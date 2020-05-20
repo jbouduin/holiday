@@ -1,0 +1,34 @@
+{
+  "name": "ww-holiday",
+  "version": "0.0.1",
+  "description": "Get World-Wide Holidays",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "test": "jest",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbouduin/ww.holiday.git"
+  },
+  "keywords": ["Holidays", "Banking Holidays"],
+  "author": "Johan Bouduin",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0",
+    "tslint": "^6.1.2",
+    "typescript": "^3.9.3"
+  }
+}
