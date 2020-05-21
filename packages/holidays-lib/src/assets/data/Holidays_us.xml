@@ -57,7 +57,7 @@
   		<tns:Holidays>
   			<tns:Fixed month="MARCH" day="8"/>
   			<tns:Fixed month="OCTOBER" day="21"/>
-  		</tns:Holidays>	
+  		</tns:Holidays>
   	</tns:SubConfigurations>
   </tns:SubConfigurations>
   <tns:SubConfigurations hierarchy="co" description="Colorado">
@@ -189,11 +189,11 @@
   	<tns:Holidays>
   		<tns:Fixed month="FEBRUARY" day="22" validFrom="1879" validTo="1967" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
   		<tns:RelativeToWeekdayInMonth weekday="FRIDAY" when="BEFORE" descriptionPropertiesKey="SERVICE_REDUCTION">
-			<tns:FixedWeekday which="LAST" weekday="MONDAY" month="MAY"/>
-		</tns:RelativeToWeekdayInMonth>
+			  <tns:FixedWeekday which="LAST" weekday="MONDAY" month="MAY"/>
+		  </tns:RelativeToWeekdayInMonth>
   		<tns:RelativeToWeekdayInMonth weekday="TUESDAY" when="AFTER" descriptionPropertiesKey="ELECTION">
-			<tns:FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
-		</tns:RelativeToWeekdayInMonth>
+			  <tns:FixedWeekday which="FIRST" weekday="MONDAY" month="NOVEMBER"/>
+		  </tns:RelativeToWeekdayInMonth>
   		<tns:FixedWeekday which="THIRD" weekday="MONDAY" month="JANUARY" validFrom="1986" descriptionPropertiesKey="MARTIN_LUTHER_KING"/>
   		<tns:FixedWeekday which="THIRD" weekday="MONDAY" month="FEBRUARY" validFrom="1968" descriptionPropertiesKey="WASHINGTONS_BIRTHDAY"/>
   		<tns:FixedWeekday which="SECOND" weekday="MONDAY" month="OCTOBER" validFrom="1934" descriptionPropertiesKey="COLUMBUS_DAY"/>

@@ -21,7 +21,10 @@
     "type": "git",
     "url": "git+https://github.com/jbouduin/ww-holiday.git"
   },
-  "keywords": ["Holidays", "Banking Holidays"],
+  "keywords": [
+    "Holidays",
+    "Banking Holidays"
+  ],
   "author": "Johan Bouduin",
   "license": "MIT",
   "devDependencies": {
