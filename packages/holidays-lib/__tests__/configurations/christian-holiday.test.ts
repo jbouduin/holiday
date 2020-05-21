@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import * as path from 'path';
 
 import { Configuration } from '../../src/configuration/configuration';
@@ -42,4 +41,10 @@ test(`${type}-chronology-type`, () => {
   expect(christianHoliday.validTo).toBe(Holiday.undefinedValidTo);
   expect(christianHoliday.type).toBe(ChristianHolidayType.ASCENSION_DAY);
   expect(christianHoliday.chronology).toBe(ChronologyType.JULIAN);
+});
+
+test(`invalid Christian Holiday`, () => {
+  const fileName = path.join(__dirname, `${dataRoot}/${type}/invalid.json`);
+  const validation = Configuration.loadByFileName(fileName).validate();
+  expect(validation.length).toBe(3);
 });

@@ -23,5 +23,19 @@ export class FixedHoliday extends Holiday implements IFixedHoliday {
   public get translationKey(): string {
     return this.key;
   }
+
+  public validate(): Array<string> {
+    const result = new Array<string>();
+    if (!this.key) {
+      result.push('Fixed holiday has no key');
+    }
+    if (this.month === undefined) {
+      result.push(`Fixed holiday '${this.key}'' has no month`);
+    }
+    if (!this.day || this.day < 1 || this.day > 31) {
+      result.push(`Fixed holiday '${this.key}' has no valid day`);
+    }
+    return result;
+  }
   // </editor-fold>
 }

@@ -1,0 +1,14 @@
+{
+  "hierarchy": "invalid",
+  "description": "invalid",
+  "holidayCollection": {
+    "fixedHolidays": [
+      { "key": "", "month": "JANUARY", "day": 1 },
+      { "key": "CHRISTMAS", "day": 1},
+      { "key": "CHRISTMAS", "month": "JANUARY" },
+      { "key": "CHRISTMAS", "month": "JANUARY", "day": 0 },
+      { "key": "CHRISTMAS", "month": "JANUARY", "day": 32 },
+      { "key": "CHRISTMAS", "month": "JANVIER", "day": 1 }
+    ]
+  }
+}

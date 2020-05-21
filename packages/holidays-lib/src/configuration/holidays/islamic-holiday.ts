@@ -19,5 +19,13 @@ export class IslamicHoliday extends Holiday implements IIslamicHoliday {
   public get translationKey(): string {
     return IslamicHolidayType[this.type];
   }
+
+  public validate(): Array<string> {
+    const result = new Array<string>();
+    if (!this.type) {
+      result.push('Islamic holiday has no type');
+    }
+    return result;
+  }
   // </editor-fold>
 }

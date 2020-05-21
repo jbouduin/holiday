@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import * as path from 'path';
 
 import { Configuration } from '../../src/configuration/configuration';
@@ -96,5 +95,8 @@ test(`${type}-cycle-type`, () => {
   expect(fixedHoliday.day).toBe(1);
 });
 
-//holidayCycleType: 5,
-  //      holidayType: 0,
+test(`invalid Fixed Holiday`, () => {
+  const fileName = path.join(__dirname, `${dataRoot}/${type}/invalid.json`);
+  const validation = Configuration.loadByFileName(fileName).validate();
+  expect(validation.length).toBe(6);
+});

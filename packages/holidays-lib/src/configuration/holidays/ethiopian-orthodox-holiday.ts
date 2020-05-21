@@ -19,5 +19,13 @@ export class EthiopianOrthodoxHoliday extends Holiday implements IEthiopianOrtho
   public get translationKey(): string {
     return EthiopianOrthodoxHolidayType[this.type];
   }
+
+  public validate(): Array<string> {
+    const result = new Array<string>();
+    if (!this.type) {
+      result.push('Ethiopian-orthodox holiday has no type');
+    }
+    return result;
+  }
   // </editor-fold>
 }

@@ -1,0 +1,11 @@
+{
+  "hierarchy": "invalid",
+  "description": "invalid",
+  "holidayCollection": {
+    "christianHolidays": [
+      { "type": "" },
+      { },
+      { "type": "ABRACADABRA" }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "hierarchy": "invalid",
+  "description": "invalid",
+  "holidayCollection": {
+    "islamicHolidays": [
+      { "type": "" },
+      { },
+      { "type": "ABRACADABRA" }
+    ]
+  }
+}

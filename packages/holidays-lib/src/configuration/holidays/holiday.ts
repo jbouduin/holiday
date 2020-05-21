@@ -7,6 +7,7 @@ export interface IHoliday {
   validFrom: number;
   validTo: number;
   readonly translationKey: string;
+  validate(): Array<string>;
 }
 
 export abstract class Holiday implements IHoliday {
@@ -25,6 +26,7 @@ export abstract class Holiday implements IHoliday {
 
   // <editor-fold desc='Abstract methods'>
   public abstract get translationKey(): string;
+  public abstract validate(): Array<string>;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>

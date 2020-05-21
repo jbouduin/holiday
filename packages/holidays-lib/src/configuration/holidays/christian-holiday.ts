@@ -36,5 +36,13 @@ export class ChristianHoliday extends Holiday implements IChristianHoliday {
   public get translationKey(): string {
     return ChristianHolidayType[this.type];
   }
+
+  public validate(): Array<string> {
+    const result = new Array<string>();
+    if (this.type === undefined) {
+      result.push('Christian holiday has no type');
+    }
+    return result;
+  }
   // </editor-fold>
 }

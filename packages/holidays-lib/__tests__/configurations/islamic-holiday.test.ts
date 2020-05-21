@@ -1,4 +1,3 @@
-import * as fs from 'fs';
 import * as path from 'path';
 
 import { Configuration } from '../../src/configuration/configuration';
@@ -24,4 +23,10 @@ test(`${type}-only-type`, () => {
   expect(islamicHoliday.validTo).toBe(Holiday.undefinedValidTo);
   expect(islamicHoliday.type).toBe(IslamicHolidayType.ASCHURA);
   expect(islamicHoliday.translationKey).toBe('ASCHURA');
+});
+
+test(`invalid Islamitic Holiday`, () => {
+  const fileName = path.join(__dirname, `${dataRoot}/${type}/invalid.json`);
+  const validation = Configuration.loadByFileName(fileName).validate();
+  expect(validation.length).toBe(3);
 });

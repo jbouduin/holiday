@@ -27,31 +27,57 @@ export interface IConfiguration {
   description: string;
   holidayCollection: IHolidayCollection;
   subConfiguration?: Array<IConfiguration>;
+  validate(): Array<string>;
 }
 
 export class Configuration implements IConfiguration {
 
+  // <editor-fold desc='IConfiguration interface properties'>
   public hierarchy!: string;
   public description!: string;
   public holidayCollection: IHolidayCollection;
   public subConfiguration: Array<Configuration>;
+  // </editor-fold>
 
+  // <editor-fold desc='Static factoriy methods'>
   public static loadByHierarchy (hierarchy: string): IConfiguration {
     const fileName = path.join(__dirname, `../assets/configurations/${hierarchy}.json`);
     return Configuration.loadByFileName(fileName);
   }
 
-  public  static loadByFileName(fileName: string): IConfiguration {
+  public static loadByFileName(fileName: string): IConfiguration {
     const result = new Configuration();
     result.loadFromFile(fileName);
     return result;
   }
+  // </editor-fold>
 
+  // <editor-fold desc='Constructor & C°'>
   private constructor() {
     this.subConfiguration = new Array<Configuration>();
     this.holidayCollection = new HolidayCollection();
   }
+  // </editor-fold>
 
+  // <editor-fold desc='IConfiguration interface methods'>
+  public validate(): Array<string> {
+    let result = new Array<string>();
+    if (!this.hierarchy) {
+      result.push('Configuration has no hierarchy');
+    }
+    if (!this.description) {
+      result.push('Configuration has no description');
+    }
+
+    this.holidayCollection.christianHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    this.holidayCollection.fixedHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    this.holidayCollection.ethiopianOrthodoxHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    this.holidayCollection.islamicHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    return result;
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='Private methods'>
   private loadFromFile(fileName: string): void {
     const data = fs.readFileSync(fileName, 'utf-8');
     const obj = JSON.parse(data);
@@ -121,6 +147,6 @@ export class Configuration implements IConfiguration {
       holiday.holidayType = HolidayType[<HolidayTypeKeyStrings>obj.holidayType];
     }
   }
-
+  // </editor-fold>
 
 }

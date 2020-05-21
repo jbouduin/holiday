@@ -1,0 +1,11 @@
+{
+  "hierarchy": "invalid",
+  "description": "invalid",
+  "holidayCollection": {
+    "ethiopianOrthodoxHolidays": [
+      { "type": "" },
+      { },
+      { "type": "ABRACADABRA" }
+    ]
+  }
+}
