@@ -6,13 +6,13 @@ import { IMovingCondition } from './moving-condition';
 import { ITypedHoliday } from './typed-holiday';
 
 export interface IChristianHoliday extends IMoveable, ITypedHoliday<ChristianHolidayType> {
-  chronologyType: ChronologyType;
+  chronology: ChronologyType;
 }
 
 export class ChristianHoliday extends Holiday implements IChristianHoliday {
 
   // <editor-fold desc='IChristianHoliday interface properties'>
-  public chronologyType: ChronologyType;
+  public chronology: ChronologyType;
   // </editor-fold>
 
   // <editor-fold desc='ITypedHoliday interface properties'>
@@ -24,11 +24,11 @@ export class ChristianHoliday extends Holiday implements IChristianHoliday {
   // </editor-fold>
 
   // <editor-fold desc='Constructor'>
-  public constructor(type: ChristianHolidayType, chronologyType?: ChronologyType) {
+  public constructor(type: ChristianHolidayType, chronology?: ChronologyType) {
     super();
     this.movingConditions = new Array<IMovingCondition>();
     this.type = type;
-    this.chronologyType = chronologyType || ChronologyType.GREGORIAN;
+    this.chronology = chronology || ChronologyType.GREGORIAN;
   }
   // </editor-fold>
 

@@ -1,0 +1,9 @@
+{
+  "hierarchy": "ethiopian-orthodox-holiday-only-type",
+  "description": "ethiopian-orthodox-holiday-only-type",
+  "holidayCollection": {
+    "ethiopianOrthodoxHolidays": [
+      { "type": "ENKUTATASH" }
+    ]
+  }
+}

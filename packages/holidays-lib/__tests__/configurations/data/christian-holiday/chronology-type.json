@@ -3,7 +3,7 @@
   "description": "christian-holiday-chronology-type",
   "holidayCollection": {
     "christianHolidays": [
-      { "type": "ASCENSION_DAY", "chronologyType": "JULIAN" }
+      { "type": "ASCENSION_DAY", "chronology": "JULIAN" }
     ]
   }
 }

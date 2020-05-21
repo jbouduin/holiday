@@ -7,7 +7,6 @@ import { ChronologyType } from '../../src/configuration/holidays/chronology-type
 import { CycleType } from '../../src/configuration/holidays/cycle-type';
 import { Holiday } from '../../src/configuration/holidays/holiday';
 import { HolidayType } from '../../src/configuration/holidays/holiday-type';
-import { Month } from '../../src/configuration/holidays/month';
 
 const dataRoot = './data';
 const type = 'christian-holiday';
@@ -25,7 +24,7 @@ test(`${type}-only-type`, () => {
   expect(christianHoliday.validFrom).toBe(Holiday.undefinedValidTo);
   expect(christianHoliday.validTo).toBe(Holiday.undefinedValidTo);
   expect(christianHoliday.type).toBe(ChristianHolidayType.ASCENSION_DAY);
-  expect(christianHoliday.chronologyType).toBe(ChronologyType.GREGORIAN);
+  expect(christianHoliday.chronology).toBe(ChronologyType.GREGORIAN);
   expect(christianHoliday.translationKey).toBe('ASCENSION_DAY');
 });
 
@@ -42,5 +41,5 @@ test(`${type}-chronology-type`, () => {
   expect(christianHoliday.validFrom).toBe(Holiday.undefinedValidTo);
   expect(christianHoliday.validTo).toBe(Holiday.undefinedValidTo);
   expect(christianHoliday.type).toBe(ChristianHolidayType.ASCENSION_DAY);
-  expect(christianHoliday.chronologyType).toBe(ChronologyType.JULIAN);
+  expect(christianHoliday.chronology).toBe(ChronologyType.JULIAN);
 });
