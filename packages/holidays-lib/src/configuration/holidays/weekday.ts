@@ -7,3 +7,5 @@ export enum Weekday {
   FRIDAY,
   SATURDAY
 }
+
+export type WeekdayKeyStrings = keyof typeof Weekday;

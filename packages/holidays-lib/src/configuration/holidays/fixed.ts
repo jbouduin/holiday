@@ -1,6 +1,7 @@
 import { Month } from './month';
 
-export interface Fixed  {
-  month: Month;
+export interface IFixed  {
   day: number;
+  month: Month;
+  key: string;
 }

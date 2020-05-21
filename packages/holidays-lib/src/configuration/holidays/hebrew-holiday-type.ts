@@ -23,3 +23,5 @@ export enum HebrewHolidayType {
   YOM_KIPPUR,
   YOM_YERUSHALAIM
 }
+
+export type HebrewHolidayTypeKeyStrings = keyof typeof HebrewHolidayType;

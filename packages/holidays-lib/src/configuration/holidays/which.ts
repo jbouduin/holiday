@@ -5,3 +5,5 @@ export enum Which {
   FOURTH,
   LAST
 }
+
+export type WhichKeyStrings = keyof typeof Which;

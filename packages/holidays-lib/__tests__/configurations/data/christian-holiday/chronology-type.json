@@ -1,0 +1,9 @@
+{
+  "hierarchy": "christian-holiday-chronology-type",
+  "description": "christian-holiday-chronology-type",
+  "holidayCollection": {
+    "christianHolidays": [
+      { "type": "ASCENSION_DAY", "chronologyType": "JULIAN" }
+    ]
+  }
+}

@@ -3,3 +3,5 @@ export enum EthiopianOrthodoxHolidayType {
   MESKEL,
   TIMKAT
 }
+
+export type EthiopianOrthodoxHolidayTypeKeyStrings = keyof typeof EthiopianOrthodoxHolidayType;

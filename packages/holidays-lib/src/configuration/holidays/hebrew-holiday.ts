@@ -1,5 +1,5 @@
 import { HebrewHolidayType } from './hebrew-holiday-type';
 import { Holiday } from './holiday';
-import { TypedHoliday } from './typed-holiday';
+import { ITypedHoliday } from './typed-holiday';
 
-export interface HebrewHoliday extends Holiday, TypedHoliday<HebrewHolidayType> { }
+export interface HebrewHoliday extends Holiday, ITypedHoliday<HebrewHolidayType> { }

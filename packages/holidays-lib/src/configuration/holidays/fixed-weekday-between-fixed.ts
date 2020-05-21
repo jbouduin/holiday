@@ -1,9 +1,9 @@
-import { Fixed } from './fixed';
-import { Holiday } from './holiday';
+import { IFixed } from './fixed';
+import { IHoliday } from './holiday';
 import { Weekday } from './weekday';
 
-export interface FixedWeekdayBetweenFixed extends Holiday {
-  from: Fixed;
-  to: Fixed;
+export interface FixedWeekdayBetweenFixed extends IHoliday {
+  from: IFixed;
+  to: IFixed;
   weekday: Weekday;
 }

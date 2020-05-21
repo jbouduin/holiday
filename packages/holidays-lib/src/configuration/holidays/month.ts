@@ -12,3 +12,5 @@ export enum Month {
   NOVEMBER,
   DECEMBER
 }
+
+export type MonthKeyStrings = keyof typeof Month;

@@ -1,4 +1,4 @@
-export enum HolidayCycleType {
+export enum CycleType {
   TWO_YEARS,
   FOUR_YEARS,
   FIVE_YEARS,
@@ -7,3 +7,5 @@ export enum HolidayCycleType {
   EVERY_YEAR,
   ODD_YEARS
 }
+
+export type CycleTypeKeyStrings = keyof typeof CycleType;

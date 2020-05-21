@@ -9,3 +9,5 @@ export enum IslamicHolidayType {
   NEWYEAR,
   RAMADAN
 }
+
+export type IslamicHolidayTypeKeyStrings = keyof typeof IslamicHolidayType;

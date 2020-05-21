@@ -1,0 +1,9 @@
+{
+  "hierarchy": "fixed-holiday-valid-to",
+  "description": "fixed-holiday-valid-to",
+  "holidayCollection": {
+    "fixedHolidays": [
+      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "validTo": 1985 }
+    ]
+  }
+}

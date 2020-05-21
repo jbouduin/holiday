@@ -8,3 +8,5 @@ export enum SubstituteOn {
   ON_SATURDAY,
   ON_WEEKEND
 }
+
+export type SubstituteOnKeyStrings = keyof typeof SubstituteOn;

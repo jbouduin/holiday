@@ -19,3 +19,5 @@ export enum ChristianHolidayType {
   WHIT_SUNDAY,
   WHIT_MONDAY
 }
+
+export type ChristianHolidayTypeKeyStrings = keyof typeof ChristianHolidayType;

@@ -11,6 +11,7 @@
     "build": "tsc",
     "lint": "tslint -p tsconfig.json",
     "test": "jest",
+    "test-coverage": "jest --coverage",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "preversion": "npm run lint",
@@ -29,9 +30,13 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^25.2.3",
+    "@types/lodash": "^4.14.152",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
     "tslint": "^6.1.2",
     "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
   }
 }
