@@ -4,6 +4,7 @@ import { Configuration } from '../../src/configuration/configuration';
 describe.each([
   [ 'bg', 'Bulgaria' ],
   [ 'bo', 'Bolivia' ],
+  [ 'by', 'Belarus' ],
   [ 'et', 'Ethiopia' ],
   [ 'gr', 'Greece'],
   [ 'nsye-euronext', 'nsye-euronext']
