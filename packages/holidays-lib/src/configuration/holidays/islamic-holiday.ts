@@ -1,10 +1,10 @@
 import { IslamicHolidayType } from './islamic-holiday-type';
-import { IHoliday, Holiday } from './holiday';
+import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { ITypedHoliday } from './typed-holiday';
 
-export interface IIslamicHoliday extends IHoliday, ITypedHoliday<IslamicHolidayType> { }
+export interface IIslamicHoliday extends IBaseHoliday, ITypedHoliday<IslamicHolidayType> { }
 
-export class IslamicHoliday extends Holiday implements IIslamicHoliday {
+export class IslamicHoliday extends BaseHoliday implements IIslamicHoliday {
   // <editor-fold desc='ITypedHoliday interface properties'>
   public type: IslamicHolidayType;
   // </editor-fold>

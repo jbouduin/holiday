@@ -1,10 +1,10 @@
 import { EthiopianOrthodoxHolidayType } from './ethiopian-orthodox-holiday-type';
-import { IHoliday, Holiday } from './holiday';
+import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { ITypedHoliday } from './typed-holiday';
 
-export interface IEthiopianOrthodoxHoliday extends IHoliday, ITypedHoliday<EthiopianOrthodoxHolidayType> { }
+export interface IEthiopianOrthodoxHoliday extends IBaseHoliday, ITypedHoliday<EthiopianOrthodoxHolidayType> { }
 
-export class EthiopianOrthodoxHoliday extends Holiday implements IEthiopianOrthodoxHoliday {
+export class EthiopianOrthodoxHoliday extends BaseHoliday implements IEthiopianOrthodoxHoliday {
   // <editor-fold desc='ITypedHoliday interface properties'>
   public type: EthiopianOrthodoxHolidayType;
   // </editor-fold>

@@ -1,7 +1,7 @@
 import { ChronologyType } from './chronology-type';
-import { Holiday } from './holiday';
+import { IBaseHoliday } from './base-holiday';
 
-export interface RelativeToEasterSunday extends Holiday {
+export interface RelativeToEasterSunday extends IBaseHoliday {
   chronologyType: ChronologyType;
   days: number;
 }

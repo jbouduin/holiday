@@ -3,7 +3,7 @@ import * as path from 'path';
 import { Configuration } from '../../src/configuration/configuration';
 import { IslamicHolidayType } from '../../src/configuration/holidays/islamic-holiday-type';
 import { CycleType } from '../../src/configuration/holidays/cycle-type';
-import { Holiday } from '../../src/configuration/holidays/holiday';
+import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
 import { HolidayType } from '../../src/configuration/holidays/holiday-type';
 
 const dataRoot = './data';
@@ -19,8 +19,8 @@ test(`${type}-only-type`, () => {
   const islamicHoliday = configuration.holidayCollection.islamicHolidays[0];
   expect(islamicHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
   expect(islamicHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
-  expect(islamicHoliday.validFrom).toBe(Holiday.undefinedValidTo);
-  expect(islamicHoliday.validTo).toBe(Holiday.undefinedValidTo);
+  expect(islamicHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
+  expect(islamicHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(islamicHoliday.type).toBe(IslamicHolidayType.ASCHURA);
   expect(islamicHoliday.translationKey).toBe('ASCHURA');
 });

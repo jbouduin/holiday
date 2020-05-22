@@ -1,16 +1,17 @@
 import { CycleType } from './cycle-type';
 import { HolidayType } from './holiday-type';
 
-export interface IHoliday {
+export interface IBaseHoliday {
   cycleType: CycleType;
   holidayType: HolidayType;
   validFrom: number;
   validTo: number;
   readonly translationKey: string;
   validate(): Array<string>;
+  // calculate(year: number): Date;
 }
 
-export abstract class Holiday implements IHoliday {
+export abstract class BaseHoliday implements IBaseHoliday {
 
   // <editor-fold desc='Public static magic numbers'>
   public static undefinedValidFrom = -1;
@@ -27,14 +28,15 @@ export abstract class Holiday implements IHoliday {
   // <editor-fold desc='Abstract methods'>
   public abstract get translationKey(): string;
   public abstract validate(): Array<string>;
+  // public abstract calculate(year: number): Date;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
     this.cycleType = CycleType.EVERY_YEAR;
     this.holidayType = HolidayType.OFFICIAL_HOLIDAY;
-    this.validFrom = Holiday.undefinedValidFrom;
-    this.validTo = Holiday.undefinedValidTo;
+    this.validFrom = BaseHoliday.undefinedValidFrom;
+    this.validTo = BaseHoliday.undefinedValidTo;
   }
   // </editor-fold>
 }

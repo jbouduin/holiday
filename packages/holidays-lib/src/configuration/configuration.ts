@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 
 // holiday related
-import { IHoliday } from './holidays/holiday';
+import { IBaseHoliday } from './holidays/base-holiday';
 import { CycleType, CycleTypeKeyStrings } from './holidays/cycle-type';
 import { HolidayType, HolidayTypeKeyStrings } from './holidays/holiday-type';
 // fixed holiday related
@@ -28,6 +28,7 @@ export interface IConfiguration {
   holidayCollection: IHolidayCollection;
   subConfiguration?: Array<IConfiguration>;
   validate(): Array<string>;
+  // calculate(year: number): Array<Date>;
 }
 
 export class Configuration implements IConfiguration {
@@ -60,6 +61,12 @@ export class Configuration implements IConfiguration {
   // </editor-fold>
 
   // <editor-fold desc='IConfiguration interface methods'>
+  // public calculate(year: number): Array<Date> {
+  //   let result = new Array<string>();
+  //
+  //   return result;
+  // }
+
   public validate(): Array<string> {
     let result = new Array<string>();
     if (!this.hierarchy) {
@@ -129,7 +136,7 @@ export class Configuration implements IConfiguration {
     return result;
   }
 
-  private processHoliday(holiday: IHoliday, obj: any): void {
+  private processHoliday(holiday: IBaseHoliday, obj: any): void {
 
     if (obj.validFrom) {
       holiday.validFrom = obj.validFrom;

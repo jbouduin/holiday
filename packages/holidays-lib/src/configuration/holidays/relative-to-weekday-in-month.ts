@@ -1,9 +1,9 @@
 import { FixedWeekdayInMonth } from './fixed-weekday-in-month';
-import { Holiday } from './holiday';
+import { IBaseHoliday } from './base-holiday';
 import { Weekday } from './weekday';
 import { When } from './when';
 
-export interface RelativeToWeekdayInMonth {
+export interface IRelativeToWeekdayInMonth extends IBaseHoliday {
   fixedWeekday: FixedWeekdayInMonth;
   weekday: Weekday;
   when: When;

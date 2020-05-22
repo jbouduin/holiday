@@ -4,7 +4,7 @@ import { Configuration } from '../../src/configuration/configuration';
 import { ChristianHolidayType } from '../../src/configuration/holidays/christian-holiday-type';
 import { ChronologyType } from '../../src/configuration/holidays/chronology-type';
 import { CycleType } from '../../src/configuration/holidays/cycle-type';
-import { Holiday } from '../../src/configuration/holidays/holiday';
+import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
 import { HolidayType } from '../../src/configuration/holidays/holiday-type';
 
 const dataRoot = './data';
@@ -20,8 +20,8 @@ test(`${type}-only-type`, () => {
   const christianHoliday = configuration.holidayCollection.christianHolidays[0];
   expect(christianHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
   expect(christianHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
-  expect(christianHoliday.validFrom).toBe(Holiday.undefinedValidTo);
-  expect(christianHoliday.validTo).toBe(Holiday.undefinedValidTo);
+  expect(christianHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
+  expect(christianHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(christianHoliday.type).toBe(ChristianHolidayType.ASCENSION_DAY);
   expect(christianHoliday.chronology).toBe(ChronologyType.GREGORIAN);
   expect(christianHoliday.translationKey).toBe('ASCENSION_DAY');
@@ -37,8 +37,8 @@ test(`${type}-chronology-type`, () => {
   const christianHoliday = configuration.holidayCollection.christianHolidays[0];
   expect(christianHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
   expect(christianHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
-  expect(christianHoliday.validFrom).toBe(Holiday.undefinedValidTo);
-  expect(christianHoliday.validTo).toBe(Holiday.undefinedValidTo);
+  expect(christianHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
+  expect(christianHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(christianHoliday.type).toBe(ChristianHolidayType.ASCENSION_DAY);
   expect(christianHoliday.chronology).toBe(ChronologyType.JULIAN);
 });

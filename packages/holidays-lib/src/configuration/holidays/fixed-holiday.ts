@@ -1,12 +1,12 @@
 import { IFixed } from './fixed';
-import { IHoliday, Holiday } from './holiday';
+import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { IMoveable } from './moveable';
 import { IMovingCondition } from './moving-condition';
 import { Month, MonthKeyStrings } from './month';
 
-export interface IFixedHoliday extends IHoliday, IFixed, IMoveable { }
+export interface IFixedHoliday extends IBaseHoliday, IFixed, IMoveable { }
 
-export class FixedHoliday extends Holiday implements IFixedHoliday {
+export class FixedHoliday extends BaseHoliday implements IFixedHoliday {
 
   // <editor-fold desc='IMoveable interface properties'>
   public movingConditions: Array<IMovingCondition>;

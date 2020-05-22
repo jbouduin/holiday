@@ -1,15 +1,15 @@
 import { ChristianHolidayType } from './christian-holiday-type';
 import { ChronologyType } from './chronology-type';
-import { Holiday } from './holiday';
+import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { IMoveable } from './moveable';
 import { IMovingCondition } from './moving-condition';
 import { ITypedHoliday } from './typed-holiday';
 
-export interface IChristianHoliday extends IMoveable, ITypedHoliday<ChristianHolidayType> {
+export interface IChristianHoliday extends IBaseHoliday, IMoveable, ITypedHoliday<ChristianHolidayType> {
   chronology: ChronologyType;
 }
 
-export class ChristianHoliday extends Holiday implements IChristianHoliday {
+export class ChristianHoliday extends BaseHoliday implements IChristianHoliday {
 
   // <editor-fold desc='IChristianHoliday interface properties'>
   public chronology: ChronologyType;

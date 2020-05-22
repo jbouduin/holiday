@@ -1,9 +1,9 @@
 import { IFixed } from './fixed';
-import { Holiday } from './holiday';
+import { IBaseHoliday } from './base-holiday';
 import { RelativeToFixedType } from './relative-to-fixed-type';
 import { When } from './when';
 
-export interface RelativeToFixed extends Holiday {
+export interface IRelativeToFixed extends IBaseHoliday {
   type: RelativeToFixedType;
   date: IFixed;
   days: number;

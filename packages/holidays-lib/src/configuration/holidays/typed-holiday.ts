@@ -1,5 +1,5 @@
-import { IHoliday, Holiday } from './holiday';
+import { IBaseHoliday } from './base-holiday';
 
-export interface ITypedHoliday<T> extends IHoliday {
+export interface ITypedHoliday<T> extends IBaseHoliday {
   type: T;
 }
