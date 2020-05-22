@@ -2,6 +2,7 @@ import { Configuration } from '../../src/configuration/configuration';
 
 // these tests only test the validity of the json files, not the contents
 describe.each([
+  [ 'be', 'Belgium' ],
   [ 'bg', 'Bulgaria' ],
   [ 'bo', 'Bolivia' ],
   [ 'by', 'Belarus' ],
