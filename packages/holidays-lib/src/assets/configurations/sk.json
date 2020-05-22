@@ -1,0 +1,26 @@
+{
+  "hierarchy": "sk",
+  "description": "Slovakia",
+  "holidayCollection": {
+    "christianHolidays": [
+      { "type": "EASTER" },
+  		{ "type": "GOOD_FRIDAY" },
+  		{ "type": "EASTER_MONDAY" }
+    ],
+    "fixedHolidays": [
+      { "key": "FOUNDATION", "month": "JANUARY", "day": 1, "validFrom": 1993 },
+  		{ "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
+  		{ "key": "LABOUR_DAY", "month": "MAY", "day": 1, "validFrom": 1886 },
+  		{ "key": "VICTORY", "month": "MAY", "day": 8 },
+  		{ "key": "CYRUS_METHODIUS", "month": "JULY", "day": 5 },
+  		{ "key": "NATIONAL_UPRISING", "month": "AUGUST", "day": 29 },
+  		{ "key": "CONSTITUTION_DAY", "month": "SEPTEMBER", "day": 1 },
+  		{ "key": "VIRGIN_MARY", "month": "SEPTEMBER", "day": 15 },
+  		{ "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1},
+  		{ "key": "FREEDOM_DEMOCRACY", "month": "NOVEMBER", "day": 17 },
+  		{ "key": "CHRISTMAS_EVE", "month": "DECEMBER", "day": 24 },
+  		{ "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+  		{ "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
+    ]
+  }
+}
