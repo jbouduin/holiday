@@ -6,6 +6,7 @@ describe.each([
   [ 'bo', 'Bolivia' ],
   [ 'by', 'Belarus' ],
   [ 'dk', 'Denmark' ],
+  [ 'ec', 'Ecuador' ],
   [ 'et', 'Ethiopia' ],
   [ 'gr', 'Greece'],
   [ 'nsye-euronext', 'nsye-euronext']

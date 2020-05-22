@@ -1,0 +1,24 @@
+{
+  "hierarchy": "ec",
+  "description": "Ecuador",
+  "holidayCollection": {
+    "christianHolidays": [
+      { "type": "EASTER" },
+  		{ "type": "MAUNDY_THURSDAY" },
+  		{ "type": "GOOD_FRIDAY" }
+    ],
+    "fixedHolidays": [
+      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+  		{ "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+  		{ "key": "PICHINCHA", "month": "MAY", "day": 24 },
+  		{ "key": "BOLIVAR", "month": "JULY", "day": 24 },
+  		{ "key": "INDEP_QUITO", "month": "AUGUST", "day": 10 },
+  		{ "key": "INDEP_GUYAQUIL", "month": "OCTOBER", "day": 9 },
+  		{ "key": "ALL_SOULS", "month": "NOVEMBER", "day": 2 },
+  		{ "key": "INDEP_CUENCA", "month": "NOVEMBER", "day": 3 },
+  		{ "key": "FOUND_QUITO", "month": "DECEMBER", "day": 6 },
+  		{ "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+  		{ "key": "NEW_YEARS_EVE", "month": "DECEMBER", "day": 31 }
+    ]
+  }
+}
