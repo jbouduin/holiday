@@ -4,7 +4,7 @@ import * as path from 'path';
 // holiday related
 import { IBaseHoliday } from './holidays/base-holiday';
 import { CycleType, CycleTypeKeyStrings } from './holidays/cycle-type';
-import { HolidayType, HolidayTypeKeyStrings } from './holidays/holiday-type';
+import { HolidayStatus, HolidayStatusKeyStrings } from './holidays/holiday-status';
 // fixed holiday related
 import { IFixedHoliday, FixedHoliday } from './holidays/fixed-holiday';
 import { Month, MonthKeyStrings } from './holidays/month';
@@ -150,8 +150,8 @@ export class Configuration implements IConfiguration {
       holiday.cycleType = CycleType[<CycleTypeKeyStrings>obj.cycleType];
     }
 
-    if (obj.holidayType) {
-      holiday.holidayType = HolidayType[<HolidayTypeKeyStrings>obj.holidayType];
+    if (obj.holidayStatus) {
+      holiday.holidayStatus = HolidayStatus[<HolidayStatusKeyStrings>obj.holidayStatus];
     }
   }
   // </editor-fold>

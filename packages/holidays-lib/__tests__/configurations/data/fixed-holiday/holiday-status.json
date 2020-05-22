@@ -1,0 +1,9 @@
+{
+  "hierarchy": "fixed-holiday-holiday-status",
+  "description": "fixed-holiday-holiday-status",
+  "holidayCollection": {
+    "fixedHolidays": [
+      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "holidayStatus": "UNOFFICIAL_HOLIDAY" }
+    ]
+  }
+}

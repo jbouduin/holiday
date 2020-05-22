@@ -1,9 +1,9 @@
 import { CycleType } from './cycle-type';
-import { HolidayType } from './holiday-type';
+import { HolidayStatus } from './holiday-status';
 
 export interface IBaseHoliday {
   cycleType: CycleType;
-  holidayType: HolidayType;
+  holidayStatus: HolidayStatus;
   validFrom: number;
   validTo: number;
   readonly translationKey: string;
@@ -22,7 +22,7 @@ export abstract class BaseHoliday implements IBaseHoliday {
   public validFrom: number;
   public validTo: number;
   public cycleType: CycleType;
-  public holidayType: HolidayType;
+  public holidayStatus: HolidayStatus;
   // </editor-fold>
 
   // <editor-fold desc='Abstract methods'>
@@ -34,7 +34,7 @@ export abstract class BaseHoliday implements IBaseHoliday {
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
     this.cycleType = CycleType.EVERY_YEAR;
-    this.holidayType = HolidayType.OFFICIAL_HOLIDAY;
+    this.holidayStatus = HolidayStatus.OFFICIAL_HOLIDAY;
     this.validFrom = BaseHoliday.undefinedValidFrom;
     this.validTo = BaseHoliday.undefinedValidTo;
   }

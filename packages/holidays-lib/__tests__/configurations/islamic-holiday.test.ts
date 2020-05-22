@@ -4,7 +4,7 @@ import { Configuration } from '../../src/configuration/configuration';
 import { IslamicHolidayType } from '../../src/configuration/holidays/islamic-holiday-type';
 import { CycleType } from '../../src/configuration/holidays/cycle-type';
 import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
-import { HolidayType } from '../../src/configuration/holidays/holiday-type';
+import { HolidayStatus } from '../../src/configuration/holidays/holiday-status';
 
 const dataRoot = './data';
 const type = 'islamic-holiday';
@@ -18,7 +18,7 @@ test(`${type}-only-type`, () => {
   expect(configuration.holidayCollection.islamicHolidays.length === 1);
   const islamicHoliday = configuration.holidayCollection.islamicHolidays[0];
   expect(islamicHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
-  expect(islamicHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
+  expect(islamicHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY);
   expect(islamicHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
   expect(islamicHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(islamicHoliday.type).toBe(IslamicHolidayType.ASCHURA);

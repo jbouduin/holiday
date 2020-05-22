@@ -3,7 +3,7 @@ import * as path from 'path';
 import { Configuration } from '../../src/configuration/configuration';
 import { CycleType } from '../../src/configuration/holidays/cycle-type';
 import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
-import { HolidayType } from '../../src/configuration/holidays/holiday-type';
+import { HolidayStatus } from '../../src/configuration/holidays/holiday-status';
 import { Month } from '../../src/configuration/holidays/month';
 
 const dataRoot = './data';
@@ -18,7 +18,7 @@ test(`${type}-only-key`, () => {
   expect(configuration.holidayCollection.fixedHolidays.length === 1);
   const fixedHoliday = configuration.holidayCollection.fixedHolidays[0];
   expect(fixedHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
-  expect(fixedHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
+  expect(fixedHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY);
   expect(fixedHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.key).toBe('NEW_YEAR');
@@ -36,7 +36,7 @@ test(`${type}-valid-to`, () => {
   expect(configuration.holidayCollection.fixedHolidays.length === 1);
   const fixedHoliday = configuration.holidayCollection.fixedHolidays[0];
   expect(fixedHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
-  expect(fixedHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
+  expect(fixedHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY);
   expect(fixedHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.validTo).toBe(1985);
   expect(fixedHoliday.key).toBe('NEW_YEAR');
@@ -53,7 +53,7 @@ test(`${type}-valid-from`, () => {
   expect(configuration.holidayCollection.fixedHolidays.length === 1);
   const fixedHoliday = configuration.holidayCollection.fixedHolidays[0];
   expect(fixedHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
-  expect(fixedHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
+  expect(fixedHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY);
   expect(fixedHoliday.validFrom).toBe(1985);
   expect(fixedHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.key).toBe('NEW_YEAR');
@@ -61,8 +61,8 @@ test(`${type}-valid-from`, () => {
   expect(fixedHoliday.day).toBe(1);
 });
 
-test(`${type}-holiday-type`, () => {
-  const current = 'holiday-type';
+test(`${type}-holiday-status`, () => {
+  const current = 'holiday-status';
   const fileName = path.join(__dirname, `${dataRoot}/${type}/${current}.json`);
   const configuration = Configuration.loadByFileName(fileName);
   expect(configuration.hierarchy).toBe(`${type}-${current}`);
@@ -70,7 +70,7 @@ test(`${type}-holiday-type`, () => {
   expect(configuration.holidayCollection.fixedHolidays.length === 1);
   const fixedHoliday = configuration.holidayCollection.fixedHolidays[0];
   expect(fixedHoliday.cycleType).toBe(CycleType.EVERY_YEAR);
-  expect(fixedHoliday.holidayType).toBe(HolidayType.UNOFFICIAL_HOLIDAY);
+  expect(fixedHoliday.holidayStatus).toBe(HolidayStatus.UNOFFICIAL_HOLIDAY);
   expect(fixedHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.key).toBe('NEW_YEAR');
@@ -87,7 +87,7 @@ test(`${type}-cycle-type`, () => {
   expect(configuration.holidayCollection.fixedHolidays.length === 1);
   const fixedHoliday = configuration.holidayCollection.fixedHolidays[0];
   expect(fixedHoliday.cycleType).toBe(CycleType.ODD_YEARS);
-  expect(fixedHoliday.holidayType).toBe(HolidayType.OFFICIAL_HOLIDAY);
+  expect(fixedHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY);
   expect(fixedHoliday.validFrom).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.validTo).toBe(BaseHoliday.undefinedValidTo);
   expect(fixedHoliday.key).toBe('NEW_YEAR');
