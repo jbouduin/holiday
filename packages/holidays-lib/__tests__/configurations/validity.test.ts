@@ -22,6 +22,7 @@ describe.each([
   [ 'lv', 'Latvia' ],
   [ 'me', 'Montenegro' ],
   [ 'mk', 'Macedonia' ],
+  [ 'mt', 'Malta' ],
   [ 'nsye-euronext', 'nsye-euronext']
 ])('Configuration %s (%s)', (iso, description) => {
   const configuration = Configuration.loadByHierarchy(iso);
