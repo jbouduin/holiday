@@ -1,6 +1,6 @@
 {
   "hierarchy": "et",
-  "description": "Ethiopie",
+  "description": "Ethiopia",
   "holidayCollection": {
     "christianHolidays": [
       { "type": "EASTER", "chronology": "JULIAN" },
@@ -17,7 +17,7 @@
       { "key": "VICTORY_ADWA", "month": "MARCH", "day": 2 },
       { "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
       { "key": "VICTORY", "month": "MAY", "day": 5 },
-      { "key": "NATIONAL_DAY", "mont": "MAY", "day": 28 }
+      { "key": "NATIONAL_DAY", "month": "MAY", "day": 28 }
     ],
     "islamicHolidays": [
       { "type": "RAMADAN" },

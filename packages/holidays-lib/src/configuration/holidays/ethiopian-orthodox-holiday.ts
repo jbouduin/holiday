@@ -22,7 +22,7 @@ export class EthiopianOrthodoxHoliday extends Holiday implements IEthiopianOrtho
 
   public validate(): Array<string> {
     const result = new Array<string>();
-    if (!this.type) {
+    if (this.type === undefined) {
       result.push('Ethiopian-orthodox holiday has no type');
     }
     return result;

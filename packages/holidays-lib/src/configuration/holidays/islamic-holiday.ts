@@ -22,7 +22,7 @@ export class IslamicHoliday extends Holiday implements IIslamicHoliday {
 
   public validate(): Array<string> {
     const result = new Array<string>();
-    if (!this.type) {
+    if (this.type === undefined) {
       result.push('Islamic holiday has no type');
     }
     return result;
