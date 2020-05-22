@@ -33,7 +33,8 @@ describe.each([
   [ 'ro', 'Romania' ],
   [ 'rs', 'Serbia' ],
   [ 'si', 'Slovenia' ],
-  [ 'sk', 'Slovakia' ]
+  [ 'sk', 'Slovakia' ],
+  [ 'target', 'Trans-European Automated Real-time Gross settlement Express Transfer system closing dates']
 ])('Configuration %s (%s)', (iso, description) => {
   const configuration = Configuration.loadByHierarchy(iso);
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
