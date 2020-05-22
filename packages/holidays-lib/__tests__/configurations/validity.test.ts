@@ -25,7 +25,8 @@ describe.each([
   [ 'mt', 'Malta' ],
   [ 'nl', 'The Netherlands' ],
   [ 'no', 'Norway' ],
-  [ 'nsye-euronext', 'nsye-euronext']
+  [ 'nsye-euronext', 'nsye-euronext'],
+  [ 'pa', 'Panama' ]
 ])('Configuration %s (%s)', (iso, description) => {
   const configuration = Configuration.loadByHierarchy(iso);
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
