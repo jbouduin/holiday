@@ -1,0 +1,21 @@
+{
+  "hierarchy": "ua",
+  "description": "Ukraine",
+  "holidayCollection": {
+    "christianHolidays": [
+      { "type": "EASTER", "chronology": "JULIAN" },
+      { "type": "EASTER_MONDAY", "chronology": "JULIAN" },
+      { "type": "PENTECOST", "chronology": "JULIAN" }
+    ],
+    "fixedHolidays": [
+      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+      { "key": "CHRISTMAS", "month": "JANUARY", "day": 7 },
+      { "key": "INTERNATIONAL_WOMAN", "month": "MARCH", "day": 8 },
+      { "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+      { "key": "LABOUR_DAY", "month": "MAY", "day": 2 },
+      { "key": "VICTORY", "month": "MAY", "day": 9 },
+      { "key": "CONSTITUTION_DAY", "month": "JUNE", "day": 28 },
+      { "key": "INDEPENDENCE", "month": "AUGUST", "day": 24 }
+    ]
+  }
+}
