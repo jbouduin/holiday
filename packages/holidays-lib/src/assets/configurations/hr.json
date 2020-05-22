@@ -1,24 +1,20 @@
 {
   "hierarchy": "hr",
   "description": "Croatia",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "EASTER" },
-  		{ "type": "EASTER_MONDAY" },
-  		{ "type": "CORPUS_CHRISTI" }
-    ],
-    "fixedHolidays": [
-      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-  		{ "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
-  		{ "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
-  		{ "key": "ANTI_FACIST", "month": "JUNE", "day": 22 },
-  		{ "key": "NATIONAL_DAY", "month": "JUNE", "day": 25 },
-  		{ "key": "VICTORY", "month": "AUGUST", "day": 5 },
-  		{ "key": "ASSUMPTION_MARY", "month": "AUGUST", "day": 15 },
-  		{ "key": "INDEPENDENCE", "month": "OCTOBER", "day": 8 },
-  		{ "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1 },
-  		{ "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
-  		{ "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "CORPUS_CHRISTI" },
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
+		{ "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "ANTI_FACIST", "month": "JUNE", "day": 22 },
+		{ "holidayType": "FIXED_DATE", "key": "NATIONAL_DAY", "month": "JUNE", "day": 25 },
+		{ "holidayType": "FIXED_DATE", "key": "VICTORY", "month": "AUGUST", "day": 5 },
+		{ "holidayType": "FIXED_DATE", "key": "ASSUMPTION_MARY", "month": "AUGUST", "day": 15 },
+		{ "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "OCTOBER", "day": 8 },
+		{ "holidayType": "FIXED_DATE", "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+		{ "holidayType": "FIXED_DATE", "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
+  ]
 }

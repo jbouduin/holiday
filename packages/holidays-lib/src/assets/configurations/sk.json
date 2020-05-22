@@ -1,26 +1,22 @@
 {
   "hierarchy": "sk",
   "description": "Slovakia",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "EASTER" },
-  		{ "type": "GOOD_FRIDAY" },
-  		{ "type": "EASTER_MONDAY" }
-    ],
-    "fixedHolidays": [
-      { "key": "FOUNDATION", "month": "JANUARY", "day": 1, "validFrom": 1993 },
-  		{ "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
-  		{ "key": "LABOUR_DAY", "month": "MAY", "day": 1, "validFrom": 1886 },
-  		{ "key": "VICTORY", "month": "MAY", "day": 8 },
-  		{ "key": "CYRUS_METHODIUS", "month": "JULY", "day": 5 },
-  		{ "key": "NATIONAL_UPRISING", "month": "AUGUST", "day": 29 },
-  		{ "key": "CONSTITUTION_DAY", "month": "SEPTEMBER", "day": 1 },
-  		{ "key": "VIRGIN_MARY", "month": "SEPTEMBER", "day": 15 },
-  		{ "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1},
-  		{ "key": "FREEDOM_DEMOCRACY", "month": "NOVEMBER", "day": 17 },
-  		{ "key": "CHRISTMAS_EVE", "month": "DECEMBER", "day": 24 },
-  		{ "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
-  		{ "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+		{ "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
+    { "holidayType": "FIXED_DATE", "key": "FOUNDATION", "month": "JANUARY", "day": 1, "validFrom": 1993 },
+		{ "holidayType": "FIXED_DATE", "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
+		{ "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1, "validFrom": 1886 },
+		{ "holidayType": "FIXED_DATE", "key": "VICTORY", "month": "MAY", "day": 8 },
+		{ "holidayType": "FIXED_DATE", "key": "CYRUS_METHODIUS", "month": "JULY", "day": 5 },
+		{ "holidayType": "FIXED_DATE", "key": "NATIONAL_UPRISING", "month": "AUGUST", "day": 29 },
+		{ "holidayType": "FIXED_DATE", "key": "CONSTITUTION_DAY", "month": "SEPTEMBER", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "VIRGIN_MARY", "month": "SEPTEMBER", "day": 15 },
+		{ "holidayType": "FIXED_DATE", "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1},
+		{ "holidayType": "FIXED_DATE", "key": "FREEDOM_DEMOCRACY", "month": "NOVEMBER", "day": 17 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS_EVE", "month": "DECEMBER", "day": 24 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+		{ "holidayType": "FIXED_DATE", "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
+  ]
 }

@@ -1,7 +1,6 @@
 import { Month } from './month';
 
-export interface IFixed  {
+export interface IFixedDate  {
   day: number;
   month: Month;
-  key: string;
 }

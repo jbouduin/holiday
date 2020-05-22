@@ -1,21 +1,17 @@
 {
   "hierarchy": "dk",
   "description": "Denmark",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "EASTER" },
-  		{ "type": "MAUNDY_THURSDAY" },
-  		{ "type": "GOOD_FRIDAY" },
-  		{ "type": "EASTER_MONDAY" },
-  		{ "type": "GENERAL_PRAYER_DAY" },
-  		{ "type": "ASCENSION_DAY" },
-  		{ "type": "WHIT_MONDAY" },
-  		{ "type": "PENTECOST" }
-    ],
-    "fixedHolidays": [
-      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-  		{ "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
-  		{ "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+		{ "holidayType": "CHRISTIAN", "type": "MAUNDY_THURSDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "GENERAL_PRAYER_DAY" },
+		{ "holidayType": "CHRISTIAN", "type": "ASCENSION_DAY" },
+		{ "holidayType": "CHRISTIAN", "type": "WHIT_MONDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "PENTECOST" },
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+		{ "holidayType": "FIXED_DATE", "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
+  ]
 }

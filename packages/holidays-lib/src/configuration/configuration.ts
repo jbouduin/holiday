@@ -5,8 +5,9 @@ import * as path from 'path';
 import { IBaseHoliday } from './holidays/base-holiday';
 import { CycleType, CycleTypeKeyStrings } from './holidays/cycle-type';
 import { HolidayStatus, HolidayStatusKeyStrings } from './holidays/holiday-status';
+import { HolidayType, HolidayTypeKeyStrings } from './holidays/holiday-type';
 // fixed holiday related
-import { IFixedHoliday, FixedHoliday } from './holidays/fixed-holiday';
+import { IFixedDateHoliday, FixedDateHoliday } from './holidays/fixed-date-holiday';
 import { Month, MonthKeyStrings } from './holidays/month';
 // Christian holiday related
 import { IChristianHoliday, ChristianHoliday } from './holidays/christian-holiday';
@@ -15,17 +16,14 @@ import { ChronologyType, ChronologyTypeKeyStrings } from './holidays/chronology-
 // Ethiopian-orthodox holiday related
 import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHoliday } from './holidays/ethiopian-orthodox-holiday';
 import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } from './holidays/ethiopian-orthodox-holiday-type';
-
 // Islamic holiday related
 import { IIslamicHoliday, IslamicHoliday } from './holidays/islamic-holiday';
 import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from './holidays/islamic-holiday-type';
 
-import { IHolidayCollection, HolidayCollection } from './holiday-collection';
-
 export interface IConfiguration {
   hierarchy: string;
   description: string;
-  holidayCollection: IHolidayCollection;
+  holidayCollection: Array<IBaseHoliday<any>>;
   subConfiguration?: Array<IConfiguration>;
   validate(): Array<string>;
   // calculate(year: number): Array<Date>;
@@ -36,7 +34,7 @@ export class Configuration implements IConfiguration {
   // <editor-fold desc='IConfiguration interface properties'>
   public hierarchy!: string;
   public description!: string;
-  public holidayCollection: IHolidayCollection;
+  public holidayCollection: Array<IBaseHoliday<any>>;
   public subConfiguration: Array<Configuration>;
   // </editor-fold>
 
@@ -56,7 +54,7 @@ export class Configuration implements IConfiguration {
   // <editor-fold desc='Constructor & C°'>
   private constructor() {
     this.subConfiguration = new Array<Configuration>();
-    this.holidayCollection = new HolidayCollection();
+    this.holidayCollection = new Array<IBaseHoliday<any>>();
   }
   // </editor-fold>
 
@@ -75,11 +73,12 @@ export class Configuration implements IConfiguration {
     if (!this.description) {
       result.push('Configuration has no description');
     }
+    this.holidayCollection.forEach(holiday => result = result.concat(holiday.validate()));
 
-    this.holidayCollection.christianHolidays.forEach(holiday => result = result.concat(holiday.validate()));
-    this.holidayCollection.fixedHolidays.forEach(holiday => result = result.concat(holiday.validate()));
-    this.holidayCollection.ethiopianOrthodoxHolidays.forEach(holiday => result = result.concat(holiday.validate()));
-    this.holidayCollection.islamicHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    // this.holidayCollection.christianHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    // this.holidayCollection.fixedHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    // this.holidayCollection.ethiopianOrthodoxHolidays.forEach(holiday => result = result.concat(holiday.validate()));
+    // this.holidayCollection.islamicHolidays.forEach(holiday => result = result.concat(holiday.validate()));
     return result;
   }
   // </editor-fold>
@@ -90,21 +89,33 @@ export class Configuration implements IConfiguration {
     const obj = JSON.parse(data);
     this.hierarchy = obj.hierarchy;
     this.description = obj.description;
-    if (obj.holidayCollection.christianHolidays?.length > 0) {
-      obj.holidayCollection.christianHolidays
-        .forEach( (holiday: any) => this.holidayCollection.christianHolidays.push(this.processChristianHoliday(holiday)));
-    }
-    if (obj.holidayCollection.ethiopianOrthodoxHolidays?.length > 0) {
-      obj.holidayCollection.ethiopianOrthodoxHolidays
-        .forEach( (holiday: any) => this.holidayCollection.ethiopianOrthodoxHolidays.push(this.processEthiopianOrthodoxHoliday(holiday)));
-    }
-    if (obj.holidayCollection.fixedHolidays?.length > 0) {
-      obj.holidayCollection.fixedHolidays
-        .forEach( (holiday: any) => this.holidayCollection.fixedHolidays.push(this.processFixedHoliday(holiday)));
-    }
-    if (obj.holidayCollection.islamicHolidays?.length > 0) {
-      obj.holidayCollection.islamicHolidays
-        .forEach( (holiday: any) => this.holidayCollection.islamicHolidays.push(this.processIslamicHoliday(holiday)));
+    if (obj.holidayCollection?.length > 0) {
+      obj.holidayCollection.forEach( (holiday: any) => {
+        const holidayType = HolidayType[<HolidayTypeKeyStrings>holiday.holidayType];
+        switch(holidayType) {
+          case HolidayType.CHRISTIAN: {
+            this.holidayCollection.push(this.processChristianHoliday(holiday));
+            break;
+          }
+          case HolidayType.ETHIOPIAN_ORTHODOX: {
+            this.holidayCollection.push(this.processEthiopianOrthodoxHoliday(holiday));
+            break;
+          }
+          case HolidayType.FIXED_DATE: {
+            this.holidayCollection.push(this.processFixedDateHoliday(holiday));
+            break;
+          }
+          case HolidayType.ISLAMIC: {
+            this.holidayCollection.push(this.processIslamicHoliday(holiday));
+            break;
+          }
+          default: {
+            throw Error('Invalid holiday type');
+          }
+        }
+      });
+    } else {
+      throw Error('no holidays in the configuration file');
     }
   }
 
@@ -123,8 +134,8 @@ export class Configuration implements IConfiguration {
     return result;
   }
 
-  private processFixedHoliday(obj: any): IFixedHoliday {
-    const result = new FixedHoliday(obj.key, Month[<MonthKeyStrings>obj.month], obj.day);
+  private processFixedDateHoliday(obj: any): IFixedDateHoliday {
+    const result = new FixedDateHoliday(obj.key, Month[<MonthKeyStrings>obj.month], obj.day);
     this.processHoliday(result, obj);
     return result;
   }
@@ -136,7 +147,7 @@ export class Configuration implements IConfiguration {
     return result;
   }
 
-  private processHoliday(holiday: IBaseHoliday, obj: any): void {
+  private processHoliday(holiday: IBaseHoliday<any>, obj: any): void {
 
     if (obj.validFrom) {
       holiday.validFrom = obj.validFrom;

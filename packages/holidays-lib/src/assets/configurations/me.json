@@ -1,19 +1,15 @@
 {
   "hierarchy": "me",
   "description": "Montenegro",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "EASTER", "chronology": "JULIAN" },
-  		{ "type": "GOOD_FRIDAY", "chronology": "JULIAN" },
-  		{ "type": "EASTER_MONDAY", "chronology": "JULIAN" }
-    ],
-    "fixedHolidays": [
-      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-  		{ "key": "CHRISTMAS_EVE", "month": "JANUARY", "day": 6 },
-  		{ "key": "CHRISTMAS", "month": "JANUARY", "day": 7 },
-  		{ "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
-  		{ "key": "INDEPENDENCE", "month": "MAY", "day": 21 },
-  		{ "key": "STATEHOOD", "month": "JULY", "day": 13 }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER", "chronology": "JULIAN" },
+		{ "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY", "chronology": "JULIAN" },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY", "chronology": "JULIAN" },
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS_EVE", "month": "JANUARY", "day": 6 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 7 },
+		{ "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "MAY", "day": 21 },
+		{ "holidayType": "FIXED_DATE", "key": "STATEHOOD", "month": "JULY", "day": 13 }
+  ]
 }

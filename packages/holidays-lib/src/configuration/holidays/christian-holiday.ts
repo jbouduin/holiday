@@ -1,22 +1,18 @@
+import { HolidayType } from './holiday-type';
 import { ChristianHolidayType } from './christian-holiday-type';
 import { ChronologyType } from './chronology-type';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { IMoveable } from './moveable';
 import { IMovingCondition } from './moving-condition';
-import { ITypedHoliday } from './typed-holiday';
 
-export interface IChristianHoliday extends IBaseHoliday, IMoveable, ITypedHoliday<ChristianHolidayType> {
+export interface IChristianHoliday extends IBaseHoliday<ChristianHolidayType>, IMoveable {
   chronology: ChronologyType;
 }
 
-export class ChristianHoliday extends BaseHoliday implements IChristianHoliday {
+export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implements IChristianHoliday {
 
   // <editor-fold desc='IChristianHoliday interface properties'>
   public chronology: ChronologyType;
-  // </editor-fold>
-
-  // <editor-fold desc='ITypedHoliday interface properties'>
-  public type: ChristianHolidayType;
   // </editor-fold>
 
   // <editor-fold desc='IMoveable interface properties'>
@@ -24,25 +20,16 @@ export class ChristianHoliday extends BaseHoliday implements IChristianHoliday {
   // </editor-fold>
 
   // <editor-fold desc='Constructor'>
-  public constructor(type: ChristianHolidayType, chronology?: ChronologyType) {
-    super();
+  public constructor(key: ChristianHolidayType, chronology?: ChronologyType) {
+    super(HolidayType.CHRISTIAN, key);
     this.movingConditions = new Array<IMovingCondition>();
-    this.type = type;
     this.chronology = chronology || ChronologyType.GREGORIAN;
   }
   // </editor-fold>
 
   // <editor-fold desc='Abstract method implementations'>
   public get translationKey(): string {
-    return ChristianHolidayType[this.type];
-  }
-
-  public validate(): Array<string> {
-    const result = new Array<string>();
-    if (this.type === undefined) {
-      result.push('Christian holiday has no type');
-    }
-    return result;
+    return ChristianHolidayType[this.key];
   }
   // </editor-fold>
 }

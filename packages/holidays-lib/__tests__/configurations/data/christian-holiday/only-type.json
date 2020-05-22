@@ -1,9 +1,7 @@
 {
   "hierarchy": "christian-holiday-only-type",
   "description": "christian-holiday-only-type",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "ASCENSION_DAY" }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "ASCENSION_DAY" }
+  ]
 }

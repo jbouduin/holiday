@@ -1,11 +1,9 @@
 {
   "hierarchy": "invalid",
   "description": "invalid",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "" },
-      { },
-      { "type": "ABRACADABRA" }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "" },
+    { "holidayType": "CHRISTIAN" },
+    { "holidayType": "CHRISTIAN", "type": "ABRACADABRA" }
+  ]
 }

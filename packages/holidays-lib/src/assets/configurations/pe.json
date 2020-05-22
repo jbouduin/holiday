@@ -1,23 +1,19 @@
 {
   "hierarchy": "pe",
   "description": "Peru",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "EASTER" },
-  	  { "type": "MAUNDY_THURSDAY" },
-  	  { "type": "GOOD_FRIDAY" }
-    ],
-    "fixedHolidays": [
-      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-  	  { "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
-  	  { "key": "ST_PETER_PAUL", "month": "JUNE", "day": 29 },
-  	  { "key": "INDEPENDENCE", "month": "JULY", "day": 28 },
-  	  { "key": "INDEPENDENCE", "month": "JULY", "day": 29 },
-  	  { "key": "SANTA_ROSA", "month": "AUGUST", "day": 30 },
-  	  { "key": "ANGAMOS", "month": "OCTOBER", "day": 8 },
-  	  { "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1 },
-  	  { "key": "IMMACULATE_CONCEPTION", "month": "DECEMBER", "day": 8 },
-  	  { "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+	  { "holidayType": "CHRISTIAN", "type": "MAUNDY_THURSDAY" },
+	  { "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+	  { "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+	  { "holidayType": "FIXED_DATE", "key": "ST_PETER_PAUL", "month": "JUNE", "day": 29 },
+	  { "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "JULY", "day": 28 },
+	  { "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "JULY", "day": 29 },
+	  { "holidayType": "FIXED_DATE", "key": "SANTA_ROSA", "month": "AUGUST", "day": 30 },
+	  { "holidayType": "FIXED_DATE", "key": "ANGAMOS", "month": "OCTOBER", "day": 8 },
+	  { "holidayType": "FIXED_DATE", "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1 },
+	  { "holidayType": "FIXED_DATE", "key": "IMMACULATE_CONCEPTION", "month": "DECEMBER", "day": 8 },
+	  { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 }
+  ]
 }

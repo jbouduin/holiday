@@ -1,27 +1,23 @@
 {
   "hierarchy": "li",
   "description": "Liechtenstein",
-  "holidayCollection": {
-    "christianHolidays": [
-      { "type": "EASTER" },
-  		{ "type": "EASTER_MONDAY" },
-  		{ "type": "ASCENSION_DAY" },
-  		{ "type": "WHIT_MONDAY" },
-  		{ "type": "CORPUS_CHRISTI" }
-    ],
-    "fixedHolidays": [
-      { "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-  		{ "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
-  		{ "key": "CANDLEMAS", "month": "FEBRUARY", "day": 2 },
-  		{ "key": "ST_JOSEPH", "month": "MARCH", "day": 19 },
-  		{ "key": "MAY_DAY", "month": "MAY", "day": 1 },
-  		{ "key": "ASSUMPTION_DAY", "month": "AUGUST", "day": 15 },
-  		{ "key": "NATIVITY_LADY", "month": "SEPTEMBER", "day": 8 },
-  		{ "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1 },
-  		{ "key": "IMMACULATE_CONCEPTION", "month": "DECEMBER", "day": 8 },
-  		{ "key": "CHRISTMAS_EVE", "month": "DECEMBER", "day": 24 },
-  		{ "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
-  		{ "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
-    ]
-  }
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "ASCENSION_DAY" },
+		{ "holidayType": "CHRISTIAN", "type": "WHIT_MONDAY" },
+    { "holidayType": "CHRISTIAN", "type": "CORPUS_CHRISTI" },
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
+		{ "holidayType": "FIXED_DATE", "key": "CANDLEMAS", "month": "FEBRUARY", "day": 2 },
+		{ "holidayType": "FIXED_DATE", "key": "ST_JOSEPH", "month": "MARCH", "day": 19 },
+		{ "holidayType": "FIXED_DATE", "key": "MAY_DAY", "month": "MAY", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "ASSUMPTION_DAY", "month": "AUGUST", "day": 15 },
+		{ "holidayType": "FIXED_DATE", "key": "NATIVITY_LADY", "month": "SEPTEMBER", "day": 8 },
+		{ "holidayType": "FIXED_DATE", "key": "ALL_SAINTS", "month": "NOVEMBER", "day": 1 },
+		{ "holidayType": "FIXED_DATE", "key": "IMMACULATE_CONCEPTION", "month": "DECEMBER", "day": 8 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS_EVE", "month": "DECEMBER", "day": 24 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+		{ "holidayType": "FIXED_DATE", "key": "STEPHENS", "month": "DECEMBER", "day": 26 }
+  ]
 }
