@@ -1,25 +1,18 @@
 import { IFixedDateHoliday } from '../configuration';
+import { IBaseCalculator, BaseCalculator } from './base-calculator';
 
-import { ICalendarHelper, CalendarHelper } from './calendar-helper';
+export interface IFixedHolidayCalculator extends IBaseCalculator<IFixedDateHoliday>{ }
 
-export interface IFixedHolidayCalculator {
-  getFixedDateHoliday(holiday: IFixedDateHoliday, year: number): Date | undefined
-}
-
-export class FixedHolidayCalculator implements IFixedHolidayCalculator {
-
-  // <editor-fold desc='Private properties'>
-  private readonly calendarHelper: ICalendarHelper;
-  // </editor-fold>
+export class FixedHolidayCalculator extends BaseCalculator<IFixedDateHoliday> implements IFixedHolidayCalculator {
 
   // <editor-fold desc='Constructor'>
   public constructor() {
-    this.calendarHelper = new CalendarHelper();
+    super();
   }
   // </editor-fold>
 
-  // <editor-fold desc='IFixedHolidayCalculator interface methods'>
-  public getFixedDateHoliday(holiday: IFixedDateHoliday, year: number): Date | undefined
+  // <editor-fold desc='Abstract method implementation'>
+  public calculate(holiday: IFixedDateHoliday, year: number): Date | undefined
   {
     if (!this.calendarHelper.occurs(holiday, year)) {
       return undefined;

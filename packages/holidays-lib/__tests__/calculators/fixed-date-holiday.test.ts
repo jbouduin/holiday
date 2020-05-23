@@ -3,8 +3,7 @@ import { FixedHolidayCalculator } from '../../src/calculators';
 import { Configuration, IFixedDateHoliday } from '../../src/configuration';
 
 const dataRoot = './data/fixed-date';
-// FIVE_YEARS,
-// SIX_YEARS,
+
 describe.each([
   // single months
   ['01.january', 2000, new Date(2000, 0, 1)],
@@ -75,7 +74,7 @@ describe.each([
   const holiday: IFixedDateHoliday = configuration.holidayCollection[0] as IFixedDateHoliday;
 
   const calculator = new FixedHolidayCalculator();
-  const result = calculator.getFixedDateHoliday(holiday, year);
+  const result = calculator.calculate(holiday, year);
   test(`${configuration.description} in ${year} - calculation`, () => expect(result).toStrictEqual(expected));
 
 });
