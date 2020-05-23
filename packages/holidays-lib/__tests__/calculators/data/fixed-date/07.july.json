@@ -1,0 +1,7 @@
+{
+  "hierarchy": "july",
+  "description": "july",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JULY", "day": 1 }
+  ]
+}

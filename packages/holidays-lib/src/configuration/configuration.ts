@@ -59,12 +59,6 @@ export class Configuration implements IConfiguration {
   // </editor-fold>
 
   // <editor-fold desc='IConfiguration interface methods'>
-  // public calculate(year: number): Array<Date> {
-  //   let result = new Array<string>();
-  //
-  //   return result;
-  // }
-
   public validate(): Array<string> {
     let result = new Array<string>();
     if (!this.hierarchy) {
@@ -74,11 +68,6 @@ export class Configuration implements IConfiguration {
       result.push('Configuration has no description');
     }
     this.holidayCollection.forEach(holiday => result = result.concat(holiday.validate()));
-
-    // this.holidayCollection.christianHolidays.forEach(holiday => result = result.concat(holiday.validate()));
-    // this.holidayCollection.fixedHolidays.forEach(holiday => result = result.concat(holiday.validate()));
-    // this.holidayCollection.ethiopianOrthodoxHolidays.forEach(holiday => result = result.concat(holiday.validate()));
-    // this.holidayCollection.islamicHolidays.forEach(holiday => result = result.concat(holiday.validate()));
     return result;
   }
   // </editor-fold>

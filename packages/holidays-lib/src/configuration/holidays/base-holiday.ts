@@ -11,7 +11,6 @@ export interface IBaseHoliday<T> {
   readonly translationKey: string;
   readonly holidayType: HolidayType;
   validate(): Array<string>;
-  // calculate(year: number): Date;
 }
 
 export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
@@ -30,7 +29,6 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
 
   // <editor-fold desc='Abstract methods'>
   public abstract get translationKey(): string;
-  // public abstract calculate(year: number): Date;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
