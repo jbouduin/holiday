@@ -1,3 +1,4 @@
+import { CycleType } from './cycle-type';
 import { IFixedDate } from './fixed-date';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { IMoveable } from './moveable';
@@ -35,6 +36,18 @@ export class FixedDateHoliday extends BaseHoliday<string> implements IFixedDateH
     }
     if (!this.day || this.day < 1 || this.day > 31) {
       result.push(`Fixed holiday '${this.key}' has no valid day`);
+    }
+
+    switch (this.cycleType) {
+      case CycleType.TWO_YEARS:
+      case CycleType.FOUR_YEARS:
+      case CycleType.FIVE_YEARS:
+      case CycleType.SIX_YEARS: {
+        if (this.validFrom === BaseHoliday.undefinedValidTo) {
+          result.push(`Fixed holiday '${this.key}' has a cycle type '${this.cycleType}' but no valid from`);
+          break;
+        }
+      }
     }
     return result;
   }

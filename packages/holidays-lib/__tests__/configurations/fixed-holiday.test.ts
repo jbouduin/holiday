@@ -110,7 +110,8 @@ describe(`${type}-cycle-type`, () => {
 describe(`Invalid Fixed-date Configurations`, () => {
   const fileName = path.join(__dirname, `${dataRoot}/${type}/invalid.json`);
   const configuration = Configuration.loadByFileName(fileName);
-  test('collection size', () => expect(configuration.holidayCollection.length).toBe(7));
+  test('collection size', () => expect(configuration.holidayCollection.length).toBe(11));
   const validation = configuration.validate();
-  test('number of errors', () => expect(validation.length).toBe(7));
+  console.log(validation);
+  test('number of errors', () => expect(validation.length).toBe(11));
 });

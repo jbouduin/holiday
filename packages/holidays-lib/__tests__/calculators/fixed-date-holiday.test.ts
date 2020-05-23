@@ -71,7 +71,6 @@ describe.each([
   const configuration = Configuration.loadByFileName(file);
   test(`${configuration.description} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidayCollection[0] as IFixedDateHoliday;
-
   const calculator = new FixedHolidayCalculator();
   const result = calculator.calculate(holiday, year);
   test(`${configuration.description} in ${year} - calculation`, () => expect(result).toStrictEqual(expected));

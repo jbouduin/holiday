@@ -8,6 +8,10 @@
     { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY" },
     { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 0 },
     { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 32 },
-    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANVIER", "day": 1 }
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANVIER", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 1, "cycleType": "TWO_YEARS" },
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 1, "cycleType": "FOUR_YEARS" },
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 1, "cycleType": "FIVE_YEARS" },
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "JANUARY", "day": 1, "cycleType": "SIX_YEARS" }
   ]
 }
