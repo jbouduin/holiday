@@ -21,8 +21,8 @@ export class CalendarHelper implements ICalendarHelper {
   public getEasternSunday(chronology: ChronologyType, year: number): Date {
     switch (chronology) {
       case ChronologyType.JULIAN: {
-        // TODO check this year >= 1583
-        return year >= 1583 ? this.getJulianEasternSunday(year) : this.getGregorianEasterSunday(year);
+        // originally this checked on year >= 1583. Took it out.
+        return this.getJulianEasternSunday(year);
       }
       case ChronologyType.GREGORIAN: {
         return this.getGregorianEasterSunday(year);
@@ -40,19 +40,34 @@ export class CalendarHelper implements ICalendarHelper {
 
   // <editor-fold desc='Private methods'>
   private getJulianEasternSunday(year: number): Date {
-    // TODO: this is apparently wrong
-    const a = year % 4;
-    const b = year % 7;
-    const century = year % 19;
-    const d = (19 * century + 15) % 30;
-    const e = (2 * a + 4 * b - d + 34) % 7;
-    const x = d + e + 114;
-    const month = Math.floor(x / 31);
-    const day = (x % 31) + 1;
-    return new Date(Date.UTC(year, month === 3 ? 2 : 3, day));
+    // source: https://www.staff.science.uu.nl/~gent0113/easter/easter_text2a.htm
+    const a = this.generalizedModulo(year, 19);
+    const goldenNumber = a + 1;
+    const b = this.generalizedModulo(year, 4);
+    const c = this.generalizedModulo(year, 7);
+    let d = this.generalizedModulo((19 * a + 15), 30);
+    if ( goldenNumber === 1) {
+      d++;
+    }
+    const e= this.generalizedModulo((2 * b + 4 * c - d + 6), 7);
+    const fmj = 113 + d; // Easter full moon [days after -92 March]
+    const dmj = fmj + e + 1; // Easter Sunday [days after -92 March]
+    const fmmj = Math.floor(fmj / 31); // month Easter full moon [March = 3; April = 4]
+    const fmdj = this.generalizedModulo(fmj , 31) + 1; // day Easter full moon
+    const esmj = Math.floor(dmj / 31); // month Easter Sunday [March = 3; April = 4]
+    const esdj = this.generalizedModulo(dmj, 31) + 1; // day Easter Sunday
+
+    return this.addDays(new Date(Date.UTC(year, esmj === 3 ? 2 : 3, esdj)), 13);
+
+  }
+
+  private generalizedModulo(a: number, b: number): number {
+    // generalized modulo function (m mod n) - also valid for negative values of m
+    return (( a % b) + b) % b;
   }
 
   private getGregorianEasterSunday(year: number): Date {
+    // original yollyday code
     const a = year % 19;
     const b = Math.floor(year / 100);
     const c = year % 100;

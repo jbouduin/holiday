@@ -48,8 +48,8 @@ describe.each([
   ['07.easter-gregorian', 2038, new Date(Date.UTC(2038, 3, 25))],
   ['07.easter-gregorian', 2039, new Date(Date.UTC(2039, 3, 10))],
   ['07.easter-gregorian', 2040, new Date(Date.UTC(2040, 3, 1))],
-  // TODO: easter julian
-  /*
+  // easter julian : Carefull: the list on Wikipedia gives the Julian date.
+  // ww-holiday returns the Gregorian date of the Julian easter sunday
   ['07.easter-julian', 2000, new Date(Date.UTC(2000, 3, 30))],
   ['07.easter-julian', 2001, new Date(Date.UTC(2001, 3, 15))],
   ['07.easter-julian', 2002, new Date(Date.UTC(2002, 4, 5))],
@@ -66,7 +66,7 @@ describe.each([
   ['07.easter-julian', 2013, new Date(Date.UTC(2013, 4, 5))],
   ['07.easter-julian', 2014, new Date(Date.UTC(2014, 3, 20))],
   ['07.easter-julian', 2015, new Date(Date.UTC(2015, 3, 12))],
-  ['07.easter-julian', 2016, new Date(Date.UTC(2016, 5, 1))],
+  ['07.easter-julian', 2016, new Date(Date.UTC(2016, 4, 1))],
   ['07.easter-julian', 2017, new Date(Date.UTC(2017, 3, 16))],
   ['07.easter-julian', 2018, new Date(Date.UTC(2018, 3, 8))],
   ['07.easter-julian', 2019, new Date(Date.UTC(2019, 3, 28))],
@@ -90,8 +90,7 @@ describe.each([
   ['07.easter-julian', 2037, new Date(Date.UTC(2037, 3, 5))],
   ['07.easter-julian', 2038, new Date(Date.UTC(2038, 3, 25))],
   ['07.easter-julian', 2039, new Date(Date.UTC(2039, 3, 17))],
-  ['07.easter-julian', 2040, new Date(Date.UTC(2040, 4, 6)]
-  */
+  ['07.easter-julian', 2040, new Date(Date.UTC(2040, 4, 6))],
   // all Christian holidays relative to easter
   ['01.shrove-monday', 2020, new Date(Date.UTC(2020, 1, 24))],
   ['01.clean-monday', 2020, new Date(Date.UTC(2020, 1, 24))],
@@ -118,8 +117,8 @@ describe.each([
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = Configuration.loadByFileName(file);
   test(`${configuration.description} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
-  const holiday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
 
+  const holiday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
   const calculator = new ChristianHolidayCalculator();
   const result = calculator.calculate(holiday, year);
   test(`${configuration.description} in ${year} - calculation`, () => expect(result).toStrictEqual(expected));
