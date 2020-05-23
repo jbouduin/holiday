@@ -1,0 +1,7 @@
+{
+  "hierarchy": "which-fourth",
+  "description": "which fourth",
+  "holidayCollection": [
+    { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "FOURTH", "weekday": "MONDAY", "month": "JANUARY" }
+  ]
+}

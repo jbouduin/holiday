@@ -1,6 +1,6 @@
 {
-  "hierarchy": "fixed-holiday-only-key",
-  "description": "fixed-holiday-only-key",
+  "hierarchy": "fixed-date-holiday-only-key",
+  "description": "fixed-date-holiday-only-key",
   "holidayCollection": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 }
   ]

@@ -1,0 +1,7 @@
+{
+  "hierarchy": "month-may",
+  "description": "month may",
+  "holidayCollection": [
+    { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "FIRST", "weekday": "FRIDAY", "month": "MAY" }
+  ]
+}

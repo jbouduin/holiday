@@ -1,0 +1,7 @@
+{
+  "hierarchy": "invalid-month-missing",
+  "description": "month missing",
+  "holidayCollection": [
+    { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "FIRST", "weekday": "FRIDAY" }
+  ]
+}

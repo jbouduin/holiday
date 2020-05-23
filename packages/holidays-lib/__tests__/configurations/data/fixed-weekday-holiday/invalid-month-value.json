@@ -1,0 +1,7 @@
+{
+  "hierarchy": "invalid-month-value",
+  "description": "month invalid value",
+  "holidayCollection": [
+    { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "FIRST", "weekday": "FRIDAY", "month": "ABRACADABRA" }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "hierarchy": "which-second",
+  "description": "which second",
+  "holidayCollection": [
+    { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "SECOND", "weekday": "MONDAY", "month": "JANUARY" }
+  ]
+}

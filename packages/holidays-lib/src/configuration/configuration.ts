@@ -8,7 +8,11 @@ import { HolidayStatus, HolidayStatusKeyStrings } from './holidays/holiday-statu
 import { HolidayType, HolidayTypeKeyStrings } from './holidays/holiday-type';
 // fixed holiday related
 import { IFixedDateHoliday, FixedDateHoliday } from './holidays/fixed-date-holiday';
+import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from './holidays/fixed-weekday-holiday';
 import { Month, MonthKeyStrings } from './holidays/month';
+import { Weekday, WeekdayKeyStrings} from './holidays/weekday';
+import { Which, WhichKeyStrings} from './holidays/which';
+
 // Christian holiday related
 import { IChristianHoliday, ChristianHoliday } from './holidays/christian-holiday';
 import { ChristianHolidayType, ChristianHolidayTypeKeyStrings } from './holidays/christian-holiday-type';
@@ -26,7 +30,6 @@ export interface IConfiguration {
   holidayCollection: Array<IBaseHoliday<any>>;
   subConfiguration?: Array<IConfiguration>;
   validate(): Array<string>;
-  // calculate(year: number): Array<Date>;
 }
 
 export class Configuration implements IConfiguration {
@@ -94,6 +97,10 @@ export class Configuration implements IConfiguration {
             this.holidayCollection.push(this.processFixedDateHoliday(holiday));
             break;
           }
+          case HolidayType.FIXED_WEEKDAY: {
+            this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
+            break;
+          }
           case HolidayType.ISLAMIC: {
             this.holidayCollection.push(this.processIslamicHoliday(holiday));
             break;
@@ -125,6 +132,16 @@ export class Configuration implements IConfiguration {
 
   private processFixedDateHoliday(obj: any): IFixedDateHoliday {
     const result = new FixedDateHoliday(obj.key, Month[<MonthKeyStrings>obj.month], obj.day);
+    this.processHoliday(result, obj);
+    return result;
+  }
+
+  private processFixedWeekdayHoliday(obj: any): IFixedWeekdayHoliday {
+    const result = new FixedWeekdayHoliday(
+      obj.key,
+      Which[<WhichKeyStrings>obj.which],
+      Weekday[<WeekdayKeyStrings>obj.weekday],
+      Month[<MonthKeyStrings>obj.month] );
     this.processHoliday(result, obj);
     return result;
   }

@@ -46,6 +46,17 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
     if (this.key === undefined) {
       result.push('holiday has no valid key');
     }
+    switch (this.cycleType) {
+      case CycleType.TWO_YEARS:
+      case CycleType.FOUR_YEARS:
+      case CycleType.FIVE_YEARS:
+      case CycleType.SIX_YEARS: {
+        if (this.validFrom === BaseHoliday.undefinedValidTo) {
+          result.push(`Fixed holiday '${this.key}' has a cycle type '${this.cycleType}' but no valid from`);
+          break;
+        }
+      }
+    }
     return result;
   }
   // </editor-fold>

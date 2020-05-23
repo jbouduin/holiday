@@ -9,7 +9,7 @@ import { HolidayType } from '../../src/configuration/holidays/holiday-type';
 import { Month } from '../../src/configuration/holidays/month';
 
 const dataRoot = './data';
-const type = 'fixed-holiday';
+const type = 'fixed-date-holiday';
 
 // The tests on fixed-date configuration also tests the base-holiday properties
 describe(`${type}-only-key`, () => {
@@ -112,6 +112,5 @@ describe(`Invalid Fixed-date Configurations`, () => {
   const configuration = Configuration.loadByFileName(fileName);
   test('collection size', () => expect(configuration.holidayCollection.length).toBe(11));
   const validation = configuration.validate();
-  console.log(validation);
   test('number of errors', () => expect(validation.length).toBe(11));
 });
