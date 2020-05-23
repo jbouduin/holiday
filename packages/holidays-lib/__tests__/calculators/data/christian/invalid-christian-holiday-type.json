@@ -1,0 +1,7 @@
+{
+  "hierarchy": "sacred-heart",
+  "description": "Sacred heart",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "ABRACADABRA" }
+  ]
+}

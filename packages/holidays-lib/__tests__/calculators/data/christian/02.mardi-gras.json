@@ -1,0 +1,7 @@
+{
+  "hierarchy": "mardi-gras",
+  "description": "Mardi gras",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "MARDI_GRAS" }
+  ]
+}

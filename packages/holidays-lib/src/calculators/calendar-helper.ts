@@ -2,6 +2,7 @@ import { ChronologyType, CycleType } from '../configuration';
 import { BaseHoliday, IBaseHoliday, IFixedDateHoliday } from '../configuration';
 
 export interface ICalendarHelper {
+  addDays(date: Date, days: number): Date;
   getEasternSunday(chronology: ChronologyType, year: number): Date;
   occurs(holiday: IBaseHoliday<any>, year: number): boolean;
 }
@@ -13,17 +14,18 @@ export class CalendarHelper implements ICalendarHelper {
   // </editor-fold>
 
   // <editor-fold desc='ICalendar interface methods'>
+  public addDays(date: Date, days: number): Date {
+    return new Date(date.getTime() + (days * 1000 * 60 * 60 * 24));
+  }
+
   public getEasternSunday(chronology: ChronologyType, year: number): Date {
     switch (chronology) {
       case ChronologyType.JULIAN: {
-        // TODO check this year >0 1583
+        // TODO check this year >= 1583
         return year >= 1583 ? this.getJulianEasternSunday(year) : this.getGregorianEasterSunday(year);
       }
       case ChronologyType.GREGORIAN: {
         return this.getGregorianEasterSunday(year);
-      }
-      default: {
-        throw new Error('invalid chronology');
       }
     }
   }
@@ -47,7 +49,7 @@ export class CalendarHelper implements ICalendarHelper {
     const x = d + e + 114;
     const month = Math.floor(x / 31);
     const day = (x % 31) + 1;
-    return new Date(year, month === 3 ? 2 : 3, day);
+    return new Date(Date.UTC(year, month === 3 ? 2 : 3, day));
   }
 
   private getGregorianEasterSunday(year: number): Date {
@@ -66,7 +68,7 @@ export class CalendarHelper implements ICalendarHelper {
     const x = h + k - 7 * l + 114;
     const month = Math.floor(x / 31);
     const day = (x % 31) + 1;
-    return new Date(year, month == 3 ? 2 : 3, day);
+    return new Date(Date.UTC(year, month == 3 ? 2 : 3, day));
   }
 
   private isValidForCyle(holiday: IBaseHoliday<any>, year: number): boolean

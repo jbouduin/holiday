@@ -1,0 +1,7 @@
+{
+  "hierarchy": "corpus-christi",
+  "description": "Corpus Christi",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "CORPUS_CHRISTI" }
+  ]
+}

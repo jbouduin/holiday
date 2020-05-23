@@ -1,0 +1,7 @@
+{
+  "hierarchy": "good-friday",
+  "description": "Good Friday",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" }
+  ]
+}

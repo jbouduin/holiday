@@ -17,7 +17,7 @@ export class FixedHolidayCalculator extends BaseCalculator<IFixedDateHoliday> im
     if (!this.calendarHelper.occurs(holiday, year)) {
       return undefined;
     }
-    return new Date(year, holiday.month, holiday.day);
+    return new Date(Date.UTC(year, holiday.month, holiday.day));
   }
   // </editor-fold>
 }

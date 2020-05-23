@@ -1,0 +1,7 @@
+{
+  "hierarchy": "carnival",
+  "description": "Carnival",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "CARNIVAL" }
+  ]
+}

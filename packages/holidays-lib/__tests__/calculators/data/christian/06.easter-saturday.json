@@ -1,0 +1,7 @@
+{
+  "hierarchy": "easter-saturday",
+  "description": "Easter Saturday",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "EASTER_SATURDAY" }
+  ]
+}
