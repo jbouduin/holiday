@@ -2,8 +2,6 @@
   "hierarchy": "invalid",
   "description": "invalid",
   "holidayCollection": [
-    { "holidayType": "ISLAMIC", "type": "" },
-    { "holidayType": "ISLAMIC" },
     { "holidayType": "ISLAMIC", "type": "ABRACADABRA" }
   ]
 }
