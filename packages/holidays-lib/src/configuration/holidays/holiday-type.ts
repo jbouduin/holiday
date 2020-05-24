@@ -7,9 +7,8 @@ export enum HolidayType {
   FIXED_WEEKDAY_RELATIVE_TO_FIX,
   HEBREW,
   ISLAMIC,
-  RELATIVE_TO_EASTER_SUNDAY,
-  RELATIVE_TO_FIXED,
-  RELATIVE_TO_WEEKDAY_IN_MONTH
+  RELATIVE_TO_DATE,
+  RELATIVE_TO_WEEKDAY
 }
 
 export type HolidayTypeKeyStrings = keyof typeof HolidayType;
