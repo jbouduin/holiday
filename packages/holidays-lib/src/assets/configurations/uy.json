@@ -1,0 +1,22 @@
+{
+  "hierarchy": "uy",
+  "description": "Uruguay",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
+    { "holidayType": "FIXED_DATE", "key": "PATRIOT", "month": "APRIL", "day": 19 },
+    { "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "LAS_PIEDRAS", "month": "MAY", "day": 18 },
+    { "holidayType": "FIXED_DATE", "key": "ARTIGAS", "month": "JUNE", "day": 19 },
+    { "holidayType": "FIXED_DATE", "key": "CONSTITUTION_DAY", "month": "JULY", "day": 18 },
+    { "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "AUGUST", "day": 25 },
+    { "holidayType": "FIXED_DATE", "key": "ALL_SOULS", "month": "NOVEMBER", "day": 2 },
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+    { "holidayType": "FIXED_WEEKDAY", "key": "RACE", "which": "SECOND", "weekday": "MONDAY", "month": "OCTOBER" },
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+    { "holidayType": "CHRISTIAN", "type": "CARNIVAL" },
+    { "holidayType": "CHRISTIAN", "type": "MAUNDY_THURSDAY" },
+    { "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
+    { "holidayType": "CHRISTIAN", "type": "CORPUS_CHRISTI" }
+  ]
+}
