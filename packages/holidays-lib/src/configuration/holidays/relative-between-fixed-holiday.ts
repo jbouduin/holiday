@@ -1,17 +1,18 @@
-import { IFixedDate } from './fixed-date';
+import { IBetweenFixedDates } from './between-fixed-dates';
 import { IBaseRelativeHoliday, BaseRelativeHoliday } from './base-relative-holiday';
+import { IFixedDate } from './fixed-date';
 import { HolidayType } from './holiday-type';
 import { Month } from './month';
 import { Weekday } from './weekday';
 import { When } from './when';
 
-export interface IRelativeToDateHoliday extends IBaseRelativeHoliday<IFixedDate> { }
+export interface IRelativeBetweenFixedHoliday extends IBaseRelativeHoliday<IBetweenFixedDates> { }
 
-export class RelativeToDateHoliday extends BaseRelativeHoliday<IFixedDate> implements IRelativeToDateHoliday {
+export class RelativeBetweenFixedHoliday extends BaseRelativeHoliday<IBetweenFixedDates> implements IRelativeBetweenFixedHoliday {
 
   // <editor-fold desc='Constructor & C°'>
-  public constructor(key: string, fix: IFixedDate, when: When, weekday: Weekday) {
-    super(HolidayType.RELATIVE_TO_DATE, key, fix, when, weekday);
+  public constructor(key: string, fix: IBetweenFixedDates, weekday: Weekday) {
+    super(HolidayType.RELATIVE_BETWEEN_FIXED, key, fix, When.BEFORE, weekday);
   }
   // </editor-fold>
 
@@ -21,28 +22,34 @@ export class RelativeToDateHoliday extends BaseRelativeHoliday<IFixedDate> imple
   }
 
   public validateFix(): Array<string> {
+    return this.validateFixedDate(this.fix.from).concat(this.validateFixedDate(this.fix.to));
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='Private methods'>
+  private validateFixedDate(fixedDate: IFixedDate): Array<string> {
     const result = new Array<string>();
 
     // TODO: this is a copy from fix-date-holiday validation
-    if (!this.fix.day || this.fix.day < 1 || this.fix.day > 31) {
+    if (!fixedDate.day || fixedDate.day < 1 || fixedDate.day > 31) {
       result.push(`Fixed of '${this.key}' has an invalid day`);
     }
 
-    if (this.fix.month === undefined) {
+    if (fixedDate.month === undefined) {
       result.push(`Fix of '${this.key}' has no valid month`);
     } else {
-      switch(this.fix.month) {
+      switch(fixedDate.month) {
         case Month.APRIL:
         case Month.JUNE:
         case Month.SEPTEMBER:
         case Month.NOVEMBER: {
-          if (this.fix.day > 30) {
+          if (fixedDate.day > 30) {
             result.push(`Fix of '${this.key}' has an invalid day`);
           }
           break;
         }
         case Month.FEBRUARY: {
-          if (this.fix.day > 29) {
+          if (fixedDate.day > 29) {
             result.push(`Fixed of '${this.key}' has an invalid day`);
           }
           break;
@@ -52,4 +59,5 @@ export class RelativeToDateHoliday extends BaseRelativeHoliday<IFixedDate> imple
     return result;
   }
   // </editor-fold>
+
 }

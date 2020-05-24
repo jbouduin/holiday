@@ -38,29 +38,4 @@ export class RelativeToWeekdayHoliday extends BaseRelativeHoliday<IFixedWeekday>
      return result;
    }
    // </editor-fold>
-
-   // <editor-fold desc='Base class methods override'>
-   public validate(): Array<string> {
-     const result = super.validate();
-     if (this.key === '') {
-       result.push('holiday has no valid key');
-     }
-     if (this.when === undefined) {
-       result.push(`relative to date holiday '${this.key}'' has no valid when`);
-     }
-
-     if (this.weekday === undefined) {
-       result.push(`relative to date holiday '${this.key}'' has no valid weekday`);
-     }
-     return result;
-   }
-   // </editor-fold>
 }
-//
-//
-//   // <editor-fold desc='Constructor'>
-//   public constructor() {
-//
-//   }
-//   // </editor-fold>
-// }
