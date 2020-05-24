@@ -1,37 +1,34 @@
 import * as path from 'path';
 
-import { Configuration } from '../../src/configuration/configuration';
-import { EthiopianOrthodoxHolidayType } from '../../src/configuration/holidays/ethiopian-orthodox-holiday-type';
-import { IEthiopianOrthodoxHoliday } from '../../src/configuration/holidays/ethiopian-orthodox-holiday';
-import { CycleType } from '../../src/configuration/holidays/cycle-type';
-import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
-import { HolidayStatus } from '../../src/configuration/holidays/holiday-status';
-import { HolidayType } from '../../src/configuration/holidays/holiday-type';
+import { Configuration } from '../../src/configuration';
+import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHolidayType } from '../../src/configuration';
 
-const dataRoot = './data';
-const type = 'ethiopian-orthodox-holiday';
 
-describe(`${type}-only-type`, () => {
-  const current = 'only-type';
-  const fileName = path.join(__dirname, `${dataRoot}/${type}/${current}.json`);
-  const configuration = Configuration.loadByFileName(fileName);
-  test('hierarchy', () => expect(configuration.hierarchy).toBe(`${type}-${current}`));
-  test('description', () => expect(configuration.description).toBe(`${type}-${current}`));
-  test('collection size', () => expect(configuration.holidayCollection.length).toBe(1));
-  const ethiopianOrthodoxHoliday: IEthiopianOrthodoxHoliday = configuration.holidayCollection[0] as IEthiopianOrthodoxHoliday;
-  test('holidayType', () => expect(ethiopianOrthodoxHoliday.holidayType).toBe(HolidayType.ETHIOPIAN_ORTHODOX));
-  test('cycleType', () => expect(ethiopianOrthodoxHoliday.cycleType).toBe(CycleType.EVERY_YEAR));
-  test('holidayStatus', () => expect(ethiopianOrthodoxHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY));
-  test('validFrom', () => expect(ethiopianOrthodoxHoliday.validFrom).toBe(BaseHoliday.undefinedValidFrom));
-  test('validTo', () => expect(ethiopianOrthodoxHoliday.validTo).toBe(BaseHoliday.undefinedValidTo));
-  test('key', () => expect(ethiopianOrthodoxHoliday.key).toBe(EthiopianOrthodoxHolidayType.ENKUTATASH));
-  test('translationKey', () => expect(ethiopianOrthodoxHoliday.translationKey).toBe('ENKUTATASH'));
-});
+const dataRoot = './data/ethiopian-orthodox-holiday';
 
-describe(`Invalid Ethiopian-orthodox Configurations`, () => {
-  const fileName = path.join(__dirname, `${dataRoot}/${type}/invalid.json`);
-  const configuration = Configuration.loadByFileName(fileName);
-  test('collection size', () => expect(configuration.holidayCollection.length).toBe(3));
+describe.each([
+  ['holiday-type.enkutatash', EthiopianOrthodoxHolidayType.ENKUTATASH],
+  ['holiday-type.meskel', EthiopianOrthodoxHolidayType.MESKEL],
+  ['holiday-type.timkat', EthiopianOrthodoxHolidayType.TIMKAT]
+])('Ethiopian Orthodox ', (fileName: string, expected: EthiopianOrthodoxHolidayType) => {
+  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
+  const configuration = Configuration.loadByFileName(file);
+  test(`${fileName} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
   const validation = configuration.validate();
-  test('number of errors', () => expect(validation.length).toBe(3));
-});
+  test(`${fileName} - validation length`, () => expect(validation.length).toBe(0));
+  const holiday: IEthiopianOrthodoxHoliday = configuration.holidayCollection[0] as IEthiopianOrthodoxHoliday;
+  test(`${fileName} - EthiopianOrthodoxHolidayType`,
+     () => expect(EthiopianOrthodoxHolidayType[holiday.key]).toBe(EthiopianOrthodoxHolidayType[expected]));
+})
+
+describe.each([
+  ['invalid.empty-holiday-type'],
+  ['invalid.holiday-type-value'],
+  ['invalid.missing-holiday-type']
+])('Ethiopian Orthodox invalid configurations', (fileName: string) => {
+  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
+  const configuration = Configuration.loadByFileName(file);
+  test(`${fileName} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const validation = configuration.validate();
+  test(`${fileName} - validation length`, () => expect(validation.length).toBe(1));
+})

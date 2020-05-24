@@ -2,8 +2,6 @@
   "hierarchy": "invalid",
   "description": "invalid",
   "holidayCollection": [
-    { "holidayType": "ETHIOPIAN_ORTHODOX", "type": "" },
-    { "holidayType": "ETHIOPIAN_ORTHODOX" },
     { "holidayType": "ETHIOPIAN_ORTHODOX", "type": "ABRACADABRA" }
   ]
 }
