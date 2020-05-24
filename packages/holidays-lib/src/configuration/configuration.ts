@@ -118,9 +118,12 @@ export class Configuration implements IConfiguration {
   }
 
   private processChristianHoliday(obj: any): IChristianHoliday {
-    const result = new ChristianHoliday(
-      ChristianHolidayType[<ChristianHolidayTypeKeyStrings>obj.type],
-      ChronologyType[<ChronologyTypeKeyStrings>obj.chronology]);
+    const result = new ChristianHoliday(ChristianHolidayType[<ChristianHolidayTypeKeyStrings>obj.type]);
+      if (obj.chronology) {
+        result.chronology = ChronologyType[<ChronologyTypeKeyStrings>obj.chronology];
+      } else {
+        result.chronology = ChronologyType.GREGORIAN;
+      }
     this.processHoliday(result, obj);
     return result;
   }

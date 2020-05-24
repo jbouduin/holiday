@@ -22,10 +22,20 @@ export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implemen
   // </editor-fold>
 
   // <editor-fold desc='Constructor'>
-  public constructor(key: ChristianHolidayType, chronology?: ChronologyType) {
+  public constructor(key: ChristianHolidayType) {
     super(HolidayType.CHRISTIAN, key);
+    this.chronology = ChronologyType.GREGORIAN;
     this.movingConditions = new Array<IMovingCondition>();
-    this.chronology = chronology || ChronologyType.GREGORIAN;
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='Baseclass methods override'>
+  public validate(): Array<string> {
+    const result = super.validate();
+    if (this.chronology === undefined) {
+      result.push(`Fixed holiday '${this.key}' has no valid chronology`);
+    }
+    return result;
   }
   // </editor-fold>
 

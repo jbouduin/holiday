@@ -1,56 +1,67 @@
 import * as path from 'path';
 
-import { Configuration } from '../../src/configuration/configuration';
-import { ChristianHolidayType } from '../../src/configuration/holidays/christian-holiday-type';
-import { IChristianHoliday } from '../../src/configuration/holidays/christian-holiday';
-import { ChronologyType } from '../../src/configuration/holidays/chronology-type';
-import { CycleType } from '../../src/configuration/holidays/cycle-type';
-import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
-import { HolidayStatus } from '../../src/configuration/holidays/holiday-status';
-import { HolidayType } from '../../src/configuration/holidays/holiday-type';
+import { Configuration } from '../../src/configuration';
+import { IChristianHoliday, ChristianHolidayType, ChronologyType } from '../../src/configuration';
 
-const dataRoot = './data';
-const type = 'christian-holiday';
 
-describe(`${type}-only-type`, () => {
-  const current = 'only-type';
-  const fileName = path.join(__dirname, `${dataRoot}/${type}/${current}.json`);
-  const configuration = Configuration.loadByFileName(fileName);
-  test('hierarchy', () => expect(configuration.hierarchy).toBe(`${type}-${current}`));
-  test('description', () => expect(configuration.description).toBe(`${type}-${current}`));
-  test('collection size', () => expect(configuration.holidayCollection.length).toBe(1));
-  const christianHoliday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
-  test('holidayType', () => expect(christianHoliday.holidayType).toBe(HolidayType.CHRISTIAN));
-  test('cycleType', () => expect(christianHoliday.cycleType).toBe(CycleType.EVERY_YEAR));
-  test('holidayStatus', () => expect(christianHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY));
-  test('validFrom', () => expect(christianHoliday.validFrom).toBe(BaseHoliday.undefinedValidFrom));
-  test('validTo', () => expect(christianHoliday.validTo).toBe(BaseHoliday.undefinedValidTo));
-  test('key', () => expect(christianHoliday.key).toBe(ChristianHolidayType.ASCENSION_DAY));
-  test('chronology', () => expect(christianHoliday.chronology).toBe(ChronologyType.GREGORIAN));
-  test('translationKey', () => expect(christianHoliday.translationKey).toBe('ASCENSION_DAY'));
-});
+const dataRoot = './data/christian-holiday';
 
-describe(`${type}-chronology-type`, () => {
-  const current = 'chronology-type';
-  const fileName = path.join(__dirname, `${dataRoot}/${type}/${current}.json`);
-  const configuration = Configuration.loadByFileName(fileName);
-  test('hierarchy', () => expect(configuration.hierarchy).toBe(`${type}-${current}`));
-  test('description', () => expect(configuration.description).toBe(`${type}-${current}`));
-  test('collection size', () => expect(configuration.holidayCollection.length).toBe(1));
-  const christianHoliday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
-  test('holidayType', () => expect(christianHoliday.holidayType).toBe(HolidayType.CHRISTIAN));
-  test('cycleType', () => expect(christianHoliday.cycleType).toBe(CycleType.EVERY_YEAR));
-  test('holidayStatus', () => expect(christianHoliday.holidayStatus).toBe(HolidayStatus.OFFICIAL_HOLIDAY));
-  test('validFrom', () => expect(christianHoliday.validFrom).toBe(BaseHoliday.undefinedValidFrom));
-  test('validTo', () => expect(christianHoliday.validTo).toBe(BaseHoliday.undefinedValidTo));
-  test('key', () => expect(christianHoliday.key).toBe(ChristianHolidayType.ASCENSION_DAY));
-  test('chronology', () => expect(christianHoliday.chronology).toBe(ChronologyType.JULIAN));
-});
-
-describe(`invalid Christian Holiday Configurations`, () => {
-  const fileName = path.join(__dirname, `${dataRoot}/${type}/invalid.json`);
-  const configuration = Configuration.loadByFileName(fileName);
-  test('collection size', () => expect(configuration.holidayCollection.length).toBe(3));
+describe.each([
+  ['holiday-type.ascension_day', ChristianHolidayType.ASCENSION_DAY],
+  ['holiday-type.ash_wednesday', ChristianHolidayType.ASH_WEDNESDAY],
+  ['holiday-type.carnival', ChristianHolidayType.CARNIVAL],
+  ['holiday-type.clean_monday', ChristianHolidayType.CLEAN_MONDAY],
+  ['holiday-type.corpus_christi', ChristianHolidayType.CORPUS_CHRISTI],
+  ['holiday-type.easter_monday', ChristianHolidayType.EASTER_MONDAY],
+  ['holiday-type.easter_saturday', ChristianHolidayType.EASTER_SATURDAY],
+  ['holiday-type.easter_tuesday', ChristianHolidayType.EASTER_TUESDAY],
+  ['holiday-type.easter', ChristianHolidayType.EASTER],
+  ['holiday-type.general_prayer_day', ChristianHolidayType.GENERAL_PRAYER_DAY],
+  ['holiday-type.good_friday', ChristianHolidayType.GOOD_FRIDAY],
+  ['holiday-type.mardi_gras', ChristianHolidayType.MARDI_GRAS],
+  ['holiday-type.maundy_thursday', ChristianHolidayType.MAUNDY_THURSDAY],
+  ['holiday-type.pentecost_monday', ChristianHolidayType.PENTECOST_MONDAY],
+  ['holiday-type.pentecost', ChristianHolidayType.PENTECOST],
+  ['holiday-type.sacred_heart', ChristianHolidayType.SACRED_HEART],
+  ['holiday-type.shrove_monday', ChristianHolidayType.SHROVE_MONDAY],
+  ['holiday-type.whit_sunday', ChristianHolidayType.WHIT_SUNDAY],
+  ['holiday-type.whit_monday', ChristianHolidayType.WHIT_MONDAY]
+])('Christian holiday ', (fileName: string, expected: ChristianHolidayType) => {
+  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
+  const configuration = Configuration.loadByFileName(file);
+  test(`${fileName} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
   const validation = configuration.validate();
-  test('number of errors', () => expect(validation.length).toBe(3));
-});
+  test(`${fileName} - validation length`, () => expect(validation.length).toBe(0));
+  const holiday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
+  test(`${fileName} - EthiopianOrthodoxHolidayType`,
+     () => expect(ChristianHolidayType[holiday.key]).toBe(ChristianHolidayType[expected]));
+})
+
+describe.each([
+  ['chronology-type.empty', ChronologyType.GREGORIAN],
+  ['chronology-type.gregorian', ChronologyType.GREGORIAN],
+  ['chronology-type.julian', ChronologyType.JULIAN],
+  ['chronology-type.not-specified', ChronologyType.GREGORIAN]
+])('Christian holiday chronology', (fileName: string, expected: ChronologyType) => {
+    const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
+    const configuration = Configuration.loadByFileName(file);
+    test(`${fileName} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+    const validation = configuration.validate();
+    test(`${fileName} - validation length`, () => expect(validation.length).toBe(0));
+    const holiday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
+    test(`${fileName} - ChronologyType`,
+       () => expect(ChronologyType[holiday.chronology]).toBe(ChronologyType[expected]));
+  })
+
+describe.each([
+  ['invalid.chronology-type-value'],
+  ['invalid.empty-holiday-type'],
+  ['invalid.holiday-type-value'],
+  ['invalid.missing-holiday-type']
+])('Christian Holiday invalid configurations', (fileName: string) => {
+  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
+  const configuration = Configuration.loadByFileName(file);
+  test(`${fileName} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const validation = configuration.validate();
+  test(`${fileName} - validation length`, () => expect(validation.length).toBe(1));
+})

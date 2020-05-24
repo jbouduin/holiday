@@ -1,0 +1,7 @@
+{
+  "hierarchy": "christian-holiday-chronology-type",
+  "description": "christian-holiday-chronology-type",
+  "holidayCollection": [
+    { "holidayType": "CHRISTIAN", "type": "ASCENSION_DAY", "chronology": "ABRACADABRA" }
+  ]
+}
