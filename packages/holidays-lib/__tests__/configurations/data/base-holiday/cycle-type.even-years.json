@@ -1,0 +1,7 @@
+{
+  "hierarchy": "cycle-type-even-years",
+  "description": "cycle type even years",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "cycleType": "EVEN_YEARS" }
+  ]
+}

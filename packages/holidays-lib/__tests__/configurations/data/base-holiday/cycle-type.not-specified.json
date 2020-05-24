@@ -1,0 +1,7 @@
+{
+  "hierarchy": "cycle-type-not specified",
+  "description": "cycle type not specified",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 }
+  ]
+}

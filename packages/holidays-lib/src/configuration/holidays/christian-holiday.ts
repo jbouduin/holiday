@@ -1,6 +1,8 @@
 import { HolidayType } from './holiday-type';
 import { ChristianHolidayType } from './christian-holiday-type';
 import { ChronologyType } from './chronology-type';
+import { CycleType }  from './cycle-type';
+import { HolidayStatus } from './holiday-status';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 import { IMoveable } from './moveable';
 import { IMovingCondition } from './moving-condition';

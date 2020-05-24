@@ -1,0 +1,7 @@
+{
+  "hierarchy": "invalid-key-empty",
+  "description": "key empty",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "", "month": "JANUARY", "day": 1 }
+  ]
+}

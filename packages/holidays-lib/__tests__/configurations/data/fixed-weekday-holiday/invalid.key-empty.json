@@ -1,0 +1,7 @@
+{
+  "hierarchy": "invalid-key-empty",
+  "description": "key empty",
+  "holidayCollection": [
+    { "holidayType": "FIXED_WEEKDAY", "key": "", "which": "FIRST", "weekday": "FRIDAY", "month": "APRIL" }
+  ]
+}

@@ -81,9 +81,11 @@ export class Configuration implements IConfiguration {
     const obj = JSON.parse(data);
     this.hierarchy = obj.hierarchy;
     this.description = obj.description;
+
     if (obj.holidayCollection?.length > 0) {
       obj.holidayCollection.forEach( (holiday: any) => {
         const holidayType = HolidayType[<HolidayTypeKeyStrings>holiday.holidayType];
+
         switch(holidayType) {
           case HolidayType.CHRISTIAN: {
             this.holidayCollection.push(this.processChristianHoliday(holiday));
@@ -124,8 +126,7 @@ export class Configuration implements IConfiguration {
   }
 
   private processEthiopianOrthodoxHoliday(obj: any): IEthiopianOrthodoxHoliday {
-    const result = new EthiopianOrthodoxHoliday(
-      EthiopianOrthodoxHolidayType[<EthiopianOrthodoxHolidayTypeKeyStrings>obj.type]);
+    const result = new EthiopianOrthodoxHoliday(EthiopianOrthodoxHolidayType[<EthiopianOrthodoxHolidayTypeKeyStrings>obj.type]);
     this.processHoliday(result, obj);
     return result;
   }
@@ -147,8 +148,7 @@ export class Configuration implements IConfiguration {
   }
 
   private processIslamicHoliday(obj: any): IIslamicHoliday {
-    const result = new IslamicHoliday(
-      IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type]);
+    const result = new IslamicHoliday(IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type]);
     this.processHoliday(result, obj);
     return result;
   }
@@ -156,19 +156,23 @@ export class Configuration implements IConfiguration {
   private processHoliday(holiday: IBaseHoliday<any>, obj: any): void {
 
     if (obj.validFrom) {
-      holiday.validFrom = obj.validFrom;
+      holiday.validFrom = Number(obj.validFrom);
     }
 
     if (obj.validTo) {
-      holiday.validTo = obj.validTo;
+      holiday.validTo = Number(obj.validTo);
     }
 
     if (obj.cycleType) {
       holiday.cycleType = CycleType[<CycleTypeKeyStrings>obj.cycleType];
+    } else {
+      holiday.cycleType = CycleType.EVERY_YEAR;
     }
 
     if (obj.holidayStatus) {
       holiday.holidayStatus = HolidayStatus[<HolidayStatusKeyStrings>obj.holidayStatus];
+    } else {
+      holiday.holidayStatus = HolidayStatus.OFFICIAL_HOLIDAY;
     }
   }
   // </editor-fold>

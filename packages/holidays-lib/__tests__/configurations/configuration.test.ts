@@ -2,7 +2,7 @@ import * as path from 'path';
 
 import { Configuration } from '../../src/configuration/configuration';
 
-const dataRoot = './data';
+const dataRoot = './data/configuration';
 test('invalid configuration', () => {
   const fileName = path.join(__dirname, `${dataRoot}/invalid-collection.json`);
   const validation = Configuration.loadByFileName(fileName).validate();

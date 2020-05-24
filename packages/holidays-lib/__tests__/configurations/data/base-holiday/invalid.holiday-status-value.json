@@ -1,0 +1,7 @@
+{
+  "hierarchy": "fixed-date-holiday-holiday-status",
+  "description": "fixed-date-holiday-holiday-status",
+  "holidayCollection": [
+      { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "holidayStatus": "ABRACADABRA" }
+  ]
+}

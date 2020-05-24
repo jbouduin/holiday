@@ -69,10 +69,9 @@ describe.each([
 ])('fixed date calculators', (fileName, year, expected) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = Configuration.loadByFileName(file);
-  test(`${configuration.description} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidayCollection[0] as IFixedDateHoliday;
   const calculator = new FixedHolidayCalculator();
   const result = calculator.calculate(holiday, year);
-  test(`${configuration.description} in ${year} - calculation`, () => expect(result).toStrictEqual(expected));
-
+  test(`${fileName} in ${year} - calculation`, () => expect(result).toStrictEqual(expected));
 });

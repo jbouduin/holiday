@@ -3,8 +3,8 @@ export enum CycleType {
   FOUR_YEARS,
   FIVE_YEARS,
   SIX_YEARS,
-  EVEN_YEARS,
   EVERY_YEAR,
+  EVEN_YEARS,
   ODD_YEARS
 }
 

@@ -4,10 +4,10 @@ import { HolidayType } from './holiday-type';
 import { Month } from './month';
 import { Weekday } from './weekday';
 import { Which } from './which';
+import { CycleType }  from './cycle-type';
+import { HolidayStatus } from './holiday-status';
 
-export interface IFixedWeekdayHoliday extends IBaseHoliday<string>, FixedWeekday {
-
-}
+export interface IFixedWeekdayHoliday extends IBaseHoliday<string>, FixedWeekday { }
 
 export class FixedWeekdayHoliday extends BaseHoliday<string> implements IFixedWeekdayHoliday {
 

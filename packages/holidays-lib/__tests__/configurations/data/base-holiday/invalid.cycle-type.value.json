@@ -1,0 +1,7 @@
+{
+  "hierarchy": "cycle-type-invalid-value",
+  "description": "cycle type invalid value",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "cycleType": "ABRACADABRA" }
+  ]
+}
