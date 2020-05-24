@@ -83,3 +83,11 @@ describe.each([
   const validation = configuration.validate();
   test(`${fileName} - validation length`, () => expect(validation.length).toBe(1));
 })
+
+describe('Fixed weekday holiday translation key', () => {
+  const file = path.join(__dirname, `${dataRoot}/translation-key.json`);
+  const configuration = Configuration.loadByFileName(file);
+  test(`translation-key - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const holiday = configuration.holidayCollection[0];
+  test(`translation-key - key`, () => expect(holiday.translationKey).toBeDefined());
+});
