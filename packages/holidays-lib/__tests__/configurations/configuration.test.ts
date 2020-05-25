@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { Configuration } from '../../src/configuration/configuration';
+import { Configuration } from '../../src/configuration';
 
 const dataRoot = './data/configuration';
 test('invalid configuration', () => {

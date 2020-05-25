@@ -1,13 +1,7 @@
-import { HolidayType } from './holiday-type';
-import { ChristianHolidayType } from './christian-holiday-type';
-import { ChronologyType } from './chronology-type';
-import { CycleType }  from './cycle-type';
-import { HolidayStatus } from './holiday-status';
+import { ChristianHolidayType, ChronologyType, HolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
-import { IMoveable } from './moveable';
-import { IMovingCondition } from './moving-condition';
 
-export interface IChristianHoliday extends IBaseHoliday<ChristianHolidayType>, IMoveable {
+export interface IChristianHoliday extends IBaseHoliday<ChristianHolidayType> {
   chronology: ChronologyType;
 }
 
@@ -17,15 +11,11 @@ export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implemen
   public chronology: ChronologyType;
   // </editor-fold>
 
-  // <editor-fold desc='IMoveable interface properties'>
-  public movingConditions: Array<IMovingCondition>;
-  // </editor-fold>
 
   // <editor-fold desc='Constructor'>
   public constructor(key: ChristianHolidayType) {
     super(HolidayType.CHRISTIAN, key);
     this.chronology = ChronologyType.GREGORIAN;
-    this.movingConditions = new Array<IMovingCondition>();
   }
   // </editor-fold>
 

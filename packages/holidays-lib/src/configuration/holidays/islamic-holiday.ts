@@ -1,8 +1,5 @@
-import { IslamicHolidayType } from './islamic-holiday-type';
+import { HolidayType, IslamicHolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
-import { HolidayType } from './holiday-type';
-import { CycleType }  from './cycle-type';
-import { HolidayStatus } from './holiday-status';
 
 export interface IIslamicHoliday extends IBaseHoliday<IslamicHolidayType> { }
 

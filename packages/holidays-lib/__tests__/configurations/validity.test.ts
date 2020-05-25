@@ -1,4 +1,4 @@
-import { Configuration } from '../../src/configuration/configuration';
+import { Configuration } from '../../src/configuration';
 
 // these tests only test the validity of the json files, not the contents
 describe.each([

@@ -1,5 +1,4 @@
-import { SubstituteWith } from './substitute-with';
-import { Weekday } from './weekday';
+import { SubstituteWith, Weekday } from '../types';
 
 export interface IMovingCondition {
   substitute: Weekday;

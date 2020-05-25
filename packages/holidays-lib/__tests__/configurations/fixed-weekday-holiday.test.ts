@@ -1,10 +1,10 @@
 import * as path from 'path';
 
-import { Configuration } from '../../src/configuration/configuration';
-import { IFixedWeekdayHoliday } from '../../src/configuration/holidays/fixed-weekday-holiday';
-import { Which } from '../../src/configuration/holidays/which';
-import { Weekday } from '../../src/configuration/holidays/weekday';
-import { Month } from '../../src/configuration/holidays/month';
+import { Configuration } from '../../src/configuration';
+import { IFixedWeekdayHoliday } from '../../src/configuration';
+import { Which } from '../../src/configuration';
+import { Weekday } from '../../src/configuration';
+import { Month } from '../../src/configuration';
 
 const dataRoot = './data/fixed-weekday-holiday';
 

@@ -1,3 +1,3 @@
-export * from './hierachy';
+export * from './hierarchy';
 export * from './holiday';
 export * from './holidays';

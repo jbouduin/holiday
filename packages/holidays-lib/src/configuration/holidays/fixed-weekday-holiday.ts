@@ -1,9 +1,6 @@
-import { IFixedWeekday } from './fixed-weekday';
+import { IFixedWeekday } from '../specifics';
+import { HolidayType, Month, Weekday, Which} from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
-import { HolidayType } from './holiday-type';
-import { Month } from './month';
-import { Weekday } from './weekday';
-import { Which } from './which';
 
 export interface IFixedWeekdayHoliday extends IBaseHoliday<string>, IFixedWeekday { }
 

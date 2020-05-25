@@ -1,5 +1,5 @@
+import { Month } from '../types';
 import { IFix } from './fix';
-import { Month } from './month';
 
 export interface IFixedDate extends IFix {
   day: number;

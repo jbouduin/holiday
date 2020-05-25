@@ -1,6 +1,5 @@
-import { CycleType } from './cycle-type';
-import { HolidayStatus } from './holiday-status';
-import { HolidayType } from './holiday-type';
+import { IMovingCondition } from '../specifics';
+import { CycleType, HolidayStatus, HolidayType } from '../types';
 
 export interface IBaseHoliday<T> {
   readonly key: T;
@@ -28,6 +27,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public validTo: number;
   public cycleType!: CycleType;
   public holidayStatus!: HolidayStatus;
+  public readonly movingConditions: Array<IMovingCondition>;
   // </editor-fold>
 
   // <editor-fold desc='Abstract methods'>
@@ -38,6 +38,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public constructor(public readonly holidayType: HolidayType, public readonly key: T) {
     this.validFrom = BaseHoliday.undefinedValidFrom;
     this.validTo = BaseHoliday.undefinedValidTo;
+    this.movingConditions = new Array<IMovingCondition>();
   }
   // </editor-fold>
 

@@ -1,32 +1,27 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-// holiday related
-import { IBaseHoliday } from './holidays/base-holiday';
-import { CycleType, CycleTypeKeyStrings } from './holidays/cycle-type';
-import { HolidayStatus, HolidayStatusKeyStrings } from './holidays/holiday-status';
-import { HolidayType, HolidayTypeKeyStrings } from './holidays/holiday-type';
-// fixed holiday related
-import { IFixedDateHoliday, FixedDateHoliday } from './holidays/fixed-date-holiday';
-import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from './holidays/fixed-weekday-holiday';
-import { IFixedDate } from './holidays/fixed-date';
-import { Month, MonthKeyStrings } from './holidays/month';
-import { Weekday, WeekdayKeyStrings} from './holidays/weekday';
-import { Which, WhichKeyStrings} from './holidays/which';
+import { ChristianHolidayType, ChristianHolidayTypeKeyStrings } from './types';
+import { ChronologyType, ChronologyTypeKeyStrings } from './types';
+import { CycleType, CycleTypeKeyStrings } from './types';
+import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } from './types';
+import { HolidayStatus, HolidayStatusKeyStrings } from './types';
+import { HolidayType, HolidayTypeKeyStrings } from './types';
+import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from './types';
+import { Month, MonthKeyStrings } from './types';
+import { Weekday, WeekdayKeyStrings} from './types';
+import { Which, WhichKeyStrings} from './types';
 
-// Christian holiday related
-import { IChristianHoliday, ChristianHoliday } from './holidays/christian-holiday';
-import { ChristianHolidayType, ChristianHolidayTypeKeyStrings } from './holidays/christian-holiday-type';
-import { ChronologyType, ChronologyTypeKeyStrings } from './holidays/chronology-type';
-// Ethiopian-orthodox holiday related
-import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHoliday } from './holidays/ethiopian-orthodox-holiday';
-import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } from './holidays/ethiopian-orthodox-holiday-type';
-// Islamic holiday related
-import { IIslamicHoliday, IslamicHoliday } from './holidays/islamic-holiday';
-import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from './holidays/islamic-holiday-type';
-// Relative between Related
-import { IRelativeBetweenFixedHoliday, RelativeBetweenFixedHoliday } from './holidays/relative-between-fixed-holiday';
-import { IBetweenFixedDates } from './holidays/between-fixed-dates';
+import { IBetweenFixedDates } from './specifics';
+import { IFixedDate } from './specifics';
+
+import { IBaseHoliday } from './holidays';
+import { IChristianHoliday, ChristianHoliday } from './holidays';
+import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHoliday } from './holidays';
+import { IFixedDateHoliday, FixedDateHoliday } from './holidays';
+import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from './holidays';
+import { IIslamicHoliday, IslamicHoliday } from './holidays';
+import { IRelativeBetweenFixedHoliday, RelativeBetweenFixedHoliday } from './holidays';
 
 export interface IConfiguration {
   hierarchy: string;

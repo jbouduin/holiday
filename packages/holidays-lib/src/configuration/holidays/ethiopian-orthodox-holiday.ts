@@ -1,8 +1,5 @@
-import { EthiopianOrthodoxHolidayType } from './ethiopian-orthodox-holiday-type';
+import { EthiopianOrthodoxHolidayType, HolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
-import { HolidayType } from './holiday-type';
-import { CycleType }  from './cycle-type';
-import { HolidayStatus } from './holiday-status';
 
 export interface IEthiopianOrthodoxHoliday extends IBaseHoliday<EthiopianOrthodoxHolidayType> { }
 

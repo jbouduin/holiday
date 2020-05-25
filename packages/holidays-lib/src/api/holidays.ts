@@ -1,5 +1,5 @@
 import { Holiday } from './holiday';
-import { Hierarchy } from './hierachy';
+import { Hierarchy } from './hierarchy';
 
 export class Holidays {
 

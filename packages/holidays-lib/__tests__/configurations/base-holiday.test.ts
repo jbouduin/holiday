@@ -1,10 +1,10 @@
 import * as path from 'path';
 
-import { Configuration } from '../../src/configuration/configuration';
-import { BaseHoliday } from '../../src/configuration/holidays/base-holiday';
-import { CycleType } from '../../src/configuration/holidays/cycle-type';
-import { HolidayStatus } from '../../src/configuration/holidays/holiday-status';
-import { HolidayType } from '../../src/configuration/holidays/holiday-type';
+import { Configuration } from '../../src/configuration';
+import { BaseHoliday } from '../../src/configuration';
+import { CycleType } from '../../src/configuration';
+import { HolidayStatus } from '../../src/configuration';
+import { HolidayType } from '../../src/configuration';
 
 const dataRoot = './data/base-holiday';
 

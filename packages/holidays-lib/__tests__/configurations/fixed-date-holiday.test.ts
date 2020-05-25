@@ -1,8 +1,8 @@
 import * as path from 'path';
 
-import { Configuration } from '../../src/configuration/configuration';
-import { IFixedDateHoliday } from '../../src/configuration/holidays/fixed-date-holiday';
-import { Month } from '../../src/configuration/holidays/month';
+import { Configuration } from '../../src/configuration';
+import { IFixedDateHoliday } from '../../src/configuration';
+import { Month } from '../../src/configuration';
 
 const dataRoot = './data/fixed-date-holiday';
 

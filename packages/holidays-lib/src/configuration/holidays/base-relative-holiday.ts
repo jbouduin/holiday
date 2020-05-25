@@ -1,8 +1,6 @@
+import { IFix } from '../specifics';
+import { HolidayType, Weekday, When } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
-import { HolidayType } from './holiday-type';
-import { IFix } from './fix';
-import { Weekday } from './weekday';
-import { When } from './when';
 
 export interface IBaseRelativeHoliday<T extends IFix> extends IBaseHoliday<string> {
   fix: T;

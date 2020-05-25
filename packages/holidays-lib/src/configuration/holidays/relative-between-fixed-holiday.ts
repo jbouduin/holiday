@@ -1,10 +1,6 @@
-import { IBetweenFixedDates } from './between-fixed-dates';
+import { IBetweenFixedDates, IFixedDate } from '../specifics';
+import { HolidayType, Month, Weekday, When } from '../types';
 import { IBaseRelativeHoliday, BaseRelativeHoliday } from './base-relative-holiday';
-import { IFixedDate } from './fixed-date';
-import { HolidayType } from './holiday-type';
-import { Month } from './month';
-import { Weekday } from './weekday';
-import { When } from './when';
 
 export interface IRelativeBetweenFixedHoliday extends IBaseRelativeHoliday<IBetweenFixedDates> { }
 
