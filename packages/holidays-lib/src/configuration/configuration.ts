@@ -114,10 +114,10 @@ export class Configuration implements IConfiguration {
             this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
             break;
           }
-          case HolidayType.ISLAMIC: {
-            this.holidayCollection.push(this.processIslamicHoliday(holiday));
-            break;
-          }
+          // case HolidayType.ISLAMIC: {
+          //   this.holidayCollection.push(this.processIslamicHoliday(holiday));
+          //   break;
+          // }
           case HolidayType.RELATIVE_BETWEEN_FIXED: {
             this.holidayCollection.push(this.processRelativeBetweenFixedHoliday(holiday));
             break;
@@ -165,11 +165,11 @@ export class Configuration implements IConfiguration {
     return result;
   }
 
-  private processIslamicHoliday(obj: any): IIslamicHoliday {
-    const result = new IslamicHoliday(IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type]);
-    this.processHoliday(result, obj);
-    return result;
-  }
+  // private processIslamicHoliday(obj: any): IIslamicHoliday {
+  //   const result = new IslamicHoliday(IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type]);
+  //   this.processHoliday(result, obj);
+  //   return result;
+  // }
 
   private processRelativeBetweenFixedHoliday(obj: any): IRelativeBetweenFixedHoliday {
     let fix;

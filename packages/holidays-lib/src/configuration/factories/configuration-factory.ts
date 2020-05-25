@@ -6,6 +6,7 @@ import { IConfiguration, Configuration } from '../configuration';
 import { HolidayType, HolidayTypeKeyStrings } from '../types';
 import { IFactoryResult } from './factory-result';
 import { IFixedDateFactory, FixedDateFactory } from './fixed-date-factory';
+import { IIslamicFactory, IslamicFactory } from './islamic-factory';
 
 export interface IConfigurationFactory {
   loadByHierarchy (hierarchy: string): IConfiguration;
@@ -16,11 +17,13 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
   // <editor-fold desc='Private properties'>
   private fixedDateFactory: IFixedDateFactory;
+  private islamicFactory: IIslamicFactory;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
     this.fixedDateFactory = new FixedDateFactory();
+    this.islamicFactory = new IslamicFactory();
   }
   // </editor-fold>
 
@@ -118,7 +121,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
           break;
         }
         case HolidayType.ISLAMIC: {
-          //this.holidayCollection.push(this.processIslamicHoliday(holiday));
+          this.processFactoryResult(this.islamicFactory.create(location, holiday), result);
           break;
         }
         case HolidayType.RELATIVE_BETWEEN_FIXED: {
