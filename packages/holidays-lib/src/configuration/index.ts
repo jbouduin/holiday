@@ -15,7 +15,11 @@ export * from './holidays/islamic-holiday';
 export * from './holidays/month';
 export * from './holidays/moveable';
 export * from './holidays/moving-condition';
+export * from './holidays/relative-between-fixed-holiday';
+export * from './holidays/relative-to-date-holiday';
+export * from './holidays/relative-to-weekday-holiday';
 export * from './holidays/weekday';
+export * from './holidays/when';
 export * from './holidays/which';
 
 export * from './configuration';

@@ -9,6 +9,7 @@ import { HolidayType, HolidayTypeKeyStrings } from './holidays/holiday-type';
 // fixed holiday related
 import { IFixedDateHoliday, FixedDateHoliday } from './holidays/fixed-date-holiday';
 import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from './holidays/fixed-weekday-holiday';
+import { IFixedDate } from './holidays/fixed-date';
 import { Month, MonthKeyStrings } from './holidays/month';
 import { Weekday, WeekdayKeyStrings} from './holidays/weekday';
 import { Which, WhichKeyStrings} from './holidays/which';
@@ -23,6 +24,9 @@ import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } 
 // Islamic holiday related
 import { IIslamicHoliday, IslamicHoliday } from './holidays/islamic-holiday';
 import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from './holidays/islamic-holiday-type';
+// Relative between Related
+import { IRelativeBetweenFixedHoliday, RelativeBetweenFixedHoliday } from './holidays/relative-between-fixed-holiday';
+import { IBetweenFixedDates } from './holidays/between-fixed-dates';
 
 export interface IConfiguration {
   hierarchy: string;
@@ -107,6 +111,10 @@ export class Configuration implements IConfiguration {
             this.holidayCollection.push(this.processIslamicHoliday(holiday));
             break;
           }
+          case HolidayType.RELATIVE_BETWEEN_FIXED: {
+            this.holidayCollection.push(this.processRelativeBetweenFixedHoliday(holiday));
+            break;
+          }
           default: {
             throw Error('Invalid holiday type');
           }
@@ -152,6 +160,42 @@ export class Configuration implements IConfiguration {
 
   private processIslamicHoliday(obj: any): IIslamicHoliday {
     const result = new IslamicHoliday(IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type]);
+    this.processHoliday(result, obj);
+    return result;
+  }
+
+  private processRelativeBetweenFixedHoliday(obj: any): IRelativeBetweenFixedHoliday {
+    let fix;
+    if (obj.fix) {
+      const from: IFixedDate = {
+        day: Number(obj.fix.from.day),
+        month: Month[<MonthKeyStrings>obj.fix.from.month]
+      };
+      const to: IFixedDate = {
+        day: Number(obj.fix.to.day),
+        month: Month[<MonthKeyStrings>obj.fix.to.month]
+      }
+      fix = {
+        from,
+        to
+      } as IBetweenFixedDates;
+    } else {
+      fix = {
+        from: {
+          day: -1,
+          month: Month[<MonthKeyStrings>'']
+        },
+        to : {
+          day: -1,
+          month: Month[<MonthKeyStrings>'']
+        }
+      }
+    }
+
+    const result = new RelativeBetweenFixedHoliday(
+      obj.key,
+      fix,
+      Weekday[<WeekdayKeyStrings>obj.weekday]);
     this.processHoliday(result, obj);
     return result;
   }
