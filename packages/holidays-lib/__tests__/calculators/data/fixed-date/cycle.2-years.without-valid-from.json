@@ -1,7 +1,0 @@
-{
-  "hierarchy": "cycle-two-years-without-valid-from",
-  "description": "Cycle two years without valid from",
-  "holidayCollection": [
-    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "cycleType": "TWO_YEARS" }
-  ]
-}

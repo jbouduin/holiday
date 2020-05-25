@@ -1,6 +1,9 @@
 import * as path from 'path';
+
+import { IConfiguration } from '../../src/configuration';
+import { ConfigurationFactory } from '../../src/configuration';
+import { IFixedDateHoliday } from '../../src/configuration';
 import { FixedHolidayCalculator } from '../../src/calculators';
-import { Configuration, IFixedDateHoliday } from '../../src/configuration';
 
 const dataRoot = './data/fixed-date';
 
@@ -23,7 +26,6 @@ describe.each([
   ['cycle.2-years', 2000, new Date(Date.UTC(2000, 0, 1))],
   ['cycle.2-years', 2001, undefined],
   ['cycle.2-years', 2002, new Date(Date.UTC(2002, 0, 1))],
-  ['cycle.2-years.without-valid-from', 2000, undefined],
   // four years
   ['cycle.4-years', 1999, undefined],
   ['cycle.4-years', 2000, new Date(Date.UTC(2000, 0, 1))],
@@ -31,7 +33,6 @@ describe.each([
   ['cycle.4-years', 2002, undefined],
   ['cycle.4-years', 2003, undefined],
   ['cycle.4-years', 2004, new Date(Date.UTC(2004, 0, 1))],
-  ['cycle.4-years.without-valid-from', 2000, undefined],
   // five years
   ['cycle.5-years', 1999, undefined],
   ['cycle.5-years', 2000, new Date(Date.UTC(2000, 0, 1))],
@@ -40,7 +41,6 @@ describe.each([
   ['cycle.5-years', 2003, undefined],
   ['cycle.5-years', 2004, undefined],
   ['cycle.5-years', 2005, new Date(Date.UTC(2005, 0, 1))],
-  ['cycle.5-years.without-valid-from', 2000, undefined],
   // six years
   ['cycle.6-years', 1999, undefined],
   ['cycle.6-years', 2000, new Date(Date.UTC(2000, 0, 1))],
@@ -50,7 +50,6 @@ describe.each([
   ['cycle.6-years', 2004, undefined],
   ['cycle.6-years', 2005, undefined],
   ['cycle.6-years', 2006, new Date(Date.UTC(2006, 0, 1))],
-  ['cycle.5-years.without-valid-from', 2000, undefined],
   // even years
   ['cycle.even-years', 2000, new Date(Date.UTC(2000, 0, 1))],
   ['cycle.even-years', 2001, undefined],
@@ -66,10 +65,11 @@ describe.each([
   ['valid-to', 1999, new Date(Date.UTC(1999,0, 1))],
   ['valid-to', 2000, new Date(Date.UTC(2000, 0, 1))],
   ['valid-to', 2001, undefined]
-])('fixed date calculators', (fileName, year, expected) => {
+])('fixed date calculator', (fileName, year, expected) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidayCollection[0] as IFixedDateHoliday;
   const calculator = new FixedHolidayCalculator();
   const result = calculator.calculate(holiday, year);

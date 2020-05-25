@@ -23,44 +23,56 @@ import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from './holidays';
 import { IIslamicHoliday, IslamicHoliday } from './holidays';
 import { IRelativeBetweenFixedHoliday, RelativeBetweenFixedHoliday } from './holidays';
 
+import { ILoadError, LoadError } from './errors';
+
 export interface IConfiguration {
   hierarchy: string;
   description: string;
-  holidayCollection: Array<IBaseHoliday<any>>;
-  subConfiguration?: Array<IConfiguration>;
+  readonly errors: Array<ILoadError>;
+  readonly holidayCollection: Array<IBaseHoliday<any>>;
+  readonly subConfiguration?: Array<IConfiguration>;
+  addError(key: string, location: string, ...args: Array<any>): void;
   validate(): Array<string>;
 }
 
 export class Configuration implements IConfiguration {
 
   // <editor-fold desc='IConfiguration interface properties'>
-  public hierarchy!: string;
-  public description!: string;
-  public holidayCollection: Array<IBaseHoliday<any>>;
-  public subConfiguration: Array<Configuration>;
+  public hierarchy: string; // TODO make readonly
+  public description: string; // TODO make readonly
+  public readonly errors: Array<ILoadError>;
+  public readonly holidayCollection: Array<IBaseHoliday<any>>;
+  public readonly subConfiguration: Array<IConfiguration>;
   // </editor-fold>
 
   // <editor-fold desc='Static factoriy methods'>
-  public static loadByHierarchy (hierarchy: string): IConfiguration {
+  public static loadByHierarchy(hierarchy: string): IConfiguration {
     const fileName = path.join(__dirname, `../assets/configurations/${hierarchy}.json`);
     return Configuration.loadByFileName(fileName);
   }
 
   public static loadByFileName(fileName: string): IConfiguration {
-    const result = new Configuration();
+    const result = new Configuration('', '');
     result.loadFromFile(fileName);
     return result;
   }
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
-  private constructor() {
-    this.subConfiguration = new Array<Configuration>();
+  public constructor(hierarchy: string, description: string) {
+    this.hierarchy = hierarchy;
+    this.description = description;
+    this.errors = new Array<ILoadError>();
     this.holidayCollection = new Array<IBaseHoliday<any>>();
+    this.subConfiguration = new Array<IConfiguration>();
+
   }
   // </editor-fold>
 
   // <editor-fold desc='IConfiguration interface methods'>
+  public addError(key: string, location: string, ...args: Array<any>): void {
+    this.errors.push(new LoadError(key, location, args));
+  }
   public validate(): Array<string> {
     let result = new Array<string>();
     if (!this.hierarchy) {
@@ -94,10 +106,10 @@ export class Configuration implements IConfiguration {
             this.holidayCollection.push(this.processEthiopianOrthodoxHoliday(holiday));
             break;
           }
-          case HolidayType.FIXED_DATE: {
-            this.holidayCollection.push(this.processFixedDateHoliday(holiday));
-            break;
-          }
+          // case HolidayType.FIXED_DATE: {
+          //   this.holidayCollection.push(this.processFixedDateHoliday(holiday));
+          //   break;
+          // }
           case HolidayType.FIXED_WEEKDAY: {
             this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
             break;
@@ -111,7 +123,7 @@ export class Configuration implements IConfiguration {
             break;
           }
           default: {
-            throw Error('Invalid holiday type');
+            // throw Error('Invalid holiday type');
           }
         }
       });
@@ -137,11 +149,11 @@ export class Configuration implements IConfiguration {
     return result;
   }
 
-  private processFixedDateHoliday(obj: any): IFixedDateHoliday {
-    const result = new FixedDateHoliday(obj.key, Month[<MonthKeyStrings>obj.month], obj.day);
-    this.processHoliday(result, obj);
-    return result;
-  }
+  // private processFixedDateHoliday(obj: any): IFixedDateHoliday {
+  //   const result = new FixedDateHoliday(obj.key, Month[<MonthKeyStrings>obj.month], obj.day);
+  //   this.processHoliday(result, obj);
+  //   return result;
+  // }
 
   private processFixedWeekdayHoliday(obj: any): IFixedWeekdayHoliday {
     const result = new FixedWeekdayHoliday(

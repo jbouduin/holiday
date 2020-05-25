@@ -1,7 +1,0 @@
-{
-  "hierarchy": "invalid-holiday-type",
-  "description": "invalid-holiday-type",
-  "holidayCollection": [
-    { "holidayType": "ABRACADABRA", "type": "ASCHURA" }
-  ]
-}

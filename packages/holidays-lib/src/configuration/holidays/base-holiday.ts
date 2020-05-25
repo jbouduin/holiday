@@ -23,6 +23,8 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   // </editor-fold>
 
   // <editor-fold desc='IHoliday interface members'>
+  public readonly holidayType: HolidayType;
+  public readonly key: T
   public validFrom: number;
   public validTo: number;
   public cycleType!: CycleType;
@@ -35,9 +37,20 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
-  public constructor(public readonly holidayType: HolidayType, public readonly key: T) {
-    this.validFrom = BaseHoliday.undefinedValidFrom;
-    this.validTo = BaseHoliday.undefinedValidTo;
+  public constructor(
+    holidayType: HolidayType,
+    key: T,
+    // TODO make params mandatory
+    holidayStatus?: HolidayStatus,
+    cycleType?: CycleType,
+    validFrom?: number,
+    validTo?: number) {
+    this.holidayType = holidayType;
+    this.key = key;
+    if (holidayStatus !== undefined) { this.holidayStatus = holidayStatus; }
+    if (cycleType !== undefined) { this.cycleType = cycleType; }
+    this.validFrom = validFrom || BaseHoliday.undefinedValidFrom;
+    this.validTo = validTo || BaseHoliday.undefinedValidTo;
     this.movingConditions = new Array<IMovingCondition>();
   }
   // </editor-fold>

@@ -1,6 +1,6 @@
 {
-  "hierarchy": "invalid-day-out-of-range",
-  "description": "month day-out-of-range",
+  "hierarchy": "invalid.day.out-of-range",
+  "description": "month day out of range",
   "holidayCollection": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": -1 },
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 0 },
@@ -12,11 +12,9 @@
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JUNE", "day": 31 },
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JULY", "day": 32 },
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "AUGUST", "day": 32 },
-    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "SEPTEMBER", "day": 31  },
-    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "OCTOBER", "day": 32},
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "SEPTEMBER", "day": 31 },
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "OCTOBER", "day": 32 },
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "NOVEMBER", "day": 31 },
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "DECEMBER", "day": 32 }
-
-
   ]
 }
