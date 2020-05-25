@@ -24,7 +24,7 @@ export enum ErrorKeys {
   FIXED_DATE_DAY_MISSING = 'Day missing in fixed date',
   FIXED_DATE_MONTH_INVALID = 'Invalid month in fixed date',
   FIXED_DATE_MONTH_MISSING = 'Month missing in fixed date',
-  FIXED_DATE_SAY_OUT_OF_RANGE = 'Day out of range',
+  FIXED_DATE_DAY_OUT_OF_RANGE = 'Day out of range',
   // Islamic Holiday error
   ISLAMIC_TYPE_MISSING = 'Type for Islamic Holiday is missing',
   ISLAMIC_TYPE_INVALID = 'Invalid Type for Islamic Holiday',

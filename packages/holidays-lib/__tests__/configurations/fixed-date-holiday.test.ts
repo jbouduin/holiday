@@ -44,9 +44,9 @@ describe.each([
 
 describe.each([
   ['invalid.day.alphanumeric', 2, ErrorKeys.FIXED_DATE_DAY_INVALID],
-  ['invalid.day.empty', 2, ErrorKeys.FIXED_DATE_SAY_OUT_OF_RANGE],
+  ['invalid.day.empty', 2, ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
   ['invalid.day.missing', 2, ErrorKeys.FIXED_DATE_DAY_MISSING],
-  ['invalid.day.out-of-range', 15, ErrorKeys.FIXED_DATE_SAY_OUT_OF_RANGE],
+  ['invalid.day.out-of-range', 15, ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
   ['invalid.key.empty', 2, ErrorKeys.KEY_MISSING],
   ['invalid.key.missing', 2, ErrorKeys.KEY_MISSING],
   ['invalid.month.empty', 2, ErrorKeys.FIXED_DATE_MONTH_MISSING],

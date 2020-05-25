@@ -145,25 +145,25 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
           case Month.SEPTEMBER:
           case Month.NOVEMBER: {
             if (result.day > 30) {
-              this.addError(ErrorKeys.FIXED_DATE_SAY_OUT_OF_RANGE, result.day, Month[result.month]);
+              this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
             }
             break;
           }
           case Month.FEBRUARY: {
             if (result.day > 29) {
-              this.addError(ErrorKeys.FIXED_DATE_SAY_OUT_OF_RANGE, result.day, Month[result.month]);
+              this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
             }
             break;
           }
           default: {
             if (result.day > 31) {
-              this.addError(ErrorKeys.FIXED_DATE_SAY_OUT_OF_RANGE, result.day, Month[result.month]);
+              this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
             }
           }
         }
       }
       else {
-        this.addError(ErrorKeys.FIXED_DATE_SAY_OUT_OF_RANGE, result.day);
+        this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day);
       }
     }
     return result;
