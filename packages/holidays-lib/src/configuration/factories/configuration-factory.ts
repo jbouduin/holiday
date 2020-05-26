@@ -6,8 +6,9 @@ import { IConfiguration, Configuration } from '../configuration';
 import { HolidayType, HolidayTypeKeyStrings } from '../types';
 import { IFactoryResult } from './factory-result';
 import { IChristianFactory, ChristianFactory } from './christian-factory';
-import { IEthiopianOrthodoxFactory, EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
 import { IFixedDateFactory, FixedDateFactory } from './fixed-date-factory';
+import { IFixedWeekdayFactory, FixedWeekdayFactory } from './fixed-weekday-factory';
+import { IEthiopianOrthodoxFactory, EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
 import { IIslamicFactory, IslamicFactory } from './islamic-factory';
 
 export interface IConfigurationFactory {
@@ -21,15 +22,17 @@ export class ConfigurationFactory implements IConfigurationFactory {
   private christianFactory: IChristianFactory;
   private ethiopianOrthodoxFactory: IEthiopianOrthodoxFactory;
   private fixedDateFactory: IFixedDateFactory;
+  private fixedWeekdayFactory: IFixedWeekdayFactory
   private islamicFactory: IIslamicFactory;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
     this.christianFactory = new ChristianFactory();
-    this.fixedDateFactory = new FixedDateFactory();
-    this.islamicFactory = new IslamicFactory();
     this.ethiopianOrthodoxFactory = new EthiopianOrthodoxFactory();
+    this.fixedDateFactory = new FixedDateFactory();
+    this.fixedWeekdayFactory = new FixedWeekdayFactory
+    this.islamicFactory = new IslamicFactory();
   }
   // </editor-fold>
 
@@ -123,7 +126,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
           break;
         }
         case HolidayType.FIXED_WEEKDAY: {
-          //this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
+          this.processFactoryResult(this.fixedWeekdayFactory.create(location, holiday), result);
           break;
         }
         case HolidayType.ISLAMIC: {

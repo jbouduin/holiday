@@ -110,10 +110,10 @@ export class Configuration implements IConfiguration {
           //   this.holidayCollection.push(this.processFixedDateHoliday(holiday));
           //   break;
           // }
-          case HolidayType.FIXED_WEEKDAY: {
-            this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
-            break;
-          }
+          // case HolidayType.FIXED_WEEKDAY: {
+          //   this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
+          //   break;
+          // }
           // case HolidayType.ISLAMIC: {
           //   this.holidayCollection.push(this.processIslamicHoliday(holiday));
           //   break;
@@ -155,15 +155,15 @@ export class Configuration implements IConfiguration {
   //   return result;
   // }
 
-  private processFixedWeekdayHoliday(obj: any): IFixedWeekdayHoliday {
-    const result = new FixedWeekdayHoliday(
-      obj.key,
-      Which[<WhichKeyStrings>obj.which],
-      Weekday[<WeekdayKeyStrings>obj.weekday],
-      Month[<MonthKeyStrings>obj.month] );
-    this.processHoliday(result, obj);
-    return result;
-  }
+  // private processFixedWeekdayHoliday(obj: any): IFixedWeekdayHoliday {
+  //   const result = new FixedWeekdayHoliday(
+  //     obj.key,
+  //     Which[<WhichKeyStrings>obj.which],
+  //     Weekday[<WeekdayKeyStrings>obj.weekday],
+  //     Month[<MonthKeyStrings>obj.month] );
+  //   this.processHoliday(result, obj);
+  //   return result;
+  // }
 
   // private processIslamicHoliday(obj: any): IIslamicHoliday {
   //   const result = new IslamicHoliday(IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type]);

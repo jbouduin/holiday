@@ -67,9 +67,6 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
       case ChristianHolidayType.SACRED_HEART: {
           return this.calendarHelper.addDays(easternSunday, 68);
       }
-      default: {
-        return undefined;
-      }
     }
   }
   // </editor-fold>

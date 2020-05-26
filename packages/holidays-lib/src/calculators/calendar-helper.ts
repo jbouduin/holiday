@@ -116,9 +116,7 @@ export class CalendarHelper implements ICalendarHelper {
         break;
       }
     }
-    return holiday.validFrom === BaseHoliday.undefinedValidFrom ?
-      false :
-      (year - holiday.validFrom) % cycleYears === 0;
+    return (year - holiday.validFrom) % cycleYears === 0;
   }
   // </editor-fold>
 }

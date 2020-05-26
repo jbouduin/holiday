@@ -1,9 +1,11 @@
 import { ErrorKeys, ILoadError, LoadError } from '../errors';
 import { IBaseHoliday, BaseHoliday } from '../holidays';
-import { IFixedDate } from '../specifics';
+import { IFixedDate, IFixedWeekday } from '../specifics';
 import { CycleType, CycleTypeKeyStrings } from '../types';
 import { HolidayStatus, HolidayStatusKeyStrings } from '../types';
 import { Month, MonthKeyStrings } from '../types';
+import { Weekday, WeekdayKeyStrings } from '../types';
+import { Which, WhichKeyStrings } from '../types'
 
 import { IFactoryResult, FactoryResult } from './factory-result';
 
@@ -169,6 +171,46 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     return result;
   }
 
+  protected extractFixedWeekday(obj: any): IFixedWeekday {
+    const result: IFixedWeekday = {
+      month: Month[<MonthKeyStrings>obj.month],
+      weekday: Weekday[<WeekdayKeyStrings>obj.weekday],
+      which: Which[<WhichKeyStrings>obj.which]
+    }
+
+    if (result.month === undefined) {
+      if (obj.month) {
+        this.addError(ErrorKeys.FIXED_WEEKDAY_MONTH_INVALID, obj.month);
+      } else {
+        this.addError(ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING);
+      }
+    }
+
+    if (result.weekday === undefined) {
+      if (obj.weekday) {
+        this.addError(ErrorKeys.FIXED_WEEKDAY_WEEKDAY_INVALID, obj.weekday);
+      } else {
+        this.addError(ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING);
+      }
+    }
+
+    if (result.which === undefined) {
+      if (obj.which) {
+        this.addError(ErrorKeys.FIXED_WEEKDAY_WHICH_INVALID, obj.which);
+      } else {
+        this.addError(ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING);
+      }
+    }
+    return result;
+  }
+
+  protected extractStringKey(obj: any): string {
+    const result = obj.key;
+    if (!result) {
+      this.addError(ErrorKeys.KEY_MISSING);
+    }
+    return result;
+  }
   // </editor-fold>
 
 

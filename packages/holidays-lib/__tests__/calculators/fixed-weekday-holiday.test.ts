@@ -1,6 +1,8 @@
 import * as path from 'path';
+
 import { FixedWeekdayCalculator } from '../../src/calculators';
-import { Configuration, IFixedWeekdayHoliday } from '../../src/configuration';
+import { ConfigurationFactory } from '../../src/configuration';
+import { IFixedWeekdayHoliday } from '../../src/configuration';
 
 const dataRoot = './data/fixed-weekday';
 
@@ -15,8 +17,9 @@ describe.each([
   ['16.first.saturday', 2020, new Date(Date.UTC(2020, 1, 1))]
 ])('fixed weekday > first is also first day of the month', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -33,8 +36,9 @@ describe.each([
   ['16.first.saturday', 2019, new Date(Date.UTC(2019, 1, 2))]
 ])('fixed weekday > first is not first day of the month', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -51,8 +55,9 @@ describe.each([
   ['26.second.saturday', 2020, new Date(Date.UTC(2020, 1, 8))]
 ])('fixed weekday > second', (fileName: string, year: number, expected: Date | undefined) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -70,8 +75,9 @@ describe.each([
   ['36.third.saturday', 2020, new Date(Date.UTC(2020, 1, 15))]
 ])('fixed weekday > third', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -90,8 +96,9 @@ describe.each([
   ['44.fourth.thursday', 2019, new Date(Date.UTC(2019, 1, 28))]
 ])('fixed weekday > third', (fileName: string, year: number, expected: Date | undefined) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -108,8 +115,9 @@ describe.each([
   ['56.last.saturday', 2020, new Date(Date.UTC(2020, 1, 29))]
 ])('fixed weekday > last is last day of the month', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -126,8 +134,9 @@ describe.each([
   ['56.last.saturday', 2020, new Date(Date.UTC(2020, 1, 29))]
 ])('fixed weekday > last is not last day of the month', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);
@@ -138,8 +147,9 @@ describe.each([
   ['99.does-not-occur', 2020, undefined]
 ])('fixed weekday > other', (fileName: string, year: number, expected: Date | undefined) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = Configuration.loadByFileName(file);
-  test(`${fileName} in ${year} - collection length`, () => expect(configuration.holidayCollection.length).toBe(1));
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday: IFixedWeekdayHoliday = configuration.holidayCollection[0] as IFixedWeekdayHoliday;
   const calculator = new FixedWeekdayCalculator();
   const result = calculator.calculate(holiday, year);

@@ -22,7 +22,7 @@ export class FixedDateFactory extends BaseFactory<IFixedDateHoliday, string> imp
   protected createHoliday(
     key: string, holidayStatus: HolidayStatus, cycleType: CycleType, validFrom: number, validTo: number): IFixedDateHoliday {
     return new FixedDateHoliday(
-      key, holidayStatus, cycleType, validFrom, validTo, this.fixedDate.month, this.fixedDate.day);
+      key, holidayStatus, cycleType, validFrom, validTo, this.fixedDate);
   }
 
   protected extractData(obj: any): void {
@@ -30,11 +30,7 @@ export class FixedDateFactory extends BaseFactory<IFixedDateHoliday, string> imp
   }
 
   protected extractKey(obj: any): string {
-    const result = obj.key;
-    if (!result) {
-      this.addError(ErrorKeys.KEY_MISSING);
-    }
-    return result;
+    return this.extractStringKey(obj);
   }
   // </editor-fold>
 
