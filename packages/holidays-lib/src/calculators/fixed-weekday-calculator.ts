@@ -18,7 +18,7 @@ export class FixedWeekdayCalculator extends BaseCalculator<IFixedWeekdayHoliday>
       return undefined;
     }
 
-    if (holiday.which == Which.LAST)
+    if (holiday.which === Which.LAST)
     {
       const lastDayOfMonth = new Date(Date.UTC(year, holiday.month + 1, 0));
       const dayOfLastDayOfMonth = lastDayOfMonth.getDay();

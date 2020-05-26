@@ -24,6 +24,7 @@
         ]
       }
     ],
+    "no-angle-bracket-type-assertion": false,
     "no-consecutive-blank-lines": false,
     "no-console": [
       true,
@@ -34,6 +35,7 @@
       "trace"
     ],
     "no-empty": false,
+    "no-empty-interface": false,
     "no-inferrable-types": [
       true,
       "ignore-params"

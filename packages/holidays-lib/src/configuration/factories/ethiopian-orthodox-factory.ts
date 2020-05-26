@@ -6,7 +6,9 @@ import { IBaseFactory, BaseFactory } from './base-factory';
 
 export interface IEthiopianOrthodoxFactory extends IBaseFactory<IEthiopianOrthodoxHoliday, EthiopianOrthodoxHolidayType>{ }
 
-export class EthiopianOrthodoxFactory extends BaseFactory<IEthiopianOrthodoxHoliday, EthiopianOrthodoxHolidayType> implements IEthiopianOrthodoxFactory {
+export class EthiopianOrthodoxFactory
+  extends BaseFactory<IEthiopianOrthodoxHoliday, EthiopianOrthodoxHolidayType>
+  implements IEthiopianOrthodoxFactory {
 
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
@@ -16,9 +18,14 @@ export class EthiopianOrthodoxFactory extends BaseFactory<IEthiopianOrthodoxHoli
 
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
-    key: EthiopianOrthodoxHolidayType, holidayStatus: HolidayStatus, cycleType: CycleType, validFrom: number, validTo: number): IEthiopianOrthodoxHoliday {
-    return new EthiopianOrthodoxHoliday(
-      key, holidayStatus, cycleType, validFrom, validTo);
+    key: EthiopianOrthodoxHolidayType,
+    holidayStatus:
+    HolidayStatus,
+    cycleType: CycleType,
+    validFrom: number,
+    validTo: number): IEthiopianOrthodoxHoliday {
+
+    return new EthiopianOrthodoxHoliday(key, holidayStatus, cycleType, validFrom, validTo);
   }
 
   protected extractData(obj: any): void {

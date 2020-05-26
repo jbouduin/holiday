@@ -83,7 +83,7 @@ export class CalendarHelper implements ICalendarHelper {
     const x = h + k - 7 * l + 114;
     const month = Math.floor(x / 31);
     const day = (x % 31) + 1;
-    return new Date(Date.UTC(year, month == 3 ? 2 : 3, day));
+    return new Date(Date.UTC(year, month === 3 ? 2 : 3, day));
   }
 
   private isValidForCyle(holiday: IBaseHoliday<any>, year: number): boolean

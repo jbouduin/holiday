@@ -46,10 +46,10 @@ export enum ErrorKeys {
   RELATIVE_BETWEEN_FIXED_FIX_EMPTY = 'Fix is empty in relative between fixed dates holiday',
   RELATIVE_BETWEEN_FIXED_FROM_MISSING = 'From is missing from relative between fixed dates holiday',
   RELATIVE_BETWEEN_FIXED_TO_MISSING = 'To is missing from relative between fixed dates holiday',
-  RELATIVE_BETWEEN_FIXED_WEEKDAY_INVALID = "Invalid Weekday in relative between fixed dates holiday",
-  RELATIVE_BETWEEN_FIXED_WEEKDAY_MISSING = "Weekday is missing from relative between fixed dates holiday",
-  RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM = "Fix to is before fix from in relative between fixed dates holiday",
-  RELATIVE_BETWEEN_FIXED_SPAN_INVALID = "Tiemspan is invalid in relative between fixed dates holiday",
+  RELATIVE_BETWEEN_FIXED_WEEKDAY_INVALID = 'Invalid Weekday in relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_WEEKDAY_MISSING = 'Weekday is missing from relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM = 'Fix to is before fix from in relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_SPAN_INVALID = 'Tiemspan is invalid in relative between fixed dates holiday',
   // </editor-fold>
 
   // <editor-fold desc='Fixed date Errors'>

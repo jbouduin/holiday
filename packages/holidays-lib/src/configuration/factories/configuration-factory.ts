@@ -47,14 +47,12 @@ export class ConfigurationFactory implements IConfigurationFactory {
     try {
       data = fs.readFileSync(fileName, 'utf-8');
     } catch (error) {
-      const result = new Configuration('', '');
       result.addError(ErrorKeys.COULD_NOT_READ_FILE, 'root', fileName, error);
       return result;
     }
 
     let obj: any;
     try {
-      const result = new Configuration('', '');
       obj = JSON.parse(data);
     } catch (error) {
       result.addError(ErrorKeys.INVALID_FILE_CONTENTS, 'root', fileName, error);
@@ -95,7 +93,6 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
     obj.holidayCollection.forEach( (holiday: any) => {
       const location = `${hierarchy}/${holidayNumber}`;
-      let factoryResult: IFactoryResult<IBaseHoliday<any>>;
       const holidayType = HolidayType[<HolidayTypeKeyStrings>holiday.holidayType];
 
       switch(holidayType) {
