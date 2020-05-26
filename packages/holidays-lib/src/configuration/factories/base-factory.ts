@@ -48,7 +48,6 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
 
   // <editor-fold desc='IBaseFactory interface methods'>
   public create(location: string, obj: any): IFactoryResult<T> {
-    this.errors = new Array<ILoadError>();
     this.location = location;
     this.obj = obj;
     this.key = this.extractKey(obj);
@@ -216,6 +215,5 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   //   let result = Date(1986, fixedDate.month, fixedDate.day);
   // }
   // </editor-fold>
-
 
 }

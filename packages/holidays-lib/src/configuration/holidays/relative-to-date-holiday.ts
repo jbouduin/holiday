@@ -33,37 +33,5 @@ export class RelativeToDateHoliday extends BaseRelativeHoliday<IFixedDate> imple
   public get translationKey(): string {
     return this.key;
   }
-
-  public validateFix(): Array<string> {
-    const result = new Array<string>();
-
-    // TODO: this is a copy from fix-date-holiday validation
-    if (!this.fix.day || this.fix.day < 1 || this.fix.day > 31) {
-      result.push(`Fixed of '${this.key}' has an invalid day`);
-    }
-
-    if (this.fix.month === undefined) {
-      result.push(`Fix of '${this.key}' has no valid month`);
-    } else {
-      switch(this.fix.month) {
-        case Month.APRIL:
-        case Month.JUNE:
-        case Month.SEPTEMBER:
-        case Month.NOVEMBER: {
-          if (this.fix.day > 30) {
-            result.push(`Fix of '${this.key}' has an invalid day`);
-          }
-          break;
-        }
-        case Month.FEBRUARY: {
-          if (this.fix.day > 29) {
-            result.push(`Fixed of '${this.key}' has an invalid day`);
-          }
-          break;
-        }
-      }
-    }
-    return result;
-  }
   // </editor-fold>
 }

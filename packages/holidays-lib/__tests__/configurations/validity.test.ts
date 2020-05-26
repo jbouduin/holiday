@@ -1,4 +1,4 @@
-import { Configuration } from '../../src/configuration';
+import { ConfigurationFactory } from '../../src/configuration';
 
 // these tests only test the validity of the json files, not the contents
 describe.each([
@@ -41,9 +41,8 @@ describe.each([
   [ 've', 'Venezuela' ],
   [ 'ua', 'Ukraine']
 ])('Configuration %s (%s)', (iso, description) => {
-  const configuration = Configuration.loadByHierarchy(iso);
+  const configuration = new ConfigurationFactory().loadByHierarchy(iso);
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
-  test('hierarchy correct', () => expect(configuration.description).toBe(description));
-  const validation = configuration.validate();
-  test('configuration valid', () => expect(validation.length).toBe(0));
+  test('description correct', () => expect(configuration.description).toBe(description));
+  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
 });

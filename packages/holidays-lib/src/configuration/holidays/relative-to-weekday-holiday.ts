@@ -33,23 +33,5 @@ export class RelativeToWeekdayHoliday extends BaseRelativeHoliday<IFixedWeekday>
    public get translationKey(): string {
      return this.key;
    }
-
-   public validateFix(): Array<string> {
-     const result = new Array<string>();
-
-     // TODO: this is a copy from fix-weekday-holiday validation
-     if (this.fix.which === undefined) {
-       result.push(`Fixed weekday holiday '${this.key}'' has no which`);
-     }
-
-     if (this.fix.weekday === undefined) {
-       result.push(`Fixed weekday holiday '${this.key}'' has no valid weekday`);
-     }
-
-     if (this.fix.month === undefined) {
-       result.push(`Fixed holiday '${this.key}'' has no valid month`);
-     }
-     return result;
-   }
    // </editor-fold>
 }

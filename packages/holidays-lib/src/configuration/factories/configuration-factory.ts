@@ -5,12 +5,12 @@ import { IBaseHoliday } from '../holidays';
 import { IConfiguration, Configuration } from '../configuration';
 import { HolidayType, HolidayTypeKeyStrings } from '../types';
 import { IFactoryResult } from './factory-result';
-import { IChristianFactory, ChristianFactory } from './christian-factory';
-import { IFixedDateFactory, FixedDateFactory } from './fixed-date-factory';
-import { IFixedWeekdayFactory, FixedWeekdayFactory } from './fixed-weekday-factory';
-import { IEthiopianOrthodoxFactory, EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
-import { IIslamicFactory, IslamicFactory } from './islamic-factory';
-import { IRelativeBetweenFixedFactory, RelativeBetweenFixedFactory } from './relative-between-fixed-factory';
+import { ChristianFactory } from './christian-factory';
+import { FixedDateFactory } from './fixed-date-factory';
+import { FixedWeekdayFactory } from './fixed-weekday-factory';
+import { EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
+import { IslamicFactory } from './islamic-factory';
+import { RelativeBetweenFixedFactory } from './relative-between-fixed-factory';
 
 export interface IConfigurationFactory {
   loadByHierarchy (hierarchy: string): IConfiguration;
@@ -19,24 +19,8 @@ export interface IConfigurationFactory {
 
 export class ConfigurationFactory implements IConfigurationFactory {
 
-  // <editor-fold desc='Private properties'>
-  private christianFactory: IChristianFactory;
-  private ethiopianOrthodoxFactory: IEthiopianOrthodoxFactory;
-  private fixedDateFactory: IFixedDateFactory;
-  private fixedWeekdayFactory: IFixedWeekdayFactory
-  private islamicFactory: IIslamicFactory;
-  private relativeBetweenFixedFactory: IRelativeBetweenFixedFactory;
-  // </editor-fold>
-
   // <editor-fold desc='Constructor & C°'>
-  public constructor() {
-    this.christianFactory = new ChristianFactory();
-    this.ethiopianOrthodoxFactory = new EthiopianOrthodoxFactory();
-    this.fixedDateFactory = new FixedDateFactory();
-    this.fixedWeekdayFactory = new FixedWeekdayFactory
-    this.islamicFactory = new IslamicFactory();
-    this.relativeBetweenFixedFactory = new RelativeBetweenFixedFactory();
-  }
+  public constructor() { }
   // </editor-fold>
 
   // <editor-fold desc='IConfigurationFactory interface methods'>
@@ -48,7 +32,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
       return result;
     }
 
-    const fileName = path.join(__dirname, `../assets/configurations/${root}.json`);
+    const fileName = path.join(__dirname, `../../assets/configurations/${root}.json`);
     return this.loadByFileName(fileName);
   }
 
@@ -107,7 +91,6 @@ export class ConfigurationFactory implements IConfigurationFactory {
       return result;
     }
 
-
     let holidayNumber = 1;
 
     obj.holidayCollection.forEach( (holiday: any) => {
@@ -117,27 +100,27 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
       switch(holidayType) {
         case HolidayType.CHRISTIAN: {
-          this.processFactoryResult(this.christianFactory.create(location, holiday), result);
+          this.processFactoryResult(new ChristianFactory().create(location, holiday), result);
           break;
         }
         case HolidayType.ETHIOPIAN_ORTHODOX: {
-          this.processFactoryResult(this.ethiopianOrthodoxFactory.create(location, holiday), result);
+          this.processFactoryResult(new EthiopianOrthodoxFactory().create(location, holiday), result);
           break;
         }
         case HolidayType.FIXED_DATE: {
-          this.processFactoryResult(this.fixedDateFactory.create(location, holiday), result);
+          this.processFactoryResult(new FixedDateFactory().create(location, holiday), result);
           break;
         }
         case HolidayType.FIXED_WEEKDAY: {
-          this.processFactoryResult(this.fixedWeekdayFactory.create(location, holiday), result);
+          this.processFactoryResult(new FixedWeekdayFactory().create(location, holiday), result);
           break;
         }
         case HolidayType.ISLAMIC: {
-          this.processFactoryResult(this.islamicFactory.create(location, holiday), result);
+          this.processFactoryResult(new IslamicFactory().create(location, holiday), result);
           break;
         }
         case HolidayType.RELATIVE_BETWEEN_FIXED: {
-          this.processFactoryResult(this.relativeBetweenFixedFactory.create(location, holiday), result);
+          this.processFactoryResult(new RelativeBetweenFixedFactory().create(location, holiday), result);
           break;
         }
         default: {
