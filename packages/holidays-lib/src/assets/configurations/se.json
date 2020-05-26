@@ -1,0 +1,29 @@
+{
+  "hierarchy": "se",
+  "description": "Sweden",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "EPIPHANY", "month": "JANUARY", "day": 6 },
+    { "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "NATIONAL_DAY", "month": "JUNE", "day": 6 },
+    { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+    { "holidayType": "FIXED_DATE", "key": "BOXING_DAY", "month": "DECEMBER", "day": 26 },
+    { "holidayType": "CHRISTIAN", "type": "EASTER" },
+    { "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
+    { "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
+    { "holidayType": "CHRISTIAN", "type": "ASCENSION_DAY" },
+    { "holidayType": "CHRISTIAN", "type": "PENTECOST" },
+    { "holidayType": "RELATIVE_BETWEEN_FIXED", "key": "MIDSUMMER", "weekday": "SATURDAY",
+			"fix": {
+        "from": { "month": "JUNE", "day": 20 },
+			  "to": { "month": "JUNE", "day": 26 }
+		  }
+    },
+		{ "holidayType": "RELATIVE_BETWEEN_FIXED", "key": "ALL_SAINTS", "weekday": "SATURDAY",
+			"fix": {
+        "from": { "month": "OCTOBER", "day": 31 },
+			  "to": { "month": "NOVEMBER", "day": 6 }
+      }
+    }
+  ]
+}

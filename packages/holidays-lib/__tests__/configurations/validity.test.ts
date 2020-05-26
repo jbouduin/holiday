@@ -34,6 +34,7 @@ describe.each([
   [ 'py', 'Paraguay' ],
   [ 'ro', 'Romania' ],
   [ 'rs', 'Serbia' ],
+  [ 'se', 'Sweden' ],
   [ 'si', 'Slovenia' ],
   [ 'sk', 'Slovakia' ],
   [ 'target', 'Trans-European Automated Real-time Gross settlement Express Transfer system closing dates'],
