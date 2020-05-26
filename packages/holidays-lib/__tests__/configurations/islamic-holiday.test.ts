@@ -1,6 +1,5 @@
 import * as path from 'path';
 
-// import { Configuration } from '../../src/configuration';
 import { ConfigurationFactory } from '../../src/configuration';
 import { ErrorKeys } from '../../src/configuration';
 import { IIslamicHoliday, IslamicHolidayType } from '../../src/configuration';
@@ -17,7 +16,7 @@ describe.each([
   ['type.mawlid_an_nabi', IslamicHolidayType.MAWLID_AN_NABI],
   ['type.newyear', IslamicHolidayType.NEWYEAR],
   ['type.ramadan', IslamicHolidayType.RAMADAN]
-])('Islamic holiday', (fileName: string, expected: IslamicHolidayType) => {
+])('Islamic holiday > type', (fileName: string, expected: IslamicHolidayType) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));

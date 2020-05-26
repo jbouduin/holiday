@@ -102,10 +102,10 @@ export class Configuration implements IConfiguration {
             this.holidayCollection.push(this.processChristianHoliday(holiday));
             break;
           }
-          case HolidayType.ETHIOPIAN_ORTHODOX: {
-            this.holidayCollection.push(this.processEthiopianOrthodoxHoliday(holiday));
-            break;
-          }
+          // case HolidayType.ETHIOPIAN_ORTHODOX: {
+          //   this.holidayCollection.push(this.processEthiopianOrthodoxHoliday(holiday));
+          //   break;
+          // }
           // case HolidayType.FIXED_DATE: {
           //   this.holidayCollection.push(this.processFixedDateHoliday(holiday));
           //   break;
@@ -143,11 +143,11 @@ export class Configuration implements IConfiguration {
     return result;
   }
 
-  private processEthiopianOrthodoxHoliday(obj: any): IEthiopianOrthodoxHoliday {
-    const result = new EthiopianOrthodoxHoliday(EthiopianOrthodoxHolidayType[<EthiopianOrthodoxHolidayTypeKeyStrings>obj.type]);
-    this.processHoliday(result, obj);
-    return result;
-  }
+  // private processEthiopianOrthodoxHoliday(obj: any): IEthiopianOrthodoxHoliday {
+  //   const result = new EthiopianOrthodoxHoliday(EthiopianOrthodoxHolidayType[<EthiopianOrthodoxHolidayTypeKeyStrings>obj.type]);
+  //   this.processHoliday(result, obj);
+  //   return result;
+  // }
 
   // private processFixedDateHoliday(obj: any): IFixedDateHoliday {
   //   const result = new FixedDateHoliday(obj.key, Month[<MonthKeyStrings>obj.month], obj.day);
