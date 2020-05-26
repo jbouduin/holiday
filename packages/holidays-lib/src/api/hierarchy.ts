@@ -1,5 +1,5 @@
-export interface Hierarchy {
-  parent: Hierarchy | undefined;
+export interface IHierarchy {
+  parent: IHierarchy | undefined;
   name: string;
   description: string;
 

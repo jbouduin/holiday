@@ -6,13 +6,16 @@
     "deprecation": {
       "severity": "warn"
     },
-    "interface-name": false,
+    "interface-name": [
+      true,
+      "always-prefix"
+    ],
     "max-classes-per-file": false,
     "max-line-length": [
       true,
       140
     ],
-    "member-access": false,
+    "member-access": true,
     "member-ordering": [
       true,
       {
@@ -25,7 +28,7 @@
       }
     ],
     "no-angle-bracket-type-assertion": false,
-    "no-consecutive-blank-lines": false,
+    "no-consecutive-blank-lines": true,
     "no-console": [
       true,
       "debug",
@@ -36,14 +39,11 @@
     ],
     "no-empty": false,
     "no-empty-interface": false,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
+    "no-inferrable-types": true,
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
-    "no-var-requires": false,
+    "no-var-requires": true,
     "object-literal-key-quotes": [
       true,
       "as-needed"

@@ -1,5 +1,5 @@
-import { Holiday } from './holiday';
-import { Hierarchy } from './hierarchy';
+import { IHoliday } from './holiday';
+import { IHierarchy } from './hierarchy';
 
 export class Holidays {
 
@@ -10,11 +10,11 @@ export class Holidays {
   // </editor-fold>
 
   // <editor-fold desc='Public methods'>
-  public getHierarchyTree(): Array<Hierarchy> {
-    return new Array<Hierarchy>();
+  public getHierarchyTree(): Array<IHierarchy> {
+    return new Array<IHierarchy>();
   }
-  public getHolidays(year: number, path: string, deep: boolean): Array<Holiday> {
-    return new Array<Holiday>();
+  public getHolidays(year: number, path: string, deep: boolean): Array<IHoliday> {
+    return new Array<IHoliday>();
   }
 
   public getSupportedLanguages(): Array<string> {

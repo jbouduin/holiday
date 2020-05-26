@@ -2,7 +2,7 @@ import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
 import { ErrorKeys } from '../../src/configuration';
-import { IRelativeBetweenFixedHoliday, Month, Weekday } from '../../src/configuration';
+import { IBetweenFixedDates, IRelativeHoliday, Month, Weekday } from '../../src/configuration';
 
 const dataRoot = './data/relative-between-fixed-holiday';
 
@@ -19,7 +19,7 @@ describe.each([
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
-  const holiday: IRelativeBetweenFixedHoliday = configuration.holidayCollection[0] as IRelativeBetweenFixedHoliday;
+  const holiday: IRelativeHoliday<IBetweenFixedDates> = configuration.holidayCollection[0] as IRelativeHoliday<IBetweenFixedDates>;
   test(`${fileName} - weekday`, () => expect(Weekday[holiday.weekday]).toBe(Weekday[expected]));
 });
 
@@ -28,13 +28,12 @@ describe('relative between fixed across months', () => {
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
-  const holiday: IRelativeBetweenFixedHoliday = configuration.holidayCollection[0] as IRelativeBetweenFixedHoliday;
+  const holiday: IRelativeHoliday<IBetweenFixedDates> = configuration.holidayCollection[0] as IRelativeHoliday<IBetweenFixedDates>;
   test(`fix from > month`, () => expect(Month[holiday.fix.from.month]).toBe(Month[Month.MAY]));
   test(`fix from > day`, () => expect(holiday.fix.from.day).toBe(30));
   test(`fix to > month`, () => expect(Month[holiday.fix.to.month]).toBe(Month[Month.JUNE]));
   test(`fix to > day`, () => expect(holiday.fix.to.day).toBe(5));
 });
-
 
 describe.each([
   ['fix.in.01.january', Month.JANUARY ],
@@ -54,7 +53,7 @@ describe.each([
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
-  const holiday: IRelativeBetweenFixedHoliday = configuration.holidayCollection[0] as IRelativeBetweenFixedHoliday;
+  const holiday: IRelativeHoliday<IBetweenFixedDates> = configuration.holidayCollection[0] as IRelativeHoliday<IBetweenFixedDates>;
   test(`${fileName} > fix from > month`, () => expect(Month[holiday.fix.from.month]).toBe(Month[expected]));
   test(`${fileName} > fix from > day`, () => expect(holiday.fix.from.day).toBe(19));
   test(`${fileName} > fix to > month`, () => expect(Month[holiday.fix.to.month]).toBe(Month[expected]));
@@ -82,7 +81,6 @@ describe.each([
   test(`${fileName} >  NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`${fileName} > expected error exists`, () => expect(expectedError.length).toBe(1));
-  if (fileName === 'invalid.fix.to-before-from.json') { console.log(configuration);}
 });
 
 describe.each([

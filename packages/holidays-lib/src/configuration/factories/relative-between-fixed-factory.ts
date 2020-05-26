@@ -96,6 +96,4 @@ export class RelativeBetweenFixedFactory
     return this.extractStringKey(obj);
   }
   // </editor-fold>
-
-
 }

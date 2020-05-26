@@ -55,7 +55,6 @@ describe.each([
   const configuration = new ConfigurationFactory().loadByHierarchy(hierarchy);
   test(`${hierarchy} > number of errors`, () => expect(configuration.errors.length).toBe(1));
   const error = configuration.errors[0];
-  console.log(error);
   test(`${hierarchy} > Error key`, () => expect(error.key).toBe(ErrorKeys.HIERARCHY_INVALID));
   test(`${hierarchy} > Location`, () => expect(error.location).toBe(location));
 });
