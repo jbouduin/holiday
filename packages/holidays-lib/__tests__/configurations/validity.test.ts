@@ -13,6 +13,7 @@ describe.each([
   [ 'ec', 'Ecuador' ],
   [ 'ee', 'Estonia' ],
   [ 'et', 'Ethiopia' ],
+  [ 'fi', 'Finland'],
   [ 'gr', 'Greece'],
   [ 'hr', 'Croatia' ],
   [ 'hu', 'Hungary' ],
