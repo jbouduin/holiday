@@ -4,8 +4,8 @@
   "holidayCollection": [
     { "holidayType": "RELATIVE_BETWEEN_FIXED", "key":"HUSBANDS_DAY", "weekday": "FRIDAY",
       "fix": {
-        "from": { "month": "JANUARY", "day": 19 },
-  			"to": { "month": "JANUARY", "day": 25 }
+        "from": { "day": 19 },
+  			"to": { "day": 25 }
       }
     }
   ]

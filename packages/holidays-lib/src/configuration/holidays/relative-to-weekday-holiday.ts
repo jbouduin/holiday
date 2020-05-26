@@ -1,5 +1,5 @@
 import { IFixedWeekday } from '../specifics';
-import { HolidayType, Month, Weekday, When } from '../types';
+import { CycleType, HolidayStatus, HolidayType, Weekday, When } from '../types';
 import { IBaseRelativeHoliday, BaseRelativeHoliday } from './base-relative-holiday';
 
 export interface IRelativeToWeekdayHoliday extends IBaseRelativeHoliday<IFixedWeekday> { }
@@ -7,8 +7,25 @@ export interface IRelativeToWeekdayHoliday extends IBaseRelativeHoliday<IFixedWe
 export class RelativeToWeekdayHoliday extends BaseRelativeHoliday<IFixedWeekday> implements IRelativeToWeekdayHoliday {
 
    // <editor-fold desc='Constructor & C°'>
-   public constructor(key: string, fix: IFixedWeekday, when: When, weekday: Weekday) {
-     super(HolidayType.RELATIVE_TO_WEEKDAY, key, fix, when, weekday);
+   public constructor(
+     key: string,
+     holidayStatus: HolidayStatus,
+     cycleType: CycleType,
+     validFrom: number,
+     validTo: number,
+     fix: IFixedWeekday,
+     when: When,
+     weekday: Weekday) {
+     super(
+       HolidayType.RELATIVE_TO_WEEKDAY,
+       key,
+       holidayStatus,
+       cycleType,
+       validFrom,
+       validTo,
+       fix,
+       when,
+       weekday);
    }
    // </editor-fold>
 

@@ -41,6 +41,17 @@ export enum ErrorKeys {
   CHRISTIAN_CHRONOLOGY_INVALID = 'Invalid Type for Christian Holiday',
   // </editor-fold>// Islamic Holiday error
 
+  // <editor-fold desc='Relative between fixed holiday errors'>
+  RELATIVE_BETWEEN_FIXED_FIX_MISSING = 'Fix is missing from relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_FIX_EMPTY = 'Fix is empty in relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_FROM_MISSING = 'From is missing from relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_TO_MISSING = 'To is missing from relative between fixed dates holiday',
+  RELATIVE_BETWEEN_FIXED_WEEKDAY_INVALID = "Invalid Weekday in relative between fixed dates holiday",
+  RELATIVE_BETWEEN_FIXED_WEEKDAY_MISSING = "Weekday is missing from relative between fixed dates holiday",
+  RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM = "Fix to is before fix from in relative between fixed dates holiday",
+  RELATIVE_BETWEEN_FIXED_SPAN_INVALID = "Tiemspan is invalid in relative between fixed dates holiday",
+  // </editor-fold>
+
   // <editor-fold desc='Fixed date Errors'>
   FIXED_DATE_DAY_INVALID = 'Invalid day in fixed date',
   FIXED_DATE_DAY_MISSING = 'Day missing in fixed date',

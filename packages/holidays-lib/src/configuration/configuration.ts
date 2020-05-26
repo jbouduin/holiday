@@ -93,43 +93,43 @@ export class Configuration implements IConfiguration {
     this.hierarchy = obj.hierarchy;
     this.description = obj.description;
 
-    if (obj.holidayCollection?.length > 0) {
-      obj.holidayCollection.forEach( (holiday: any) => {
-        const holidayType = HolidayType[<HolidayTypeKeyStrings>holiday.holidayType];
-
-        switch(holidayType) {
-          // case HolidayType.CHRISTIAN: {
-          //   this.holidayCollection.push(this.processChristianHoliday(holiday));
-          //   break;
-          // }
-          // case HolidayType.ETHIOPIAN_ORTHODOX: {
-          //   this.holidayCollection.push(this.processEthiopianOrthodoxHoliday(holiday));
-          //   break;
-          // }
-          // case HolidayType.FIXED_DATE: {
-          //   this.holidayCollection.push(this.processFixedDateHoliday(holiday));
-          //   break;
-          // }
-          // case HolidayType.FIXED_WEEKDAY: {
-          //   this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
-          //   break;
-          // }
-          // case HolidayType.ISLAMIC: {
-          //   this.holidayCollection.push(this.processIslamicHoliday(holiday));
-          //   break;
-          // }
-          case HolidayType.RELATIVE_BETWEEN_FIXED: {
-            this.holidayCollection.push(this.processRelativeBetweenFixedHoliday(holiday));
-            break;
-          }
-          default: {
-            // throw Error('Invalid holiday type');
-          }
-        }
-      });
-    } else {
-      throw Error('no holidays in the configuration file');
-    }
+    // if (obj.holidayCollection?.length > 0) {
+    //   obj.holidayCollection.forEach( (holiday: any) => {
+    //     const holidayType = HolidayType[<HolidayTypeKeyStrings>holiday.holidayType];
+    //
+    //     switch(holidayType) {
+    //       // case HolidayType.CHRISTIAN: {
+    //       //   this.holidayCollection.push(this.processChristianHoliday(holiday));
+    //       //   break;
+    //       // }
+    //       // case HolidayType.ETHIOPIAN_ORTHODOX: {
+    //       //   this.holidayCollection.push(this.processEthiopianOrthodoxHoliday(holiday));
+    //       //   break;
+    //       // }
+    //       // case HolidayType.FIXED_DATE: {
+    //       //   this.holidayCollection.push(this.processFixedDateHoliday(holiday));
+    //       //   break;
+    //       // }
+    //       // case HolidayType.FIXED_WEEKDAY: {
+    //       //   this.holidayCollection.push(this.processFixedWeekdayHoliday(holiday));
+    //       //   break;
+    //       // }
+    //       // case HolidayType.ISLAMIC: {
+    //       //   this.holidayCollection.push(this.processIslamicHoliday(holiday));
+    //       //   break;
+    //       // }
+    //       // case HolidayType.RELATIVE_BETWEEN_FIXED: {
+    //       //   this.holidayCollection.push(this.processRelativeBetweenFixedHoliday(holiday));
+    //       //   break;
+    //       // }
+    //       default: {
+    //         // throw Error('Invalid holiday type');
+    //       }
+    //     }
+    //   });
+    // } else {
+    //   throw Error('no holidays in the configuration file');
+    // }
   }
 
   // private processChristianHoliday(obj: any): IChristianHoliday {
@@ -171,41 +171,41 @@ export class Configuration implements IConfiguration {
   //   return result;
   // }
 
-  private processRelativeBetweenFixedHoliday(obj: any): IRelativeBetweenFixedHoliday {
-    let fix;
-    if (obj.fix) {
-      const from: IFixedDate = {
-        day: Number(obj.fix.from.day),
-        month: Month[<MonthKeyStrings>obj.fix.from.month]
-      };
-      const to: IFixedDate = {
-        day: Number(obj.fix.to.day),
-        month: Month[<MonthKeyStrings>obj.fix.to.month]
-      }
-      fix = {
-        from,
-        to
-      } as IBetweenFixedDates;
-    } else {
-      fix = {
-        from: {
-          day: -1,
-          month: Month[<MonthKeyStrings>'']
-        },
-        to : {
-          day: -1,
-          month: Month[<MonthKeyStrings>'']
-        }
-      }
-    }
-
-    const result = new RelativeBetweenFixedHoliday(
-      obj.key,
-      fix,
-      Weekday[<WeekdayKeyStrings>obj.weekday]);
-    this.processHoliday(result, obj);
-    return result;
-  }
+  // private processRelativeBetweenFixedHoliday(obj: any): IRelativeBetweenFixedHoliday {
+  //   let fix;
+  //   if (obj.fix) {
+  //     const from: IFixedDate = {
+  //       day: Number(obj.fix.from.day),
+  //       month: Month[<MonthKeyStrings>obj.fix.from.month]
+  //     };
+  //     const to: IFixedDate = {
+  //       day: Number(obj.fix.to.day),
+  //       month: Month[<MonthKeyStrings>obj.fix.to.month]
+  //     }
+  //     fix = {
+  //       from,
+  //       to
+  //     } as IBetweenFixedDates;
+  //   } else {
+  //     fix = {
+  //       from: {
+  //         day: -1,
+  //         month: Month[<MonthKeyStrings>'']
+  //       },
+  //       to : {
+  //         day: -1,
+  //         month: Month[<MonthKeyStrings>'']
+  //       }
+  //     }
+  //   }
+  //
+  //   const result = new RelativeBetweenFixedHoliday(
+  //     obj.key,
+  //     fix,
+  //     Weekday[<WeekdayKeyStrings>obj.weekday]);
+  //   this.processHoliday(result, obj);
+  //   return result;
+  // }
 
   private processHoliday(holiday: IBaseHoliday<any>, obj: any): void {
 

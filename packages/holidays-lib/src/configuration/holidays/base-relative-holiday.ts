@@ -1,5 +1,5 @@
 import { IFix } from '../specifics';
-import { HolidayType, Weekday, When } from '../types';
+import { CycleType, HolidayStatus, HolidayType, Weekday, When } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IBaseRelativeHoliday<T extends IFix> extends IBaseHoliday<string> {
@@ -10,36 +10,29 @@ export interface IBaseRelativeHoliday<T extends IFix> extends IBaseHoliday<strin
 
 export abstract class BaseRelativeHoliday<T> extends BaseHoliday<string> implements IBaseRelativeHoliday<T> {
 
+  // <editor-fold desc='IBaseRelativeHoliday interface members'>
+  public fix: T;
+  public when: When;
+  public weekday: Weekday;
+  // </editor-fold>
+
   // <editor-fold desc='Constructor & C°'>
   public constructor(
     holidayType: HolidayType,
     key: string,
-    public fix: T,
-    public when: When,
-    public weekday: Weekday) {
-    super(holidayType, key);
+    holidayStatus: HolidayStatus,
+    cycleType: CycleType,
+    validFrom: number,
+    validTo: number,
+    fix: T,
+    when: When,
+    weekday: Weekday) {
+    super(holidayType, key, holidayStatus, cycleType, validFrom, validTo);
+    this.fix = fix;
+    this.when = when;
+    this.weekday = weekday;
   }
   // </editor-fold>
 
-  // <editor-fold desc='Abstract methods'>
-  public abstract validateFix(): Array<string>;
-  // </editor-fold>
 
-  // <editor-fold desc='Base class methods overrides'>
-  public validate(): Array<string> {
-    const result = super.validate().concat(this.validateFix());
-    if (this.key === '') {
-      result.push('holiday has no valid key');
-    }
-
-    if (this.when === undefined) {
-      result.push(`relative to date holiday '${this.key}'' has no valid when`);
-    }
-
-    if (this.weekday === undefined) {
-      result.push(`relative to date holiday '${this.key}'' has no valid weekday`);
-    }
-    return result;
-  }
-  // </editor-fold>
 }

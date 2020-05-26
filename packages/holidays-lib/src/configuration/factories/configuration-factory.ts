@@ -10,6 +10,7 @@ import { IFixedDateFactory, FixedDateFactory } from './fixed-date-factory';
 import { IFixedWeekdayFactory, FixedWeekdayFactory } from './fixed-weekday-factory';
 import { IEthiopianOrthodoxFactory, EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
 import { IIslamicFactory, IslamicFactory } from './islamic-factory';
+import { IRelativeBetweenFixedFactory, RelativeBetweenFixedFactory } from './relative-between-fixed-factory';
 
 export interface IConfigurationFactory {
   loadByHierarchy (hierarchy: string): IConfiguration;
@@ -24,6 +25,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
   private fixedDateFactory: IFixedDateFactory;
   private fixedWeekdayFactory: IFixedWeekdayFactory
   private islamicFactory: IIslamicFactory;
+  private relativeBetweenFixedFactory: IRelativeBetweenFixedFactory;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
@@ -33,6 +35,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
     this.fixedDateFactory = new FixedDateFactory();
     this.fixedWeekdayFactory = new FixedWeekdayFactory
     this.islamicFactory = new IslamicFactory();
+    this.relativeBetweenFixedFactory = new RelativeBetweenFixedFactory();
   }
   // </editor-fold>
 
@@ -134,7 +137,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
           break;
         }
         case HolidayType.RELATIVE_BETWEEN_FIXED: {
-          //this.holidayCollection.push(this.processRelativeBetweenFixedHoliday(holiday));
+          this.processFactoryResult(this.relativeBetweenFixedFactory.create(location, holiday), result);
           break;
         }
         default: {

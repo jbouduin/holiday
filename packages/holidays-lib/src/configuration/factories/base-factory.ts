@@ -211,6 +211,10 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     }
     return result;
   }
+
+  // protected calculateFixedFate(fixedDate: IFixedDate): Date {
+  //   let result = Date(1986, fixedDate.month, fixedDate.day);
+  // }
   // </editor-fold>
 
 
