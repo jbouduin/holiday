@@ -2,13 +2,13 @@ import { IFix } from '../specifics';
 import { CycleType, HolidayStatus, HolidayType, Weekday, When } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
-export interface IBaseRelativeHoliday<T extends IFix> extends IBaseHoliday<string> {
+export interface IRelativeHoliday<T extends IFix> extends IBaseHoliday<string> {
   fix: T;
   weekday: Weekday;
   when: When;
 }
 
-export abstract class BaseRelativeHoliday<T> extends BaseHoliday<string> implements IBaseRelativeHoliday<T> {
+export class RelativeHoliday<T> extends BaseHoliday<string> implements IRelativeHoliday<T> {
 
   // <editor-fold desc='IBaseRelativeHoliday interface members'>
   public fix: T;
@@ -34,5 +34,10 @@ export abstract class BaseRelativeHoliday<T> extends BaseHoliday<string> impleme
   }
   // </editor-fold>
 
+  // <editor-fold desc='Abstract methods implementation'>
+  public get translationKey(): string {
+    return this.key;
+  }
+  // </editor-fold>
 
 }

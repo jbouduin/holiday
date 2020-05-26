@@ -1,14 +1,15 @@
 import { ErrorKeys } from '../errors';
-import { IRelativeBetweenFixedHoliday, RelativeBetweenFixedHoliday } from '../holidays';
+import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IBetweenFixedDates } from '../specifics';
-import { CycleType, HolidayStatus } from '../types';
+import { CycleType, HolidayStatus, HolidayType } from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
+import { When } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
-export interface IRelativeBetweenFixedFactory extends IBaseFactory<IRelativeBetweenFixedHoliday, string>{ }
+export interface IRelativeBetweenFixedFactory extends IBaseFactory<IRelativeHoliday<IBetweenFixedDates>, string>{ }
 
 export class RelativeBetweenFixedFactory
-  extends BaseFactory<IRelativeBetweenFixedHoliday, string>
+  extends BaseFactory<IRelativeHoliday<IBetweenFixedDates>, string>
   implements IRelativeBetweenFixedFactory {
 
   // <editor-fold desc='Private properties'>
@@ -24,8 +25,22 @@ export class RelativeBetweenFixedFactory
 
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
-    key: string, holidayStatus: HolidayStatus, cycleType: CycleType, validFrom: number, validTo: number): IRelativeBetweenFixedHoliday {
-    return new RelativeBetweenFixedHoliday(key, holidayStatus, cycleType, validFrom, validTo, this.fix, this.weekday);
+    key: string,
+    holidayStatus: HolidayStatus,
+    cycleType: CycleType,
+    validFrom: number,
+    validTo: number): IRelativeHoliday<IBetweenFixedDates> {
+
+    return new RelativeHoliday(
+      HolidayType.RELATIVE_BETWEEN_FIXED,
+      key,
+      holidayStatus,
+      cycleType,
+      validFrom,
+      validTo,
+      this.fix,
+      When.BEFORE,
+      this.weekday);
   }
 
   protected extractData(obj: any): void {

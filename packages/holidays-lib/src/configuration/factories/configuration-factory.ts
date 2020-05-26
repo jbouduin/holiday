@@ -26,7 +26,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
   // <editor-fold desc='IConfigurationFactory interface methods'>
   public loadByHierarchy (hierarchy: string): IConfiguration {
     const root = hierarchy.split('/')[0];
-    if (hierarchy.length === 0) {
+    if (root.length === 0) {
       const result = new Configuration('', '');
       result.addError(ErrorKeys.HIERARCHY_INVALID, 'root', hierarchy);
       return result;

@@ -9,6 +9,7 @@ const location = 'root';
 
 describe.each([
   ['a.missing.file', ErrorKeys.FILE_NOT_FOUND, location],
+  ['directory', ErrorKeys.COULD_NOT_READ_FILE, location],
   ['invalid.collection.empty', ErrorKeys.HOLIDAY_COLLECTION_EMPTY, '/invalid.collection.empty'],
   ['invalid.collection.missing', ErrorKeys.HOLIDAY_COLLECTION_MISSING, '/invalid.collection.missing'],
   ['invalid.content', ErrorKeys.INVALID_FILE_CONTENTS, location],
@@ -45,5 +46,16 @@ describe('Configuration > Only an invalid', () => {
   const invalidHolidayType = configuration.errors.filter(error => error.key === ErrorKeys.HOLIDAY_TYPE_INVALID);
   test('invalidHolidayType error exists', () => expect(invalidHolidayType.length).toBe(1));
   test('invalidHolidayType error location', () => expect(invalidHolidayType[0].location).toBe('/invalid.no-valid-holidays/1'));
+});
 
+describe.each([
+  [''],
+  ['/xx']
+])('Configuration > Invalid hierarchy', (hierarchy: string) => {
+  const configuration = new ConfigurationFactory().loadByHierarchy(hierarchy);
+  test(`${hierarchy} > number of errors`, () => expect(configuration.errors.length).toBe(1));
+  const error = configuration.errors[0];
+  console.log(error);
+  test(`${hierarchy} > Error key`, () => expect(error.key).toBe(ErrorKeys.HIERARCHY_INVALID));
+  test(`${hierarchy} > Location`, () => expect(error.location).toBe(location));
 });
