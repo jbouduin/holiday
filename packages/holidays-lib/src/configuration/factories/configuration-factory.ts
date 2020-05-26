@@ -5,6 +5,7 @@ import { IBaseHoliday } from '../holidays';
 import { IConfiguration, Configuration } from '../configuration';
 import { HolidayType, HolidayTypeKeyStrings } from '../types';
 import { IFactoryResult } from './factory-result';
+import { IChristianFactory, ChristianFactory } from './christian-factory';
 import { IEthiopianOrthodoxFactory, EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
 import { IFixedDateFactory, FixedDateFactory } from './fixed-date-factory';
 import { IIslamicFactory, IslamicFactory } from './islamic-factory';
@@ -17,6 +18,7 @@ export interface IConfigurationFactory {
 export class ConfigurationFactory implements IConfigurationFactory {
 
   // <editor-fold desc='Private properties'>
+  private christianFactory: IChristianFactory;
   private ethiopianOrthodoxFactory: IEthiopianOrthodoxFactory;
   private fixedDateFactory: IFixedDateFactory;
   private islamicFactory: IIslamicFactory;
@@ -24,6 +26,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
+    this.christianFactory = new ChristianFactory();
     this.fixedDateFactory = new FixedDateFactory();
     this.islamicFactory = new IslamicFactory();
     this.ethiopianOrthodoxFactory = new EthiopianOrthodoxFactory();
@@ -108,7 +111,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
       switch(holidayType) {
         case HolidayType.CHRISTIAN: {
-          // this.holidayCollection.push(this.processChristianHoliday(holiday));
+          this.processFactoryResult(this.christianFactory.create(location, holiday), result);
           break;
         }
         case HolidayType.ETHIOPIAN_ORTHODOX: {

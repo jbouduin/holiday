@@ -1,6 +1,5 @@
 import * as path from 'path';
 
-import { IConfiguration } from '../../src/configuration';
 import { ConfigurationFactory } from '../../src/configuration';
 import { IFixedDateHoliday } from '../../src/configuration';
 import { FixedHolidayCalculator } from '../../src/calculators';

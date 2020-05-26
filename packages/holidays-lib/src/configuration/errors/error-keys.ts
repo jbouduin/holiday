@@ -31,4 +31,8 @@ export enum ErrorKeys {
   // Islamic Holiday error
   ETHIOPIAN_ORTHODOX_TYPE_MISSING = 'Type for Ethiopian-orthodox Holiday is missing',
   ETHIOPIAN_ORTHODOX_TYPE_INVALID = 'Invalid Type for Ethiopian-orthodox Holiday',
+  // Islamic Holiday error
+  CHRISTIAN_TYPE_MISSING = 'Type for Christian Holiday is missing',
+  CHRISTIAN_TYPE_INVALID = 'Invalid Type for Christian Holiday',
+  CHRISTIAN_CHRONOLOGY_INVALID = 'Invalid Type for Christian Holiday',
 }
