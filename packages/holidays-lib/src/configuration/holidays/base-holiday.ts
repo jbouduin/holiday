@@ -1,4 +1,4 @@
-import { IMovingCondition } from '../specifics';
+import { IMove } from '../specifics';
 import { CycleType, HolidayStatus, HolidayType } from '../types';
 
 export interface IBaseHoliday<T> {
@@ -9,6 +9,7 @@ export interface IBaseHoliday<T> {
   readonly validTo: number;
   readonly translationKey: string;
   readonly holidayType: HolidayType;
+  readonly moves: Array<IMove>;
 }
 
 export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
@@ -28,7 +29,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public readonly validTo: number;
   public readonly cycleType!: CycleType;
   public readonly holidayStatus!: HolidayStatus;
-  public readonly movingConditions: Array<IMovingCondition>;
+  public readonly moves: Array<IMove>;
   // </editor-fold>
 
   // <editor-fold desc='Abstract methods'>
@@ -49,7 +50,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
     this.cycleType = cycleType;
     this.validFrom = validFrom;
     this.validTo = validTo;
-    this.movingConditions = new Array<IMovingCondition>();
+    this.moves = new Array<IMove>();
   }
   // </editor-fold>
 }

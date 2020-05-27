@@ -1,5 +1,6 @@
 export enum Month {
-  JANUARY,
+  // Do not change the order: the value is used in calculations
+  JANUARY = 0,
   FEBRUARY,
   MARCH,
   APRIL,

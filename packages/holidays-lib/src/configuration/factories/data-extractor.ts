@@ -1,6 +1,8 @@
 import { ErrorKeys } from '../errors';
-import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
+import { IFixedDate, IFixedWeekday, IMove, IRelationWhichWeekdayWhen } from '../specifics';
+import { Condition, ConditionKeyStrings } from '../types';
 import { Month, MonthKeyStrings } from '../types';
+import { MoveTo, MoveToKeyStrings }  from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
 import { When, WhenKeyStrings } from '../types';
 import { Which, WhichKeyStrings } from '../types';
@@ -8,6 +10,7 @@ import { Which, WhichKeyStrings } from '../types';
 export interface IDataExtractor {
   extractFixedDate(obj: any): IFixedDate;
   extractFixedWeekday(obj: any): IFixedWeekday;
+  extractMoves(obj: any): Array<IMove>;
   extractStringKey(obj: any): string;
   extractWhichWeekdayWhen(obj: any): IRelationWhichWeekdayWhen;
 }
@@ -112,6 +115,36 @@ export class DataExtractor implements IDataExtractor {
     return result;
   }
 
+  public extractMoves(obj: any): Array<IMove> {
+    const result = new Array<IMove>();
+
+    if (obj.moves) {
+      obj.moves.forEach( (move: any) => {
+        if (!move.condition && !move.moveTo && !move.weekday) {
+          this.errorHandlerCallBack(ErrorKeys.MOVE_EMPTY);
+        } else {
+          result.push(this.extractMove(move));
+        }
+      });
+    }
+
+    const saturday = result.map(
+      (move: IMove) => move.condition === Condition.IS_SATURDAY ? Condition.IS_WEEKEND : move.condition
+    );
+
+    if (new Set(saturday).size !== result.length) {
+      this.errorHandlerCallBack(ErrorKeys.MOVE_DUPLICATE_CONDITIONS, obj.moves);
+    } else {
+      const sunday = result.map(
+        (move: IMove) => move.condition === Condition.IS_SUNDAY ? Condition.IS_WEEKEND : move.condition
+      );
+      if (new Set(sunday).size !== result.length) {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_DUPLICATE_CONDITIONS, obj.moves);
+      }
+    }
+    return result;
+  }
+
   public extractStringKey(obj: any): string {
     const result = obj.key;
     if (!result) {
@@ -158,6 +191,41 @@ export class DataExtractor implements IDataExtractor {
       which,
       weekday,
       when
+    }
+    return result;
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='Private methos'>
+  private extractMove(obj: any): IMove {
+    const result: IMove = {
+      condition: Condition[<ConditionKeyStrings>obj.condition],
+      moveTo: MoveTo[<MoveToKeyStrings>obj.moveTo],
+      weekday: Weekday[<WeekdayKeyStrings>obj.weekday]
+    };
+
+    if (result.condition === undefined) {
+      if (obj.condition) {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_CONDITION_INVALID, obj.condition);
+      } else {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_CONDITION_MISSING);
+      }
+    }
+
+    if (result.moveTo === undefined) {
+      if (obj.moveTo) {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_MOVE_TO_INVALID, obj.moveTo);
+      } else {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_MOVE_TO_MISSING);
+      }
+    }
+
+    if (result.weekday === undefined) {
+      if (obj.weekday) {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_WEEKDAY_INVALID, obj.weekday);
+      } else {
+        this.errorHandlerCallBack(ErrorKeys.MOVE_WEEKDAY_MISSING);
+      }
     }
     return result;
   }

@@ -19,13 +19,11 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   // </editor-fold>
 
   // <editor-fold desc='Protected properties'>
-  protected obj: any;
-  protected key!: U;
   protected dataExtractor: IDataExtractor;
-  protected cycleType: CycleType;
-  protected holidayStatus: HolidayStatus;
-  protected validFrom: number;
-  protected validTo: number;
+  private cycleType: CycleType;
+  private holidayStatus: HolidayStatus;
+  private validFrom: number;
+  private validTo: number;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
@@ -49,13 +47,14 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   // <editor-fold desc='IBaseFactory interface methods'>
   public create(location: string, obj: any): IFactoryResult<T> {
     this.location = location;
-    this.obj = obj;
-    this.key = this.extractKey(obj);
+    const key = this.extractKey(obj);
+    const moves = this.dataExtractor.extractMoves(obj);
     this.extractBaseHolidayData(obj);
     this.extractData(obj);
 
     if (this.errors.length === 0) {
-      const holiday = this.createHoliday(this.key, this.holidayStatus, this.cycleType, this.validFrom, this.validTo);
+      const holiday = this.createHoliday(key, this.holidayStatus, this.cycleType, this.validFrom, this.validTo);
+      moves.forEach(move => holiday.moves.push(move));
       return new FactoryResult<T>(holiday, this.errors);
     } else {
       return new FactoryResult<T>(undefined, this.errors);

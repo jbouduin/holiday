@@ -82,5 +82,13 @@ export enum ErrorKeys {
   // </editor-fold>
 
   // <editor-fold desc='Move condition related'>
+  MOVE_EMPTY = 'Move is empty',
+  MOVE_CONDITION_INVALID = 'Invalid condition in move',
+  MOVE_CONDITION_MISSING = 'Condition is missing from move',
+  MOVE_MOVE_TO_INVALID = 'Invalid moveTo in move',
+  MOVE_MOVE_TO_MISSING = 'MoveTo is missing from move',
+  MOVE_WEEKDAY_INVALID = 'Invalid Weekday in move',
+  MOVE_WEEKDAY_MISSING = 'Weekday is missing from move',
+  MOVE_DUPLICATE_CONDITIONS = 'Duplicate conditions in move collection detected'
   // </editor-fold>
 }
