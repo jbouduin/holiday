@@ -9,6 +9,7 @@ describe.each([
   [ 'bo', 'Bolivia' ],
   [ 'by', 'Belarus' ],
   [ 'cl', 'Chile' ],
+  [ 'co', 'Colombia' ],
   [ 'cr', 'Costa Rica' ],
   [ 'cz', 'Czech Republic' ],
   [ 'dk', 'Denmark' ],
