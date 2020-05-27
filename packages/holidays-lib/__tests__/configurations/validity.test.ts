@@ -33,6 +33,7 @@ describe.each([
   [ 'nl', 'The Netherlands' ],
   [ 'no', 'Norway' ],
   [ 'nsye-euronext', 'nsye-euronext'],
+  [ 'nyse', 'New York Stock Exchange' ],
   [ 'pa', 'Panama' ],
   [ 'pe', 'Peru' ],
   [ 'pl', 'Poland' ],
