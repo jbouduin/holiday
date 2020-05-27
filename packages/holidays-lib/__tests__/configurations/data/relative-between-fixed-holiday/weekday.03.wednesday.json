@@ -2,7 +2,8 @@
   "hierarchy": "between-fixed",
   "description": "between two fixed dates",
   "holidayCollection": [
-    { "holidayType": "RELATIVE_BETWEEN_FIXED", "key":"HUSBANDS_DAY", "weekday": "WEDNESDAY",
+    { "holidayType": "RELATIVE_BETWEEN_FIXED", "key":"HUSBANDS_DAY",
+      "relation": { "weekday": "WEDNESDAY" },
       "fix": {
         "from": { "month": "JANUARY", "day": 19 },
   			"to": { "month": "JANUARY", "day": 25 }

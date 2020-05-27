@@ -1,19 +1,17 @@
-import { IFix } from '../specifics';
+import { IFix, IRelation } from '../specifics';
 import { CycleType, HolidayStatus, HolidayType, Weekday, When } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
-export interface IRelativeHoliday<T extends IFix> extends IBaseHoliday<string> {
-  fix: T;
-  weekday: Weekday;
-  when: When;
+export interface IRelativeHoliday<T extends IRelation, U extends IFix > extends IBaseHoliday<string> {
+  fix: U;
+  relation: T;
 }
 
-export class RelativeHoliday<T> extends BaseHoliday<string> implements IRelativeHoliday<T> {
+export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelativeHoliday<T, U> {
 
   // <editor-fold desc='IBaseRelativeHoliday interface members'>
-  public fix: T;
-  public when: When;
-  public weekday: Weekday;
+  public fix: U;
+  public relation: T;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
@@ -24,13 +22,11 @@ export class RelativeHoliday<T> extends BaseHoliday<string> implements IRelative
     cycleType: CycleType,
     validFrom: number,
     validTo: number,
-    fix: T,
-    when: When,
-    weekday: Weekday) {
+    relation: T,
+    fix: U) {
     super(holidayType, key, holidayStatus, cycleType, validFrom, validTo);
     this.fix = fix;
-    this.when = when;
-    this.weekday = weekday;
+    this.relation = relation;
   }
   // </editor-fold>
 

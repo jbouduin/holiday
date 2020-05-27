@@ -1,20 +1,20 @@
 import { ErrorKeys } from '../errors';
 import { IRelativeHoliday, RelativeHoliday } from '../holidays';
-import { IBetweenFixedDates } from '../specifics';
+import { IBetweenFixedDates, IRelationWeekday } from '../specifics';
 import { CycleType, HolidayStatus, HolidayType } from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
 import { When } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
-export interface IRelativeBetweenFixedFactory extends IBaseFactory<IRelativeHoliday<IBetweenFixedDates>, string>{ }
+export interface IRelativeBetweenFixedFactory extends IBaseFactory<IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>, string>{ }
 
 export class RelativeBetweenFixedFactory
-  extends BaseFactory<IRelativeHoliday<IBetweenFixedDates>, string>
+  extends BaseFactory<IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>, string>
   implements IRelativeBetweenFixedFactory {
 
   // <editor-fold desc='Private properties'>
   private fix!: IBetweenFixedDates;
-  private weekday!: Weekday
+  private relation!: IRelationWeekday;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
@@ -29,7 +29,7 @@ export class RelativeBetweenFixedFactory
     holidayStatus: HolidayStatus,
     cycleType: CycleType,
     validFrom: number,
-    validTo: number): IRelativeHoliday<IBetweenFixedDates> {
+    validTo: number): IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> {
 
     return new RelativeHoliday(
       HolidayType.RELATIVE_BETWEEN_FIXED,
@@ -38,19 +38,18 @@ export class RelativeBetweenFixedFactory
       cycleType,
       validFrom,
       validTo,
-      this.fix,
-      When.BEFORE,
-      this.weekday);
+      this.relation,
+      this.fix);
   }
 
   protected extractData(obj: any): void {
     let canContinue = true;
     if (!obj.fix) {
-      this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_FIX_MISSING);
+      this.addError(ErrorKeys.RELATIVE_FIX_MISSING);
       canContinue = false;
     } else {
       if (!obj.fix.from && !obj.fix.to) {
-        this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_FIX_EMPTY);
+        this.addError(ErrorKeys.RELATIVE_FIX_EMPTY);
         canContinue = false;
       } else {
         if (!obj.fix.from) {
@@ -63,12 +62,19 @@ export class RelativeBetweenFixedFactory
         }
       }
     }
-    this.weekday = Weekday[<WeekdayKeyStrings>obj.weekday];
-    if (this.weekday === undefined) {
-      if (obj.weekday) {
-        this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_WEEKDAY_INVALID, obj.weekday);
+
+    if (!obj.relation) {
+      this.addError(ErrorKeys.RELATIVE_RELATION_MISSING);
+    } else {
+      if (!obj.relation.weekday && obj.relation.weekday !== '') {
+        this.addError(ErrorKeys.RELATIVE_RELATION_EMPTY);
       } else {
-        this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_WEEKDAY_MISSING);
+        const weekday = Weekday[<WeekdayKeyStrings>obj.relation.weekday];
+        if (weekday === undefined) {
+          this.addError(ErrorKeys.RELATION_WEEKDAY_INVALID, obj.weekday);
+        } else {
+          this.relation = { weekday };
+        }
       }
     }
 

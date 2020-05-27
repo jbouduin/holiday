@@ -1,10 +1,11 @@
 import { ErrorKeys, ILoadError, LoadError } from '../errors';
 import { IBaseHoliday, BaseHoliday } from '../holidays';
-import { IFixedDate, IFixedWeekday } from '../specifics';
+import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { CycleType, CycleTypeKeyStrings } from '../types';
 import { HolidayStatus, HolidayStatusKeyStrings } from '../types';
 import { Month, MonthKeyStrings } from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
+import { When, WhenKeyStrings } from '../types'
 import { Which, WhichKeyStrings } from '../types'
 
 import { IFactoryResult, FactoryResult } from './factory-result';
@@ -211,9 +212,44 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     return result;
   }
 
-  // protected calculateFixedFate(fixedDate: IFixedDate): Date {
-  //   let result = Date(1986, fixedDate.month, fixedDate.day);
-  // }
+  protected extractWhichWeekdayWhen(obj: any): IRelationWhichWeekdayWhen {
+    // TODO default to Which.First (the value of first is only found in Icelandic configuration)
+    const which = Which[<WhichKeyStrings>obj.which];
+    if (which === undefined) {
+      if (!obj.which) {
+          this.addError(ErrorKeys.RELATION_WHICH_MISSING, obj.which);
+      } else {
+        this.addError(ErrorKeys.RELATION_WHICH_INVALID);
+      }
+    } else if (which === Which.LAST) {
+      this.addError(ErrorKeys.RELATION_WHICH_INVALID, obj.which);
+    }
+
+    const weekday = Weekday[<WeekdayKeyStrings>obj.weekday];
+    if (weekday === undefined) {
+      if (obj.weekday) {
+        this.addError(ErrorKeys.RELATION_WEEKDAY_INVALID, obj.weekday);
+      } else {
+        this.addError(ErrorKeys.RELATION_WEEKDAY_MISSING);
+      }
+    }
+
+    const when = When[<WhenKeyStrings>obj.when];
+    if (when === undefined) {
+      if (obj.when) {
+        this.addError(ErrorKeys.RELATION_WHEN_INVALID, obj.when);
+      } else {
+        this.addError(ErrorKeys.RELATION_WHEN_MISSING);
+      }
+    }
+
+    const result: IRelationWhichWeekdayWhen = {
+      which,
+      weekday,
+      when
+    }
+    return result;
+  }
   // </editor-fold>
 
 }

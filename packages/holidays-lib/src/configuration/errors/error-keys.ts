@@ -42,12 +42,10 @@ export enum ErrorKeys {
   // </editor-fold>// Islamic Holiday error
 
   // <editor-fold desc='Relative between fixed holiday errors'>
-  RELATIVE_BETWEEN_FIXED_FIX_MISSING = 'Fix is missing from relative between fixed dates holiday',
-  RELATIVE_BETWEEN_FIXED_FIX_EMPTY = 'Fix is empty in relative between fixed dates holiday',
   RELATIVE_BETWEEN_FIXED_FROM_MISSING = 'From is missing from relative between fixed dates holiday',
   RELATIVE_BETWEEN_FIXED_TO_MISSING = 'To is missing from relative between fixed dates holiday',
-  RELATIVE_BETWEEN_FIXED_WEEKDAY_INVALID = 'Invalid Weekday in relative between fixed dates holiday',
-  RELATIVE_BETWEEN_FIXED_WEEKDAY_MISSING = 'Weekday is missing from relative between fixed dates holiday',
+  // RELATIVE_BETWEEN_FIXED_WEEKDAY_INVALID = 'Invalid Weekday in relative between fixed dates holiday',
+  // RELATIVE_BETWEEN_FIXED_WEEKDAY_MISSING = 'Weekday is missing from relative between fixed dates holiday',
   RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM = 'Fix to is before fix from in relative between fixed dates holiday',
   RELATIVE_BETWEEN_FIXED_SPAN_INVALID = 'Tiemspan is invalid in relative between fixed dates holiday',
   // </editor-fold>
@@ -69,4 +67,19 @@ export enum ErrorKeys {
   FIXED_WEEKDAY_WHICH_MISSING = 'which missing in fixed date',
   // </editor-fold>
 
+  // <editor-fold desc='Relative holidays errors'>
+  RELATIVE_FIX_MISSING = 'Fix is missing from relative holiday',
+  RELATIVE_FIX_EMPTY = 'Fix is empty for relative holiday',
+  RELATIVE_RELATION_MISSING = 'Relation is missing from relative holiday',
+  RELATIVE_RELATION_EMPTY = 'Relations is empty for relative holiday',
+  // </editor-fold>
+
+  // <editor-fold desc='Relation errors'>
+  RELATION_WEEKDAY_INVALID = 'Invalid Weekday in relation',
+  RELATION_WEEKDAY_MISSING = 'Weekday is missing from relation',
+  RELATION_WHEN_INVALID = 'Invalid when in relation',
+  RELATION_WHEN_MISSING = 'When is missing in relation',
+  RELATION_WHICH_INVALID = 'Invalid which in relation',
+  RELATION_WHICH_MISSING = 'Which is missing in relation',
+  // </editor-fold>
 }
