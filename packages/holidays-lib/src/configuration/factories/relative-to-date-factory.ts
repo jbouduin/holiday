@@ -50,7 +50,7 @@ export class RelativeToDateFactory
     } else if (!obj.fix.day && !obj.fix.month) {
       this.addError(ErrorKeys.RELATIVE_FIX_EMPTY);
     } else {
-      this.fix = this.extractFixedDate(obj.fix);
+      this.fix = this.dataExtractor.extractFixedDate(obj.fix);
     }
 
     if (!obj.relation) {
@@ -58,12 +58,12 @@ export class RelativeToDateFactory
     } else if (!obj.relation.which && !obj.relation.weekday && !obj.relation.when) {
       this.addError(ErrorKeys.RELATIVE_RELATION_EMPTY);
     } else {
-      this.relation = this.extractWhichWeekdayWhen(obj.relation);
+      this.relation = this.dataExtractor.extractWhichWeekdayWhen(obj.relation);
     }
   }
 
   protected extractKey(obj: any): string {
-    return this.extractStringKey(obj);
+    return this.dataExtractor.extractStringKey(obj);
   }
   // </editor-fold>
 }

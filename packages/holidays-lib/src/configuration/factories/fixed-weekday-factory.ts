@@ -26,11 +26,11 @@ export class FixedWeekdayFactory extends BaseFactory<IFixedWeekdayHoliday, strin
   }
 
   protected extractData(obj: any): void {
-    this.fixedWeekday = this.extractFixedWeekday(obj);
+    this.fixedWeekday = this.dataExtractor.extractFixedWeekday(obj);
   }
 
   protected extractKey(obj: any): string {
-    return this.extractStringKey(obj);
+    return this.dataExtractor.extractStringKey(obj);
   }
   // </editor-fold>
 

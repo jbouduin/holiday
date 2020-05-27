@@ -3,11 +3,8 @@ import { IBaseHoliday, BaseHoliday } from '../holidays';
 import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { CycleType, CycleTypeKeyStrings } from '../types';
 import { HolidayStatus, HolidayStatusKeyStrings } from '../types';
-import { Month, MonthKeyStrings } from '../types';
-import { Weekday, WeekdayKeyStrings } from '../types';
-import { When, WhenKeyStrings } from '../types'
-import { Which, WhichKeyStrings } from '../types'
 
+import { IDataExtractor, DataExtractor } from './data-extractor';
 import { IFactoryResult, FactoryResult } from './factory-result';
 
 export interface IBaseFactory<T extends IBaseHoliday<U>, U> {
@@ -24,6 +21,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   // <editor-fold desc='Protected properties'>
   protected obj: any;
   protected key!: U;
+  protected dataExtractor: IDataExtractor;
   protected cycleType: CycleType;
   protected holidayStatus: HolidayStatus;
   protected validFrom: number;
@@ -33,6 +31,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   // <editor-fold desc='Constructor & C°'>
   public constructor() {
     this.location = '';
+    this.dataExtractor = new DataExtractor(this.addError.bind(this));
     this.errors = new Array<ILoadError>();
     this.validFrom = BaseHoliday.undefinedValidFrom;
     this.validTo = BaseHoliday.undefinedValidTo;
@@ -68,8 +67,10 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   protected addError(key: string, ...args: Array<any>): void {
     this.errors.push(new LoadError(key, this.location, args));
   }
+  // </editor-fold>
 
-  protected extractBaseHolidayData(obj: any): void {
+  // <editor-fold desc='Private helper methods'>
+  private extractBaseHolidayData(obj: any): void {
     if (obj.validFrom) {
       this.validFrom = Number(obj.validFrom);
     }
@@ -117,138 +118,6 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     if (this.validFrom && this.validTo && this.validFrom > this.validTo) {
       this.addError(ErrorKeys.VALID_TO_BEFORE_VALID_FROM, obj.validTo, obj.validFrom);
     }
-  }
-
-  protected extractFixedDate(obj: any): IFixedDate {
-    const result: IFixedDate = {
-      day: Number(obj.day),
-      month: Month[<MonthKeyStrings>obj.month]
-    };
-
-    if (!result.day && result.day !== 0) {
-      if (!obj.day) {
-        this.addError(ErrorKeys.FIXED_DATE_DAY_MISSING);
-      } else  {
-        this.addError(ErrorKeys.FIXED_DATE_DAY_INVALID, obj.day);
-      }
-    }
-
-    if (result.month === undefined) {
-      if (!obj.month || obj.month === '') {
-        this.addError(ErrorKeys.FIXED_DATE_MONTH_MISSING);
-      } else {
-        this.addError(ErrorKeys.FIXED_DATE_MONTH_INVALID, obj.day);
-      }
-    } else if (result.day  || result.day === 0) {
-      if (result.day > 0) {
-        switch(result.month) {
-          case Month.APRIL:
-          case Month.JUNE:
-          case Month.SEPTEMBER:
-          case Month.NOVEMBER: {
-            if (result.day > 30) {
-              this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
-            }
-            break;
-          }
-          case Month.FEBRUARY: {
-            if (result.day > 29) {
-              this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
-            }
-            break;
-          }
-          default: {
-            if (result.day > 31) {
-              this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
-            }
-          }
-        }
-      }
-      else {
-        this.addError(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day);
-      }
-    }
-    return result;
-  }
-
-  protected extractFixedWeekday(obj: any): IFixedWeekday {
-    const result: IFixedWeekday = {
-      month: Month[<MonthKeyStrings>obj.month],
-      weekday: Weekday[<WeekdayKeyStrings>obj.weekday],
-      which: Which[<WhichKeyStrings>obj.which]
-    }
-
-    if (result.month === undefined) {
-      if (obj.month) {
-        this.addError(ErrorKeys.FIXED_WEEKDAY_MONTH_INVALID, obj.month);
-      } else {
-        this.addError(ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING);
-      }
-    }
-
-    if (result.weekday === undefined) {
-      if (obj.weekday) {
-        this.addError(ErrorKeys.FIXED_WEEKDAY_WEEKDAY_INVALID, obj.weekday);
-      } else {
-        this.addError(ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING);
-      }
-    }
-
-    if (result.which === undefined) {
-      if (obj.which) {
-        this.addError(ErrorKeys.FIXED_WEEKDAY_WHICH_INVALID, obj.which);
-      } else {
-        this.addError(ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING);
-      }
-    }
-    return result;
-  }
-
-  protected extractStringKey(obj: any): string {
-    const result = obj.key;
-    if (!result) {
-      this.addError(ErrorKeys.KEY_MISSING);
-    }
-    return result;
-  }
-
-  protected extractWhichWeekdayWhen(obj: any): IRelationWhichWeekdayWhen {
-    // TODO default to Which.First (the value of first is only found in Icelandic configuration)
-    const which = Which[<WhichKeyStrings>obj.which];
-    if (which === undefined) {
-      if (!obj.which) {
-          this.addError(ErrorKeys.RELATION_WHICH_MISSING, obj.which);
-      } else {
-        this.addError(ErrorKeys.RELATION_WHICH_INVALID);
-      }
-    } else if (which === Which.LAST) {
-      this.addError(ErrorKeys.RELATION_WHICH_INVALID, obj.which);
-    }
-
-    const weekday = Weekday[<WeekdayKeyStrings>obj.weekday];
-    if (weekday === undefined) {
-      if (obj.weekday) {
-        this.addError(ErrorKeys.RELATION_WEEKDAY_INVALID, obj.weekday);
-      } else {
-        this.addError(ErrorKeys.RELATION_WEEKDAY_MISSING);
-      }
-    }
-
-    const when = When[<WhenKeyStrings>obj.when];
-    if (when === undefined) {
-      if (obj.when) {
-        this.addError(ErrorKeys.RELATION_WHEN_INVALID, obj.when);
-      } else {
-        this.addError(ErrorKeys.RELATION_WHEN_MISSING);
-      }
-    }
-
-    const result: IRelationWhichWeekdayWhen = {
-      which,
-      weekday,
-      when
-    }
-    return result;
   }
   // </editor-fold>
 

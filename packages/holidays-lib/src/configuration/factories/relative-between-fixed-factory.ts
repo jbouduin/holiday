@@ -80,8 +80,8 @@ export class RelativeBetweenFixedFactory
 
     if (canContinue) {
       this.fix = {
-        from: this.extractFixedDate(obj.fix.from),
-        to: this.extractFixedDate(obj.fix.to)
+        from: this.dataExtractor.extractFixedDate(obj.fix.from),
+        to: this.dataExtractor.extractFixedDate(obj.fix.to)
       }
       if (this.fix.from.day !== 0 && this.fix.to.day !== 0) {
         const fromDate = new Date(1986, this.fix.from.month, this.fix.from.day);
@@ -99,7 +99,7 @@ export class RelativeBetweenFixedFactory
   }
 
   protected extractKey(obj: any): string {
-    return this.extractStringKey(obj);
+    return this.dataExtractor.extractStringKey(obj);
   }
   // </editor-fold>
 }

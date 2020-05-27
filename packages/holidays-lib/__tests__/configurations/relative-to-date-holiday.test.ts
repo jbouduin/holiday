@@ -12,6 +12,7 @@ describe.each([
   ['relation.which.02.second', Which.SECOND ],
   ['relation.which.03.third', Which.THIRD ],
   ['relation.which.04.fourth', Which.FOURTH ],
+  ['relation.which.missing', Which.FIRST]
 ])('relative to date > relation which > %s', (fileName: string, expected: Which) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
@@ -90,7 +91,6 @@ describe.each([
   ['invalid.relation.empty', 2, ErrorKeys.RELATIVE_RELATION_EMPTY],
   ['invalid.relation.missing', 2, ErrorKeys.RELATIVE_RELATION_MISSING],
   ['invalid.relation.which.empty', 2, ErrorKeys.RELATION_WHICH_MISSING],
-  ['invalid.relation.which.missing', 2, ErrorKeys.RELATION_WHICH_MISSING],
   ['invalid.relation.which.last', 2, ErrorKeys.RELATION_WHICH_INVALID],
   ['invalid.relation.which.value', 2, ErrorKeys.RELATION_WHICH_INVALID],
   ['invalid.relation.weekday.empty', 2, ErrorKeys.RELATION_WEEKDAY_MISSING],
