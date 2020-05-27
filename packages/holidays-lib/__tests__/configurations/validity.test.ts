@@ -18,6 +18,7 @@ describe.each([
   [ 'hr', 'Croatia' ],
   [ 'hu', 'Hungary' ],
   [ 'ie', 'Ireland' ],
+  [ 'is', 'Iceland' ],
   [ 'kz', 'Kazakhstan' ],
   [ 'jp', 'Japan' ],
   [ 'li', 'Liechtenstein' ],
@@ -47,4 +48,5 @@ describe.each([
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
   test('description correct', () => expect(configuration.description).toBe(description));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
+  if (iso === 'is') { console.log(configuration.errors);}
 });
