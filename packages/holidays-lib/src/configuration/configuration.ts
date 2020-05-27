@@ -30,7 +30,7 @@ export interface IConfiguration {
   readonly description: string;
   readonly errors: Array<ILoadError>;
   readonly holidayCollection: Array<IBaseHoliday<any>>;
-  readonly subConfiguration?: Array<IConfiguration>;
+  readonly subConfigurations: Array<IConfiguration>;
   addError(key: string, location: string, ...args: Array<any>): void;
 }
 
@@ -41,7 +41,7 @@ export class Configuration implements IConfiguration {
   public readonly description: string;
   public readonly errors: Array<ILoadError>;
   public readonly holidayCollection: Array<IBaseHoliday<any>>;
-  public readonly subConfiguration: Array<IConfiguration>;
+  public readonly subConfigurations: Array<IConfiguration>;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
@@ -50,7 +50,7 @@ export class Configuration implements IConfiguration {
     this.description = description;
     this.errors = new Array<ILoadError>();
     this.holidayCollection = new Array<IBaseHoliday<any>>();
-    this.subConfiguration = new Array<IConfiguration>();
+    this.subConfigurations = new Array<IConfiguration>();
 
   }
   // </editor-fold>

@@ -1,0 +1,32 @@
+{
+  "hierarchy": "parent",
+  "description": "parent",
+  "holidayCollection": [
+    { "holidayType": "FIXED_DATE", "key": "PARENT", "month": "JANUARY", "day": 1 }
+  ],
+  "subConfigurations": [
+    {
+      "hierarchy": "child-1",
+      "description": "child 1",
+      "holidayCollection": [
+        { "holidayType": "FIXED_DATE", "key": "CHILD-1", "month": "FEBRUARY", "day": 2 }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "grand-child-1",
+          "description": "grand-child 1",
+          "holidayCollection": [
+            { "holidayType": "FIXED_DATE", "key": "GRANDCHILD-1", "month": "MARCH", "day": 3 }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "child-2",
+      "description": "child 2",
+      "holidayCollection": [
+        { "holidayType": "FIXED_DATE", "key": "CHILD-2", "month": "FEBRUARY", "day": 2 }
+      ]
+    }
+  ]
+}

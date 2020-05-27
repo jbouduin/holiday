@@ -134,6 +134,11 @@ export class ConfigurationFactory implements IConfigurationFactory {
     if (result.holidayCollection.length === 0) {
       result.addError(ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION, hierarchy);
     }
+
+    if (obj.subConfigurations) {
+      obj.subConfigurations
+        .forEach( (sub: any) => result.subConfigurations.push(this.loadConfiguration(hierarchy, sub)));
+    }
     return result;
   }
 
