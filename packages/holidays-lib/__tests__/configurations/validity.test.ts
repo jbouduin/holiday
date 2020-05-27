@@ -2,6 +2,7 @@ import { ConfigurationFactory } from '../../src/configuration';
 
 // these tests only test the validity of the json files, not the contents
 describe.each([
+  [ 'al', 'Albania' ],
   [ 'be', 'Belgium' ],
   [ 'bg', 'Bulgaria' ],
   [ 'bo', 'Bolivia' ],
@@ -48,4 +49,5 @@ describe.each([
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
   test('description correct', () => expect(configuration.description).toBe(description));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
+  if (iso === 'al') { configuration.errors.forEach(e => console.log(e, e.args));}
 });

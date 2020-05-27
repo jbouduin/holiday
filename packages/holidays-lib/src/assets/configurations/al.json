@@ -1,0 +1,44 @@
+{
+  "hierarchy": "al",
+  "description": "Albania",
+  "holidayCollection": [
+		{ "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1,
+			"moves" : [
+				{ "condition": "IS_SATURDAY", "moveTo": "NEXT", "weekday": "MONDAY" },
+			  { "condition": "IS_SUNDAY", "moveTo": "NEXT", "weekday": "MONDAY" }
+			]
+		},
+		{ "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 2,
+			"moves" : [
+				{ "condition": "IS_SATURDAY", "moveTo": "NEXT", "weekday": "MONDAY" },
+			  { "condition": "IS_SUNDAY", "moveTo": "NEXT", "weekday": "MONDAY" }
+			]
+		},
+		{ "holidayType": "FIXED_DATE", "key": "SPRING_DAY", "month": "MARCH", "day": 14, "validFrom": 2004,
+			"moves" : [
+				{ "condition": "IS_SATURDAY", "moveTo": "NEXT", "weekday": "MONDAY" },
+				{ "condition": "IS_SUNDAY", "moveTo": "NEXT", "weekday": "MONDAY" }
+			]
+		},
+		{ "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1,
+			"moves" : [
+				{ "condition": "IS_SATURDAY", "moveTo": "NEXT", "weekday": "MONDAY" },
+				{ "condition": "IS_SUNDAY", "moveTo": "NEXT", "weekday": "MONDAY" }
+			]
+		},
+		{ "holidayType": "FIXED_DATE", "key": "MOTHER_TERESA", "month": "OCTOBER", "day": 19, "validFrom": 2003,
+			"moves" : [
+				{ "condition": "IS_SATURDAY", "moveTo": "NEXT", "weekday": "MONDAY" },
+				{ "condition": "IS_SUNDAY", "moveTo": "NEXT", "weekday": "MONDAY" }
+			]
+		},
+		{ "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "NOVEMBER", "day": 28 },
+		{ "holidayType": "FIXED_DATE", "key": "LIBERATION", "month": "NOVEMBER", "day": 29 },
+		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER" },
+		{ "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
+		{ "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
+		{ "holidayType": "ISLAMIC", "type": "ID_UL_ADHA" },
+		{ "holidayType": "ISLAMIC", "type": "ID_AL_FITR" }
+  ]
+}
