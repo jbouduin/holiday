@@ -40,17 +40,18 @@ describe.each([
   [ 'py', 'Paraguay' ],
   [ 'ro', 'Romania' ],
   [ 'rs', 'Serbia' ],
+  [ 'ru', 'Russian Federation' ],
   [ 'se', 'Sweden' ],
   [ 'si', 'Slovenia' ],
   [ 'sk', 'Slovakia' ],
   [ 'target', 'Trans-European Automated Real-time Gross settlement Express Transfer system closing dates'],
   [ 'uy', 'Uruguay' ],
   [ 've', 'Venezuela' ],
-  [ 'ua', 'Ukraine']
+  [ 'ua', 'Ukraine'],
+  [ 'za', 'South Africa']
 ])('Configuration %s (%s)', (iso, description) => {
   const configuration = new ConfigurationFactory().loadByHierarchy(iso);
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
   test('description correct', () => expect(configuration.description).toBe(description));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  if (iso === 'ar') { configuration.errors.forEach(e => console.log(e, e.args));}
 });
