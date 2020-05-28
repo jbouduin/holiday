@@ -46,6 +46,7 @@ describe.each([
   [ 'mt', 'Malta' ],
   [ 'mx', 'Mexico' ],
   [ 'ng', 'Nigeria' ],
+  [ 'ni', 'Nicaragua' ],
   [ 'nl', 'The Netherlands' ],
   [ 'no', 'Norway' ],
   [ 'nsye-euronext', 'nsye-euronext'],
