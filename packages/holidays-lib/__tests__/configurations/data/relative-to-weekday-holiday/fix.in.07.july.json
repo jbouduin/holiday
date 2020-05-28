@@ -1,0 +1,12 @@
+{
+  "hierarchy": "between-fixed",
+  "description": "between two fixed dates",
+  "holidayCollection": [
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key":"HUSBANDS_DAY",
+      "relation": { "which": "FIRST", "weekday": "FRIDAY", "when": "AFTER" },
+      "fix": { "which": "FIRST", "weekday": "MONDAY", "month": "JULY" }
+    }
+  ]
+}

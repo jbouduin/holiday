@@ -12,6 +12,7 @@ import { EthiopianOrthodoxFactory } from './ethiopian-orthodox-factory';
 import { IslamicFactory } from './islamic-factory';
 import { RelativeBetweenFixedFactory } from './relative-between-fixed-factory';
 import { RelativeToDateFactory } from './relative-to-date-factory';
+import { RelativeToWeekdayFactory } from './relative-to-weekday-factory';
 
 export interface IConfigurationFactory {
   loadByHierarchy (hierarchy: string): IConfiguration;
@@ -123,6 +124,10 @@ export class ConfigurationFactory implements IConfigurationFactory {
         }
         case HolidayType.RELATIVE_TO_DATE: {
           this.processFactoryResult(new RelativeToDateFactory().create(location, holiday), result);
+          break;
+        }
+        case HolidayType.RELATIVE_TO_WEEKDAY: {
+          this.processFactoryResult(new RelativeToWeekdayFactory().create(location, holiday), result);
           break;
         }
         default: {

@@ -57,12 +57,12 @@ export enum ErrorKeys {
   // </editor-fold>
 
   // <editor-fold desc='Fixed weekday error'>
-  FIXED_WEEKDAY_MONTH_INVALID = 'Invalid month in fixed date',
-  FIXED_WEEKDAY_MONTH_MISSING = 'Month missing in fixed date',
-  FIXED_WEEKDAY_WEEKDAY_INVALID = 'Invalid weekday in fixed date',
-  FIXED_WEEKDAY_WEEKDAY_MISSING = 'Weekday missing in fixed date',
-  FIXED_WEEKDAY_WHICH_INVALID = 'Invalid which in fixed date',
-  FIXED_WEEKDAY_WHICH_MISSING = 'which missing in fixed date',
+  FIXED_WEEKDAY_MONTH_INVALID = 'Invalid month in fixed weekday',
+  FIXED_WEEKDAY_MONTH_MISSING = 'Month missing in fixed weekday',
+  FIXED_WEEKDAY_WEEKDAY_INVALID = 'Invalid weekday in fixed weekday',
+  FIXED_WEEKDAY_WEEKDAY_MISSING = 'Weekday missing in fixed weekday',
+  FIXED_WEEKDAY_WHICH_INVALID = 'Invalid which in fixed weekday',
+  FIXED_WEEKDAY_WHICH_MISSING = 'which missing in fixed weekday',
   // </editor-fold>
 
   // <editor-fold desc='Relative holidays errors'>

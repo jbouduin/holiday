@@ -1,0 +1,12 @@
+{
+  "hierarchy": "between-fixed",
+  "description": "between two fixed dates",
+  "holidayCollection": [
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key":"ELECTION",
+      "relation": { "which": "FIRST", "weekday": "TUESDAY", "when": "AFTER" },
+      "fix": { "which": "FIRST", "weekday": "WEDNESDAY", "month": "NOVEMBER" }
+    }
+  ]
+}
