@@ -14,6 +14,7 @@ describe.each([
   [ 'br',  'Brazil' ],
   [ 'by', 'Belarus' ],
   [ 'ca', 'Canada' ],
+  [ 'ch', 'Switzerland' ],
   [ 'cl', 'Chile' ],
   [ 'co', 'Colombia' ],
   [ 'cr', 'Costa Rica' ],
