@@ -1,0 +1,313 @@
+{
+  "hierarchy": "br",
+  "description": "Brazil",
+  "holidayCollection": [
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "CARNIVAL"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "ASH_WEDNESDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "GOOD_FRIDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "CORPUS_CHRISTI"
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "TIRADENTES",
+      "month": "APRIL",
+      "day": 21
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "LABOUR_DAY",
+      "month": "MAY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "INDEPENDENCE",
+      "month": "SEPTEMBER",
+      "day": 7
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "APARECIDA",
+      "month": "OCTOBER",
+      "day": 12,
+      "validFrom": 1980
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "ALL_SOULS",
+      "month": "NOVEMBER",
+      "day": 2
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NATIONAL_DAY",
+      "month": "NOVEMBER",
+      "day": 15
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25
+    }
+  ],
+  "subConfigurations": [
+    {
+      "hierarchy": "rj",
+      "description": "Rio de Janeiro",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ST_GEORGE",
+          "month": "APRIL",
+          "day": 23,
+          "validFrom": 2007
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "BLACK_AWARENESS",
+          "month": "NOVEMBER",
+          "day": 20
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "crj",
+          "description": "City of Rio de Janeiro",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ST_SEBASTIAN",
+              "month": "JANUARY",
+              "day": 20
+            },
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ST_GEORGE",
+              "month": "APRIL",
+              "day": 23,
+              "validTo": 2006
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "s",
+      "description": "Sao Paulo",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CONST_REVOLUTION",
+          "month": "JULY",
+          "day": 9
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "BLACK_AWARENESS",
+          "month": "NOVEMBER",
+          "day": 20
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "cs",
+          "description": "City of Sao Paulo",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "FOUNDATION",
+              "month": "JANUARY",
+              "day": 25
+            },
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "FOUNDATION",
+              "month": "NOVEMBER",
+              "day": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "mg",
+      "description": "Minas Gerais",
+      "holidayCollection": [],
+      "subConfigurations": [
+        {
+          "hierarchy": "bh",
+          "description": "Belo Horizonte",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_GOOD_VOYAGE",
+              "month": "AUGUST",
+              "day": 15
+            },
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_CONCEICAO",
+              "month": "DECEMBER",
+              "day": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "ms",
+      "description": "Mato Grosso do Sul",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "FOUNDATION",
+          "month": "OCTOBER",
+          "day": 11
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "cg",
+          "description": "Campo Grande",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "FOUNDATION",
+              "month": "AUGUST",
+              "day": 26
+            }
+          ]
+        },
+        {
+          "hierarchy": "do",
+          "description": "Dourados",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_CONCEICAO",
+              "month": "DECEMBER",
+              "day": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "pr",
+      "description": "Parana",
+      "holidayCollection": [],
+      "subConfigurations": [
+        {
+          "hierarchy": "cu",
+          "description": "Curitiba",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_LIGHT_PINE",
+              "month": "SEPTEMBER",
+              "day": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "rs",
+      "description": "Rio Grande do Sul",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "FARROUS_REVOLUTION",
+          "month": "SEPTEMBER",
+          "day": 20
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "sm",
+          "description": "Santa Maria",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_CONCEICAO",
+              "month": "DECEMBER",
+              "day": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "rn",
+      "description": "Rio Grande do Norte",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "MARTYRS_DAY",
+          "month": "OCTOBER",
+          "day": 3
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "na",
+          "description": "Natal",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_APRESENTACAO",
+              "month": "NOVEMBER",
+              "day": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "go",
+      "description": "Goiás",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "FOUNDATION",
+          "month": "OCTOBER",
+          "day": 24
+        }
+      ]
+    },
+    {
+      "hierarchy": "pe",
+      "description": "Pernambuco",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LADY_CONCEICAO",
+          "month": "DECEMBER",
+          "day": 8
+        }
+      ]
+    }
+  ]
+}
