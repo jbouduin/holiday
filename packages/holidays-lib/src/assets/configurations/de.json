@@ -1,0 +1,325 @@
+{
+  "hierarchy": "de",
+  "description": "Germany",
+  "holidayCollection": [
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "GOOD_FRIDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER_MONDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "ASCENSION_DAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "WHIT_SUNDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "WHIT_MONDAY"
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "LABOUR_DAY",
+      "month": "MAY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "UNIFICATION",
+      "month": "JUNE",
+      "day": 17,
+      "validFrom": 1954,
+      "validTo": 1990
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "UNIFICATION",
+      "month": "OCTOBER",
+      "day": 3,
+      "validFrom": 1990
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "STEPHENS",
+      "month": "DECEMBER",
+      "day": 26
+    }
+  ],
+  "subConfigurations": [
+    {
+      "hierarchy": "bb",
+      "description": "Brandenburg",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31
+        }
+      ]
+    },
+    {
+      "hierarchy": "bw",
+      "description": "Baden-Württenberg",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "CORPUS_CHRISTI"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "EPIPHANY",
+          "month": "JANUARY",
+          "day": 6
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ALL_SAINTS",
+          "month": "NOVEMBER",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "hierarchy": "by",
+      "description": "Bayern",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "CORPUS_CHRISTI"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "EPIPHANY",
+          "month": "JANUARY",
+          "day": 6
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ALL_SAINTS",
+          "month": "NOVEMBER",
+          "day": 1
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "mu",
+          "description": "Munich",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ASSUMPTION_DAY",
+              "month": "AUGUST",
+              "day": 15
+            }
+          ]
+        },
+        {
+          "hierarchy": "ag",
+          "description": "Augsburg",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "PEACE",
+              "month": "AUGUST",
+              "day": 8
+            },
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ASSUMPTION_DAY",
+              "month": "AUGUST",
+              "day": 15
+            }
+          ]
+        },
+        {
+          "hierarchy": "wu",
+          "description": "Würzburg",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ASSUMPTION_DAY",
+              "month": "AUGUST",
+              "day": 15
+            }
+          ]
+        },
+        {
+          "hierarchy": "re",
+          "description": "Regensburg",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ASSUMPTION_DAY",
+              "month": "AUGUST",
+              "day": 15
+            }
+          ]
+        },
+        {
+          "hierarchy": "in",
+          "description": "Ingolstadt",
+          "holidayCollection": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ASSUMPTION_DAY",
+              "month": "AUGUST",
+              "day": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "hierarchy": "he",
+      "description": "Hessen",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "CORPUS_CHRISTI"
+        }
+      ]
+    },
+    {
+      "hierarchy": "mv",
+      "description": "Mecklenburg-Vorpommern",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31
+        }
+      ]
+    },
+    {
+      "hierarchy": "nw",
+      "description": "Nordrhein-Westfalen",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "CORPUS_CHRISTI"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ALL_SAINTS",
+          "month": "NOVEMBER",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "hierarchy": "rp",
+      "description": "Rheinland-Pfalz",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "CORPUS_CHRISTI"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ALL_SAINTS",
+          "month": "NOVEMBER",
+          "day": 1
+        }
+      ]
+    },
+    {
+      "hierarchy": "sl",
+      "description": "Saarland",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "CORPUS_CHRISTI"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ALL_SAINTS",
+          "month": "NOVEMBER",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "ASSUMPTION_DAY",
+          "month": "AUGUST",
+          "day": 15
+        }
+      ]
+    },
+    {
+      "hierarchy": "sn",
+      "description": "Sachsen",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31
+        },
+        {
+          "holidayType": "RELATIVE_TO_DATE",
+          "key": "REPENTANCE_PRAYER",
+          "relation": {
+            "weekday": "WEDNESDAY",
+            "when": "BEFORE"
+          },
+          "fix": {
+            "month": "NOVEMBER",
+            "day": 23
+          }
+        }
+      ]
+    },
+    {
+      "hierarchy": "st",
+      "description": "Sachsen-Anhalt",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "EPIPHANY",
+          "month": "JANUARY",
+          "day": 6
+        }
+      ]
+    },
+    {
+      "hierarchy": "th",
+      "description": "Thüringen",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31
+        }
+      ]
+    }
+  ]
+}
