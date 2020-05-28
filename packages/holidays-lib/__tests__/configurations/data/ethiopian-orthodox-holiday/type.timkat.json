@@ -2,6 +2,6 @@
   "hierarchy": "ethiopian-orthodox-holiday-only-type",
   "description": "ethiopian-orthodox-holiday-only-type",
   "holidayCollection": [
-    { "holidayType": "ETHIOPIAN_ORTHODOX", "type": "TIMKAT" }
+    { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "TIMKAT" }
   ]
 }

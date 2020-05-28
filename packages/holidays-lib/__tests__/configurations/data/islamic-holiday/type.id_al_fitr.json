@@ -2,6 +2,6 @@
   "hierarchy": "islamic-holiday-only-type",
   "description": "islamic-holiday-only-type",
   "holidayCollection": [
-    { "holidayType": "ISLAMIC", "type": "ID_AL_FITR" }
+    { "holidayType": "ISLAMIC", "key": "ID_AL_FITR" }
   ]
 }

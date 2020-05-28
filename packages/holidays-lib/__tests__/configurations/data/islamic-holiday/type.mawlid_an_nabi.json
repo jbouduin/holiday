@@ -2,6 +2,6 @@
   "hierarchy": "islamic-holiday-only-type",
   "description": "islamic-holiday-only-type",
   "holidayCollection": [
-    { "holidayType": "ISLAMIC", "type": "MAWLID_AN_NABI" }
+    { "holidayType": "ISLAMIC", "key": "MAWLID_AN_NABI" }
   ]
 }

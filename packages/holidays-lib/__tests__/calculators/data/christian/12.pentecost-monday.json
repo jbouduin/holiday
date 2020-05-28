@@ -2,6 +2,6 @@
   "hierarchy": "pentecost-monday",
   "description": "Pentecost monday",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "PENTECOST_MONDAY" }
+    { "holidayType": "CHRISTIAN", "key": "PENTECOST_MONDAY" }
   ]
 }

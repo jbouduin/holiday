@@ -2,6 +2,6 @@
   "hierarchy": "general-prayer-day",
   "description": "General prayer day",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "GENERAL_PRAYER_DAY" }
+    { "holidayType": "CHRISTIAN", "key": "GENERAL_PRAYER_DAY" }
   ]
 }

@@ -2,6 +2,6 @@
   "hierarchy": "clean-monday",
   "description": "Clean Monday",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "CLEAN_MONDAY" }
+    { "holidayType": "CHRISTIAN", "key": "CLEAN_MONDAY" }
   ]
 }

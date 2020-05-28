@@ -2,6 +2,6 @@
   "hierarchy": "whit-monday",
   "description": "Whitmonday",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "WHIT_MONDAY" }
+    { "holidayType": "CHRISTIAN", "key": "WHIT_MONDAY" }
   ]
 }

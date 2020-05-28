@@ -2,6 +2,6 @@
   "hierarchy": "easter-julian",
   "description": "easter Julian",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "MARDI_GRAS" }
+    { "holidayType": "CHRISTIAN", "key": "MARDI_GRAS" }
   ]
 }

@@ -2,6 +2,6 @@
   "hierarchy": "islamic-holiday-only-type",
   "description": "islamic-holiday-only-type",
   "holidayCollection": [
-    { "holidayType": "ISLAMIC", "type": "ASCHURA" }
+    { "holidayType": "ISLAMIC", "key": "ASCHURA" }
   ]
 }

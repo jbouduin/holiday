@@ -2,6 +2,6 @@
   "hierarchy": "invalid",
   "description": "invalid",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "" }
+    { "holidayType": "CHRISTIAN", "key": "" }
   ]
 }

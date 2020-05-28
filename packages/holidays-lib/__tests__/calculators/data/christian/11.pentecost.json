@@ -2,6 +2,6 @@
   "hierarchy": "pentecost",
   "description": "Pentecost",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "PENTECOST" }
+    { "holidayType": "CHRISTIAN", "key": "PENTECOST" }
   ]
 }

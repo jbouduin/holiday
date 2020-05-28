@@ -2,6 +2,6 @@
   "hierarchy": "easter-julian",
   "description": "easter Julian",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "WHIT_SUNDAY" }
+    { "holidayType": "CHRISTIAN", "key": "WHIT_SUNDAY" }
   ]
 }
