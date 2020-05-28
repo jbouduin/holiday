@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IFixedDate, IRelationWhichWeekdayWhen, IRelativeHoliday } from '../../src/configuration';
 import { Month, Weekday, When, Which } from '../../src/configuration';
 
@@ -79,32 +79,32 @@ describe.each([
 });
 
 describe.each([
-  ['invalid.fix.empty', 2, ErrorKeys.RELATIVE_FIX_EMPTY],
-  ['invalid.fix.missing', 2, ErrorKeys.RELATIVE_FIX_MISSING],
-  ['invalid.fix.month.missing', 2, ErrorKeys.FIXED_DATE_MONTH_MISSING],
-  ['invalid.fix.month.empty', 2, ErrorKeys.FIXED_DATE_MONTH_MISSING],
-  ['invalid.fix.month.value', 2, ErrorKeys.FIXED_DATE_MONTH_INVALID],
-  ['invalid.fix.day.alphanumeric', 2, ErrorKeys.FIXED_DATE_DAY_INVALID],
-  ['invalid.fix.day.missing', 2, ErrorKeys.FIXED_DATE_DAY_MISSING],
-  ['invalid.fix.day.empty', 2, ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
-  ['invalid.fix.day.out-of-range', 15, ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
-  ['invalid.relation.empty', 2, ErrorKeys.RELATIVE_RELATION_EMPTY],
-  ['invalid.relation.missing', 2, ErrorKeys.RELATIVE_RELATION_MISSING],
-  ['invalid.relation.which.empty', 2, ErrorKeys.RELATION_WHICH_MISSING],
-  ['invalid.relation.which.last', 2, ErrorKeys.RELATION_WHICH_INVALID],
-  ['invalid.relation.which.value', 2, ErrorKeys.RELATION_WHICH_INVALID],
-  ['invalid.relation.weekday.missing', 2, ErrorKeys.RELATION_WEEKDAY_MISSING],
-  ['invalid.relation.weekday.empty', 2, ErrorKeys.RELATION_WEEKDAY_MISSING],
-  ['invalid.relation.weekday.value', 2, ErrorKeys.RELATION_WEEKDAY_INVALID],
-  ['invalid.relation.when.empty', 2, ErrorKeys.RELATION_WHEN_MISSING],
-  ['invalid.relation.when.missing', 2, ErrorKeys.RELATION_WHEN_MISSING],
-  ['invalid.relation.when.value', 2, ErrorKeys.RELATION_WHEN_INVALID]
-])('relative to date > invalid configurations > %s', (fileName: string, expectedNumber: number, key: ErrorKeys) => {
+  ['invalid.fix.empty', 2, ErrorKey.RELATIVE_FIX_EMPTY],
+  ['invalid.fix.missing', 2, ErrorKey.RELATIVE_FIX_MISSING],
+  ['invalid.fix.month.missing', 2, ErrorKey.FIXED_DATE_MONTH_MISSING],
+  ['invalid.fix.month.empty', 2, ErrorKey.FIXED_DATE_MONTH_MISSING],
+  ['invalid.fix.month.value', 2, ErrorKey.FIXED_DATE_MONTH_INVALID],
+  ['invalid.fix.day.alphanumeric', 2, ErrorKey.FIXED_DATE_DAY_INVALID],
+  ['invalid.fix.day.missing', 2, ErrorKey.FIXED_DATE_DAY_MISSING],
+  ['invalid.fix.day.empty', 2, ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE],
+  ['invalid.fix.day.out-of-range', 15, ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE],
+  ['invalid.relation.empty', 2, ErrorKey.RELATIVE_RELATION_EMPTY],
+  ['invalid.relation.missing', 2, ErrorKey.RELATIVE_RELATION_MISSING],
+  ['invalid.relation.which.empty', 2, ErrorKey.RELATION_WHICH_MISSING],
+  ['invalid.relation.which.last', 2, ErrorKey.RELATION_WHICH_INVALID],
+  ['invalid.relation.which.value', 2, ErrorKey.RELATION_WHICH_INVALID],
+  ['invalid.relation.weekday.missing', 2, ErrorKey.RELATION_WEEKDAY_MISSING],
+  ['invalid.relation.weekday.empty', 2, ErrorKey.RELATION_WEEKDAY_MISSING],
+  ['invalid.relation.weekday.value', 2, ErrorKey.RELATION_WEEKDAY_INVALID],
+  ['invalid.relation.when.empty', 2, ErrorKey.RELATION_WHEN_MISSING],
+  ['invalid.relation.when.missing', 2, ErrorKey.RELATION_WHEN_MISSING],
+  ['invalid.relation.when.value', 2, ErrorKey.RELATION_WHEN_INVALID]
+])('relative to date > invalid configurations > %s', (fileName: string, expectedNumber: number, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(expectedNumber));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`expected error exists`, () => expect(expectedError.length).toBe(expectedNumber - 1));

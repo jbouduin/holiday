@@ -1,4 +1,4 @@
-import { ErrorKeys } from './error-keys';
+import { ErrorKey } from './error-key';
 
 export interface ILoadError {
   key: string;

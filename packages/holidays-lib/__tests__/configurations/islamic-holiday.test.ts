@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IIslamicHoliday, IslamicHolidayType } from '../../src/configuration';
 
 const dataRoot = './data/islamic-holiday';
@@ -26,15 +26,15 @@ describe.each([
 })
 
 describe.each([
-  ['invalid.type.empty', ErrorKeys.ISLAMIC_TYPE_MISSING],
-  ['invalid.type.value', ErrorKeys.ISLAMIC_TYPE_INVALID],
-  ['invalid.type.missing', ErrorKeys.ISLAMIC_TYPE_MISSING]
-])('Islamic holiday invalid configurations', (fileName: string, key: ErrorKeys) => {
+  ['invalid.type.empty', ErrorKey.ISLAMIC_TYPE_MISSING],
+  ['invalid.type.value', ErrorKey.ISLAMIC_TYPE_INVALID],
+  ['invalid.type.missing', ErrorKey.ISLAMIC_TYPE_MISSING]
+])('Islamic holiday invalid configurations', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(2));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`${fileName} >  NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`${fileName} > expected error exists`, () => expect(expectedError.length).toBe(1));

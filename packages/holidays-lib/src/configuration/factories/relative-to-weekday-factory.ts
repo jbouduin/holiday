@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { CycleType, HolidayStatus, HolidayType } from '../types';
@@ -45,17 +45,17 @@ export class RelativeToWeekdayFactory
 
   protected extractData(obj: any): void {
     if (!obj.fix) {
-      this.addError(ErrorKeys.RELATIVE_FIX_MISSING);
+      this.addError(ErrorKey.RELATIVE_FIX_MISSING);
     } else if (!obj.fix.which && !obj.fix.weekday && !obj.fix.month) {
-      this.addError(ErrorKeys.RELATIVE_FIX_EMPTY);
+      this.addError(ErrorKey.RELATIVE_FIX_EMPTY);
     } else {
       this.fix = this.dataExtractor.extractFixedWeekday(obj.fix);
     }
 
     if (!obj.relation) {
-      this.addError(ErrorKeys.RELATIVE_RELATION_MISSING);
+      this.addError(ErrorKey.RELATIVE_RELATION_MISSING);
     } else if (!obj.relation.which && !obj.relation.weekday && !obj.relation.when) {
-      this.addError(ErrorKeys.RELATIVE_RELATION_EMPTY);
+      this.addError(ErrorKey.RELATIVE_RELATION_EMPTY);
     } else {
       this.relation = this.dataExtractor.extractWhichWeekdayWhen(obj.relation);
     }

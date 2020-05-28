@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IBaseHoliday } from '../holidays';
 import { IConfiguration, Configuration } from '../configuration';
 import { HolidayType, HolidayTypeKeyStrings } from '../types';
@@ -30,7 +30,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
     const root = hierarchy.split('/')[0];
     if (root.length === 0) {
       const result = new Configuration('', '');
-      result.addError(ErrorKeys.HIERARCHY_INVALID, 'root', hierarchy);
+      result.addError(ErrorKey.HIERARCHY_INVALID, 'root', hierarchy);
       return result;
     }
 
@@ -41,7 +41,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
   public loadByFileName(fileName: string): IConfiguration {
     const result = new Configuration('', '');
     if (!fs.existsSync(fileName)) {
-      result.addError(ErrorKeys.FILE_NOT_FOUND, 'root', fileName);
+      result.addError(ErrorKey.FILE_NOT_FOUND, 'root', fileName);
       return result;
     }
 
@@ -49,7 +49,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
     try {
       data = fs.readFileSync(fileName, 'utf-8');
     } catch (error) {
-      result.addError(ErrorKeys.COULD_NOT_READ_FILE, 'root', fileName, error);
+      result.addError(ErrorKey.COULD_NOT_READ_FILE, 'root', fileName, error);
       return result;
     }
 
@@ -57,7 +57,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
     try {
       obj = JSON.parse(data);
     } catch (error) {
-      result.addError(ErrorKeys.INVALID_FILE_CONTENTS, 'root', fileName, error);
+      result.addError(ErrorKey.INVALID_FILE_CONTENTS, 'root', fileName, error);
       return result;
     }
 
@@ -71,20 +71,20 @@ export class ConfigurationFactory implements IConfigurationFactory {
     let hierarchy: string;
 
     if (!result.hierarchy) {
-      result.addError(ErrorKeys.HIERARCHY_NOT_SPECIFIED, parent);
+      result.addError(ErrorKey.HIERARCHY_NOT_SPECIFIED, parent);
       hierarchy = parent;
     } else {
       hierarchy = `${parent === 'root' ? '' : parent}/${result.hierarchy}`;
     }
 
     if (!result.description) {
-      result.addError(ErrorKeys.DESCRIPTION_NOT_SPECIFIED, hierarchy);
+      result.addError(ErrorKey.DESCRIPTION_NOT_SPECIFIED, hierarchy);
     }
 
     if (!obj.holidayCollection) {
-      result.addError(ErrorKeys.HOLIDAY_COLLECTION_MISSING, hierarchy);
+      result.addError(ErrorKey.HOLIDAY_COLLECTION_MISSING, hierarchy);
     } else if (obj.holidayCollection.length === 0) {
-      result.addError(ErrorKeys.HOLIDAY_COLLECTION_EMPTY, hierarchy);
+      result.addError(ErrorKey.HOLIDAY_COLLECTION_EMPTY, hierarchy);
     }
 
     if (result.errors.length > 0) {
@@ -131,13 +131,13 @@ export class ConfigurationFactory implements IConfigurationFactory {
           break;
         }
         default: {
-          result.addError(ErrorKeys.HOLIDAY_TYPE_INVALID, location, holiday.holidayType);
+          result.addError(ErrorKey.HOLIDAY_TYPE_INVALID, location, holiday.holidayType);
         }
       }
       holidayNumber++;
     });
     if (result.holidayCollection.length === 0) {
-      result.addError(ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION, hierarchy);
+      result.addError(ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION, hierarchy);
     }
 
     if (obj.subConfigurations) {

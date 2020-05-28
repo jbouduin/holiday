@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IBetweenFixedDates, IRelationWeekday } from '../specifics';
 import { CycleType, HolidayStatus, HolidayType } from '../types';
@@ -45,33 +45,33 @@ export class RelativeBetweenFixedFactory
   protected extractData(obj: any): void {
     let canContinue = true;
     if (!obj.fix) {
-      this.addError(ErrorKeys.RELATIVE_FIX_MISSING);
+      this.addError(ErrorKey.RELATIVE_FIX_MISSING);
       canContinue = false;
     } else {
       if (!obj.fix.from && !obj.fix.to) {
-        this.addError(ErrorKeys.RELATIVE_FIX_EMPTY);
+        this.addError(ErrorKey.RELATIVE_FIX_EMPTY);
         canContinue = false;
       } else {
         if (!obj.fix.from) {
-          this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_FROM_MISSING);
+          this.addError(ErrorKey.RELATIVE_BETWEEN_FIXED_FROM_MISSING);
           canContinue = false;
         }
         if (!obj.fix.to) {
-          this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_TO_MISSING);
+          this.addError(ErrorKey.RELATIVE_BETWEEN_FIXED_TO_MISSING);
             canContinue = false;
         }
       }
     }
 
     if (!obj.relation) {
-      this.addError(ErrorKeys.RELATIVE_RELATION_MISSING);
+      this.addError(ErrorKey.RELATIVE_RELATION_MISSING);
     } else {
       if (!obj.relation.weekday && obj.relation.weekday !== '') {
-        this.addError(ErrorKeys.RELATIVE_RELATION_EMPTY);
+        this.addError(ErrorKey.RELATIVE_RELATION_EMPTY);
       } else {
         const weekday = Weekday[<WeekdayKeyStrings>obj.relation.weekday];
         if (weekday === undefined) {
-          this.addError(ErrorKeys.RELATION_WEEKDAY_INVALID, obj.weekday);
+          this.addError(ErrorKey.RELATION_WEEKDAY_INVALID, obj.weekday);
         } else {
           this.relation = { weekday };
         }
@@ -89,9 +89,9 @@ export class RelativeBetweenFixedFactory
         if (!isNaN(fromDate.getTime()) && !isNaN(toDate.getTime())) {
           const timeSpan = toDate.getTime() - fromDate.getTime();
           if (timeSpan < 0) {
-            this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM, obj.fix);
+            this.addError(ErrorKey.RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM, obj.fix);
           } else if (timeSpan !== 6 * 24 * 60 * 60 * 1000 ) { // 518400000 is a week
-            this.addError(ErrorKeys.RELATIVE_BETWEEN_FIXED_SPAN_INVALID, obj.fix);
+            this.addError(ErrorKey.RELATIVE_BETWEEN_FIXED_SPAN_INVALID, obj.fix);
           }
         }
       }

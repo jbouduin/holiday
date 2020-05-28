@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IFixedDateHoliday } from '../../src/configuration';
 import { Month } from '../../src/configuration';
 
@@ -65,7 +65,7 @@ describe('errors on all 3 levels', () => {
   test('parent holiday > value', () => expect(holiday.day).toBe(1));
   test('parent > number of subConfigurations', () => expect(configuration.subConfigurations.length).toBe(2));
   const error = configuration.errors[0];
-  test('parent error > key', () => expect(error.key).toBe(ErrorKeys.FIXED_DATE_MONTH_INVALID));
+  test('parent error > key', () => expect(error.key).toBe(ErrorKey.FIXED_DATE_MONTH_INVALID));
 
   const child1 = configuration.subConfigurations[0];
   test('child1 > hierarchy', () => expect(child1.hierarchy).toBe('child-1'));
@@ -77,7 +77,7 @@ describe('errors on all 3 levels', () => {
   test('child1 holiday > value', () => expect(holiday1.day).toBe(2));
   test('child1 > number of subConfigurations', () => expect(child1.subConfigurations.length).toBe(1));
   const error1 = child1.errors[0];
-  test('child1 error > key', () => expect(error1.key).toBe(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE));
+  test('child1 error > key', () => expect(error1.key).toBe(ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE));
 
   const child2 = configuration.subConfigurations[1];
   test('child2 > hierarchy', () => expect(child2.hierarchy).toBe('child-2'));
@@ -89,7 +89,7 @@ describe('errors on all 3 levels', () => {
   test('child2 holiday > value', () => expect(holiday2.day).toBe(2));
   test('child2 > number of subConfigurations', () => expect(child2.subConfigurations.length).toBe(0));
   const error2 = child2.errors[0];
-  test('child2 error > key', () => expect(error2.key).toBe(ErrorKeys.CHRISTIAN_TYPE_MISSING));
+  test('child2 error > key', () => expect(error2.key).toBe(ErrorKey.CHRISTIAN_TYPE_MISSING));
 
   const grandChild = child1.subConfigurations[0];
   test('grandChild > hierarchy', () => expect(grandChild.hierarchy).toBe('grand-child-1'));
@@ -101,5 +101,5 @@ describe('errors on all 3 levels', () => {
   test('grandChild holiday > value', () => expect(holiday3.day).toBe(3));
   test('grandChild > number of subConfigurations', () => expect(grandChild.subConfigurations.length).toBe(0));
   const error3 = grandChild.errors[0];
-  test('grandChild error > key', () => expect(error3.key).toBe(ErrorKeys.KEY_MISSING));
+  test('grandChild error > key', () => expect(error3.key).toBe(ErrorKey.KEY_MISSING));
 })

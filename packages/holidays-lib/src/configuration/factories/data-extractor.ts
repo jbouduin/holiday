@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IFixedDate, IFixedWeekday, IMove, IRelationWhichWeekdayWhen } from '../specifics';
 import { Condition, ConditionKeyStrings } from '../types';
 import { Month, MonthKeyStrings } from '../types';
@@ -38,17 +38,17 @@ export class DataExtractor implements IDataExtractor {
 
     if (!result.day && result.day !== 0) {
       if (!obj.day) {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_DAY_MISSING);
+        this.errorHandlerCallBack(ErrorKey.FIXED_DATE_DAY_MISSING);
       } else  {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_DAY_INVALID, obj.day);
+        this.errorHandlerCallBack(ErrorKey.FIXED_DATE_DAY_INVALID, obj.day);
       }
     }
 
     if (result.month === undefined) {
       if (!obj.month || obj.month === '') {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_MONTH_MISSING);
+        this.errorHandlerCallBack(ErrorKey.FIXED_DATE_MONTH_MISSING);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_MONTH_INVALID, obj.day);
+        this.errorHandlerCallBack(ErrorKey.FIXED_DATE_MONTH_INVALID, obj.day);
       }
     } else if (result.day  || result.day === 0) {
       if (result.day > 0) {
@@ -58,25 +58,25 @@ export class DataExtractor implements IDataExtractor {
           case Month.SEPTEMBER:
           case Month.NOVEMBER: {
             if (result.day > 30) {
-              this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
+              this.errorHandlerCallBack(ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
             }
             break;
           }
           case Month.FEBRUARY: {
             if (result.day > 29) {
-              this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
+              this.errorHandlerCallBack(ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
             }
             break;
           }
           default: {
             if (result.day > 31) {
-              this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
+              this.errorHandlerCallBack(ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE, result.day, Month[result.month]);
             }
           }
         }
       }
       else {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE, result.day);
+        this.errorHandlerCallBack(ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE, result.day);
       }
     }
     return result;
@@ -91,25 +91,25 @@ export class DataExtractor implements IDataExtractor {
 
     if (result.month === undefined) {
       if (obj.month) {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_WEEKDAY_MONTH_INVALID, obj.month);
+        this.errorHandlerCallBack(ErrorKey.FIXED_WEEKDAY_MONTH_INVALID, obj.month);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING);
+        this.errorHandlerCallBack(ErrorKey.FIXED_WEEKDAY_MONTH_MISSING);
       }
     }
 
     if (result.weekday === undefined) {
       if (obj.weekday) {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_WEEKDAY_WEEKDAY_INVALID, obj.weekday);
+        this.errorHandlerCallBack(ErrorKey.FIXED_WEEKDAY_WEEKDAY_INVALID, obj.weekday);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING);
+        this.errorHandlerCallBack(ErrorKey.FIXED_WEEKDAY_WEEKDAY_MISSING);
       }
     }
 
     if (result.which === undefined) {
       if (obj.which) {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_WEEKDAY_WHICH_INVALID, obj.which);
+        this.errorHandlerCallBack(ErrorKey.FIXED_WEEKDAY_WHICH_INVALID, obj.which);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING);
+        this.errorHandlerCallBack(ErrorKey.FIXED_WEEKDAY_WHICH_MISSING);
       }
     }
     return result;
@@ -121,7 +121,7 @@ export class DataExtractor implements IDataExtractor {
     if (obj.moves) {
       obj.moves.forEach( (move: any) => {
         if (!move.condition && !move.moveTo && !move.weekday) {
-          this.errorHandlerCallBack(ErrorKeys.MOVE_EMPTY);
+          this.errorHandlerCallBack(ErrorKey.MOVE_EMPTY);
         } else {
           result.push(this.extractMove(move));
         }
@@ -133,13 +133,13 @@ export class DataExtractor implements IDataExtractor {
     );
 
     if (new Set(saturday).size !== result.length) {
-      this.errorHandlerCallBack(ErrorKeys.MOVE_DUPLICATE_CONDITIONS, obj.moves);
+      this.errorHandlerCallBack(ErrorKey.MOVE_DUPLICATE_CONDITIONS, obj.moves);
     } else {
       const sunday = result.map(
         (move: IMove) => move.condition === Condition.IS_SUNDAY ? Condition.IS_WEEKEND : move.condition
       );
       if (new Set(sunday).size !== result.length) {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_DUPLICATE_CONDITIONS, obj.moves);
+        this.errorHandlerCallBack(ErrorKey.MOVE_DUPLICATE_CONDITIONS, obj.moves);
       }
     }
     return result;
@@ -148,7 +148,7 @@ export class DataExtractor implements IDataExtractor {
   public extractStringKey(obj: any): string {
     const result = obj.key;
     if (!result) {
-      this.errorHandlerCallBack(ErrorKeys.KEY_MISSING);
+      this.errorHandlerCallBack(ErrorKey.KEY_MISSING);
     }
     return result;
   }
@@ -160,30 +160,30 @@ export class DataExtractor implements IDataExtractor {
       which = Which[<WhichKeyStrings>obj.which];
       if (which === undefined) {
         if (!obj.which) {
-          this.errorHandlerCallBack(ErrorKeys.RELATION_WHICH_MISSING);
+          this.errorHandlerCallBack(ErrorKey.RELATION_WHICH_MISSING);
         } else {
-          this.errorHandlerCallBack(ErrorKeys.RELATION_WHICH_INVALID, obj.which);
+          this.errorHandlerCallBack(ErrorKey.RELATION_WHICH_INVALID, obj.which);
         }
       } else if (which === Which.LAST) {
-        this.errorHandlerCallBack(ErrorKeys.RELATION_WHICH_INVALID, obj.which);
+        this.errorHandlerCallBack(ErrorKey.RELATION_WHICH_INVALID, obj.which);
       }
     }
 
     const weekday = Weekday[<WeekdayKeyStrings>obj.weekday];
     if (weekday === undefined) {
       if (obj.weekday) {
-        this.errorHandlerCallBack(ErrorKeys.RELATION_WEEKDAY_INVALID, obj.weekday);
+        this.errorHandlerCallBack(ErrorKey.RELATION_WEEKDAY_INVALID, obj.weekday);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.RELATION_WEEKDAY_MISSING);
+        this.errorHandlerCallBack(ErrorKey.RELATION_WEEKDAY_MISSING);
       }
     }
 
     const when = When[<WhenKeyStrings>obj.when];
     if (when === undefined) {
       if (obj.when) {
-        this.errorHandlerCallBack(ErrorKeys.RELATION_WHEN_INVALID, obj.when);
+        this.errorHandlerCallBack(ErrorKey.RELATION_WHEN_INVALID, obj.when);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.RELATION_WHEN_MISSING);
+        this.errorHandlerCallBack(ErrorKey.RELATION_WHEN_MISSING);
       }
     }
 
@@ -206,25 +206,25 @@ export class DataExtractor implements IDataExtractor {
 
     if (result.condition === undefined) {
       if (obj.condition) {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_CONDITION_INVALID, obj.condition);
+        this.errorHandlerCallBack(ErrorKey.MOVE_CONDITION_INVALID, obj.condition);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_CONDITION_MISSING);
+        this.errorHandlerCallBack(ErrorKey.MOVE_CONDITION_MISSING);
       }
     }
 
     if (result.moveTo === undefined) {
       if (obj.moveTo) {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_MOVE_TO_INVALID, obj.moveTo);
+        this.errorHandlerCallBack(ErrorKey.MOVE_MOVE_TO_INVALID, obj.moveTo);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_MOVE_TO_MISSING);
+        this.errorHandlerCallBack(ErrorKey.MOVE_MOVE_TO_MISSING);
       }
     }
 
     if (result.weekday === undefined) {
       if (obj.weekday) {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_WEEKDAY_INVALID, obj.weekday);
+        this.errorHandlerCallBack(ErrorKey.MOVE_WEEKDAY_INVALID, obj.weekday);
       } else {
-        this.errorHandlerCallBack(ErrorKeys.MOVE_WEEKDAY_MISSING);
+        this.errorHandlerCallBack(ErrorKey.MOVE_WEEKDAY_MISSING);
       }
     }
     return result;

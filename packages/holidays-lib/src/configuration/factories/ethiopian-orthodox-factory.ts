@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHoliday } from '../holidays';
 import { HolidayStatus, CycleType } from '../types';
 import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } from '../types';
@@ -37,9 +37,9 @@ export class EthiopianOrthodoxFactory
 
     if (!result && result !== 0) {
       if (!obj.key) {
-        this.addError(ErrorKeys.ETHIOPIAN_ORTHODOX_TYPE_MISSING);
+        this.addError(ErrorKey.ETHIOPIAN_ORTHODOX_TYPE_MISSING);
       } else {
-        this.addError(ErrorKeys.ETHIOPIAN_ORTHODOX_TYPE_INVALID, obj.key);
+        this.addError(ErrorKey.ETHIOPIAN_ORTHODOX_TYPE_INVALID, obj.key);
       }
     }
     return result;

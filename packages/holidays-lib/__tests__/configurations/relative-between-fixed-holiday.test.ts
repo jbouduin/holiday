@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IBetweenFixedDates, IRelationWeekday, IRelativeHoliday, Month, Weekday } from '../../src/configuration';
 
 const dataRoot = './data/relative-between-fixed-holiday';
@@ -64,42 +64,42 @@ describe.each([
 });
 
 describe.each([
-  ['invalid.fix.empty', ErrorKeys.RELATIVE_FIX_EMPTY],
-  ['invalid.fix.from.missing', ErrorKeys.RELATIVE_BETWEEN_FIXED_FROM_MISSING],
-  ['invalid.fix.missing', ErrorKeys.RELATIVE_FIX_MISSING],
-  ['invalid.fix.to.missing', ErrorKeys.RELATIVE_BETWEEN_FIXED_TO_MISSING],
-  ['invalid.key.empty', ErrorKeys.KEY_MISSING],
-  ['invalid.key.missing', ErrorKeys.KEY_MISSING],
-  ['invalid.relation.missing', ErrorKeys.RELATIVE_RELATION_MISSING],
-  ['invalid.relation.weekday.missing', ErrorKeys.RELATIVE_RELATION_EMPTY],
-  ['invalid.relation.weekday.empty', ErrorKeys.RELATION_WEEKDAY_INVALID],
-  ['invalid.relation.weekday.value', ErrorKeys.RELATION_WEEKDAY_INVALID],
-  ['invalid.fix.timespan.invalid', ErrorKeys.RELATIVE_BETWEEN_FIXED_SPAN_INVALID],
-  ['invalid.fix.to-before-from', ErrorKeys.RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM]
-])('relative between fixed > invalid configurations > %s', (fileName: string, key: ErrorKeys) => {
+  ['invalid.fix.empty', ErrorKey.RELATIVE_FIX_EMPTY],
+  ['invalid.fix.from.missing', ErrorKey.RELATIVE_BETWEEN_FIXED_FROM_MISSING],
+  ['invalid.fix.missing', ErrorKey.RELATIVE_FIX_MISSING],
+  ['invalid.fix.to.missing', ErrorKey.RELATIVE_BETWEEN_FIXED_TO_MISSING],
+  ['invalid.key.empty', ErrorKey.KEY_MISSING],
+  ['invalid.key.missing', ErrorKey.KEY_MISSING],
+  ['invalid.relation.missing', ErrorKey.RELATIVE_RELATION_MISSING],
+  ['invalid.relation.weekday.missing', ErrorKey.RELATIVE_RELATION_EMPTY],
+  ['invalid.relation.weekday.empty', ErrorKey.RELATION_WEEKDAY_INVALID],
+  ['invalid.relation.weekday.value', ErrorKey.RELATION_WEEKDAY_INVALID],
+  ['invalid.fix.timespan.invalid', ErrorKey.RELATIVE_BETWEEN_FIXED_SPAN_INVALID],
+  ['invalid.fix.to-before-from', ErrorKey.RELATIVE_BETWEEN_FIXED_FIX_TO_BEFORE_FROM]
+])('relative between fixed > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(2));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`expected error exists`, () => expect(expectedError.length).toBe(1));
 });
 
 describe.each([
-  ['invalid.fix.days.empty', ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
-  ['invalid.fix.days.missing', ErrorKeys.FIXED_DATE_DAY_MISSING],
-  ['invalid.fix.days.invalid', ErrorKeys.FIXED_DATE_DAY_INVALID],
-  ['invalid.fix.months.empty', ErrorKeys.FIXED_DATE_MONTH_MISSING],
-  ['invalid.fix.months.missing', ErrorKeys.FIXED_DATE_MONTH_MISSING],
-  ['invalid.fix.months.invalid', ErrorKeys.FIXED_DATE_MONTH_INVALID],
-])('relative between fixed > invalid configurations > %s', (fileName: string, key: ErrorKeys) => {
+  ['invalid.fix.days.empty', ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE],
+  ['invalid.fix.days.missing', ErrorKey.FIXED_DATE_DAY_MISSING],
+  ['invalid.fix.days.invalid', ErrorKey.FIXED_DATE_DAY_INVALID],
+  ['invalid.fix.months.empty', ErrorKey.FIXED_DATE_MONTH_MISSING],
+  ['invalid.fix.months.missing', ErrorKey.FIXED_DATE_MONTH_MISSING],
+  ['invalid.fix.months.invalid', ErrorKey.FIXED_DATE_MONTH_INVALID],
+])('relative between fixed > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(3));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`expected error exists`, () => expect(expectedError.length).toBe(2));

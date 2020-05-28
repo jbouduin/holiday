@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IFixedWeekdayHoliday } from '../../src/configuration';
 import { Month } from '../../src/configuration';
 import { Weekday } from '../../src/configuration';
@@ -64,23 +64,23 @@ describe.each([
 })
 
 describe.each([
-  ['invalid.key.empty', ErrorKeys.KEY_MISSING],
-  ['invalid.key.missing', ErrorKeys.KEY_MISSING],
-  ['invalid.month.empty', ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING],
-  ['invalid.month.missing', ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING],
-  ['invalid.month.value', ErrorKeys.FIXED_WEEKDAY_MONTH_INVALID],
-  ['invalid.weekday.empty', ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING],
-  ['invalid.weekday.missing', ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING],
-  ['invalid.weekday.value', ErrorKeys.FIXED_WEEKDAY_WEEKDAY_INVALID],
-  ['invalid.which.empty', ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING],
-  ['invalid.which.missing', ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING],
-  ['invalid.which.value', ErrorKeys.FIXED_WEEKDAY_WHICH_INVALID]
-])('fixed weekday > invalid configurations', (fileName: string, key: ErrorKeys) => {
+  ['invalid.key.empty', ErrorKey.KEY_MISSING],
+  ['invalid.key.missing', ErrorKey.KEY_MISSING],
+  ['invalid.month.empty', ErrorKey.FIXED_WEEKDAY_MONTH_MISSING],
+  ['invalid.month.missing', ErrorKey.FIXED_WEEKDAY_MONTH_MISSING],
+  ['invalid.month.value', ErrorKey.FIXED_WEEKDAY_MONTH_INVALID],
+  ['invalid.weekday.empty', ErrorKey.FIXED_WEEKDAY_WEEKDAY_MISSING],
+  ['invalid.weekday.missing', ErrorKey.FIXED_WEEKDAY_WEEKDAY_MISSING],
+  ['invalid.weekday.value', ErrorKey.FIXED_WEEKDAY_WEEKDAY_INVALID],
+  ['invalid.which.empty', ErrorKey.FIXED_WEEKDAY_WHICH_MISSING],
+  ['invalid.which.missing', ErrorKey.FIXED_WEEKDAY_WHICH_MISSING],
+  ['invalid.which.value', ErrorKey.FIXED_WEEKDAY_WHICH_INVALID]
+])('fixed weekday > invalid configurations', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(2));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`${fileName} >  NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`${fileName} > expected error exists`, () => expect(expectedError.length).toBe(1));

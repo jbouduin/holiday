@@ -1,4 +1,4 @@
-import { ErrorKeys, ILoadError, LoadError } from '../errors';
+import { ErrorKey, ILoadError, LoadError } from '../errors';
 import { IBaseHoliday, BaseHoliday } from '../holidays';
 import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { CycleType, CycleTypeKeyStrings } from '../types';
@@ -87,7 +87,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     }
 
     if (this.cycle === undefined) {
-      this.addError(ErrorKeys.CYCLE_TYPE_INVALID, obj.cycle);
+      this.addError(ErrorKey.CYCLE_TYPE_INVALID, obj.cycle);
     } else {
       switch (this.cycle) {
         case CycleType.TWO_YEARS:
@@ -95,7 +95,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
         case CycleType.FIVE_YEARS:
         case CycleType.SIX_YEARS: {
           if (this.validFrom === BaseHoliday.undefinedValidFrom) {
-            this.addError(ErrorKeys.CYCLE_TYPE_REQUIRES_VALID_FROM, obj.cycle, obj.validFrom);
+            this.addError(ErrorKey.CYCLE_TYPE_REQUIRES_VALID_FROM, obj.cycle, obj.validFrom);
             break;
           }
         }
@@ -103,19 +103,19 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     }
 
     if (this.holidayStatus === undefined) {
-      this.addError(ErrorKeys.HOLIDAY_STATUS_INVALID, obj.HolidayStatus);
+      this.addError(ErrorKey.HOLIDAY_STATUS_INVALID, obj.HolidayStatus);
     }
 
     if (!this.validFrom) {
-      this.addError(ErrorKeys.VALID_FROM_INVALID, obj.validFrom);
+      this.addError(ErrorKey.VALID_FROM_INVALID, obj.validFrom);
     }
 
     if (!this.validTo) {
-      this.addError(ErrorKeys.VALID_TO_INVALID, obj.validTo);
+      this.addError(ErrorKey.VALID_TO_INVALID, obj.validTo);
     }
 
     if (this.validFrom && this.validTo && this.validFrom > this.validTo) {
-      this.addError(ErrorKeys.VALID_TO_BEFORE_VALID_FROM, obj.validTo, obj.validFrom);
+      this.addError(ErrorKey.VALID_TO_BEFORE_VALID_FROM, obj.validTo, obj.validFrom);
     }
   }
   // </editor-fold>

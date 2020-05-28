@@ -1,2 +1,2 @@
-export * from './error-keys';
+export * from './error-key';
 export * from './load-error';

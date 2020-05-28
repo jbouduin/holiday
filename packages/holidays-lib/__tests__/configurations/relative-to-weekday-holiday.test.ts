@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IFixedWeekday, IRelationWhichWeekdayWhen, IRelativeHoliday } from '../../src/configuration';
 import { Month, Weekday, When, Which } from '../../src/configuration';
 
@@ -112,34 +112,34 @@ describe.each([
 });
 
 describe.each([
-  ['invalid.fix.empty', ErrorKeys.RELATIVE_FIX_EMPTY],
-  ['invalid.fix.missing', ErrorKeys.RELATIVE_FIX_MISSING],
-  ['invalid.fix.month.missing', ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING],
-  ['invalid.fix.month.empty', ErrorKeys.FIXED_WEEKDAY_MONTH_MISSING],
-  ['invalid.fix.month.value', ErrorKeys.FIXED_WEEKDAY_MONTH_INVALID],
-  ['invalid.fix.weekday.missing', ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING],
-  ['invalid.fix.weekday.empty', ErrorKeys.FIXED_WEEKDAY_WEEKDAY_MISSING],
-  ['invalid.fix.weekday.value', ErrorKeys.FIXED_WEEKDAY_WEEKDAY_INVALID],
-  ['invalid.fix.which.missing', ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING],
-  ['invalid.fix.which.empty', ErrorKeys.FIXED_WEEKDAY_WHICH_MISSING],
-  ['invalid.fix.which.value', ErrorKeys.FIXED_WEEKDAY_WHICH_INVALID],
-  ['invalid.relation.empty', ErrorKeys.RELATIVE_RELATION_EMPTY],
-  ['invalid.relation.missing', ErrorKeys.RELATIVE_RELATION_MISSING],
-  ['invalid.relation.weekday.empty', ErrorKeys.RELATION_WEEKDAY_MISSING],
-  ['invalid.relation.weekday.missing', ErrorKeys.RELATION_WEEKDAY_MISSING],
-  ['invalid.relation.weekday.value', ErrorKeys.RELATION_WEEKDAY_INVALID],
-  ['invalid.relation.when.empty', ErrorKeys.RELATION_WHEN_MISSING],
-  ['invalid.relation.when.missing', ErrorKeys.RELATION_WHEN_MISSING],
-  ['invalid.relation.when.value', ErrorKeys.RELATION_WHEN_INVALID],
-  ['invalid.relation.which.empty', ErrorKeys.RELATION_WHICH_MISSING],
-  ['invalid.relation.which.last', ErrorKeys.RELATION_WHICH_INVALID],
-  ['invalid.relation.which.value', ErrorKeys.RELATION_WHICH_INVALID]
-])('relative to weekday > invalid configurations > %s', (fileName: string, key: ErrorKeys) => {
+  ['invalid.fix.empty', ErrorKey.RELATIVE_FIX_EMPTY],
+  ['invalid.fix.missing', ErrorKey.RELATIVE_FIX_MISSING],
+  ['invalid.fix.month.missing', ErrorKey.FIXED_WEEKDAY_MONTH_MISSING],
+  ['invalid.fix.month.empty', ErrorKey.FIXED_WEEKDAY_MONTH_MISSING],
+  ['invalid.fix.month.value', ErrorKey.FIXED_WEEKDAY_MONTH_INVALID],
+  ['invalid.fix.weekday.missing', ErrorKey.FIXED_WEEKDAY_WEEKDAY_MISSING],
+  ['invalid.fix.weekday.empty', ErrorKey.FIXED_WEEKDAY_WEEKDAY_MISSING],
+  ['invalid.fix.weekday.value', ErrorKey.FIXED_WEEKDAY_WEEKDAY_INVALID],
+  ['invalid.fix.which.missing', ErrorKey.FIXED_WEEKDAY_WHICH_MISSING],
+  ['invalid.fix.which.empty', ErrorKey.FIXED_WEEKDAY_WHICH_MISSING],
+  ['invalid.fix.which.value', ErrorKey.FIXED_WEEKDAY_WHICH_INVALID],
+  ['invalid.relation.empty', ErrorKey.RELATIVE_RELATION_EMPTY],
+  ['invalid.relation.missing', ErrorKey.RELATIVE_RELATION_MISSING],
+  ['invalid.relation.weekday.empty', ErrorKey.RELATION_WEEKDAY_MISSING],
+  ['invalid.relation.weekday.missing', ErrorKey.RELATION_WEEKDAY_MISSING],
+  ['invalid.relation.weekday.value', ErrorKey.RELATION_WEEKDAY_INVALID],
+  ['invalid.relation.when.empty', ErrorKey.RELATION_WHEN_MISSING],
+  ['invalid.relation.when.missing', ErrorKey.RELATION_WHEN_MISSING],
+  ['invalid.relation.when.value', ErrorKey.RELATION_WHEN_INVALID],
+  ['invalid.relation.which.empty', ErrorKey.RELATION_WHICH_MISSING],
+  ['invalid.relation.which.last', ErrorKey.RELATION_WHICH_INVALID],
+  ['invalid.relation.which.value', ErrorKey.RELATION_WHICH_INVALID]
+])('relative to weekday > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(2));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`expected error exists`, () => expect(expectedError.length).toBe(1));

@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IChristianHoliday, ChristianHoliday } from '../holidays';
 import { ChronologyType, ChronologyTypeKeyStrings} from '../types';
 import { ChristianHolidayType, ChristianHolidayTypeKeyStrings } from '../types';
@@ -34,7 +34,7 @@ export class ChristianFactory extends BaseFactory<IChristianHoliday, ChristianHo
     }
 
     if (this.chronology === undefined) {
-      this.addError(ErrorKeys.CHRISTIAN_CHRONOLOGY_INVALID);
+      this.addError(ErrorKey.CHRISTIAN_CHRONOLOGY_INVALID);
     }
   }
 
@@ -43,9 +43,9 @@ export class ChristianFactory extends BaseFactory<IChristianHoliday, ChristianHo
 
     if (!result && result !== 0) {
       if (!obj.key) {
-        this.addError(ErrorKeys.CHRISTIAN_TYPE_MISSING);
+        this.addError(ErrorKey.CHRISTIAN_TYPE_MISSING);
       } else {
-        this.addError(ErrorKeys.CHRISTIAN_TYPE_INVALID, obj.key);
+        this.addError(ErrorKey.CHRISTIAN_TYPE_INVALID, obj.key);
       }
     }
     return result;

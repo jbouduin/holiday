@@ -1,5 +1,5 @@
 import { IFixedDateHoliday, FixedDateHoliday } from '../holidays';
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IFixedDate } from '../specifics';
 import { HolidayStatus, CycleType } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';

@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IIslamicHoliday, IslamicHoliday } from '../holidays';
 import { HolidayStatus, CycleType } from '../types';
 import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from '../types';
@@ -30,9 +30,9 @@ export class IslamicFactory extends BaseFactory<IIslamicHoliday, IslamicHolidayT
 
     if (!result && result !== 0) {
       if (!obj.key) {
-        this.addError(ErrorKeys.ISLAMIC_TYPE_MISSING);
+        this.addError(ErrorKey.ISLAMIC_TYPE_MISSING);
       } else {
-        this.addError(ErrorKeys.ISLAMIC_TYPE_INVALID, obj.key);
+        this.addError(ErrorKey.ISLAMIC_TYPE_INVALID, obj.key);
       }
     }
     return result;

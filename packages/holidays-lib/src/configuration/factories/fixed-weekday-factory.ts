@@ -1,4 +1,4 @@
-import { ErrorKeys } from '../errors';
+import { ErrorKey } from '../errors';
 import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from '../holidays';
 import { IFixedWeekday } from '../specifics';
 import { ChronologyType, ChronologyTypeKeyStrings} from '../types';

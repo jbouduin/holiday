@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ConfigurationFactory } from '../../src/configuration';
-import { ErrorKeys } from '../../src/configuration';
+import { ErrorKey } from '../../src/configuration';
 import { IFixedDateHoliday } from '../../src/configuration';
 import { Month } from '../../src/configuration';
 
@@ -42,21 +42,21 @@ describe.each([
 });
 
 describe.each([
-  ['invalid.day.alphanumeric', 2, ErrorKeys.FIXED_DATE_DAY_INVALID],
-  ['invalid.day.empty', 2, ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
-  ['invalid.day.missing', 2, ErrorKeys.FIXED_DATE_DAY_MISSING],
-  ['invalid.day.out-of-range', 15, ErrorKeys.FIXED_DATE_DAY_OUT_OF_RANGE],
-  ['invalid.key.empty', 2, ErrorKeys.KEY_MISSING],
-  ['invalid.key.missing', 2, ErrorKeys.KEY_MISSING],
-  ['invalid.month.empty', 2, ErrorKeys.FIXED_DATE_MONTH_MISSING],
-  ['invalid.month.missing', 2, ErrorKeys.FIXED_DATE_MONTH_MISSING],
-  ['invalid.month.value', 2, ErrorKeys.FIXED_DATE_MONTH_INVALID]
-])('fixed date > invalid configurations', (fileName: string, expectedNumber: number, key: ErrorKeys) => {
+  ['invalid.day.alphanumeric', 2, ErrorKey.FIXED_DATE_DAY_INVALID],
+  ['invalid.day.empty', 2, ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE],
+  ['invalid.day.missing', 2, ErrorKey.FIXED_DATE_DAY_MISSING],
+  ['invalid.day.out-of-range', 15, ErrorKey.FIXED_DATE_DAY_OUT_OF_RANGE],
+  ['invalid.key.empty', 2, ErrorKey.KEY_MISSING],
+  ['invalid.key.missing', 2, ErrorKey.KEY_MISSING],
+  ['invalid.month.empty', 2, ErrorKey.FIXED_DATE_MONTH_MISSING],
+  ['invalid.month.missing', 2, ErrorKey.FIXED_DATE_MONTH_MISSING],
+  ['invalid.month.value', 2, ErrorKey.FIXED_DATE_MONTH_INVALID]
+])('fixed date > invalid configurations', (fileName: string, expectedNumber: number, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(expectedNumber));
-  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKeys.NO_VALID_HOLIDAYS_IN_COLLECTION);
+  const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`${fileName} >  NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
   test(`${fileName} > expected error exists`, () => expect(expectedError.length).toBe(expectedNumber - 1));
