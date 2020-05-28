@@ -168,10 +168,14 @@ class Main {
       delete configuration.holidays.relativetoweekdayinmonth;
     }
 
-    const leftOver = JSON.stringify(configuration.holidays);
+    if (configuration.holidays._comment) {
+      console.warn(`Comments in ${configuration._attributes.hierarchy}: ${JSON.stringify(configuration.holidays._comment)}`);
+      delete configuration.holidays._comment;
+    }
 
+    const leftOver = JSON.stringify(configuration.holidays);
     if (leftOver !== '{}') {
-      throw new Error(`unprocessed content: ${leftOver}`);
+      throw new Error(`unprocessed content in ${configuration._attributes.hierarchy}: ${leftOver}`);
     }
     let subConfigurations!: Array<any>;
     if (configuration.subconfigurations) {

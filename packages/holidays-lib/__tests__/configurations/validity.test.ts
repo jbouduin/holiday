@@ -54,6 +54,7 @@ describe.each([
   [ 'pa', 'Panama' ],
   [ 'pe', 'Peru' ],
   [ 'pl', 'Poland' ],
+  [ 'pt', 'Portugal' ],
   [ 'py', 'Paraguay' ],
   [ 'ro', 'Romania' ],
   [ 'rs', 'Serbia' ],
