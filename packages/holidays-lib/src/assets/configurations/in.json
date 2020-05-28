@@ -1,0 +1,1230 @@
+{
+  "hierarchy": "in",
+  "description": "India",
+  "holidayCollection": [
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "REPUBLIC_DAY",
+      "month": "JANUARY",
+      "day": 26
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "INDEPENDENCE",
+      "month": "AUGUST",
+      "day": 15
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "GHANDIS_BIRTHDAY",
+      "month": "OCTOBER",
+      "day": 2
+    }
+  ],
+  "subConfigurations": [
+    {
+      "hierarchy": "ap",
+      "description": "Andhra Pradesh",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ar",
+      "description": "Arunachal Pradesh",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "as",
+      "description": "Assam",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "br",
+      "description": "Bihar",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ct",
+      "description": "Chhattisgarh",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ga",
+      "description": "Goa",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "DECEMBER",
+          "day": 3
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        }
+      ]
+    },
+    {
+      "hierarchy": "gj",
+      "description": "Gujarat",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "hr",
+      "description": "Haryana",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        }
+      ]
+    },
+    {
+      "hierarchy": "hp",
+      "description": "Himachal Pradesh",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "jk",
+      "description": "Jammu and Kashmir",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "jh",
+      "description": "Jharkhand",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ka",
+      "description": "Karnataka",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "NOVEMBER",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "NOVEMBER",
+          "day": 5
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "kl",
+      "description": "Kerala",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "mp",
+      "description": "Madhya Pradesh",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "mh",
+      "description": "Maharashtra",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "FEBRUARY",
+          "day": 19
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "mn",
+      "description": "Manipur",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ml",
+      "description": "Meghalaya",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "mz",
+      "description": "Mizoram",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        }
+      ]
+    },
+    {
+      "hierarchy": "nl",
+      "description": "Nagaland",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "or",
+      "description": "Orissa",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "pb",
+      "description": "Punjab",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        }
+      ]
+    },
+    {
+      "hierarchy": "rj",
+      "description": "Rajasthan",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "sk",
+      "description": "Sikkim",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "MAY",
+          "day": 16
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        }
+      ]
+    },
+    {
+      "hierarchy": "tn",
+      "description": "Tamil Nadu",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "tr",
+      "description": "Tripura",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "JANUARY",
+          "day": 23
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "up",
+      "description": "Uttar Pradesh",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "MARCH",
+          "day": 15
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ul",
+      "description": "Uttarakhand",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "wb",
+      "description": "West Bengal",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "JANUARY",
+          "day": 23
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "an",
+      "description": "Andaman and Nicobar Islands",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ch",
+      "description": "Chandigarh",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "dn",
+      "description": "Dadra and Nagar Haveli",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "dd",
+      "description": "Daman and Diu",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "ld",
+      "description": "Lakshadweep",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "dl",
+      "description": "Delhi",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    },
+    {
+      "hierarchy": "py",
+      "description": "Puducherry",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LABOUR_DAY",
+          "month": "MAY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "APRIL",
+          "day": 14
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NEW_YEAR",
+          "month": "JANUARY",
+          "day": 1
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHRISTMAS",
+          "month": "DECEMBER",
+          "day": 25
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ASCHURA"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "MAWLID_AN_NABI"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_AL_FITR"
+        },
+        {
+          "holidayType": "ISLAMIC",
+          "type": "ID_UL_ADHA"
+        }
+      ]
+    }
+  ]
+}
