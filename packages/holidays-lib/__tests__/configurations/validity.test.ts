@@ -1,3 +1,4 @@
+import * as path from 'path';
 import { ConfigurationFactory } from '../../src/configuration';
 
 // these tests only test the conformity of the json files

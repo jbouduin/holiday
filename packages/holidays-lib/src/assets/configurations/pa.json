@@ -2,17 +2,69 @@
   "hierarchy": "pa",
   "description": "Panama",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "EASTER" },
-		{ "holidayType": "CHRISTIAN", "type": "CLEAN_MONDAY" },
-		{ "holidayType": "CHRISTIAN", "type": "CARNIVAL" },
-		{ "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
-    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-		{ "holidayType": "FIXED_DATE", "key": "MARTYRS_DAY", "month": "JANUARY", "day": 9 },
-		{ "holidayType": "FIXED_DATE", "key": "LABOUR_DAY", "month": "MAY", "day": 1 },
-		{ "holidayType": "FIXED_DATE", "key": "SEPARATION", "month": "NOVEMBER", "day": 3 },
-		{ "holidayType": "FIXED_DATE", "key": "FLAG_DAY", "month": "NOVEMBER", "day": 4 },
-		{ "holidayType": "FIXED_DATE", "key": "INDEPENDENCE", "month": "NOVEMBER", "day": 28 },
-		{ "holidayType": "FIXED_DATE", "key": "MOTHERS_DAY", "month": "DECEMBER", "day": 8 },
-		{ "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 }
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "CLEAN_MONDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "CARNIVAL"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "GOOD_FRIDAY"
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "MARTYRS_DAY",
+      "month": "JANUARY",
+      "day": 9
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "LABOUR_DAY",
+      "month": "MAY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "SEPARATION",
+      "month": "NOVEMBER",
+      "day": 3
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "FLAG_DAY",
+      "month": "NOVEMBER",
+      "day": 4
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "INDEPENDENCE",
+      "month": "NOVEMBER",
+      "day": 28
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "MOTHERS_DAY",
+      "month": "DECEMBER",
+      "day": 8
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25
+    }
   ]
 }

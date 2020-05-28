@@ -2,16 +2,63 @@
   "hierarchy": "nl",
   "description": "The Netherlands",
   "holidayCollection": [
-    { "holidayType": "CHRISTIAN", "type": "EASTER" },
-	  { "holidayType": "CHRISTIAN", "type": "GOOD_FRIDAY" },
-	  { "holidayType": "CHRISTIAN", "type": "EASTER_MONDAY" },
- 	  { "holidayType": "CHRISTIAN", "type": "ASCENSION_DAY" },
- 	  { "holidayType": "CHRISTIAN", "type": "WHIT_MONDAY" },
-    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 },
-	  { "holidayType": "FIXED_DATE", "key": "QUEENS_BIRTHDAY", "month": "APRIL", "day": 30, "validUntil": 2013 },
-	  { "holidayType": "FIXED_DATE", "key": "KINGS_DAY", "month": "APRIL", "day": 26, "validFrom": 2014 },
-	  { "holidayType": "FIXED_DATE", "key": "LIBERATION", "month": "MAY", "day": 5, "validFrom": 2000, "cycleType": "FIVE_YEARS" },
-	  { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 25 },
-	  { "holidayType": "FIXED_DATE", "key": "CHRISTMAS", "month": "DECEMBER", "day": 26 }
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "GOOD_FRIDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER_MONDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "ASCENSION_DAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "WHIT_MONDAY"
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "QUEENS_BIRTHDAY",
+      "month": "APRIL",
+      "day": 30
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "KINGS_DAY",
+      "month": "APRIL",
+      "day": 26,
+      "validFrom": 2014
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "LIBERATION",
+      "month": "MAY",
+      "day": 5,
+      "validFrom": 2000
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 26
+    }
   ]
 }

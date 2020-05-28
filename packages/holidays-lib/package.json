@@ -29,12 +29,18 @@
   "author": "Johan Bouduin",
   "license": "MIT",
   "devDependencies": {
+    "@types/command-line-args": "^5.0.0",
+    "@types/glob": "^7.1.1",
     "@types/jest": "^25.2.3",
     "@types/lodash": "^4.14.152",
+    "command-line-args": "^5.1.1",
+    "glob": "^7.1.6",
     "jest": "^26.0.1",
     "ts-jest": "^26.0.0",
+    "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.3",
+    "xml-js": "^1.6.11"
   },
   "dependencies": {}
 }
