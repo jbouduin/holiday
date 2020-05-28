@@ -4,8 +4,8 @@ import { IConfiguration } from '../../src/configuration';
 import { ConfigurationFactory } from '../../src/configuration';
 import { ErrorKey } from '../../src/configuration';
 import { BaseHoliday } from '../../src/configuration';
+import { Category } from '../../src/configuration';
 import { CycleType } from '../../src/configuration';
-import { HolidayStatus } from '../../src/configuration';
 import { HolidayType } from '../../src/configuration';
 
 const dataRoot = './data/base-holiday';
@@ -54,24 +54,24 @@ describe.each([
 });
 
 describe.each([
-  ['holiday-status.empty', HolidayStatus.OFFICIAL_HOLIDAY],
-  ['holiday-status.not-specified', HolidayStatus.OFFICIAL_HOLIDAY],
-  ['holiday-status.official', HolidayStatus.OFFICIAL_HOLIDAY],
-  ['holiday-status.unofficial', HolidayStatus.UNOFFICIAL_HOLIDAY]
-])('base holiday > holiday status', (fileName: string, expected: HolidayStatus) => {
+  ['category.empty', Category.OFFICIAL_HOLIDAY],
+  ['category.not-specified', Category.OFFICIAL_HOLIDAY],
+  ['category.official', Category.OFFICIAL_HOLIDAY],
+  ['category.unofficial', Category.UNOFFICIAL_HOLIDAY]
+])('base holiday > category > %s', (fileName: string, expected: Category) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`${fileName} > number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
-  test(`${fileName} - value`, () => expect(HolidayStatus[holiday.holidayStatus]).toBe(HolidayStatus[expected]));
+  test(`value`, () => expect(Category[holiday.category]).toBe(Category[expected]));
 });
 
 describe.each([
   ['invalid.cycle-type.six-years.missing-from', ErrorKey.CYCLE_TYPE_REQUIRES_VALID_FROM],
   ['invalid.cycle-type.two-years.missing-from', ErrorKey.CYCLE_TYPE_REQUIRES_VALID_FROM],
   ['invalid.from-alphanumeric', ErrorKey.VALID_FROM_INVALID],
-  ['invalid.holiday-status-value', ErrorKey.HOLIDAY_STATUS_INVALID],
+  ['invalid.category.value', ErrorKey.HOLIDAY_CATEGORY_INVALID],
   ['invalid.key-empty', ErrorKey.KEY_MISSING],
   ['invalid.to-alphanumeric', ErrorKey.VALID_TO_INVALID],
   ['invalid.to-lt-from', ErrorKey.VALID_TO_BEFORE_VALID_FROM],

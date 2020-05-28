@@ -1,10 +1,10 @@
 import { IMove } from '../specifics';
-import { CycleType, HolidayStatus, HolidayType } from '../types';
+import { Category, CycleType, HolidayType } from '../types';
 
 export interface IBaseHoliday<T> {
   readonly key: T;
   readonly cycle: CycleType;
-  readonly holidayStatus: HolidayStatus;
+  readonly category: Category;
   readonly validFrom: number;
   readonly validTo: number;
   readonly translationKey: string;
@@ -28,7 +28,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public readonly validFrom: number;
   public readonly validTo: number;
   public readonly cycle!: CycleType;
-  public readonly holidayStatus!: HolidayStatus;
+  public readonly category!: Category;
   public readonly moves: Array<IMove>;
   // </editor-fold>
 
@@ -40,13 +40,13 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public constructor(
     holidayType: HolidayType,
     key: T,
-    holidayStatus: HolidayStatus,
+    category: Category,
     cycle: CycleType,
     validFrom: number,
     validTo: number) {
     this.holidayType = holidayType;
     this.key = key;
-    this.holidayStatus = holidayStatus;
+    this.category = category;
     this.cycle = cycle;
     this.validFrom = validFrom;
     this.validTo = validTo;

@@ -18,7 +18,7 @@ export enum ErrorKey {
   KEY_MISSING = 'Missing key',
   HOLIDAY_TYPE_INVALID = 'Invalid holidayType',
   CYCLE_TYPE_INVALID = 'Invalid cycletype',
-  HOLIDAY_STATUS_INVALID = 'Invalid holidayStatus',
+  HOLIDAY_CATEGORY_INVALID = 'Invalid category',
   VALID_FROM_INVALID = 'Invalid valid from',
   VALID_TO_INVALID = 'Invalid valid to',
   VALID_TO_BEFORE_VALID_FROM = 'Valid to is before valid from',

@@ -2,7 +2,7 @@ import { ErrorKey } from '../errors';
 import { IChristianHoliday, ChristianHoliday } from '../holidays';
 import { ChronologyType, ChronologyTypeKeyStrings} from '../types';
 import { ChristianHolidayType, ChristianHolidayTypeKeyStrings } from '../types';
-import { CycleType, HolidayStatus } from '../types';
+import { CycleType, Category } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
 export interface IChristianFactory extends IBaseFactory<IChristianHoliday, ChristianHolidayType>{ }
@@ -22,8 +22,8 @@ export class ChristianFactory extends BaseFactory<IChristianHoliday, ChristianHo
 
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
-    key: ChristianHolidayType, holidayStatus: HolidayStatus, cycleType: CycleType, validFrom: number, validTo: number): IChristianHoliday {
-    return new ChristianHoliday(key, holidayStatus, cycleType, validFrom, validTo, this.chronology);
+    key: ChristianHolidayType, category: Category, cycle: CycleType, validFrom: number, validTo: number): IChristianHoliday {
+    return new ChristianHoliday(key, category, cycle, validFrom, validTo, this.chronology);
   }
 
   protected extractData(obj: any): void {

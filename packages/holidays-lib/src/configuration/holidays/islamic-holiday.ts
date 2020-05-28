@@ -1,4 +1,4 @@
-import { CycleType, HolidayStatus, HolidayType, IslamicHolidayType } from '../types';
+import { Category, CycleType, HolidayType, IslamicHolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IIslamicHoliday extends IBaseHoliday<IslamicHolidayType> { }
@@ -8,12 +8,12 @@ export class IslamicHoliday extends BaseHoliday<IslamicHolidayType> implements I
   // <editor-fold desc='Constructor & C°'>
   public constructor(
     key: IslamicHolidayType,
-    holidayStatus: HolidayStatus,
-    cycleType: CycleType,
+    category: Category,
+    cycle: CycleType,
     validFrom: number,
     validTo: number) {
 
-    super(HolidayType.ISLAMIC, key, holidayStatus, cycleType, validFrom, validTo);
+    super(HolidayType.ISLAMIC, key, category, cycle, validFrom, validTo);
   }
   // </editor-fold>
 

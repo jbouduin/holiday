@@ -2,7 +2,7 @@ import { ErrorKey, ILoadError, LoadError } from '../errors';
 import { IBaseHoliday, BaseHoliday } from '../holidays';
 import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { CycleType, CycleTypeKeyStrings } from '../types';
-import { HolidayStatus, HolidayStatusKeyStrings } from '../types';
+import { Category, CategoryKeyStrings } from '../types';
 
 import { IDataExtractor, DataExtractor } from './data-extractor';
 import { IFactoryResult, FactoryResult } from './factory-result';
@@ -21,7 +21,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   // <editor-fold desc='Protected properties'>
   protected dataExtractor: IDataExtractor;
   private cycle: CycleType;
-  private holidayStatus: HolidayStatus;
+  private category: Category;
   private validFrom: number;
   private validTo: number;
   // </editor-fold>
@@ -34,14 +34,14 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     this.validFrom = BaseHoliday.undefinedValidFrom;
     this.validTo = BaseHoliday.undefinedValidTo;
     this.cycle = CycleType.EVERY_YEAR;
-    this.holidayStatus = HolidayStatus.OFFICIAL_HOLIDAY;
+    this.category = Category.OFFICIAL_HOLIDAY;
   }
   // </editor-fold>
 
   // <editor-fold desc='Abstract methods'>
   protected abstract extractKey(obj: any): U;
   protected abstract extractData(obj: any): void;
-  protected abstract createHoliday(key: U, holidayStatus: HolidayStatus, cycleType: CycleType, validFrom: number, validTo: number): T;
+  protected abstract createHoliday(key: U, category: Category, cycle: CycleType, validFrom: number, validTo: number): T;
   // </editor-fold>
 
   // <editor-fold desc='IBaseFactory interface methods'>
@@ -53,7 +53,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     this.extractData(obj);
 
     if (this.errors.length === 0) {
-      const holiday = this.createHoliday(key, this.holidayStatus, this.cycle, this.validFrom, this.validTo);
+      const holiday = this.createHoliday(key, this.category, this.cycle, this.validFrom, this.validTo);
       moves.forEach(move => holiday.moves.push(move));
       return new FactoryResult<T>(holiday, this.errors);
     } else {
@@ -82,8 +82,8 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
       this.cycle = CycleType[<CycleTypeKeyStrings>obj.cycle];
     }
 
-    if (obj.holidayStatus) {
-      this.holidayStatus = HolidayStatus[<HolidayStatusKeyStrings>obj.holidayStatus];
+    if (obj.category) {
+      this.category = Category[<CategoryKeyStrings>obj.category];
     }
 
     if (this.cycle === undefined) {
@@ -102,8 +102,8 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
       }
     }
 
-    if (this.holidayStatus === undefined) {
-      this.addError(ErrorKey.HOLIDAY_STATUS_INVALID, obj.HolidayStatus);
+    if (this.category === undefined) {
+      this.addError(ErrorKey.HOLIDAY_CATEGORY_INVALID, obj.category);
     }
 
     if (!this.validFrom) {

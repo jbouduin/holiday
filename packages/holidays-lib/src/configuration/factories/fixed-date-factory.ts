@@ -1,7 +1,7 @@
 import { IFixedDateHoliday, FixedDateHoliday } from '../holidays';
 import { ErrorKey } from '../errors';
 import { IFixedDate } from '../specifics';
-import { HolidayStatus, CycleType } from '../types';
+import { Category, CycleType } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
 export interface IFixedDateFactory extends IBaseFactory<IFixedDateHoliday, string>{ }
@@ -20,9 +20,9 @@ export class FixedDateFactory extends BaseFactory<IFixedDateHoliday, string> imp
 
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
-    key: string, holidayStatus: HolidayStatus, cycleType: CycleType, validFrom: number, validTo: number): IFixedDateHoliday {
+    key: string, category: Category, cycle: CycleType, validFrom: number, validTo: number): IFixedDateHoliday {
     return new FixedDateHoliday(
-      key, holidayStatus, cycleType, validFrom, validTo, this.fixedDate);
+      key, category, cycle, validFrom, validTo, this.fixedDate);
   }
 
   protected extractData(obj: any): void {

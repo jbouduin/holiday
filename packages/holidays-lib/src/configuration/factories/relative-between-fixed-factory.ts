@@ -1,7 +1,7 @@
 import { ErrorKey } from '../errors';
 import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IBetweenFixedDates, IRelationWeekday } from '../specifics';
-import { CycleType, HolidayStatus, HolidayType } from '../types';
+import { Category, CycleType, HolidayType } from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
 import { When } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
@@ -26,16 +26,16 @@ export class RelativeBetweenFixedFactory
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
     key: string,
-    holidayStatus: HolidayStatus,
-    cycleType: CycleType,
+    category: Category,
+    cycle: CycleType,
     validFrom: number,
     validTo: number): IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> {
 
     return new RelativeHoliday(
       HolidayType.RELATIVE_BETWEEN_FIXED,
       key,
-      holidayStatus,
-      cycleType,
+      category,
+      cycle,
       validFrom,
       validTo,
       this.relation,

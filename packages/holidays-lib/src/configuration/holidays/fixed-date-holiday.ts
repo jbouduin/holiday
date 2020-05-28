@@ -1,5 +1,5 @@
 import { IFixedDate } from '../specifics';
-import { CycleType, HolidayStatus, HolidayType, Month } from '../types';
+import { Category, CycleType, HolidayType, Month } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IFixedDateHoliday extends IBaseHoliday<string>, IFixedDate { }
@@ -14,12 +14,12 @@ export class FixedDateHoliday extends BaseHoliday<string> implements IFixedDateH
   // <editor-fold desc='Constructor'>
   public constructor(
     key: string,
-    holidayStatus: HolidayStatus,
-    cycleType: CycleType,
+    category: Category,
+    cycle: CycleType,
     validFrom: number,
     validTo: number,
     fixedDate: IFixedDate) {
-    super(HolidayType.FIXED_DATE, key, holidayStatus, cycleType, validFrom, validTo);
+    super(HolidayType.FIXED_DATE, key, category, cycle, validFrom, validTo);
 
     this.month = fixedDate.month;
     this.day = fixedDate.day;
