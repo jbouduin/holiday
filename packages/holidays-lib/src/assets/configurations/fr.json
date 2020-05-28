@@ -1,0 +1,170 @@
+{
+  "hierarchy": "fr",
+  "description": "France",
+  "holidayCollection": [
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "EASTER_MONDAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "ASCENSION_DAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "WHIT_MONDAY",
+      "validTo": 2003
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "type": "WHIT_MONDAY",
+      "validFrom": 2008
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "LABOUR_DAY",
+      "month": "MAY",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "VICTORY_DAY",
+      "month": "MAY",
+      "day": 8
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NATIONAL_DAY",
+      "month": "JULY",
+      "day": 14
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "ASSUMPTION_MARY",
+      "month": "AUGUST",
+      "day": 15
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "ALL_SAINTS",
+      "month": "NOVEMBER",
+      "day": 1
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "REMEMBRANCE",
+      "month": "NOVEMBER",
+      "day": 11
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25
+    }
+  ],
+  "subConfigurations": [
+    {
+      "hierarchy": "ma",
+      "description": "Martinique",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "MAY",
+          "day": 22
+        }
+      ]
+    },
+    {
+      "hierarchy": "gu",
+      "description": "Guadeloupe",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "MAY",
+          "day": 27
+        }
+      ]
+    },
+    {
+      "hierarchy": "gy",
+      "description": "Guyane",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "JUNE",
+          "day": 10
+        }
+      ]
+    },
+    {
+      "hierarchy": "lr",
+      "description": "La Reunion",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "DECEMBER",
+          "day": 20
+        }
+      ]
+    },
+    {
+      "hierarchy": "br",
+      "description": "Bas-Rhin",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "DECEMBER",
+          "day": 26
+        }
+      ]
+    },
+    {
+      "hierarchy": "hr",
+      "description": "Haut-Rhin",
+      "holidayCollection": [
+        {
+          "holidayType": "CHRISTIAN",
+          "type": "GOOD_FRIDAY"
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "DECEMBER",
+          "day": 26
+        }
+      ]
+    },
+    {
+      "hierarchy": "mo",
+      "description": "Moselle",
+      "holidayCollection": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "__UNKNOWN__",
+          "month": "DECEMBER",
+          "day": 26
+        }
+      ]
+    }
+  ]
+}

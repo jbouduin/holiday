@@ -26,6 +26,7 @@ describe.each([
   [ 'es', 'Spain' ],
   [ 'et', 'Ethiopia' ],
   [ 'fi', 'Finland'],
+  [ 'fr', 'France' ],
   [ 'gr', 'Greece'],
   [ 'hr', 'Croatia' ],
   [ 'hu', 'Hungary' ],
