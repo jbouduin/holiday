@@ -5,6 +5,7 @@ import { ConfigurationFactory } from '../../src/configuration';
 describe.each([
   [ 'al', 'Albania' ],
   [ 'ar', 'Argentina' ],
+  [ 'at', 'Austria' ],
   [ 'be', 'Belgium' ],
   [ 'bg', 'Bulgaria' ],
   [ 'bo', 'Bolivia' ],
