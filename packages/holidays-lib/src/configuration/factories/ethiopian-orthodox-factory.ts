@@ -1,6 +1,6 @@
 import { ErrorKey } from '../errors';
 import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHoliday } from '../holidays';
-import { Category, CycleType } from '../types';
+import { Category, Cycle } from '../types';
 import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
@@ -20,7 +20,7 @@ export class EthiopianOrthodoxFactory
   protected createHoliday(
     key: EthiopianOrthodoxHolidayType,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number): IEthiopianOrthodoxHoliday {
 

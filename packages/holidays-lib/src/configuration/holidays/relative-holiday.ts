@@ -1,5 +1,5 @@
 import { IFix, IRelation } from '../specifics';
-import { Category, CycleType, HolidayType, Weekday, When } from '../types';
+import { Category, Cycle, HolidayType, Weekday, When } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IRelativeHoliday<T extends IRelation, U extends IFix > extends IBaseHoliday<string> {
@@ -19,7 +19,7 @@ export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelat
     holidayType: HolidayType,
     key: string,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number,
     relation: T,

@@ -2,7 +2,7 @@ import { ErrorKey } from '../errors';
 import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from '../holidays';
 import { IFixedWeekday } from '../specifics';
 import { ChronologyType, ChronologyTypeKeyStrings} from '../types';
-import { Category, CycleType } from '../types';
+import { Category, Cycle } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
 export interface IFixedWeekdayFactory extends IBaseFactory<IFixedWeekdayHoliday, string>{ }
@@ -21,7 +21,7 @@ export class FixedWeekdayFactory extends BaseFactory<IFixedWeekdayHoliday, strin
 
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
-    key: string, category: Category, cycle: CycleType, validFrom: number, validTo: number): IFixedWeekdayHoliday {
+    key: string, category: Category, cycle: Cycle, validFrom: number, validTo: number): IFixedWeekdayHoliday {
     return new FixedWeekdayHoliday(key, category, cycle, validFrom, validTo, this.fixedWeekday);
   }
 

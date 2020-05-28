@@ -1,5 +1,5 @@
 import { IFixedWeekday } from '../specifics';
-import { Category, CycleType, HolidayType, Month, Weekday, Which } from '../types';
+import { Category, Cycle, HolidayType, Month, Weekday, Which } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IFixedWeekdayHoliday extends IBaseHoliday<string>, IFixedWeekday { }
@@ -16,7 +16,7 @@ export class FixedWeekdayHoliday extends BaseHoliday<string> implements IFixedWe
   public constructor(
     key: string,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number,
     fixedWeekday: IFixedWeekday) {

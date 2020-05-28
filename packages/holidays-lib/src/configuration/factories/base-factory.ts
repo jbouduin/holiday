@@ -1,7 +1,7 @@
 import { ErrorKey, ILoadError, LoadError } from '../errors';
 import { IBaseHoliday, BaseHoliday } from '../holidays';
 import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
-import { CycleType, CycleTypeKeyStrings } from '../types';
+import { Cycle, CycleKeyStrings } from '../types';
 import { Category, CategoryKeyStrings } from '../types';
 
 import { IDataExtractor, DataExtractor } from './data-extractor';
@@ -20,7 +20,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
 
   // <editor-fold desc='Protected properties'>
   protected dataExtractor: IDataExtractor;
-  private cycle: CycleType;
+  private cycle: Cycle;
   private category: Category;
   private validFrom: number;
   private validTo: number;
@@ -33,7 +33,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     this.errors = new Array<ILoadError>();
     this.validFrom = BaseHoliday.undefinedValidFrom;
     this.validTo = BaseHoliday.undefinedValidTo;
-    this.cycle = CycleType.EVERY_YEAR;
+    this.cycle = Cycle.EVERY_YEAR;
     this.category = Category.OFFICIAL_HOLIDAY;
   }
   // </editor-fold>
@@ -41,7 +41,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
   // <editor-fold desc='Abstract methods'>
   protected abstract extractKey(obj: any): U;
   protected abstract extractData(obj: any): void;
-  protected abstract createHoliday(key: U, category: Category, cycle: CycleType, validFrom: number, validTo: number): T;
+  protected abstract createHoliday(key: U, category: Category, cycle: Cycle, validFrom: number, validTo: number): T;
   // </editor-fold>
 
   // <editor-fold desc='IBaseFactory interface methods'>
@@ -79,7 +79,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     }
 
     if (obj.cycle) {
-      this.cycle = CycleType[<CycleTypeKeyStrings>obj.cycle];
+      this.cycle = Cycle[<CycleKeyStrings>obj.cycle];
     }
 
     if (obj.category) {
@@ -87,15 +87,15 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     }
 
     if (this.cycle === undefined) {
-      this.addError(ErrorKey.CYCLE_TYPE_INVALID, obj.cycle);
+      this.addError(ErrorKey.HOLIDAY_CYCLE_INVALID, obj.cycle);
     } else {
       switch (this.cycle) {
-        case CycleType.TWO_YEARS:
-        case CycleType.FOUR_YEARS:
-        case CycleType.FIVE_YEARS:
-        case CycleType.SIX_YEARS: {
+        case Cycle.TWO_YEARS:
+        case Cycle.FOUR_YEARS:
+        case Cycle.FIVE_YEARS:
+        case Cycle.SIX_YEARS: {
           if (this.validFrom === BaseHoliday.undefinedValidFrom) {
-            this.addError(ErrorKey.CYCLE_TYPE_REQUIRES_VALID_FROM, obj.cycle, obj.validFrom);
+            this.addError(ErrorKey.HOLIDAY_CYCLE_REQUIRES_VALID_FROM, obj.cycle, obj.validFrom);
             break;
           }
         }

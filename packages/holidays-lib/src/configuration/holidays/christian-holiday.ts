@@ -1,4 +1,4 @@
-import { Category, ChronologyType, CycleType, HolidayType, ChristianHolidayType } from '../types';
+import { Category, ChronologyType, Cycle, HolidayType, ChristianHolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IChristianHoliday extends IBaseHoliday<ChristianHolidayType> {
@@ -15,7 +15,7 @@ export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implemen
   public constructor(
     key: ChristianHolidayType,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number,
     chronology: ChronologyType) {

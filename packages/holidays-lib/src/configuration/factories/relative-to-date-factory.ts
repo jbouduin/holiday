@@ -1,7 +1,7 @@
 import { ErrorKey } from '../errors';
 import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IFixedDate, IRelationWhichWeekdayWhen } from '../specifics';
-import { Category, CycleType, HolidayType } from '../types';
+import { Category, Cycle, HolidayType } from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
 import { When, WhenKeyStrings } from '../types';
 import { Which, WhichKeyStrings } from '../types';
@@ -28,7 +28,7 @@ export class RelativeToDateFactory
   protected createHoliday(
     key: string,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number): IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> {
 

@@ -1,4 +1,4 @@
-import { Category, CycleType, HolidayType, EthiopianOrthodoxHolidayType } from '../types';
+import { Category, Cycle, HolidayType, EthiopianOrthodoxHolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IEthiopianOrthodoxHoliday extends IBaseHoliday<EthiopianOrthodoxHolidayType> { }
@@ -9,7 +9,7 @@ export class EthiopianOrthodoxHoliday extends BaseHoliday<EthiopianOrthodoxHolid
   public constructor(
     key: EthiopianOrthodoxHolidayType,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number) {
     super(HolidayType.ETHIOPIAN_ORTHODOX, key, category, cycle, validFrom, validTo);

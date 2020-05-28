@@ -1,4 +1,4 @@
-import { Category, CycleType, HolidayType, IslamicHolidayType } from '../types';
+import { Category, Cycle, HolidayType, IslamicHolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IIslamicHoliday extends IBaseHoliday<IslamicHolidayType> { }
@@ -9,7 +9,7 @@ export class IslamicHoliday extends BaseHoliday<IslamicHolidayType> implements I
   public constructor(
     key: IslamicHolidayType,
     category: Category,
-    cycle: CycleType,
+    cycle: Cycle,
     validFrom: number,
     validTo: number) {
 

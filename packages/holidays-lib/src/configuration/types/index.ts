@@ -2,7 +2,7 @@ export * from './category';
 export * from './christian-holiday-type';
 export * from './chronology-type';
 export * from './condition';
-export * from './cycle-type';
+export * from './cycle';
 export * from './ethiopian-orthodox-holiday-type';
 export * from './hebrew-holiday-type';
 export * from './holiday-type';

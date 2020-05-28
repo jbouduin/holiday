@@ -1,4 +1,4 @@
-import { ChronologyType, CycleType } from '../configuration';
+import { ChronologyType, Cycle } from '../configuration';
 import { BaseHoliday, IBaseHoliday, IFixedDateHoliday } from '../configuration';
 
 export interface ICalendarHelper {
@@ -90,28 +90,28 @@ export class CalendarHelper implements ICalendarHelper {
   {
     let cycleYears = 1;
     switch (holiday.cycle) {
-      case CycleType.EVERY_YEAR: {
+      case Cycle.EVERY_YEAR: {
         return true;
       }
-      case CycleType.ODD_YEARS: {
+      case Cycle.ODD_YEARS: {
         return year % 2 !== 0;
       }
-      case CycleType.EVEN_YEARS: {
+      case Cycle.EVEN_YEARS: {
         return year % 2 === 0;
       }
-      case CycleType.TWO_YEARS: {
+      case Cycle.TWO_YEARS: {
         cycleYears = 2;
         break;
       }
-      case CycleType.FOUR_YEARS: {
+      case Cycle.FOUR_YEARS: {
         cycleYears = 4;
         break;
       }
-      case CycleType.FIVE_YEARS: {
+      case Cycle.FIVE_YEARS: {
         cycleYears = 5;
         break;
       }
-      case CycleType.SIX_YEARS: {
+      case Cycle.SIX_YEARS: {
         cycleYears = 6;
         break;
       }

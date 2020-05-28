@@ -1,6 +1,6 @@
 import { ErrorKey } from '../errors';
 import { IIslamicHoliday, IslamicHoliday } from '../holidays';
-import { Category, CycleType } from '../types';
+import { Category, Cycle } from '../types';
 import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
@@ -16,7 +16,7 @@ export class IslamicFactory extends BaseFactory<IIslamicHoliday, IslamicHolidayT
 
   // <editor-fold desc='Abstract methods implementation'>
   protected createHoliday(
-    key: IslamicHolidayType, category: Category, cycle: CycleType, validFrom: number, validTo: number): IIslamicHoliday {
+    key: IslamicHolidayType, category: Category, cycle: Cycle, validFrom: number, validTo: number): IIslamicHoliday {
     return new IslamicHoliday(
       key, category, cycle, validFrom, validTo);
   }

@@ -17,12 +17,12 @@ export enum ErrorKey {
   // <editor-fold desc='Base Holiday errors'>
   KEY_MISSING = 'Missing key',
   HOLIDAY_TYPE_INVALID = 'Invalid holidayType',
-  CYCLE_TYPE_INVALID = 'Invalid cycletype',
   HOLIDAY_CATEGORY_INVALID = 'Invalid category',
+  HOLIDAY_CYCLE_INVALID = 'Invalid cycletype',
+  HOLIDAY_CYCLE_REQUIRES_VALID_FROM = 'The specified cycletype requires a valid valid from',
   VALID_FROM_INVALID = 'Invalid valid from',
   VALID_TO_INVALID = 'Invalid valid to',
   VALID_TO_BEFORE_VALID_FROM = 'Valid to is before valid from',
-  CYCLE_TYPE_REQUIRES_VALID_FROM = 'The specified cycletype requires a valid valid from',
   // </editor-fold>// Holiday level Errors
 
   // <editor-fold desc='Islamic Holiday errors'>
