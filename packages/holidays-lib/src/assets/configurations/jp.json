@@ -1,7 +1,7 @@
 {
   "hierarchy": "jp",
   "description": "Japan",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "FIXED_DATE",
       "key": "NEW_YEAR",

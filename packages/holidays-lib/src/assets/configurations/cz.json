@@ -1,7 +1,7 @@
 {
   "hierarchy": "cz",
   "description": "Czech Republic",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

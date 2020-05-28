@@ -1,7 +1,7 @@
 {
   "hierarchy": "which-third",
   "description": "which-third",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "THIRD", "weekday": "MONDAY", "month": "JANUARY" }
   ]
 }

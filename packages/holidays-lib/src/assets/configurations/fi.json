@@ -1,7 +1,7 @@
 {
   "hierarchy": "fi",
   "description": "Finland",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

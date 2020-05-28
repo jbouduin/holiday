@@ -1,7 +1,7 @@
 {
   "hierarchy": "invalid.no-valid-holidays",
   "description": "no valid holidays in collection",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "ABRACADABRA", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "key": "OFFICIAL_HOLIDAY" }
   ]
 }

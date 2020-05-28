@@ -81,9 +81,9 @@ export class ConfigurationFactory implements IConfigurationFactory {
       result.addError(ErrorKey.DESCRIPTION_NOT_SPECIFIED, hierarchy);
     }
 
-    if (!obj.holidayCollection) {
+    if (!obj.holidays) {
       result.addError(ErrorKey.HOLIDAY_COLLECTION_MISSING, hierarchy);
-    } else if (obj.holidayCollection.length === 0) {
+    } else if (obj.holidays.length === 0) {
       result.addError(ErrorKey.HOLIDAY_COLLECTION_EMPTY, hierarchy);
     }
 
@@ -93,7 +93,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
     let holidayNumber = 1;
 
-    obj.holidayCollection.forEach( (holiday: any) => {
+    obj.holidays.forEach( (holiday: any) => {
       const location = `${hierarchy}/${holidayNumber}`;
       const holidayType = HolidayType[<HolidayTypeKeyStrings>holiday.holidayType];
 
@@ -136,7 +136,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
       }
       holidayNumber++;
     });
-    if (result.holidayCollection.length === 0) {
+    if (result.holidays.length === 0) {
       result.addError(ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION, hierarchy);
     }
 
@@ -152,7 +152,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
       factoryResult.errors.forEach(error => configuration.errors.push(error));
     }
     if (factoryResult.holiday) {
-      configuration.holidayCollection.push(factoryResult.holiday);
+      configuration.holidays.push(factoryResult.holiday);
     }
   }
   // </editor-fold>

@@ -1,7 +1,7 @@
 {
   "hierarchy": "es",
   "description": "Spain",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -64,7 +64,7 @@
     {
       "hierarchy": "an",
       "description": "Andalucia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -104,7 +104,7 @@
     {
       "hierarchy": "ar",
       "description": "Aragon",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -138,7 +138,7 @@
     {
       "hierarchy": "ce",
       "description": "Ceuta",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -165,7 +165,7 @@
     {
       "hierarchy": "ml",
       "description": "Melilla",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -192,7 +192,7 @@
     {
       "hierarchy": "cl",
       "description": "Castile and Leon",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -220,7 +220,7 @@
     {
       "hierarchy": "cm",
       "description": "Castile - La Mancha",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -248,7 +248,7 @@
     {
       "hierarchy": "cn",
       "description": "Canary Islands",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -270,7 +270,7 @@
     {
       "hierarchy": "ct",
       "description": "Catalonia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -298,7 +298,7 @@
     {
       "hierarchy": "ex",
       "description": "Extremadura",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -326,7 +326,7 @@
     {
       "hierarchy": "ga",
       "description": "Galicia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -360,7 +360,7 @@
     {
       "hierarchy": "ib",
       "description": "Balearic Island",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -386,7 +386,7 @@
     {
       "hierarchy": "lo",
       "description": "La Rioja",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -414,7 +414,7 @@
     {
       "hierarchy": "m",
       "description": "Madrid",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -440,7 +440,7 @@
     {
       "hierarchy": "mu",
       "description": "Murcia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -468,7 +468,7 @@
     {
       "hierarchy": "na",
       "description": "Navarre",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -494,7 +494,7 @@
     {
       "hierarchy": "o",
       "description": "Asturias",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -528,7 +528,7 @@
     {
       "hierarchy": "pv",
       "description": "Euskadi",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -561,7 +561,7 @@
     {
       "hierarchy": "s",
       "description": "Cantabria",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "MAUNDY_THURSDAY"
@@ -583,7 +583,7 @@
     {
       "hierarchy": "vc",
       "description": "Valencia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"

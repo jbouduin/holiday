@@ -1,7 +1,7 @@
 {
   "hierarchy": "ni",
   "description": "Nicaragua",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -81,7 +81,7 @@
     {
       "hierarchy": "bo",
       "description": "Boaco",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTIAGO",
@@ -93,7 +93,7 @@
     {
       "hierarchy": "so",
       "description": "Somoto",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTIAGO",
@@ -105,7 +105,7 @@
     {
       "hierarchy": "mn",
       "description": "Managua",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTIAGO",
@@ -123,7 +123,7 @@
     {
       "hierarchy": "na",
       "description": "Nandaime",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTA_ANA",
@@ -135,7 +135,7 @@
     {
       "hierarchy": "ni",
       "description": "Niquinohomo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTA_ANA",
@@ -147,7 +147,7 @@
     {
       "hierarchy": "mo",
       "description": "Moyogalpa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTA_ANA",
@@ -159,7 +159,7 @@
     {
       "hierarchy": "om",
       "description": "Ometepe",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "SANTA_ANA",

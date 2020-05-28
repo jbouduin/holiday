@@ -1,7 +1,7 @@
 {
   "hierarchy": "bo",
   "description": "Bolivia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

@@ -118,8 +118,8 @@ describe.each([
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
-  const holiday: IChristianHoliday = configuration.holidayCollection[0] as IChristianHoliday;
+  test(`${fileName} > number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  const holiday: IChristianHoliday = configuration.holidays[0] as IChristianHoliday;
   const calculator = new ChristianHolidayCalculator();
   const result = calculator.calculate(holiday, year);
   test(`${fileName} in ${year} - calculation`, () => expect(result).toStrictEqual(expected));

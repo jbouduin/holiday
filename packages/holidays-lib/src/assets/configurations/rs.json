@@ -1,7 +1,7 @@
 {
   "hierarchy": "rs",
   "description": "Serbia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

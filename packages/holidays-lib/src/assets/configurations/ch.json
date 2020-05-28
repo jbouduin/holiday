@@ -1,7 +1,7 @@
 {
   "hierarchy": "ch",
   "description": "Switzerland",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "ASCENSION_DAY"
@@ -33,7 +33,7 @@
     {
       "hierarchy": "ag",
       "description": "Aargau",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -61,7 +61,7 @@
     {
       "hierarchy": "ai",
       "description": "Appenzell Innerrhoden",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -117,7 +117,7 @@
     {
       "hierarchy": "ar",
       "description": "Appenzell Ausserrhoden",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -137,7 +137,7 @@
     {
       "hierarchy": "be",
       "description": "Bern",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -167,7 +167,7 @@
     {
       "hierarchy": "bl",
       "description": "Basel-Landschaft",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -197,7 +197,7 @@
     {
       "hierarchy": "bs",
       "description": "Basel-Stadt",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -227,7 +227,7 @@
     {
       "hierarchy": "fr",
       "description": "Freiburg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -257,7 +257,7 @@
     {
       "hierarchy": "ge",
       "description": "Genf",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -275,7 +275,7 @@
     {
       "hierarchy": "gl",
       "description": "Glarus",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -311,7 +311,7 @@
     {
       "hierarchy": "gr",
       "description": "Graubünden",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -335,7 +335,7 @@
     {
       "hierarchy": "ju",
       "description": "Jura",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -381,7 +381,7 @@
     {
       "hierarchy": "lu",
       "description": "Luzern",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -433,7 +433,7 @@
     {
       "hierarchy": "ne",
       "description": "Neuenburg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -469,7 +469,7 @@
     {
       "hierarchy": "nw",
       "description": "Nidwalden",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -521,7 +521,7 @@
     {
       "hierarchy": "ow",
       "description": "Obwalden",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -573,7 +573,7 @@
     {
       "hierarchy": "sg",
       "description": "St.Gallen",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -597,7 +597,7 @@
     {
       "hierarchy": "sh",
       "description": "Schaffhausen",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -633,7 +633,7 @@
     {
       "hierarchy": "so",
       "description": "Solothurn",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -655,7 +655,7 @@
     {
       "hierarchy": "sz",
       "description": "Schwyz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -713,7 +713,7 @@
     {
       "hierarchy": "tg",
       "description": "Thurgau",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -749,7 +749,7 @@
     {
       "hierarchy": "ti",
       "description": "Tessin",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -809,7 +809,7 @@
     {
       "hierarchy": "ur",
       "description": "Uri",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -867,7 +867,7 @@
     {
       "hierarchy": "vd",
       "description": "Waadt",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -891,7 +891,7 @@
     {
       "hierarchy": "vs",
       "description": "Wallis",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -925,7 +925,7 @@
     {
       "hierarchy": "zg",
       "description": "Zug",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -977,7 +977,7 @@
     {
       "hierarchy": "zh",
       "description": "Zürich",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"

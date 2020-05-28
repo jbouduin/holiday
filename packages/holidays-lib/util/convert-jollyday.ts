@@ -189,7 +189,7 @@ class Main {
     return {
       hierarchy: configuration._attributes.hierarchy,
       description: configuration._attributes.description || configuration._attributes.hierarchy,
-      holidayCollection: holidays,
+      holidays: holidays,
       subConfigurations: subConfigurations
     };
   }

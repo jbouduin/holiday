@@ -1,7 +1,7 @@
 {
   "hierarchy": "hr",
   "description": "Croatia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

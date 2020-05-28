@@ -1,7 +1,7 @@
 {
   "hierarchy": "cycle-type-empty",
   "description": "cycle type empty",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "cycle": "" }
   ]
 }

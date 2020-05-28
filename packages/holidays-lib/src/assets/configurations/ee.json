@@ -1,7 +1,7 @@
 {
   "hierarchy": "ee",
   "description": "Estonia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

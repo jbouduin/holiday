@@ -1,7 +1,7 @@
 {
   "hierarchy": "valid.configuration",
   "description": "valid.configuration",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "key": "OFFICIAL_HOLIDAY" }
   ]
 }

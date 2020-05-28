@@ -1,7 +1,7 @@
 {
   "hierarchy": "ethiopian-orthodox-holiday-only-type",
   "description": "ethiopian-orthodox-holiday-only-type",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "MESKEL" }
   ]
 }

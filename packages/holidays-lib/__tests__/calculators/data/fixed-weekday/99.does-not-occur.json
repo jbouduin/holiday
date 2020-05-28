@@ -1,7 +1,7 @@
 {
   "hierarchy": "does-not-occur",
   "description": "test added to have 100% code coverage",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "LAST", "weekday": "SATURDAY", "month": "FEBRUARY", "validTo": 2000 }
   ]
 }

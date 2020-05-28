@@ -1,7 +1,7 @@
 {
   "hierarchy": "parent",
   "description": "parent",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "PARENT", "month": "JANUARY", "day": 1 },
     { "holidayType": "FIXED_DATE", "key": "PARENT-INVALID", "month": "ABRACADABRA", "day": 31 }
   ],
@@ -9,7 +9,7 @@
     {
       "hierarchy": "child-1",
       "description": "child 1",
-      "holidayCollection": [
+      "holidays": [
         { "holidayType": "FIXED_DATE", "key": "CHILD-1", "month": "FEBRUARY", "day": 2 },
         { "holidayType": "FIXED_DATE", "key": "CHILD-1-INVALID", "month": "OCTOBER", "day": 0 }
       ],
@@ -17,7 +17,7 @@
         {
           "hierarchy": "grand-child-1",
           "description": "grand-child 1",
-          "holidayCollection": [
+          "holidays": [
             { "holidayType": "FIXED_DATE", "key": "GRANDCHILD-1", "month": "MARCH", "day": 3 },
             { "holidayType": "FIXED_DATE", "month": "NOVEMBER", "day": 29 }
           ]
@@ -27,7 +27,7 @@
     {
       "hierarchy": "child-2",
       "description": "child 2",
-      "holidayCollection": [
+      "holidays": [
         { "holidayType": "FIXED_DATE", "key": "CHILD-2", "month": "FEBRUARY", "day": 2 },
         { "holidayType": "CHRISTIAN" }
       ]

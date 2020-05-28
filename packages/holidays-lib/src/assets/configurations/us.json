@@ -1,7 +1,7 @@
 {
   "hierarchy": "us",
   "description": "United States",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "FIXED_DATE",
       "key": "NEW_YEAR",
@@ -65,7 +65,7 @@
     {
       "hierarchy": "al",
       "description": "Alabama",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_WEEKDAY",
           "key": "MARTIN_LUTHER_KING",
@@ -109,7 +109,7 @@
     {
       "hierarchy": "ak",
       "description": "Alaska",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "ALASKA",
@@ -144,7 +144,7 @@
     {
       "hierarchy": "az",
       "description": "Arizona",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -182,7 +182,7 @@
     {
       "hierarchy": "ar",
       "description": "Arkansas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS_EVE",
@@ -218,7 +218,7 @@
     {
       "hierarchy": "ca",
       "description": "California",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "LINCOLN",
@@ -260,7 +260,7 @@
         {
           "hierarchy": "be",
           "description": "Berkeley",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "__UNKNOWN__",
@@ -280,7 +280,7 @@
     {
       "hierarchy": "co",
       "description": "Colorado",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -318,7 +318,7 @@
     {
       "hierarchy": "ct",
       "description": "Connecticut",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -366,7 +366,7 @@
     {
       "hierarchy": "de",
       "description": "Delaware",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -400,7 +400,7 @@
     {
       "hierarchy": "fl",
       "description": "Florida",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -445,7 +445,7 @@
     {
       "hierarchy": "ga",
       "description": "Georgia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -490,7 +490,7 @@
     {
       "hierarchy": "hi",
       "description": "Hawaii",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -543,7 +543,7 @@
     {
       "hierarchy": "id",
       "description": "Idaho",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -581,7 +581,7 @@
     {
       "hierarchy": "il",
       "description": "Illinois",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "LINCOLN",
@@ -646,7 +646,7 @@
     {
       "hierarchy": "in",
       "description": "Indiana",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -700,7 +700,7 @@
     {
       "hierarchy": "ia",
       "description": "Iowa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS_EVE",
@@ -726,7 +726,7 @@
     {
       "hierarchy": "ks",
       "description": "Kansas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_WEEKDAY",
           "key": "MARTIN_LUTHER_KING",
@@ -740,7 +740,7 @@
     {
       "hierarchy": "ky",
       "description": "Kentucky",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -770,7 +770,7 @@
     {
       "hierarchy": "la",
       "description": "Louisiana",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -792,7 +792,7 @@
     {
       "hierarchy": "me",
       "description": "Maine",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -830,7 +830,7 @@
     {
       "hierarchy": "md",
       "description": "Maryland",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -894,7 +894,7 @@
     {
       "hierarchy": "ma",
       "description": "Massachusetts",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -939,7 +939,7 @@
         {
           "hierarchy": "sc",
           "description": "Suffolk County",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "EVACUATION",
@@ -957,7 +957,7 @@
         {
           "hierarchy": "ca",
           "description": "Cambridge",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "EVACUATION",
@@ -971,7 +971,7 @@
     {
       "hierarchy": "mi",
       "description": "Michigan",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1023,7 +1023,7 @@
     {
       "hierarchy": "mn",
       "description": "Minnesota",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1053,7 +1053,7 @@
     {
       "hierarchy": "ms",
       "description": "Mississippi",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1090,7 +1090,7 @@
     {
       "hierarchy": "mo",
       "description": "Missouri",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "LINCOLN",
@@ -1140,7 +1140,7 @@
     {
       "hierarchy": "mt",
       "description": "Montana",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS_EVE",
@@ -1195,7 +1195,7 @@
     {
       "hierarchy": "ne",
       "description": "Nebraska",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1240,7 +1240,7 @@
     {
       "hierarchy": "nv",
       "description": "Nevada",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1277,7 +1277,7 @@
     {
       "hierarchy": "nh",
       "description": "New Hampshire",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1307,7 +1307,7 @@
     {
       "hierarchy": "nj",
       "description": "New Jersey",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -1368,7 +1368,7 @@
     {
       "hierarchy": "nm",
       "description": "New Mexico",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_WEEKDAY",
           "key": "MARTIN_LUTHER_KING",
@@ -1390,7 +1390,7 @@
     {
       "hierarchy": "ny",
       "description": "New York",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1451,7 +1451,7 @@
         {
           "hierarchy": "nyc",
           "description": "New York City",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_WEEKDAY",
               "key": "BROOKLY_QUEENS",
@@ -1466,7 +1466,7 @@
     {
       "hierarchy": "nc",
       "description": "North Carolina",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -1497,7 +1497,7 @@
         {
           "hierarchy": "ce",
           "description": "Charlotte",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "INDEPENDENCE",
@@ -1509,7 +1509,7 @@
         {
           "hierarchy": "me",
           "description": "Mecklenburg",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "INDEPENDENCE",
@@ -1523,7 +1523,7 @@
     {
       "hierarchy": "nd",
       "description": "North Dakota",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -1561,7 +1561,7 @@
     {
       "hierarchy": "oh",
       "description": "Ohio",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1599,7 +1599,7 @@
     {
       "hierarchy": "ok",
       "description": "Oklahoma",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1629,7 +1629,7 @@
     {
       "hierarchy": "or",
       "description": "Oregon",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1659,7 +1659,7 @@
     {
       "hierarchy": "pa",
       "description": "Pennsylvania",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1697,7 +1697,7 @@
     {
       "hierarchy": "ri",
       "description": "Rhode Island",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_WEEKDAY",
           "key": "VICTORY",
@@ -1718,7 +1718,7 @@
     {
       "hierarchy": "sc",
       "description": "South Carolina",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CONFEDERATE",
@@ -1754,7 +1754,7 @@
     {
       "hierarchy": "sd",
       "description": "South Dakota",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1792,7 +1792,7 @@
     {
       "hierarchy": "tn",
       "description": "Tennesee",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -1839,7 +1839,7 @@
     {
       "hierarchy": "tx",
       "description": "Texas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS_EVE",
@@ -1882,7 +1882,7 @@
     {
       "hierarchy": "ut",
       "description": "Utah",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "PIONEER",
@@ -1926,7 +1926,7 @@
     {
       "hierarchy": "vt",
       "description": "Vermont",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -1971,7 +1971,7 @@
     {
       "hierarchy": "va",
       "description": "Virginia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -2022,7 +2022,7 @@
     {
       "hierarchy": "wa",
       "description": "Washington",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -2052,7 +2052,7 @@
     {
       "hierarchy": "dc",
       "description": "District of Columbia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -2090,7 +2090,7 @@
     {
       "hierarchy": "wv",
       "description": "West Virginia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WEST_VIRGINIA",
@@ -2134,7 +2134,7 @@
     {
       "hierarchy": "wi",
       "description": "Wisconsin",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",
@@ -2192,7 +2192,7 @@
     {
       "hierarchy": "wy",
       "description": "Wyoming",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "WASHINGTONS_BIRTHDAY",

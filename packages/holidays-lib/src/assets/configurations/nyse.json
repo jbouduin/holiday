@@ -1,7 +1,7 @@
 {
   "hierarchy": "nyse",
   "description": "New York Stock Exchange",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "GOOD_FRIDAY"

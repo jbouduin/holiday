@@ -1,7 +1,7 @@
 {
   "hierarchy": "general-prayer-day",
   "description": "General prayer day",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "CHRISTIAN", "key": "GENERAL_PRAYER_DAY" }
   ]
 }

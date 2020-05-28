@@ -1,7 +1,7 @@
 {
   "hierarchy": "sk",
   "description": "Slovakia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

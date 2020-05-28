@@ -1,7 +1,7 @@
 {
   "hierarchy": "mx",
   "description": "Mexico",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "FIXED_DATE",
       "key": "ARMY_DAY",
@@ -150,7 +150,7 @@
     {
       "hierarchy": "pue",
       "description": "Puebla",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "MAY_DAY",

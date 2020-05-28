@@ -1,7 +1,7 @@
 {
   "hierarchy": "ascension-day",
   "description": "Ascension",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "CHRISTIAN", "key": "ASCENSION_DAY" }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "hierarchy": "be",
   "description": "Belgium",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",

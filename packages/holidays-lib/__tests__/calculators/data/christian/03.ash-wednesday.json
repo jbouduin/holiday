@@ -1,7 +1,7 @@
 {
   "hierarchy": "ash-wednesday",
   "description": "Ash wednesday",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "CHRISTIAN", "key": "ASH_WEDNESDAY" }
   ]
 }

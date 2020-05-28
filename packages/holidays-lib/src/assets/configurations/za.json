@@ -1,7 +1,7 @@
 {
   "hierarchy": "za",
   "description": "South Africa",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

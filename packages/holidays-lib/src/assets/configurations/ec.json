@@ -1,7 +1,7 @@
 {
   "hierarchy": "ec",
   "description": "Ecuador",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

@@ -1,7 +1,7 @@
 {
   "hierarchy": "cycle-four-years",
   "description": "Cycle four years",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "cycle": "FOUR_YEARS", "validFrom": 2000 }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "hierarchy": "cycle-type-odd-years",
   "description": "cycle type odd years",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "cycle": "ODD_YEARS" }
   ]
 }

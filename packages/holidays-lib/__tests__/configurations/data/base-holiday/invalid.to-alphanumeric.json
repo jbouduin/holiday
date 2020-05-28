@@ -1,7 +1,7 @@
 {
   "hierarchy": "fixed-date-holiday-valid-to",
   "description": "fixed-date-holiday-valid-to",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "validTo": "ABRACADABRA" }
   ]
 }

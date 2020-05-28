@@ -1,7 +1,7 @@
 {
   "hierarchy": "invalid-which-value",
   "description": "which invalid value",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "ABRACADABRA", "weekday": "FRIDAY", "month": "JANUARY" }
   ]
 }

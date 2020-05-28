@@ -1,7 +1,7 @@
 {
   "hierarchy": "invalid",
   "description": "invalid",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "ABRACADABRA" }
   ]
 }

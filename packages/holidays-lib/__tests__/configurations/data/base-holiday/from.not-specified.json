@@ -1,7 +1,7 @@
 {
   "hierarchy": "valid-from-not-specified",
   "description": "valid from not specified",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 }
   ]
 }

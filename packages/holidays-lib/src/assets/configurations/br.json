@@ -1,7 +1,7 @@
 {
   "hierarchy": "br",
   "description": "Brazil",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -76,7 +76,7 @@
     {
       "hierarchy": "rj",
       "description": "Rio de Janeiro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "ST_GEORGE",
@@ -95,7 +95,7 @@
         {
           "hierarchy": "crj",
           "description": "City of Rio de Janeiro",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "ST_SEBASTIAN",
@@ -116,7 +116,7 @@
     {
       "hierarchy": "s",
       "description": "Sao Paulo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CONST_REVOLUTION",
@@ -134,7 +134,7 @@
         {
           "hierarchy": "cs",
           "description": "City of Sao Paulo",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "FOUNDATION",
@@ -154,12 +154,12 @@
     {
       "hierarchy": "mg",
       "description": "Minas Gerais",
-      "holidayCollection": [],
+      "holidays": [],
       "subConfigurations": [
         {
           "hierarchy": "bh",
           "description": "Belo Horizonte",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "LADY_GOOD_VOYAGE",
@@ -179,7 +179,7 @@
     {
       "hierarchy": "ms",
       "description": "Mato Grosso do Sul",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "FOUNDATION",
@@ -191,7 +191,7 @@
         {
           "hierarchy": "cg",
           "description": "Campo Grande",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "FOUNDATION",
@@ -203,7 +203,7 @@
         {
           "hierarchy": "do",
           "description": "Dourados",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "LADY_CONCEICAO",
@@ -217,12 +217,12 @@
     {
       "hierarchy": "pr",
       "description": "Parana",
-      "holidayCollection": [],
+      "holidays": [],
       "subConfigurations": [
         {
           "hierarchy": "cu",
           "description": "Curitiba",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "LADY_LIGHT_PINE",
@@ -236,7 +236,7 @@
     {
       "hierarchy": "rs",
       "description": "Rio Grande do Sul",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "FARROUS_REVOLUTION",
@@ -248,7 +248,7 @@
         {
           "hierarchy": "sm",
           "description": "Santa Maria",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "LADY_CONCEICAO",
@@ -262,7 +262,7 @@
     {
       "hierarchy": "rn",
       "description": "Rio Grande do Norte",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "MARTYRS_DAY",
@@ -274,7 +274,7 @@
         {
           "hierarchy": "na",
           "description": "Natal",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "LADY_APRESENTACAO",
@@ -288,7 +288,7 @@
     {
       "hierarchy": "go",
       "description": "Goiás",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "FOUNDATION",
@@ -300,7 +300,7 @@
     {
       "hierarchy": "pe",
       "description": "Pernambuco",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "LADY_CONCEICAO",

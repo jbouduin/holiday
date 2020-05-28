@@ -1,7 +1,7 @@
 {
   "hierarchy": "mt",
   "description": "Malta",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

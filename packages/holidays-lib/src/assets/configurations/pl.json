@@ -1,7 +1,7 @@
 {
   "hierarchy": "pl",
   "description": "Poland",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

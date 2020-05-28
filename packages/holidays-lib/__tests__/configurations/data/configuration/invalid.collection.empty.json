@@ -1,5 +1,5 @@
 {
   "hierarchy": "invalid.collection.empty",
   "description": "empty collection",
-  "holidayCollection": [ ]
+  "holidays": [ ]
 }

@@ -1,7 +1,7 @@
 {
   "hierarchy": "target",
   "description": "Trans-European Automated Real-time Gross settlement Express Transfer system closing dates",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "GOOD_FRIDAY",

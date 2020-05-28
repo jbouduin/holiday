@@ -1,7 +1,7 @@
 {
   "hierarchy": "mk",
   "description": "Macedonia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",

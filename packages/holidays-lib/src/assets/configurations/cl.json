@@ -1,7 +1,7 @@
 {
   "hierarchy": "cl",
   "description": "Chile",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

@@ -1,7 +1,7 @@
 {
   "hierarchy": "dk",
   "description": "Denmark",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

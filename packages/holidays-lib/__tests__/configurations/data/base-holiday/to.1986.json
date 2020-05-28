@@ -1,7 +1,7 @@
 {
   "hierarchy": "valid-to-1986",
   "description": "valid to 1986",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "validTo": 1986 }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "hierarchy": "me",
   "description": "Montenegro",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",

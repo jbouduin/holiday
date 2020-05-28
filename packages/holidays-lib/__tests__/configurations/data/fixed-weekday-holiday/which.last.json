@@ -1,7 +1,7 @@
 {
   "hierarchy": "which-last",
   "description": "which last",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "LAST", "weekday": "MONDAY", "month": "JANUARY" }
   ]
 }

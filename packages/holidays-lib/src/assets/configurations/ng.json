@@ -1,7 +1,7 @@
 {
   "hierarchy": "ng",
   "description": "Nigeria",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -77,7 +77,7 @@
     {
       "hierarchy": "lag",
       "description": "Lagos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "ELECTION",

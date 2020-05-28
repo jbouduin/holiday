@@ -1,7 +1,7 @@
 {
   "hierarchy": "it",
   "description": "Italy",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -75,7 +75,7 @@
     {
       "hierarchy": "bz",
       "description": "Südtirol",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "WHIT_MONDAY"

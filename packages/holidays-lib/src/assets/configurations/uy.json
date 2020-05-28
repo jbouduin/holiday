@@ -1,7 +1,7 @@
 {
   "hierarchy": "uy",
   "description": "Uruguay",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

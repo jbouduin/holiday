@@ -1,7 +1,7 @@
 {
   "hierarchy": "holiday-status-official",
   "description": "holiday status official",
-  "holidayCollection": [
+  "holidays": [
       { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "holidayStatus": "OFFICIAL_HOLIDAY" }
   ]
 }

@@ -8,7 +8,7 @@ export interface IConfiguration {
   readonly hierarchy: string;
   readonly description: string;
   readonly errors: Array<ILoadError>;
-  readonly holidayCollection: Array<IBaseHoliday<any>>;
+  readonly holidays: Array<IBaseHoliday<any>>;
   readonly subConfigurations: Array<IConfiguration>;
   addError(key: string, location: string, ...args: Array<any>): void;
 }
@@ -19,7 +19,7 @@ export class Configuration implements IConfiguration {
   public readonly hierarchy: string;
   public readonly description: string;
   public readonly errors: Array<ILoadError>;
-  public readonly holidayCollection: Array<IBaseHoliday<any>>;
+  public readonly holidays: Array<IBaseHoliday<any>>;
   public readonly subConfigurations: Array<IConfiguration>;
   // </editor-fold>
 
@@ -28,7 +28,7 @@ export class Configuration implements IConfiguration {
     this.hierarchy = hierarchy;
     this.description = description;
     this.errors = new Array<ILoadError>();
-    this.holidayCollection = new Array<IBaseHoliday<any>>();
+    this.holidays = new Array<IBaseHoliday<any>>();
     this.subConfigurations = new Array<IConfiguration>();
 
   }

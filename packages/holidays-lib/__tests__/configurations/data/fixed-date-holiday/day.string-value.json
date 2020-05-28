@@ -1,7 +1,7 @@
 {
   "hierarchy": "invalid.day.missing",
   "description": "day missing",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": "1" }
   ]
 }

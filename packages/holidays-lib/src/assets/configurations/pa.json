@@ -1,7 +1,7 @@
 {
   "hierarchy": "pa",
   "description": "Panama",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

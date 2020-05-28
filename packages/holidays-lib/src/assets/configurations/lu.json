@@ -1,7 +1,7 @@
 {
   "hierarchy": "lu",
   "description": "Luxembourg",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -71,7 +71,7 @@
     {
       "hierarchy": "clu",
       "description": "City of Luxembourg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CARNIVAL",

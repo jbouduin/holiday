@@ -1,7 +1,7 @@
 {
   "hierarchy": "uk",
   "description": "United Kingdom",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -70,7 +70,7 @@
     {
       "hierarchy": "al",
       "description": "Alderney",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -86,7 +86,7 @@
     {
       "hierarchy": "en",
       "description": "England",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -121,7 +121,7 @@
     {
       "hierarchy": "gu",
       "description": "Guernsey",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -143,7 +143,7 @@
     {
       "hierarchy": "im",
       "description": "Isle of Man",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -172,7 +172,7 @@
     {
       "hierarchy": "je",
       "description": "Jersey",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -194,7 +194,7 @@
     {
       "hierarchy": "ni",
       "description": "Northern Ireland",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -246,7 +246,7 @@
     {
       "hierarchy": "sc",
       "description": "Scotland",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",
@@ -295,7 +295,7 @@
     {
       "hierarchy": "wa",
       "description": "Wales",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"

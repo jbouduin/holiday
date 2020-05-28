@@ -1,7 +1,7 @@
 {
   "hierarchy": "lt",
   "description": "Lithuania",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

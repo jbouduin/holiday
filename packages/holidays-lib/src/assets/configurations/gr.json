@@ -1,7 +1,7 @@
 {
   "hierarchy": "gr",
   "description": "Greece",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",

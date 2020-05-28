@@ -1,7 +1,7 @@
 {
   "hierarchy": "al",
   "description": "Albania",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

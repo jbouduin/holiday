@@ -1,7 +1,7 @@
 {
   "hierarchy": "weekday-monday",
   "description": "weekday monday",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "FIRST", "weekday": "MONDAY", "month": "JANUARY" }
   ]
 }

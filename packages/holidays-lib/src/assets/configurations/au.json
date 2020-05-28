@@ -1,7 +1,7 @@
 {
   "hierarchy": "au",
   "description": "Australia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -72,7 +72,7 @@
     {
       "hierarchy": "act",
       "description": "Australian Capital Territory",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",
@@ -182,7 +182,7 @@
     {
       "hierarchy": "nsw",
       "description": "New South Wales",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",
@@ -268,7 +268,7 @@
     {
       "hierarchy": "nt",
       "description": "Nothern Territory",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",
@@ -366,7 +366,7 @@
     {
       "hierarchy": "qld",
       "description": "Queensland",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",
@@ -442,7 +442,7 @@
     {
       "hierarchy": "sa",
       "description": "South Australia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",
@@ -540,7 +540,7 @@
     {
       "hierarchy": "tas",
       "description": "Tasmania",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_TUESDAY"
@@ -627,7 +627,7 @@
         {
           "hierarchy": "ho",
           "description": "Hobard Area",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_WEEKDAY",
               "key": "HOBART",
@@ -640,7 +640,7 @@
         {
           "hierarchy": "nh",
           "description": "Non-Hobard Area",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_WEEKDAY",
               "key": "RECREATION",
@@ -655,7 +655,7 @@
     {
       "hierarchy": "vic",
       "description": "Victoria",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "ANZAC",
@@ -740,7 +740,7 @@
     {
       "hierarchy": "wa",
       "description": "West Australia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "NEW_YEAR",

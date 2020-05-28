@@ -1,7 +1,7 @@
 {
   "hierarchy": "valid-from",
   "description": "valid from 2000",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "validFrom": 2000 }
   ]
 }

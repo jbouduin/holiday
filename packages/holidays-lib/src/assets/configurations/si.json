@@ -1,7 +1,7 @@
 {
   "hierarchy": "si",
   "description": "Slovenia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

@@ -1,7 +1,7 @@
 {
   "hierarchy": "fr",
   "description": "France",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -77,7 +77,7 @@
     {
       "hierarchy": "ma",
       "description": "Martinique",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "__UNKNOWN__",
@@ -89,7 +89,7 @@
     {
       "hierarchy": "gu",
       "description": "Guadeloupe",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "__UNKNOWN__",
@@ -101,7 +101,7 @@
     {
       "hierarchy": "gy",
       "description": "Guyane",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "__UNKNOWN__",
@@ -113,7 +113,7 @@
     {
       "hierarchy": "lr",
       "description": "La Reunion",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "__UNKNOWN__",
@@ -125,7 +125,7 @@
     {
       "hierarchy": "br",
       "description": "Bas-Rhin",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -141,7 +141,7 @@
     {
       "hierarchy": "hr",
       "description": "Haut-Rhin",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "GOOD_FRIDAY"
@@ -157,7 +157,7 @@
     {
       "hierarchy": "mo",
       "description": "Moselle",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "__UNKNOWN__",

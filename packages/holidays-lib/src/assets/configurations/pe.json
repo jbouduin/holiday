@@ -1,7 +1,7 @@
 {
   "hierarchy": "pe",
   "description": "Peru",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

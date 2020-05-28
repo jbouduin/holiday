@@ -1,7 +1,7 @@
 {
   "hierarchy": "nsye-euronext",
   "description": "nsye-euronext",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "ASCENSION_DAY"

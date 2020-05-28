@@ -32,13 +32,13 @@ describe('Configuration > Valid configuration', () => {
   test('no errors', () => expect(configuration.errors.length).toBe(0));
   test('hierarchy', () => expect(configuration.hierarchy).toBe('valid.configuration'));
   test('description', () => expect(configuration.description).toBe('valid.configuration'));
-  test('holiday created', () => expect(configuration.holidayCollection.length).toBe(1));
+  test('holiday created', () => expect(configuration.holidays.length).toBe(1));
 });
 
 describe('Configuration > Only an invalid', () => {
   const file = path.join(__dirname, `${dataRoot}/invalid.collection.no-valid-holidays.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test('no holiday created', () => expect(configuration.holidayCollection.length).toBe(0));
+  test('no holiday created', () => expect(configuration.holidays.length).toBe(0));
   test('two errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test('NO_VALID_HOLIDAYS_IN_COLLECTION error exists', () => expect(noValidHolidaysError.length).toBe(1));

@@ -1,7 +1,7 @@
 {
   "hierarchy": "ba",
   "description": "Bosnia and Herzegovina",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "FIXED_DATE",
       "key": "NEW_YEAR",
@@ -115,7 +115,7 @@
     {
       "hierarchy": "rs",
       "description": "Republika Srpska",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REPUBLIC_DAY",
@@ -139,7 +139,7 @@
     {
       "hierarchy": "fbh",
       "description": "Federation of Bosnia and Herzegovina",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "INDEPENDENCE",

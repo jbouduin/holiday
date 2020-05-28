@@ -1,7 +1,7 @@
 {
   "hierarchy": "month-february",
   "description": "month february",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "THIRD", "weekday": "SUNDAY", "month": "FEBRUARY" }
   ]
 }

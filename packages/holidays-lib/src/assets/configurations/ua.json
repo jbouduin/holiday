@@ -1,7 +1,7 @@
 {
   "hierarchy": "ua",
   "description": "Ukraine",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",

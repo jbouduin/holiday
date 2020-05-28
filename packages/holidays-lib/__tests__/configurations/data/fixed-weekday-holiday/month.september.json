@@ -1,7 +1,7 @@
 {
   "hierarchy": "month-september",
   "description": "month september",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "which": "FIRST", "weekday": "FRIDAY", "month": "SEPTEMBER" }
   ]
 }

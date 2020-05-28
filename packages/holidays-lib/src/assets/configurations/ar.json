@@ -1,7 +1,7 @@
 {
   "hierarchy": "ar",
   "description": "Argentina",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

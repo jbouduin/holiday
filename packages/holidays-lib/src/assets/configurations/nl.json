@@ -1,7 +1,7 @@
 {
   "hierarchy": "nl",
   "description": "The Netherlands",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

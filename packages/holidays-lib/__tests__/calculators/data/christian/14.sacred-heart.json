@@ -1,7 +1,7 @@
 {
   "hierarchy": "sacred-heart",
   "description": "Sacred heart",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "CHRISTIAN", "key": "SACRED_HEART" }
   ]
 }

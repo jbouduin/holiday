@@ -1,7 +1,7 @@
 {
   "hierarchy": "between-fixed",
   "description": "between two fixed dates",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "RELATIVE_TO_DATE",
       "key":"HUSBANDS_DAY",

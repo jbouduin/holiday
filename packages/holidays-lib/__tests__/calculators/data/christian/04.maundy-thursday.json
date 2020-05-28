@@ -1,7 +1,7 @@
 {
   "hierarchy": "maundy-thursday",
   "description": "Maundy thursday",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "CHRISTIAN", "key": "MAUNDY_THURSDAY" }
   ]
 }

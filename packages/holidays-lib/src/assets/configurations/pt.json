@@ -1,7 +1,7 @@
 {
   "hierarchy": "pt",
   "description": "Portugal",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -83,7 +83,7 @@
     {
       "hierarchy": "ABT",
       "description": "Abrantes",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -95,7 +95,7 @@
     {
       "hierarchy": "AGD",
       "description": "Águeda",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "PENTECOST_MONDAY",
@@ -106,7 +106,7 @@
     {
       "hierarchy": "AGB",
       "description": "Aguiar da Beira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -118,17 +118,17 @@
     {
       "hierarchy": "ADL",
       "description": "Alandroal",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "ALB",
       "description": "Albergaria-a-Velha",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "ABF",
       "description": "Albufeira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -140,7 +140,7 @@
     {
       "hierarchy": "ASL",
       "description": "Alcácer do Sal",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -152,7 +152,7 @@
     {
       "hierarchy": "ACN",
       "description": "Alcanena",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -162,7 +162,7 @@
     {
       "hierarchy": "ACB",
       "description": "Alcobaça",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -174,7 +174,7 @@
     {
       "hierarchy": "ACH",
       "description": "Alcochete",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -186,7 +186,7 @@
     {
       "hierarchy": "ACT",
       "description": "Alcoutim",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
           "key": "CITY_DAY",
@@ -205,7 +205,7 @@
     {
       "hierarchy": "ALQ",
       "description": "Alenquer",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -221,7 +221,7 @@
     {
       "hierarchy": "AFE",
       "description": "Alfândega da Fé",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -233,7 +233,7 @@
     {
       "hierarchy": "ALJ",
       "description": "Alijó",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -245,7 +245,7 @@
     {
       "hierarchy": "AJZ",
       "description": "Aljezur",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -257,7 +257,7 @@
     {
       "hierarchy": "AJT",
       "description": "Aljustrel",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -269,7 +269,7 @@
     {
       "hierarchy": "ALM",
       "description": "Almada",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -281,7 +281,7 @@
     {
       "hierarchy": "ALD",
       "description": "Almeida",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -293,7 +293,7 @@
     {
       "hierarchy": "ALR",
       "description": "Almeirim",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -303,7 +303,7 @@
     {
       "hierarchy": "ADV",
       "description": "Almodôvar",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -315,7 +315,7 @@
     {
       "hierarchy": "APC",
       "description": "Alpiarça",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -327,7 +327,7 @@
     {
       "hierarchy": "ALT",
       "description": "Alter do Chão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -337,7 +337,7 @@
     {
       "hierarchy": "AVZ",
       "description": "Alvaiázere",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -349,7 +349,7 @@
     {
       "hierarchy": "AVT",
       "description": "Alvito",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -359,7 +359,7 @@
     {
       "hierarchy": "AMD",
       "description": "Amadora",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -371,7 +371,7 @@
     {
       "hierarchy": "AMT",
       "description": "Amarante",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -383,7 +383,7 @@
     {
       "hierarchy": "AMR",
       "description": "Amares",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -395,7 +395,7 @@
     {
       "hierarchy": "AND",
       "description": "Anadia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -405,7 +405,7 @@
     {
       "hierarchy": "AGH",
       "description": "Angra do Heroísmo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -417,7 +417,7 @@
     {
       "hierarchy": "ANS",
       "description": "Ansião",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -427,7 +427,7 @@
     {
       "hierarchy": "AVV",
       "description": "Arcos de Valdevez",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -439,7 +439,7 @@
     {
       "hierarchy": "AGN",
       "description": "Arganil",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -451,7 +451,7 @@
     {
       "hierarchy": "AMM",
       "description": "Armamar",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -463,7 +463,7 @@
     {
       "hierarchy": "ARC",
       "description": "Arouca",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -475,7 +475,7 @@
     {
       "hierarchy": "ARL",
       "description": "Arraiolos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -485,7 +485,7 @@
     {
       "hierarchy": "ARR",
       "description": "Arronches",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -497,7 +497,7 @@
     {
       "hierarchy": "ARV",
       "description": "Arruda dos Vinhos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -507,7 +507,7 @@
     {
       "hierarchy": "AVR",
       "description": "Aveiro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -519,7 +519,7 @@
     {
       "hierarchy": "AVS",
       "description": "Avis",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -529,7 +529,7 @@
     {
       "hierarchy": "AZB",
       "description": "Azambuja",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -539,7 +539,7 @@
     {
       "hierarchy": "BAO",
       "description": "Baião",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -551,7 +551,7 @@
     {
       "hierarchy": "BCL",
       "description": "Barcelos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -563,7 +563,7 @@
     {
       "hierarchy": "BRC",
       "description": "Barrancos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -575,7 +575,7 @@
     {
       "hierarchy": "BRR",
       "description": "Barreiro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -587,7 +587,7 @@
     {
       "hierarchy": "BTL",
       "description": "Batalha",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -599,7 +599,7 @@
     {
       "hierarchy": "BJA",
       "description": "Beja",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -609,7 +609,7 @@
     {
       "hierarchy": "BMT",
       "description": "Belmonte",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -621,7 +621,7 @@
     {
       "hierarchy": "BNV",
       "description": "Benavente",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -631,7 +631,7 @@
     {
       "hierarchy": "BBR",
       "description": "Bombarral",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -643,7 +643,7 @@
     {
       "hierarchy": "BRB",
       "description": "Borba",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -653,7 +653,7 @@
     {
       "hierarchy": "BTC",
       "description": "Boticas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -665,7 +665,7 @@
     {
       "hierarchy": "BRG",
       "description": "Braga",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -677,7 +677,7 @@
     {
       "hierarchy": "BGC",
       "description": "Bragança",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -689,7 +689,7 @@
     {
       "hierarchy": "CBC",
       "description": "Cabeceiras de Basto",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -701,7 +701,7 @@
     {
       "hierarchy": "CDV",
       "description": "Cadaval",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -713,7 +713,7 @@
     {
       "hierarchy": "CLD",
       "description": "Caldas da Rainha",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -725,7 +725,7 @@
     {
       "hierarchy": "CHT",
       "description": "Calheta (Açores)",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -737,7 +737,7 @@
     {
       "hierarchy": "CLT",
       "description": "Calheta (Madeira)",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -749,7 +749,7 @@
     {
       "hierarchy": "CML",
       "description": "Câmara de Lobos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -761,7 +761,7 @@
     {
       "hierarchy": "CMN",
       "description": "Caminha",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -771,7 +771,7 @@
     {
       "hierarchy": "CMR",
       "description": "Campo Maior",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -781,7 +781,7 @@
     {
       "hierarchy": "CNT",
       "description": "Cantanhede",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -793,7 +793,7 @@
     {
       "hierarchy": "CRZ",
       "description": "Carrazeda de Ansiães",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -805,7 +805,7 @@
     {
       "hierarchy": "CTX",
       "description": "Cartaxo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -815,7 +815,7 @@
     {
       "hierarchy": "CSC",
       "description": "Cascais",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -827,12 +827,12 @@
     {
       "hierarchy": "CTB",
       "description": "Castelo Branco",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "CPV",
       "description": "Castelo de Paiva",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -844,7 +844,7 @@
     {
       "hierarchy": "CVD",
       "description": "Castelo de Vide",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -854,7 +854,7 @@
     {
       "hierarchy": "CDR",
       "description": "Castro Daire",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -866,7 +866,7 @@
     {
       "hierarchy": "CTM",
       "description": "Castro Marim",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -878,7 +878,7 @@
     {
       "hierarchy": "CVR",
       "description": "Castro Verde",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -894,7 +894,7 @@
     {
       "hierarchy": "CLB",
       "description": "Celorico da Beira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -906,7 +906,7 @@
     {
       "hierarchy": "CBT",
       "description": "Celorico de Basto",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -918,7 +918,7 @@
     {
       "hierarchy": "CHM",
       "description": "Chamusca",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -928,7 +928,7 @@
     {
       "hierarchy": "CHV",
       "description": "Chaves",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -940,7 +940,7 @@
     {
       "hierarchy": "CNF",
       "description": "Cinfães",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -952,7 +952,7 @@
     {
       "hierarchy": "CBR",
       "description": "Coimbra",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -964,7 +964,7 @@
     {
       "hierarchy": "CDN",
       "description": "Condeixa-a-Nova",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -976,7 +976,7 @@
     {
       "hierarchy": "CNS",
       "description": "Constância",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -986,7 +986,7 @@
     {
       "hierarchy": "CCH",
       "description": "Coruche",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -998,7 +998,7 @@
     {
       "hierarchy": "CVL",
       "description": "Covilhã",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1010,7 +1010,7 @@
     {
       "hierarchy": "CRT",
       "description": "Crato",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1020,7 +1020,7 @@
     {
       "hierarchy": "CBA",
       "description": "Cuba",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1030,7 +1030,7 @@
     {
       "hierarchy": "ELV",
       "description": "Elvas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1042,7 +1042,7 @@
     {
       "hierarchy": "ENT",
       "description": "Entroncamento",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1054,7 +1054,7 @@
     {
       "hierarchy": "ESP",
       "description": "Espinho",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1066,7 +1066,7 @@
     {
       "hierarchy": "EPS",
       "description": "Esposende",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1078,7 +1078,7 @@
     {
       "hierarchy": "ETR",
       "description": "Estarreja",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1090,7 +1090,7 @@
     {
       "hierarchy": "ETZ",
       "description": "Estremoz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1100,7 +1100,7 @@
     {
       "hierarchy": "EVR",
       "description": "Évora",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1112,7 +1112,7 @@
     {
       "hierarchy": "FAF",
       "description": "Fafe",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1124,7 +1124,7 @@
     {
       "hierarchy": "FAR",
       "description": "Faro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1136,7 +1136,7 @@
     {
       "hierarchy": "FLG",
       "description": "Felgueiras",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1148,7 +1148,7 @@
     {
       "hierarchy": "FAL",
       "description": "Ferreira do Alentejo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1160,7 +1160,7 @@
     {
       "hierarchy": "FZZ",
       "description": "Ferreira do Zêzere",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1172,7 +1172,7 @@
     {
       "hierarchy": "FIG",
       "description": "Figueira da Foz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1184,7 +1184,7 @@
     {
       "hierarchy": "FCR",
       "description": "Figueira de Castelo Rodrigo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1196,7 +1196,7 @@
     {
       "hierarchy": "FVN",
       "description": "Figueiró dos Vinhos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1208,7 +1208,7 @@
     {
       "hierarchy": "FAG",
       "description": "Fornos de Algodres",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1220,7 +1220,7 @@
     {
       "hierarchy": "FEC",
       "description": "Freixo de Espada à Cinta",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1230,7 +1230,7 @@
     {
       "hierarchy": "FTR",
       "description": "Fronteira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1242,7 +1242,7 @@
     {
       "hierarchy": "FNC",
       "description": "Funchal",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1254,7 +1254,7 @@
     {
       "hierarchy": "FND",
       "description": "Fundão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1266,7 +1266,7 @@
     {
       "hierarchy": "GAV",
       "description": "Gavião",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1278,7 +1278,7 @@
     {
       "hierarchy": "GOI",
       "description": "Góis",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1290,7 +1290,7 @@
     {
       "hierarchy": "GLG",
       "description": "Golegã",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1300,17 +1300,17 @@
     {
       "hierarchy": "GDM",
       "description": "Gondomar",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "GVA",
       "description": "Gouveia",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "GDL",
       "description": "Grândola",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1322,7 +1322,7 @@
     {
       "hierarchy": "GRD",
       "description": "Guarda",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1334,7 +1334,7 @@
     {
       "hierarchy": "GMR",
       "description": "Guimarães",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1346,7 +1346,7 @@
     {
       "hierarchy": "HRT",
       "description": "Horta",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1358,12 +1358,12 @@
     {
       "hierarchy": "IDN",
       "description": "Idanha-a-Nova",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "ILH",
       "description": "Ílhavo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1373,7 +1373,7 @@
     {
       "hierarchy": "LAG",
       "description": "Lagoa (Açores)",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1385,7 +1385,7 @@
     {
       "hierarchy": "LGA",
       "description": "Lagoa (Algarve)",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1397,7 +1397,7 @@
     {
       "hierarchy": "LGS",
       "description": "Lagos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1409,7 +1409,7 @@
     {
       "hierarchy": "LGF",
       "description": "Lajes das Flores",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1421,7 +1421,7 @@
     {
       "hierarchy": "LGP",
       "description": "Lajes do Pico",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1433,7 +1433,7 @@
     {
       "hierarchy": "LMG",
       "description": "Lamego",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1445,7 +1445,7 @@
     {
       "hierarchy": "LRA",
       "description": "Leiria",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1457,7 +1457,7 @@
     {
       "hierarchy": "LSB",
       "description": "Lisboa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1469,7 +1469,7 @@
     {
       "hierarchy": "LLE",
       "description": "Loulé",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1479,7 +1479,7 @@
     {
       "hierarchy": "LRS",
       "description": "Loures",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1491,7 +1491,7 @@
     {
       "hierarchy": "LNH",
       "description": "Lourinhã",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1503,7 +1503,7 @@
     {
       "hierarchy": "LSA",
       "description": "Lousã",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1515,7 +1515,7 @@
     {
       "hierarchy": "MAC",
       "description": "Mação",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1525,7 +1525,7 @@
     {
       "hierarchy": "MCD",
       "description": "Macedo de Cavaleiros",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1537,7 +1537,7 @@
     {
       "hierarchy": "MCH",
       "description": "Machico",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1549,7 +1549,7 @@
     {
       "hierarchy": "MAD",
       "description": "Madalena",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1561,7 +1561,7 @@
     {
       "hierarchy": "MFR",
       "description": "Mafra",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1571,12 +1571,12 @@
     {
       "hierarchy": "MAI",
       "description": "Maia",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "MGL",
       "description": "Mangualde",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1588,7 +1588,7 @@
     {
       "hierarchy": "MTG",
       "description": "Manteigas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1600,7 +1600,7 @@
     {
       "hierarchy": "MCN",
       "description": "Marco de Canaveses",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1612,7 +1612,7 @@
     {
       "hierarchy": "MGR",
       "description": "Marinha Grande",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1622,7 +1622,7 @@
     {
       "hierarchy": "MRV",
       "description": "Marvão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1634,12 +1634,12 @@
     {
       "hierarchy": "MTS",
       "description": "Matosinhos",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "MLD",
       "description": "Mealhada",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1649,7 +1649,7 @@
     {
       "hierarchy": "MED",
       "description": "Mêda",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1661,7 +1661,7 @@
     {
       "hierarchy": "MLG",
       "description": "Melgaço",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1671,7 +1671,7 @@
     {
       "hierarchy": "MTL",
       "description": "Mértola",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1683,7 +1683,7 @@
     {
       "hierarchy": "MSF",
       "description": "Mesão Frio",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1695,7 +1695,7 @@
     {
       "hierarchy": "MIR",
       "description": "Mira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1707,7 +1707,7 @@
     {
       "hierarchy": "MCV",
       "description": "Miranda do Corvo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1719,7 +1719,7 @@
     {
       "hierarchy": "MDR",
       "description": "Miranda do Douro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1731,7 +1731,7 @@
     {
       "hierarchy": "MDL",
       "description": "Mirandela",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1743,7 +1743,7 @@
     {
       "hierarchy": "MGD",
       "description": "Mogadouro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1755,7 +1755,7 @@
     {
       "hierarchy": "MBR",
       "description": "Moimenta da Beira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1767,12 +1767,12 @@
     {
       "hierarchy": "MTA",
       "description": "Moita",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "MNC",
       "description": "Monção",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1782,7 +1782,7 @@
     {
       "hierarchy": "MCQ",
       "description": "Monchique",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1792,7 +1792,7 @@
     {
       "hierarchy": "MDB",
       "description": "Mondim de Basto",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1804,12 +1804,12 @@
     {
       "hierarchy": "MFT",
       "description": "Monforte",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "MTR",
       "description": "Montalegre",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1821,7 +1821,7 @@
     {
       "hierarchy": "MMN",
       "description": "Montemor-o-Novo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1833,7 +1833,7 @@
     {
       "hierarchy": "MMV",
       "description": "Montemor-o-Velho",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1845,7 +1845,7 @@
     {
       "hierarchy": "MTJ",
       "description": "Montijo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1857,7 +1857,7 @@
     {
       "hierarchy": "MOR",
       "description": "Mora",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1867,7 +1867,7 @@
     {
       "hierarchy": "MRT",
       "description": "Mortágua",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -1877,7 +1877,7 @@
     {
       "hierarchy": "MRA",
       "description": "Moura",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1889,7 +1889,7 @@
     {
       "hierarchy": "MOU",
       "description": "Mourão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1901,7 +1901,7 @@
     {
       "hierarchy": "MUR",
       "description": "Murça",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1913,7 +1913,7 @@
     {
       "hierarchy": "MRS",
       "description": "Murtosa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1925,7 +1925,7 @@
     {
       "hierarchy": "NZR",
       "description": "Nazaré",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1937,7 +1937,7 @@
     {
       "hierarchy": "NLS",
       "description": "Nelas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1949,7 +1949,7 @@
     {
       "hierarchy": "NIS",
       "description": "Nisa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -1959,7 +1959,7 @@
     {
       "hierarchy": "OBD",
       "description": "Óbidos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1971,7 +1971,7 @@
     {
       "hierarchy": "ODM",
       "description": "Odemira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1983,7 +1983,7 @@
     {
       "hierarchy": "ODV",
       "description": "Odivelas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -1995,7 +1995,7 @@
     {
       "hierarchy": "OER",
       "description": "Oeiras",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2007,17 +2007,17 @@
     {
       "hierarchy": "OLR",
       "description": "Oleiros",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "OAZ",
       "description": "Oliveira de Azeméis",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "OFR",
       "description": "Oliveira de Frades",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2029,7 +2029,7 @@
     {
       "hierarchy": "OBR",
       "description": "Oliveira do Bairro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -2039,7 +2039,7 @@
     {
       "hierarchy": "OHP",
       "description": "Oliveira do Hospital",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2051,7 +2051,7 @@
     {
       "hierarchy": "ORM",
       "description": "Ourém",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2063,7 +2063,7 @@
     {
       "hierarchy": "ORQ",
       "description": "Ourique",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2075,7 +2075,7 @@
     {
       "hierarchy": "OVR",
       "description": "Ovar",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2087,7 +2087,7 @@
     {
       "hierarchy": "PFR",
       "description": "Paços de Ferreira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2099,7 +2099,7 @@
     {
       "hierarchy": "PLM",
       "description": "Palmela",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2111,7 +2111,7 @@
     {
       "hierarchy": "PPS",
       "description": "Pampilhosa da Serra",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2123,7 +2123,7 @@
     {
       "hierarchy": "PRD",
       "description": "Paredes",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2135,7 +2135,7 @@
     {
       "hierarchy": "PCR",
       "description": "Paredes de Coura",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2147,7 +2147,7 @@
     {
       "hierarchy": "PCV",
       "description": "Penacova",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2159,7 +2159,7 @@
     {
       "hierarchy": "PNF",
       "description": "Penafiel",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2171,7 +2171,7 @@
     {
       "hierarchy": "PNC",
       "description": "Penamacor",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -2181,7 +2181,7 @@
     {
       "hierarchy": "PND",
       "description": "Penedono",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2193,7 +2193,7 @@
     {
       "hierarchy": "PNL",
       "description": "Penela",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2205,12 +2205,12 @@
     {
       "hierarchy": "PNI",
       "description": "Peniche",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "PRG",
       "description": "Peso da Régua",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2222,7 +2222,7 @@
     {
       "hierarchy": "PNH",
       "description": "Pinhel",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2234,7 +2234,7 @@
     {
       "hierarchy": "PBL",
       "description": "Pombal",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2246,12 +2246,12 @@
     {
       "hierarchy": "PDL",
       "description": "Ponta Delgada",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "PTS",
       "description": "Ponta do Sol",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2263,7 +2263,7 @@
     {
       "hierarchy": "PTB",
       "description": "Ponte da Barca",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2275,7 +2275,7 @@
     {
       "hierarchy": "PTL",
       "description": "Ponte de Lima",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2287,7 +2287,7 @@
     {
       "hierarchy": "PSR",
       "description": "Ponte de Sor",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -2297,7 +2297,7 @@
     {
       "hierarchy": "PTG",
       "description": "Portalegre",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2309,7 +2309,7 @@
     {
       "hierarchy": "PRL",
       "description": "Portel",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -2319,7 +2319,7 @@
     {
       "hierarchy": "PTM",
       "description": "Portimão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2331,7 +2331,7 @@
     {
       "hierarchy": "PRT",
       "description": "Porto",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2343,7 +2343,7 @@
     {
       "hierarchy": "PMS",
       "description": "Porto de Mós",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2355,7 +2355,7 @@
     {
       "hierarchy": "PMZ",
       "description": "Porto Moniz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2367,7 +2367,7 @@
     {
       "hierarchy": "PST",
       "description": "Porto Santo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2379,7 +2379,7 @@
     {
       "hierarchy": "PVL",
       "description": "Póvoa de Lanhoso",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2391,7 +2391,7 @@
     {
       "hierarchy": "PVZ",
       "description": "Póvoa de Varzim",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2403,7 +2403,7 @@
     {
       "hierarchy": "PVC",
       "description": "Povoação",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2415,7 +2415,7 @@
     {
       "hierarchy": "VPV",
       "description": "Praia da Vitória",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2427,7 +2427,7 @@
     {
       "hierarchy": "PNV",
       "description": "Proença-a-Nova",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2439,7 +2439,7 @@
     {
       "hierarchy": "RDD",
       "description": "Redondo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -2449,7 +2449,7 @@
     {
       "hierarchy": "RMZ",
       "description": "Reguengos de Monsaraz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2461,7 +2461,7 @@
     {
       "hierarchy": "RSD",
       "description": "Resende",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2473,7 +2473,7 @@
     {
       "hierarchy": "RBR",
       "description": "Ribeira Brava",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2485,7 +2485,7 @@
     {
       "hierarchy": "RPN",
       "description": "Ribeira de Pena",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2497,7 +2497,7 @@
     {
       "hierarchy": "RGR",
       "description": "Ribeira Grande",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2509,7 +2509,7 @@
     {
       "hierarchy": "RMR",
       "description": "Rio Maior",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2521,7 +2521,7 @@
     {
       "hierarchy": "SBS",
       "description": "Sabrosa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2533,12 +2533,12 @@
     {
       "hierarchy": "SBG",
       "description": "Sabugal",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "SMG",
       "description": "Salvaterra de Magos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -2548,7 +2548,7 @@
     {
       "hierarchy": "SCD",
       "description": "Santa Comba Dão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2560,7 +2560,7 @@
     {
       "hierarchy": "SCR",
       "description": "Santa Cruz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2572,7 +2572,7 @@
     {
       "hierarchy": "SCG",
       "description": "Santa Cruz da Graciosa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2584,7 +2584,7 @@
     {
       "hierarchy": "SCF",
       "description": "Santa Cruz das Flores",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2596,7 +2596,7 @@
     {
       "hierarchy": "VFR",
       "description": "Santa Maria da Feira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2608,7 +2608,7 @@
     {
       "hierarchy": "SMP",
       "description": "Santa Marta de Penaguião",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2620,7 +2620,7 @@
     {
       "hierarchy": "STN",
       "description": "Santana",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2632,7 +2632,7 @@
     {
       "hierarchy": "STR",
       "description": "Santarém",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2644,7 +2644,7 @@
     {
       "hierarchy": "STC",
       "description": "Santiago do Cacém",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2656,7 +2656,7 @@
     {
       "hierarchy": "STS",
       "description": "Santo Tirso",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2668,7 +2668,7 @@
     {
       "hierarchy": "SBA",
       "description": "São Brás de Alportel",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2680,7 +2680,7 @@
     {
       "hierarchy": "SJM",
       "description": "São João da Madeira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2692,7 +2692,7 @@
     {
       "hierarchy": "SPS",
       "description": "São Pedro do Sul",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2704,7 +2704,7 @@
     {
       "hierarchy": "SRQ",
       "description": "São Roque do Pico",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2716,7 +2716,7 @@
     {
       "hierarchy": "SVC",
       "description": "São Vicente",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2728,7 +2728,7 @@
     {
       "hierarchy": "SRD",
       "description": "Sardoal",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2740,7 +2740,7 @@
     {
       "hierarchy": "SAT",
       "description": "Sátão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2752,7 +2752,7 @@
     {
       "hierarchy": "SEI",
       "description": "Seia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2764,7 +2764,7 @@
     {
       "hierarchy": "SXL",
       "description": "Seixal",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2776,7 +2776,7 @@
     {
       "hierarchy": "SRN",
       "description": "Sernancelhe",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2788,7 +2788,7 @@
     {
       "hierarchy": "SRT",
       "description": "Sertã",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2800,7 +2800,7 @@
     {
       "hierarchy": "SSB",
       "description": "Sesimbra",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2812,7 +2812,7 @@
     {
       "hierarchy": "STB",
       "description": "Setúbal",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2824,7 +2824,7 @@
     {
       "hierarchy": "SVV",
       "description": "Sever do Vouga",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2836,7 +2836,7 @@
     {
       "hierarchy": "SLV",
       "description": "Silves",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2848,7 +2848,7 @@
     {
       "hierarchy": "SNS",
       "description": "Sines",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2860,7 +2860,7 @@
     {
       "hierarchy": "SNT",
       "description": "Sintra",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2872,7 +2872,7 @@
     {
       "hierarchy": "SMA",
       "description": "Sobral de Monte Agraço",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -2882,7 +2882,7 @@
     {
       "hierarchy": "SRE",
       "description": "Soure",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2894,7 +2894,7 @@
     {
       "hierarchy": "SSL",
       "description": "Sousel",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -2904,7 +2904,7 @@
     {
       "hierarchy": "TBU",
       "description": "Tábua",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2916,7 +2916,7 @@
     {
       "hierarchy": "TBC",
       "description": "Tabuaço",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2928,7 +2928,7 @@
     {
       "hierarchy": "TRC",
       "description": "Tarouca",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2940,7 +2940,7 @@
     {
       "hierarchy": "TVR",
       "description": "Tavira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2952,7 +2952,7 @@
     {
       "hierarchy": "TBR",
       "description": "Terras de Bouro",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2964,7 +2964,7 @@
     {
       "hierarchy": "TMR",
       "description": "Tomar",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2976,7 +2976,7 @@
     {
       "hierarchy": "TND",
       "description": "Tondela",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -2988,7 +2988,7 @@
     {
       "hierarchy": "TMC",
       "description": "Torre de Moncorvo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3000,7 +3000,7 @@
     {
       "hierarchy": "TNV",
       "description": "Torres Novas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -3010,7 +3010,7 @@
     {
       "hierarchy": "TVD",
       "description": "Torres Vedras",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3022,7 +3022,7 @@
     {
       "hierarchy": "TCR",
       "description": "Trancoso",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3034,7 +3034,7 @@
     {
       "hierarchy": "TRF",
       "description": "Trofa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3046,7 +3046,7 @@
     {
       "hierarchy": "VGS",
       "description": "Vagos",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "PENTECOST_MONDAY",
@@ -3057,7 +3057,7 @@
     {
       "hierarchy": "VAC",
       "description": "Vale de Cambra",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3069,7 +3069,7 @@
     {
       "hierarchy": "VLC",
       "description": "Valença",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3081,7 +3081,7 @@
     {
       "hierarchy": "VLG",
       "description": "Valongo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3093,7 +3093,7 @@
     {
       "hierarchy": "VPC",
       "description": "Valpaços",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3105,7 +3105,7 @@
     {
       "hierarchy": "VLS",
       "description": "Velas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3117,7 +3117,7 @@
     {
       "hierarchy": "VND",
       "description": "Vendas Novas",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3129,7 +3129,7 @@
     {
       "hierarchy": "VNT",
       "description": "Viana do Alentejo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3141,7 +3141,7 @@
     {
       "hierarchy": "VCT",
       "description": "Viana do Castelo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3153,7 +3153,7 @@
     {
       "hierarchy": "VDG",
       "description": "Vidigueira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -3163,12 +3163,12 @@
     {
       "hierarchy": "VRM",
       "description": "Vieira do Minho",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "VBP",
       "description": "Vila do Bispo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3180,7 +3180,7 @@
     {
       "hierarchy": "VCD",
       "description": "Vila do Conde",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3192,7 +3192,7 @@
     {
       "hierarchy": "VPT",
       "description": "Vila do Porto",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3204,7 +3204,7 @@
     {
       "hierarchy": "VFL",
       "description": "Vila Flor",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3216,7 +3216,7 @@
     {
       "hierarchy": "VFX",
       "description": "Vila Franca de Xira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "ASCENSION_DAY"
@@ -3226,7 +3226,7 @@
     {
       "hierarchy": "VFC",
       "description": "Vila Franca do Campo",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3238,7 +3238,7 @@
     {
       "hierarchy": "VNB",
       "description": "Vila Nova da Barquinha",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3250,7 +3250,7 @@
     {
       "hierarchy": "VNC",
       "description": "Vila Nova de Cerveira",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3262,7 +3262,7 @@
     {
       "hierarchy": "VNF",
       "description": "Vila Nova de Famalicão",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3274,7 +3274,7 @@
     {
       "hierarchy": "VLF",
       "description": "Vila Nova de Foz Côa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3286,7 +3286,7 @@
     {
       "hierarchy": "VNG",
       "description": "Vila Nova de Gaia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3298,7 +3298,7 @@
     {
       "hierarchy": "VNP",
       "description": "Vila Nova de Paiva",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3310,7 +3310,7 @@
     {
       "hierarchy": "PRS",
       "description": "Vila Nova de Poiares",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3322,7 +3322,7 @@
     {
       "hierarchy": "VPA",
       "description": "Vila Pouca de Aguiar",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3334,7 +3334,7 @@
     {
       "hierarchy": "VRL",
       "description": "Vila Real",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3346,7 +3346,7 @@
     {
       "hierarchy": "VRS",
       "description": "Vila Real de Santo António",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3358,12 +3358,12 @@
     {
       "hierarchy": "VVR",
       "description": "Vila Velha de Ródão",
-      "holidayCollection": []
+      "holidays": []
     },
     {
       "hierarchy": "VVD",
       "description": "Vila Verde",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3375,7 +3375,7 @@
     {
       "hierarchy": "VVC",
       "description": "Vila Viçosa",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3387,7 +3387,7 @@
     {
       "hierarchy": "VMS",
       "description": "Vimioso",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3399,7 +3399,7 @@
     {
       "hierarchy": "VNH",
       "description": "Vinhais",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3411,7 +3411,7 @@
     {
       "hierarchy": "VIS",
       "description": "Viseu",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3423,7 +3423,7 @@
     {
       "hierarchy": "VIZ",
       "description": "Vizela",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -3435,7 +3435,7 @@
     {
       "hierarchy": "VZL",
       "description": "Vouzela",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",

@@ -1,7 +1,7 @@
 {
   "hierarchy": "li",
   "description": "Liechtenstein",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

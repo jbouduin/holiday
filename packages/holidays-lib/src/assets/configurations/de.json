@@ -1,7 +1,7 @@
 {
   "hierarchy": "de",
   "description": "Germany",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -70,7 +70,7 @@
     {
       "hierarchy": "bb",
       "description": "Brandenburg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",
@@ -82,7 +82,7 @@
     {
       "hierarchy": "bw",
       "description": "Baden-Württenberg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -104,7 +104,7 @@
     {
       "hierarchy": "by",
       "description": "Bayern",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -126,7 +126,7 @@
         {
           "hierarchy": "mu",
           "description": "Munich",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "ASSUMPTION_DAY",
@@ -138,7 +138,7 @@
         {
           "hierarchy": "ag",
           "description": "Augsburg",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "PEACE",
@@ -156,7 +156,7 @@
         {
           "hierarchy": "wu",
           "description": "Würzburg",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "ASSUMPTION_DAY",
@@ -168,7 +168,7 @@
         {
           "hierarchy": "re",
           "description": "Regensburg",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "ASSUMPTION_DAY",
@@ -180,7 +180,7 @@
         {
           "hierarchy": "in",
           "description": "Ingolstadt",
-          "holidayCollection": [
+          "holidays": [
             {
               "holidayType": "FIXED_DATE",
               "key": "ASSUMPTION_DAY",
@@ -194,7 +194,7 @@
     {
       "hierarchy": "he",
       "description": "Hessen",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -204,7 +204,7 @@
     {
       "hierarchy": "mv",
       "description": "Mecklenburg-Vorpommern",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",
@@ -216,7 +216,7 @@
     {
       "hierarchy": "nw",
       "description": "Nordrhein-Westfalen",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -232,7 +232,7 @@
     {
       "hierarchy": "rp",
       "description": "Rheinland-Pfalz",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -248,7 +248,7 @@
     {
       "hierarchy": "sl",
       "description": "Saarland",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "CORPUS_CHRISTI"
@@ -270,7 +270,7 @@
     {
       "hierarchy": "sn",
       "description": "Sachsen",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",
@@ -294,7 +294,7 @@
     {
       "hierarchy": "st",
       "description": "Sachsen-Anhalt",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",
@@ -312,7 +312,7 @@
     {
       "hierarchy": "th",
       "description": "Thüringen",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",

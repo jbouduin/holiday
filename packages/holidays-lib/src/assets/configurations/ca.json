@@ -1,7 +1,7 @@
 {
   "hierarchy": "ca",
   "description": "Canada",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "GOOD_FRIDAY"
@@ -40,7 +40,7 @@
     {
       "hierarchy": "on",
       "description": "Ontario",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "BOXING_DAY",
@@ -78,7 +78,7 @@
     {
       "hierarchy": "yt",
       "description": "Yukon",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -109,7 +109,7 @@
     {
       "hierarchy": "qc",
       "description": "Quebec",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "CHRISTIAN",
           "key": "EASTER_MONDAY"
@@ -138,7 +138,7 @@
     {
       "hierarchy": "ns",
       "description": "Nova Scotia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -150,7 +150,7 @@
     {
       "hierarchy": "nb",
       "description": "New Brunswick",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -169,7 +169,7 @@
     {
       "hierarchy": "mb",
       "description": "Manitoba",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -207,7 +207,7 @@
     {
       "hierarchy": "nt",
       "description": "Northwest Territories",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -245,7 +245,7 @@
     {
       "hierarchy": "nu",
       "description": "Nunavut",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -283,7 +283,7 @@
     {
       "hierarchy": "bc",
       "description": "British Columbia",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -321,7 +321,7 @@
     {
       "hierarchy": "pe",
       "description": "Prince Edward Island",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -333,7 +333,7 @@
     {
       "hierarchy": "sk",
       "description": "Saskatchewan",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -378,7 +378,7 @@
     {
       "hierarchy": "ab",
       "description": "Alberta",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",
@@ -423,7 +423,7 @@
     {
       "hierarchy": "nl",
       "description": "Newfoundland and Labrador",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REMEMBRANCE",

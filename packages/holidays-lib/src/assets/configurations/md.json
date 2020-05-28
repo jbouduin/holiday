@@ -1,7 +1,7 @@
 {
   "hierarchy": "md",
   "description": "Moldova",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",
@@ -59,7 +59,7 @@
     {
       "hierarchy": "bti",
       "description": "Balti",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "REGIONAL",

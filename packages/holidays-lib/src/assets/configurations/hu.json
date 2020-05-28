@@ -1,7 +1,7 @@
 {
   "hierarchy": "hu",
   "description": "Hungary",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

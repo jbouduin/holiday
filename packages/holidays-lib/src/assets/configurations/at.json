@@ -1,7 +1,7 @@
 {
   "hierarchy": "at",
   "description": "Austria",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"
@@ -93,7 +93,7 @@
     {
       "hierarchy": "b",
       "description": "Burgenland",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "MARTINS_TAG",
@@ -105,7 +105,7 @@
     {
       "hierarchy": "k",
       "description": "Kärnten",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "JOSEFS_DAY",
@@ -123,7 +123,7 @@
     {
       "hierarchy": "la",
       "description": "Niederösterreich",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "LEOPOLD",
@@ -135,7 +135,7 @@
     {
       "hierarchy": "ua",
       "description": "Oberösterreich",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "FLORIAN",
@@ -147,7 +147,7 @@
     {
       "hierarchy": "s",
       "description": "Salzburg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "RUPERT",
@@ -159,7 +159,7 @@
     {
       "hierarchy": "st",
       "description": "Steiermark",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "JOSEFS_DAY",
@@ -171,7 +171,7 @@
     {
       "hierarchy": "t",
       "description": "Tirol",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "JOSEFS_DAY",
@@ -183,7 +183,7 @@
     {
       "hierarchy": "va",
       "description": "Vorarlberg",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "JOSEFS_DAY",
@@ -195,7 +195,7 @@
     {
       "hierarchy": "w",
       "description": "Wien",
-      "holidayCollection": [
+      "holidays": [
         {
           "holidayType": "FIXED_DATE",
           "key": "LEOPOLD",

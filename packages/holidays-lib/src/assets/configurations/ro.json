@@ -1,7 +1,7 @@
 {
   "hierarchy": "ro",
   "description": "Romania",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER",

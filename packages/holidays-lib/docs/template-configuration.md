@@ -2,7 +2,7 @@
 {
   "hierarchy": "",
   "description": "",
-  "holidayCollection": [
+  "holidays": [
       { "type": "", "chronology": "" }  		
   ]
 }

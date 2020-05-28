@@ -1,7 +1,7 @@
 {
   "hierarchy": "lv",
   "description": "Latvia",
-  "holidayCollection": [
+  "holidays": [
     {
       "holidayType": "CHRISTIAN",
       "key": "EASTER"

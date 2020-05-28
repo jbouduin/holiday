@@ -18,9 +18,9 @@ describe.each([
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> =
-    configuration.holidayCollection[0] as IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>;
+    configuration.holidays[0] as IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>;
   test(`weekday`, () => expect(Weekday[holiday.relation.weekday]).toBe(Weekday[expected]));
 });
 
@@ -28,9 +28,9 @@ describe('relative between fixed across months', () => {
   const file = path.join(__dirname, `${dataRoot}/fix.across-months.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> =
-    configuration.holidayCollection[0] as IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>;
+    configuration.holidays[0] as IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>;
   test(`fix from > month`, () => expect(Month[holiday.fix.from.month]).toBe(Month[Month.MAY]));
   test(`fix from > day`, () => expect(holiday.fix.from.day).toBe(30));
   test(`fix to > month`, () => expect(Month[holiday.fix.to.month]).toBe(Month[Month.JUNE]));
@@ -54,9 +54,9 @@ describe.each([
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> =
-    configuration.holidayCollection[0] as IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>;
+    configuration.holidays[0] as IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>;
   test(`fix from > month`, () => expect(Month[holiday.fix.from.month]).toBe(Month[expected]));
   test(`fix from > day`, () => expect(holiday.fix.from.day).toBe(19));
   test(`fix to > month`, () => expect(Month[holiday.fix.to.month]).toBe(Month[expected]));
@@ -79,7 +79,7 @@ describe.each([
 ])('relative between fixed > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(0));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
@@ -97,7 +97,7 @@ describe.each([
 ])('relative between fixed > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(0));
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(0));
   test(`number of errors`, () => expect(configuration.errors.length).toBe(3));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
   test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
@@ -109,7 +109,7 @@ describe('relative between fixed > translationkey', () => {
   const file = path.join(__dirname, `${dataRoot}/translation-key.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
   test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
-  const holiday = configuration.holidayCollection[0];
+  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  const holiday = configuration.holidays[0];
   test(`translation-key`, () => expect(holiday.translationKey).toBeDefined());
 });

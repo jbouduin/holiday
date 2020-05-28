@@ -1,7 +1,7 @@
 {
   "hierarchy": "invalid-which-missing",
   "description": "which missing",
-  "holidayCollection": [
+  "holidays": [
     { "holidayType": "FIXED_WEEKDAY", "key": "NEW_YEAR", "weekday": "FRIDAY", "month": "JANUARY" }
   ]
 }
