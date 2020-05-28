@@ -91,6 +91,7 @@
       "key": "GOVERNMENT_CHANGE",
       "month": "DECEMBER",
       "day": 1,
+      "cycle": "SIX_YEARS",
       "validFrom": 1934,
       "moves": [
         {

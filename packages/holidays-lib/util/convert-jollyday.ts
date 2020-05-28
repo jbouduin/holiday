@@ -209,6 +209,7 @@ class Main {
         month: obj._attributes.month,
         day: Number(obj._attributes.day),
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -233,6 +234,7 @@ class Main {
         weekday: obj._attributes.weekday,
         month: obj._attributes.month,
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -254,6 +256,7 @@ class Main {
       key: obj._attributes.type,
       chronology: obj._attributes.chronology,
       category: obj._attributes.localizedType,
+      cycle: this.transformCycle(obj._attributes.every),
       validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
       validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
       moves: moves
@@ -271,6 +274,7 @@ class Main {
         holidayType: "ISLAMIC",
         key: obj._attributes.type,
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -292,6 +296,7 @@ class Main {
         holidayType: "ETHIOPIAN_ORTHODOX",
         key: obj._attributes.type,
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -324,6 +329,7 @@ class Main {
           }
   		  },
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -353,6 +359,7 @@ class Main {
           day: Number(obj.day._attributes.day)
         },
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -382,6 +389,7 @@ class Main {
           day: Number(obj.date._attributes.day)
         },
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -413,6 +421,7 @@ class Main {
           month: obj.fixedweekday._attributes.month
         },
         category: obj._attributes.localizedType,
+        cycle: this.transformCycle(obj._attributes.every),
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -441,6 +450,18 @@ class Main {
       moveTo: obj._attributes.with,
       weekday: obj._attributes.weekday
     };
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='Private transformation methods'>
+  private transformCycle(obj: any): any {
+    switch(obj) {
+      case '2_YEARS': { return 'TWO_YEARS'; }
+      case '4_YEARS': { return 'FOUR_YEARS'; }
+      case '5_YEARS': { return 'FIVE_YEARS'; }
+      case '6_YEARS': { return 'SIX_YEARS'; }
+      default: { return obj; }
+    }
   }
   // </editor-fold>
 }

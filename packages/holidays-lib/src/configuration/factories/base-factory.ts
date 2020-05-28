@@ -20,7 +20,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
 
   // <editor-fold desc='Protected properties'>
   protected dataExtractor: IDataExtractor;
-  private cycleType: CycleType;
+  private cycle: CycleType;
   private holidayStatus: HolidayStatus;
   private validFrom: number;
   private validTo: number;
@@ -33,7 +33,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     this.errors = new Array<ILoadError>();
     this.validFrom = BaseHoliday.undefinedValidFrom;
     this.validTo = BaseHoliday.undefinedValidTo;
-    this.cycleType = CycleType.EVERY_YEAR;
+    this.cycle = CycleType.EVERY_YEAR;
     this.holidayStatus = HolidayStatus.OFFICIAL_HOLIDAY;
   }
   // </editor-fold>
@@ -53,7 +53,7 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     this.extractData(obj);
 
     if (this.errors.length === 0) {
-      const holiday = this.createHoliday(key, this.holidayStatus, this.cycleType, this.validFrom, this.validTo);
+      const holiday = this.createHoliday(key, this.holidayStatus, this.cycle, this.validFrom, this.validTo);
       moves.forEach(move => holiday.moves.push(move));
       return new FactoryResult<T>(holiday, this.errors);
     } else {
@@ -78,24 +78,24 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
       this.validTo = Number(obj.validTo);
     }
 
-    if (obj.cycleType) {
-      this.cycleType = CycleType[<CycleTypeKeyStrings>obj.cycleType];
+    if (obj.cycle) {
+      this.cycle = CycleType[<CycleTypeKeyStrings>obj.cycle];
     }
 
     if (obj.holidayStatus) {
       this.holidayStatus = HolidayStatus[<HolidayStatusKeyStrings>obj.holidayStatus];
     }
 
-    if (this.cycleType === undefined) {
-      this.addError(ErrorKeys.CYCLE_TYPE_INVALID, obj.cycletype);
+    if (this.cycle === undefined) {
+      this.addError(ErrorKeys.CYCLE_TYPE_INVALID, obj.cycle);
     } else {
-      switch (this.cycleType) {
+      switch (this.cycle) {
         case CycleType.TWO_YEARS:
         case CycleType.FOUR_YEARS:
         case CycleType.FIVE_YEARS:
         case CycleType.SIX_YEARS: {
           if (this.validFrom === BaseHoliday.undefinedValidFrom) {
-            this.addError(ErrorKeys.CYCLE_TYPE_REQUIRES_VALID_FROM, obj.CycleType, obj.validFrom);
+            this.addError(ErrorKeys.CYCLE_TYPE_REQUIRES_VALID_FROM, obj.cycle, obj.validFrom);
             break;
           }
         }

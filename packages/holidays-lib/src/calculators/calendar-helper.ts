@@ -89,7 +89,7 @@ export class CalendarHelper implements ICalendarHelper {
   private isValidForCyle(holiday: IBaseHoliday<any>, year: number): boolean
   {
     let cycleYears = 1;
-    switch (holiday.cycleType) {
+    switch (holiday.cycle) {
       case CycleType.EVERY_YEAR: {
         return true;
       }

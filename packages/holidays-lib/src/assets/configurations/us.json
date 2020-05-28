@@ -638,7 +638,8 @@
             "which": "FIRST",
             "weekday": "MONDAY",
             "month": "NOVEMBER"
-          }
+          },
+          "cycle": "EVEN_YEARS"
         }
       ]
     },

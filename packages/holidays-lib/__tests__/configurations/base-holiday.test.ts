@@ -26,7 +26,7 @@ describe.each([
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidayCollection.length).toBe(1));
   const holiday = configuration.holidayCollection[0];
-  test(`${fileName} > value`, () => expect(CycleType[holiday.cycleType]).toBe(CycleType[expected]));
+  test(`${fileName} > value`, () => expect(CycleType[holiday.cycle]).toBe(CycleType[expected]));
 });
 
 describe.each([

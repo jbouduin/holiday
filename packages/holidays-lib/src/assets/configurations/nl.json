@@ -46,6 +46,7 @@
       "key": "LIBERATION",
       "month": "MAY",
       "day": 5,
+      "cycle": "FIVE_YEARS",
       "validFrom": 2000
     },
     {

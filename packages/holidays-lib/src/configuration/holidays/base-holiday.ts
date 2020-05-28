@@ -3,7 +3,7 @@ import { CycleType, HolidayStatus, HolidayType } from '../types';
 
 export interface IBaseHoliday<T> {
   readonly key: T;
-  readonly cycleType: CycleType;
+  readonly cycle: CycleType;
   readonly holidayStatus: HolidayStatus;
   readonly validFrom: number;
   readonly validTo: number;
@@ -27,7 +27,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public readonly key: T
   public readonly validFrom: number;
   public readonly validTo: number;
-  public readonly cycleType!: CycleType;
+  public readonly cycle!: CycleType;
   public readonly holidayStatus!: HolidayStatus;
   public readonly moves: Array<IMove>;
   // </editor-fold>
@@ -41,13 +41,13 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
     holidayType: HolidayType,
     key: T,
     holidayStatus: HolidayStatus,
-    cycleType: CycleType,
+    cycle: CycleType,
     validFrom: number,
     validTo: number) {
     this.holidayType = holidayType;
     this.key = key;
     this.holidayStatus = holidayStatus;
-    this.cycleType = cycleType;
+    this.cycle = cycle;
     this.validFrom = validFrom;
     this.validTo = validTo;
     this.moves = new Array<IMove>();
