@@ -38,6 +38,7 @@ describe.each([
   [ 'jp', 'Japan' ],
   [ 'li', 'Liechtenstein' ],
   [ 'lt', 'Lithuania' ],
+  [ 'lu', 'Luxembourg' ],
   [ 'lv', 'Latvia' ],
   [ 'me', 'Montenegro' ],
   [ 'mk', 'Macedonia' ],
