@@ -33,6 +33,7 @@ describe.each([
   [ 'ie', 'Ireland' ],
   [ 'in', 'India' ],
   [ 'is', 'Iceland' ],
+  [ 'it', 'Italy' ],
   [ 'kz', 'Kazakhstan' ],
   [ 'jp', 'Japan' ],
   [ 'li', 'Liechtenstein' ],
