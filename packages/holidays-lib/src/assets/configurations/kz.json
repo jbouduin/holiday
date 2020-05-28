@@ -58,7 +58,7 @@
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_UL_ADHA"
+      "key": "ID_UL_ADHA"
     }
   ]
 }

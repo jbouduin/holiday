@@ -4,35 +4,35 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "MAUNDY_THURSDAY"
+      "key": "MAUNDY_THURSDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GENERAL_PRAYER_DAY"
+      "key": "GENERAL_PRAYER_DAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "ASCENSION_DAY"
+      "key": "ASCENSION_DAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "WHIT_MONDAY"
+      "key": "WHIT_MONDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "PENTECOST"
+      "key": "PENTECOST"
     },
     {
       "holidayType": "FIXED_DATE",

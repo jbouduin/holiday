@@ -4,27 +4,27 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "ASCENSION_DAY"
+      "key": "ASCENSION_DAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "WHIT_SUNDAY"
+      "key": "WHIT_SUNDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "WHIT_MONDAY"
+      "key": "WHIT_MONDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -85,7 +85,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -107,7 +107,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -197,7 +197,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         }
       ]
     },
@@ -219,7 +219,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -235,7 +235,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -251,7 +251,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         },
         {
           "holidayType": "FIXED_DATE",

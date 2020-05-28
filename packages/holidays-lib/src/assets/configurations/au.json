@@ -4,19 +4,19 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_SATURDAY"
+      "key": "EASTER_SATURDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -543,7 +543,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_TUESDAY"
+          "key": "EASTER_TUESDAY"
         },
         {
           "holidayType": "FIXED_DATE",

@@ -39,13 +39,13 @@ export class ChristianFactory extends BaseFactory<IChristianHoliday, ChristianHo
   }
 
   protected extractKey(obj: any): ChristianHolidayType {
-    const result = ChristianHolidayType[<ChristianHolidayTypeKeyStrings>obj.type];
+    const result = ChristianHolidayType[<ChristianHolidayTypeKeyStrings>obj.key];
 
     if (!result && result !== 0) {
-      if (!obj.type) {
+      if (!obj.key) {
         this.addError(ErrorKeys.CHRISTIAN_TYPE_MISSING);
       } else {
-        this.addError(ErrorKeys.CHRISTIAN_TYPE_INVALID, obj.type);
+        this.addError(ErrorKeys.CHRISTIAN_TYPE_INVALID, obj.key);
       }
     }
     return result;

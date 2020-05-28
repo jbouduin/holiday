@@ -4,15 +4,15 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CORPUS_CHRISTI"
+      "key": "CORPUS_CHRISTI"
     },
     {
       "holidayType": "FIXED_DATE",

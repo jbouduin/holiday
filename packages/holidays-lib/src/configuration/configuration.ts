@@ -1,29 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
-// import { ChristianHolidayType, ChristianHolidayTypeKeyStrings } from './types';
-// import { ChronologyType, ChronologyTypeKeyStrings } from './types';
-// import { CycleType, CycleTypeKeyStrings } from './types';
-// import { EthiopianOrthodoxHolidayType, EthiopianOrthodoxHolidayTypeKeyStrings } from './types';
-// import { HolidayStatus, HolidayStatusKeyStrings } from './types';
-// import { HolidayType, HolidayTypeKeyStrings } from './types';
-// import { IslamicHolidayType, IslamicHolidayTypeKeyStrings } from './types';
-// import { Month, MonthKeyStrings } from './types';
-// import { Weekday, WeekdayKeyStrings} from './types';
-// import { Which, WhichKeyStrings} from './types';
-
-// import { IBetweenFixedDates } from './specifics';
-// import { IFixedDate } from './specifics';
-
-import { IBaseHoliday } from './holidays';
-// import { IChristianHoliday, ChristianHoliday } from './holidays';
-// import { IEthiopianOrthodoxHoliday, EthiopianOrthodoxHoliday } from './holidays';
-// import { IFixedDateHoliday, FixedDateHoliday } from './holidays';
-// import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from './holidays';
-// import { IIslamicHoliday, IslamicHoliday } from './holidays';
-// import { IRelativeBetweenFixedHoliday, RelativeBetweenFixedHoliday } from './holidays';
-
 import { ILoadError, LoadError } from './errors';
+import { IBaseHoliday } from './holidays';
 
 export interface IConfiguration {
   readonly hierarchy: string;

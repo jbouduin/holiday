@@ -15,7 +15,7 @@ class Main {
 
   // <editor-fold desc='Main method'>
   public execute(args: Array<any>) {
-    let cnt = 0;
+
     let params: any;
     try {
       params = commandLineArgs(this.commandLineOptions);
@@ -34,7 +34,7 @@ class Main {
           if (err) {
             console.log(err);
           }
-          cnt++;
+          let cnt = 0;
           files.forEach( (file: any) => {
             this.convertFile(file, params.output);
             cnt++;
@@ -208,7 +208,7 @@ class Main {
         key: obj._attributes.key || this.unknownKey,
         month: obj._attributes.month,
         day: Number(obj._attributes.day),
-        localizedType: obj._attributes.localizedType,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -232,7 +232,7 @@ class Main {
         which: obj._attributes.which,
         weekday: obj._attributes.weekday,
         month: obj._attributes.month,
-        localizedType: obj._attributes.localizedType,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -251,9 +251,9 @@ class Main {
 
     return {
       holidayType: "CHRISTIAN",
-      type: obj._attributes.type,
+      key: obj._attributes.type,
       chronology: obj._attributes.chronology,
-      localizedType: obj._attributes.localizedType,
+      category: obj._attributes.localizedType,
       validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
       validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
       moves: moves
@@ -269,8 +269,8 @@ class Main {
 
       return {
         holidayType: "ISLAMIC",
-        type: obj._attributes.type,
-        localizedType: obj._attributes.localizedType,
+        key: obj._attributes.type,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -290,8 +290,8 @@ class Main {
 
       return {
         holidayType: "ETHIOPIAN_ORTHODOX",
-        type: obj._attributes.type,
-        localizedType: obj._attributes.localizedType,
+        key: obj._attributes.type,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -323,7 +323,7 @@ class Main {
             day: Number(obj.to._attributes.day)
           }
   		  },
-        localizedType: obj._attributes.localizedType,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -352,7 +352,7 @@ class Main {
           month: obj.day._attributes.month,
           day: Number(obj.day._attributes.day)
         },
-        localizedType: obj._attributes.localizedType,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -381,7 +381,7 @@ class Main {
           month: obj.date._attributes.month,
           day: Number(obj.date._attributes.day)
         },
-        localizedType: obj._attributes.localizedType,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves
@@ -412,7 +412,7 @@ class Main {
           weekday: obj.fixedweekday._attributes.weekday,
           month: obj.fixedweekday._attributes.month
         },
-        localizedType: obj._attributes.localizedType,
+        category: obj._attributes.localizedType,
         validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
         validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
         moves: moves

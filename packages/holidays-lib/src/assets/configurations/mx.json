@@ -7,14 +7,14 @@
       "key": "ARMY_DAY",
       "month": "FEBRUARY",
       "day": 19,
-      "localizedType": "UNOFFICIAL_HOLIDAY"
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "FIXED_DATE",
       "key": "FLAG_DAY",
       "month": "FEBRUARY",
       "day": 24,
-      "localizedType": "UNOFFICIAL_HOLIDAY",
+      "category": "UNOFFICIAL_HOLIDAY",
       "validFrom": 1937
     },
     {
@@ -22,7 +22,7 @@
       "key": "__UNKNOWN__",
       "month": "MARCH",
       "day": 18,
-      "localizedType": "UNOFFICIAL_HOLIDAY",
+      "category": "UNOFFICIAL_HOLIDAY",
       "validFrom": 1938
     },
     {
@@ -30,7 +30,7 @@
       "key": "COLUMBUS_DAY",
       "month": "OCTOBER",
       "day": 12,
-      "localizedType": "UNOFFICIAL_HOLIDAY"
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -155,7 +155,7 @@
           "key": "MAY_DAY",
           "month": "MAY",
           "day": 5,
-          "localizedType": "UNOFFICIAL_HOLIDAY"
+          "category": "UNOFFICIAL_HOLIDAY"
         }
       ]
     }

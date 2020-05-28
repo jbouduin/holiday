@@ -4,19 +4,19 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CARNIVAL"
+      "key": "CARNIVAL"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CORPUS_CHRISTI"
+      "key": "CORPUS_CHRISTI"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -98,8 +98,8 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "PENTECOST_MONDAY",
-          "localizedType": "OFFICIAL_HOLIDAY"
+          "key": "PENTECOST_MONDAY",
+          "category": "OFFICIAL_HOLIDAY"
         }
       ]
     },
@@ -155,7 +155,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -208,7 +208,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -296,7 +296,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -330,7 +330,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -352,7 +352,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -398,7 +398,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -420,7 +420,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -478,7 +478,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -500,7 +500,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -522,7 +522,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -532,7 +532,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -602,7 +602,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -624,7 +624,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -646,7 +646,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -764,7 +764,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -774,7 +774,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -808,7 +808,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -847,7 +847,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -881,7 +881,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -921,7 +921,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -979,7 +979,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1013,7 +1013,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1023,7 +1023,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1093,7 +1093,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1223,7 +1223,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1293,7 +1293,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1366,7 +1366,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1472,7 +1472,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1518,7 +1518,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1564,7 +1564,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1615,7 +1615,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1642,7 +1642,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1664,7 +1664,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1775,7 +1775,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1785,7 +1785,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1860,7 +1860,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -1870,7 +1870,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -1952,7 +1952,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -2032,7 +2032,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -2174,7 +2174,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -2290,7 +2290,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -2312,7 +2312,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -2442,7 +2442,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -2541,7 +2541,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -2875,7 +2875,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -2897,7 +2897,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         }
       ]
     },
@@ -3003,7 +3003,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -3049,8 +3049,8 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "PENTECOST_MONDAY",
-          "localizedType": "OFFICIAL_HOLIDAY"
+          "key": "PENTECOST_MONDAY",
+          "category": "OFFICIAL_HOLIDAY"
         }
       ]
     },
@@ -3156,7 +3156,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },
@@ -3219,7 +3219,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "ASCENSION_DAY"
+          "key": "ASCENSION_DAY"
         }
       ]
     },

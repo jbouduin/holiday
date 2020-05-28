@@ -4,23 +4,23 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "SHROVE_MONDAY"
+      "key": "SHROVE_MONDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CARNIVAL"
+      "key": "CARNIVAL"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "MAUNDY_THURSDAY"
+      "key": "MAUNDY_THURSDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "FIXED_DATE",

@@ -2,6 +2,6 @@
   "hierarchy": "invalid.description.empty",
   "description": "",
   "holidayCollection": [
-      { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "localizedType": "OFFICIAL_HOLIDAY" }
+      { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1, "key": "OFFICIAL_HOLIDAY" }
   ]
 }

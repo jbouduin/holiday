@@ -4,17 +4,17 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER",
+      "key": "EASTER",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY",
+      "key": "GOOD_FRIDAY",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY",
+      "key": "EASTER_MONDAY",
       "chronology": "JULIAN"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_AL_FITR"
+      "key": "ID_AL_FITR"
     }
   ]
 }

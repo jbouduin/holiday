@@ -28,7 +28,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -44,19 +44,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -66,11 +66,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -86,11 +86,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -100,11 +100,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -120,11 +120,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -134,11 +134,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -160,15 +160,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -184,19 +184,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -206,11 +206,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -250,11 +250,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -276,7 +276,7 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         }
       ]
     },
@@ -292,11 +292,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         }
       ]
     },
@@ -318,15 +318,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -336,15 +336,15 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -354,11 +354,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -392,19 +392,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -414,11 +414,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -440,11 +440,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -460,19 +460,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -506,19 +506,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -528,11 +528,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -554,11 +554,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -568,11 +568,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -588,11 +588,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -602,11 +602,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -622,11 +622,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         }
       ]
     },
@@ -636,11 +636,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -656,11 +656,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -682,15 +682,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -706,7 +706,7 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         }
       ]
     },
@@ -722,15 +722,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -740,11 +740,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -766,7 +766,7 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         }
       ]
     },
@@ -776,11 +776,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -808,19 +808,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -848,11 +848,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -862,11 +862,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -888,15 +888,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -906,11 +906,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -926,19 +926,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -948,11 +948,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -974,15 +974,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -992,11 +992,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1006,19 +1006,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -1028,11 +1028,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1048,15 +1048,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -1066,11 +1066,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1080,11 +1080,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -1094,11 +1094,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1108,11 +1108,11 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -1122,11 +1122,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1136,7 +1136,7 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -1146,11 +1146,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1160,15 +1160,15 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     },
@@ -1178,11 +1178,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER"
+          "key": "EASTER"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1210,19 +1210,19 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ASCHURA"
+          "key": "ASCHURA"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "MAWLID_AN_NABI"
+          "key": "MAWLID_AN_NABI"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_AL_FITR"
+          "key": "ID_AL_FITR"
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA"
+          "key": "ID_UL_ADHA"
         }
       ]
     }

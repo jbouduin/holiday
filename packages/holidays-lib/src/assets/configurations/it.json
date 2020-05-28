@@ -4,11 +4,11 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -78,7 +78,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "WHIT_MONDAY"
+          "key": "WHIT_MONDAY"
         }
       ]
     }

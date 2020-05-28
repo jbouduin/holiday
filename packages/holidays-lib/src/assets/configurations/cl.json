@@ -4,19 +4,19 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_SATURDAY"
+      "key": "EASTER_SATURDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CORPUS_CHRISTI",
+      "key": "CORPUS_CHRISTI",
       "validTo": 2006
     },
     {

@@ -26,13 +26,13 @@ export class IslamicFactory extends BaseFactory<IIslamicHoliday, IslamicHolidayT
   }
 
   protected extractKey(obj: any): IslamicHolidayType {
-    const result = IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.type];
+    const result = IslamicHolidayType[<IslamicHolidayTypeKeyStrings>obj.key];
 
     if (!result && result !== 0) {
-      if (!obj.type) {
+      if (!obj.key) {
         this.addError(ErrorKeys.ISLAMIC_TYPE_MISSING);
       } else {
-        this.addError(ErrorKeys.ISLAMIC_TYPE_INVALID, obj.type);
+        this.addError(ErrorKeys.ISLAMIC_TYPE_INVALID, obj.key);
       }
     }
     return result;

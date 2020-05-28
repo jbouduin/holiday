@@ -33,13 +33,13 @@ export class EthiopianOrthodoxFactory
   }
 
   protected extractKey(obj: any): EthiopianOrthodoxHolidayType {
-    const result = EthiopianOrthodoxHolidayType[<EthiopianOrthodoxHolidayTypeKeyStrings>obj.type];
+    const result = EthiopianOrthodoxHolidayType[<EthiopianOrthodoxHolidayTypeKeyStrings>obj.key];
 
     if (!result && result !== 0) {
-      if (!obj.type) {
+      if (!obj.key) {
         this.addError(ErrorKeys.ETHIOPIAN_ORTHODOX_TYPE_MISSING);
       } else {
-        this.addError(ErrorKeys.ETHIOPIAN_ORTHODOX_TYPE_INVALID, obj.type);
+        this.addError(ErrorKeys.ETHIOPIAN_ORTHODOX_TYPE_INVALID, obj.key);
       }
     }
     return result;

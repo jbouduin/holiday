@@ -4,7 +4,7 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "FIXED_DATE",

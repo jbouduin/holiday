@@ -4,15 +4,15 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -58,19 +58,19 @@
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "RAMADAN"
+      "key": "RAMADAN"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "MAWLID_AN_NABI"
+      "key": "MAWLID_AN_NABI"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_AL_FITR"
+      "key": "ID_AL_FITR"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_UL_ADHA"
+      "key": "ID_UL_ADHA"
     }
   ],
   "subConfigurations": [

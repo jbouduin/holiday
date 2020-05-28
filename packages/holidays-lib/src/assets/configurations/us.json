@@ -321,7 +321,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -369,7 +369,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -493,7 +493,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -648,11 +648,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -742,7 +742,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -772,11 +772,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "MARDI_GRAS"
+          "key": "MARDI_GRAS"
         },
         {
           "holidayType": "FIXED_WEEKDAY",
@@ -973,7 +973,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1309,7 +1309,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1392,7 +1392,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1468,7 +1468,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1525,11 +1525,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -1794,7 +1794,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "GOOD_FRIDAY"
+          "key": "GOOD_FRIDAY"
         },
         {
           "holidayType": "FIXED_DATE",

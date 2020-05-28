@@ -4,12 +4,12 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY",
+      "key": "GOOD_FRIDAY",
       "validFrom": 2000
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY",
+      "key": "EASTER_MONDAY",
       "validFrom": 2000
     },
     {

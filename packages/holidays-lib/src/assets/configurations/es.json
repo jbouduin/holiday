@@ -4,11 +4,11 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -67,7 +67,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -107,7 +107,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -141,7 +141,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -157,7 +157,7 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA",
+          "key": "ID_UL_ADHA",
           "validFrom": 2010
         }
       ]
@@ -168,7 +168,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -184,7 +184,7 @@
         },
         {
           "holidayType": "ISLAMIC",
-          "type": "ID_UL_ADHA",
+          "key": "ID_UL_ADHA",
           "validFrom": 2010
         }
       ]
@@ -195,7 +195,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -223,7 +223,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -251,7 +251,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -273,7 +273,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -301,7 +301,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -329,7 +329,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -363,11 +363,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -389,7 +389,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -417,11 +417,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "CORPUS_CHRISTI"
+          "key": "CORPUS_CHRISTI"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -443,7 +443,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -471,11 +471,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -497,7 +497,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -531,11 +531,11 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -564,7 +564,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "MAUNDY_THURSDAY"
+          "key": "MAUNDY_THURSDAY"
         },
         {
           "holidayType": "FIXED_DATE",
@@ -586,7 +586,7 @@
       "holidayCollection": [
         {
           "holidayType": "CHRISTIAN",
-          "type": "EASTER_MONDAY"
+          "key": "EASTER_MONDAY"
         },
         {
           "holidayType": "FIXED_DATE",

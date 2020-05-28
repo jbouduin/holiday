@@ -4,16 +4,16 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY",
+      "key": "GOOD_FRIDAY",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY",
+      "key": "EASTER_MONDAY",
       "chronology": "JULIAN"
     },
     {
@@ -51,7 +51,7 @@
       "key": "VICTORY",
       "month": "MAY",
       "day": 9,
-      "localizedType": "UNOFFICIAL_HOLIDAY"
+      "category": "UNOFFICIAL_HOLIDAY"
     }
   ]
 }

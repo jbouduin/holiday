@@ -4,17 +4,17 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER",
+      "key": "EASTER",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY",
+      "key": "EASTER_MONDAY",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "PENTECOST",
+      "key": "PENTECOST",
       "chronology": "JULIAN"
     },
     {

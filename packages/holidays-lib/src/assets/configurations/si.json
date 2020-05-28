@@ -4,20 +4,20 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER"
+      "key": "EASTER"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY"
+      "key": "EASTER_MONDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CARNIVAL",
-      "localizedType": "UNOFFICIAL_HOLIDAY"
+      "key": "CARNIVAL",
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "PENTECOST"
+      "key": "PENTECOST"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -42,7 +42,7 @@
       "key": "ST_GEORGE",
       "month": "APRIL",
       "day": 23,
-      "localizedType": "UNOFFICIAL_HOLIDAY"
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -91,7 +91,7 @@
       "key": "ST_MARTIN",
       "month": "NOVEMBER",
       "day": 11,
-      "localizedType": "UNOFFICIAL_HOLIDAY"
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "FIXED_DATE",

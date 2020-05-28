@@ -4,12 +4,12 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER",
+      "key": "EASTER",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY",
+      "key": "GOOD_FRIDAY",
       "chronology": "JULIAN"
     },
     {
@@ -50,31 +50,31 @@
     },
     {
       "holidayType": "ETHIOPIAN_ORTHODOX",
-      "type": "TIMKAT"
+      "key": "TIMKAT"
     },
     {
       "holidayType": "ETHIOPIAN_ORTHODOX",
-      "type": "ENKUTATASH"
+      "key": "ENKUTATASH"
     },
     {
       "holidayType": "ETHIOPIAN_ORTHODOX",
-      "type": "MESKEL"
+      "key": "MESKEL"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "RAMADAN"
+      "key": "RAMADAN"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "MAWLID_AN_NABI"
+      "key": "MAWLID_AN_NABI"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_AL_FITR"
+      "key": "ID_AL_FITR"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_UL_ADHA"
+      "key": "ID_UL_ADHA"
     }
   ]
 }

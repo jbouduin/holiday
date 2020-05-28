@@ -100,15 +100,15 @@
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_AL_FITR"
+      "key": "ID_AL_FITR"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "ID_UL_ADHA"
+      "key": "ID_UL_ADHA"
     },
     {
       "holidayType": "ISLAMIC",
-      "type": "MAWLID_AN_NABI"
+      "key": "MAWLID_AN_NABI"
     }
   ],
   "subConfigurations": [

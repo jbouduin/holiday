@@ -4,27 +4,27 @@
   "holidayCollection": [
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER",
+      "key": "EASTER",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "CLEAN_MONDAY",
+      "key": "CLEAN_MONDAY",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "GOOD_FRIDAY",
+      "key": "GOOD_FRIDAY",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "EASTER_MONDAY",
+      "key": "EASTER_MONDAY",
       "chronology": "JULIAN"
     },
     {
       "holidayType": "CHRISTIAN",
-      "type": "WHIT_MONDAY",
+      "key": "WHIT_MONDAY",
       "chronology": "JULIAN"
     },
     {
