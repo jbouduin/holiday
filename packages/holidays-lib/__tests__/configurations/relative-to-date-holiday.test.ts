@@ -93,6 +93,7 @@ describe.each([
   ['invalid.relation.which.empty', 2, ErrorKeys.RELATION_WHICH_MISSING],
   ['invalid.relation.which.last', 2, ErrorKeys.RELATION_WHICH_INVALID],
   ['invalid.relation.which.value', 2, ErrorKeys.RELATION_WHICH_INVALID],
+  ['invalid.relation.weekday.missing', 2, ErrorKeys.RELATION_WEEKDAY_MISSING],
   ['invalid.relation.weekday.empty', 2, ErrorKeys.RELATION_WEEKDAY_MISSING],
   ['invalid.relation.weekday.value', 2, ErrorKeys.RELATION_WEEKDAY_INVALID],
   ['invalid.relation.when.empty', 2, ErrorKeys.RELATION_WHEN_MISSING],
