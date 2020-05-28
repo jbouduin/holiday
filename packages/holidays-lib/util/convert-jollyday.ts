@@ -6,8 +6,9 @@ import * as commandLineArgs from 'command-line-args';
 class Main {
 
   private unknownKey = '__UNKNOWN__';
-  private params: any;
+  // private params: any;
   private commandLineOptions = [
+    { name: 'file', alias: 'f', type: String },
     { name: 'input', alias: 'i', type: String },
     { name: 'output', alias: 'o', type: String }
   ];
@@ -15,29 +16,37 @@ class Main {
   // <editor-fold desc='Main method'>
   public execute(args: Array<any>) {
     let cnt = 0;
+    let params: any;
     try {
-      this.params = commandLineArgs(this.commandLineOptions);
+      params = commandLineArgs(this.commandLineOptions);
     } catch(error) {
-      console.log(error);
+      console.error(error);
       return
     }
 
-    const pattern = `${this.params.input}/*.xml`;
-    const files = glob(
-      pattern,
-      (err: Error | null, files: Array<string>) => {
-        if (err) {
-          console.log(err);
-        }
-        cnt++;
-        files.forEach( (file: any) => {
-          this.convertFile(file, this.params.output);
+    if (params.file) {
+      this.convertFile(params.file, params.output);
+    } else if (params.input){
+      const pattern = `${params.input}/*.xml`;
+      const files = glob(
+        pattern,
+        (err: Error | null, files: Array<string>) => {
+          if (err) {
+            console.log(err);
+          }
           cnt++;
-          console.log(file);
-        });
-        console.log(`converted ${cnt} files`);
-      }
-    );
+          files.forEach( (file: any) => {
+            this.convertFile(file, params.output);
+            cnt++;
+            console.log(file);
+          });
+          console.log(`converted ${cnt} files`);
+        }
+      );
+    } else {
+      console.log('invalid args');
+    }
+
   }
   // </editor-fold>
 
@@ -57,7 +66,7 @@ class Main {
       const json = this.processConfiguration(configuration.configuration);
       fs.writeFile(`${outputDir}/${json.hierarchy.replace('_', '-')}.json`, JSON.stringify(json, null, 2), (err) => {} );
     } catch(error) {
-      console.log(fileName, error.message);
+      console.log(fileName, error);
     }
 
   }
@@ -149,6 +158,16 @@ class Main {
       }
       delete configuration.holidays.relativetofixed;
     }
+
+    if (configuration.holidays.relativetoweekdayinmonth) {
+      if (Array.isArray(configuration.holidays.relativetoweekdayinmonth)) {
+        configuration.holidays.relativetoweekdayinmonth.forEach( (holiday: any) => holidays.push(this.processRelativetoweekdayinmonth(holiday)));
+      } else {
+        holidays.push(this.processRelativetoweekdayinmonth(configuration.holidays.relativetoweekdayinmonth))
+      }
+      delete configuration.holidays.relativetoweekdayinmonth;
+    }
+
     const leftOver = JSON.stringify(configuration.holidays);
 
     if (leftOver !== '{}') {
@@ -174,39 +193,49 @@ class Main {
 
   // <editor-fold desc='Holiday specific processing'>
   private processFixed(obj:any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
-    }
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition);
+      }
 
-    return {
-      holidayType: "FIXED_DATE",
-      key: obj._attributes.key || this.unknownKey,
-      month: obj._attributes.month,
-      day: Number(obj._attributes.day),
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
-    };
+      return {
+        holidayType: "FIXED_DATE",
+        key: obj._attributes.key || this.unknownKey,
+        month: obj._attributes.month,
+        day: Number(obj._attributes.day),
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
+    }
   }
 
   private processFixedWeekday(obj:any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
-    }
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition);
+      }
 
-    return {
-      holidayType: "FIXED_WEEKDAY",
-      key: obj._attributes.key || this.unknownKey,
-      which: obj._attributes.which,
-      weekday: obj._attributes.weekday,
-      month: obj._attributes.month,
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
+      return {
+        holidayType: "FIXED_WEEKDAY",
+        key: obj._attributes.key || this.unknownKey,
+        which: obj._attributes.which,
+        weekday: obj._attributes.weekday,
+        month: obj._attributes.month,
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
     }
   }
 
@@ -228,118 +257,166 @@ class Main {
   }
 
   private processIslamic(obj:any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
-    }
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition);
+      }
 
-    return {
-      holidayType: "ISLAMIC",
-      type: obj._attributes.type,
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
-    };
+      return {
+        holidayType: "ISLAMIC",
+        type: obj._attributes.type,
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
+    }
   }
 
   private processEthiopianorthodox(obj:any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
-    }
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition);
+      }
 
-    return {
-      holidayType: "ETHIOPIAN_ORTHODOX",
-      type: obj._attributes.type,
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
-    };
+      return {
+        holidayType: "ETHIOPIAN_ORTHODOX",
+        type: obj._attributes.type,
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
+    }
   }
 
   private processFixedweekdaybetweenfixed(obj: any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
-    }
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition)
+      }
 
-    return {
-      holidayType: "RELATIVE_BETWEEN_FIXED",
-      key: obj._attributes.key || this.unknownKey,
-      relation: { "weekday": obj._attributes.weekday },
-			fix: {
-        from: {
-          month: obj.from._attributes.month,
-          day: Number(obj.from._attributes.day)
-        },
-			  to: {
-          month: obj.to._attributes.month,
-          day: Number(obj.to._attributes.day)
-        }
-		  },
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
-    };
+      return {
+        holidayType: "RELATIVE_BETWEEN_FIXED",
+        key: obj._attributes.key || this.unknownKey,
+        relation: { "weekday": obj._attributes.weekday },
+  			fix: {
+          from: {
+            month: obj.from._attributes.month,
+            day: Number(obj.from._attributes.day)
+          },
+  			  to: {
+            month: obj.to._attributes.month,
+            day: Number(obj.to._attributes.day)
+          }
+  		  },
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
+    }
   }
 
   private processFixedweekdayrelativetofixed(obj: any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
-    }
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition)
+      }
 
-    return {
-      holidayType: "RELATIVE_TO_DATE",
-      key: obj._attributes.key || this.unknownKey,
-      relation: {
-        which: obj._attributes.which,
-        weekday: obj._attributes.weekday,
-        when: obj._attributes.when },
-			fix: {
-        month: obj.day._attributes.month,
-        day: Number(obj.day._attributes.day)
-      },
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
+      return {
+        holidayType: "RELATIVE_TO_DATE",
+        key: obj._attributes.key || this.unknownKey,
+        relation: {
+          which: obj._attributes.which,
+          weekday: obj._attributes.weekday,
+          when: obj._attributes.when },
+  			fix: {
+          month: obj.day._attributes.month,
+          day: Number(obj.day._attributes.day)
+        },
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
     }
   }
 
   private processRelativetofixed(obj: any): any {
-    let moves: Array<any> | undefined = undefined;
-    if (obj.movingcondition) {
-      moves = this.processMovingConditions(obj.movingcondition)
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition)
+      }
+      return {
+        holidayType: "RELATIVE_TO_DATE",
+        key: obj._attributes.key || this.unknownKey,
+        relation: {
+          which: obj.which ? obj.which._text : undefined,
+          weekday: obj.weekday._text,
+          when: obj.when._text
+        },
+  			fix: {
+          month: obj.date._attributes.month,
+          day: Number(obj.date._attributes.day)
+        },
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      }
+    } catch(error) {
+      console.log(obj);
+      throw error;
     }
-    // console.log(JSON.stringify(obj, null, 2));
-    // {"_attributes":
-    //   { "key":"VICTORIA_DAY" },
-    //   "weekday": { "_text":"MONDAY"},"when":{"_text":"BEFORE"},"date":{"_attributes":{"month":"MAY","day":"24"}}}}
-    return {
-      holidayType: "RELATIVE_TO_DATE",
-      key: obj._attributes.key || this.unknownKey,
-      relation: {
-        weekday: obj.weekday._text,
-        when: obj.when._text },
-			fix: {
-        month: obj.date._attributes.month,
-        day: Number(obj.date._attributes.day)
-      },
-      localizedType: obj._attributes.localizedType,
-      validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
-      validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
-      moves: moves
+  }
+
+  private processRelativetoweekdayinmonth(obj: any): any {
+    try {
+      let moves: Array<any> | undefined = undefined;
+      if (obj.movingcondition) {
+        moves = this.processMovingConditions(obj.movingcondition)
+      }
+
+      return {
+        holidayType: "RELATIVE_TO_WEEKDAY",
+        key: obj._attributes.key || this.unknownKey,
+        relation: {
+          which: obj._attributes.which ? obj._attributes.which : undefined,
+          weekday: obj._attributes.weekday,
+          when: obj._attributes.when
+        },
+  			fix: {
+          which: obj.fixedweekday._attributes.which,
+          weekday: obj.fixedweekday._attributes.weekday,
+          month: obj.fixedweekday._attributes.month
+        },
+        localizedType: obj._attributes.localizedType,
+        validFrom: obj._attributes.validFrom ? Number(obj._attributes.validFrom) : undefined,
+        validTo: obj._attributes.validTo ? Number(obj._attributes.validTo) : undefined,
+        moves: moves
+      };
+    } catch(error) {
+      console.log(obj);
+      throw error;
     }
-    // {
-    //   "holidayType": "RELATIVE_TO_DATE",
-    //   "key": "FIRST_DAY_SUMMER",
-    //   "relation": { "which": "FIRST", "weekday": "THURSDAY", "when": "AFTER" },
-		// 	"fix": { "month": "APRIL", "day": 18 }
-    // }
   }
   // </editor-fold>
 
