@@ -6,6 +6,7 @@ describe.each([
   [ 'al', 'Albania' ],
   [ 'ar', 'Argentina' ],
   [ 'at', 'Austria' ],
+  [ 'au', 'Australia' ],
   [ 'be', 'Belgium' ],
   [ 'bg', 'Bulgaria' ],
   [ 'bo', 'Bolivia' ],
