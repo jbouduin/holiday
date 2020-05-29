@@ -24,6 +24,7 @@ describe.each([
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;
   const calculator = new FixedHolidayCalculator();
   const result = calculator.calculate(holiday, year);
+  test('date returned', () => expect(result).toBeDefined());
   if (result) {
     test('move detected', () => expect(result.getTime() === expected.getTime()).toBeFalsy());
   }
@@ -93,5 +94,4 @@ describe.each([
   const calculator = new FixedHolidayCalculator();
   const result = calculator.calculate(holiday, year);
   test('no move', () => expect(result).toStrictEqual(expected));
-
 });

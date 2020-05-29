@@ -1,7 +1,7 @@
 import { IFix, IBetweenFixedDates, IFixedDate, IFixedWeekday } from '../configuration';
 import { IRelation, IRelationWeekday, IRelationWhichWeekdayWhen } from '../configuration';
 import { IRelativeHoliday } from '../configuration';
-import { HolidayType } from '../configuration';
+import { HolidayType, When } from '../configuration';
 import { IBaseCalculator, BaseCalculator } from './base-calculator';
 
 export interface IRelativeHolidayCalculator extends IBaseCalculator<IRelativeHoliday<IRelation, IFix>> { }
@@ -60,18 +60,43 @@ export class RelativeHolidayCalculator extends BaseCalculator<IRelativeHoliday<I
     holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate>,
     year: number): Date | undefined {
 
-    const fix = this.calendarHelper.calculateFixedDate(holiday.fix, year);
-    // console.log('calculateRelativeToDate => fix', fix);
-    return undefined;
+    return this.applyRelation(
+      holiday.relation,
+      this.calendarHelper.calculateFixedDate(holiday.fix, year)
+    );
+
   }
 
   private calculateRelativeToWeekday(
     holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>,
     year: number): Date | undefined  {
 
-    const fix = this.calendarHelper.calculateFixedWeekday(holiday.fix, year);
-    // console.log('calculateRelativeToWeekday  => fix', fix);
-    return undefined;
+    return this.applyRelation(
+      holiday.relation,
+      this.calendarHelper.calculateFixedWeekday(holiday.fix, year)
+    );
+  }
+
+  private applyRelation(relation: IRelationWhichWeekdayWhen, date: Date): Date {
+    // weekday: Weekday;
+    // when: When; (Before or After)
+    // which: Which (First .. Fourth);
+
+    const dayOfFix = date.getDay();
+    let diff = 0;
+
+    if (relation.when === When.BEFORE )
+    {
+      diff = dayOfFix >= relation.weekday ?
+        relation.weekday - dayOfFix :
+        relation.weekday - dayOfFix - 7;
+    } else {
+      diff = dayOfFix > relation.weekday ?
+          relation.weekday - dayOfFix + 7:
+          relation.weekday - dayOfFix;
+    }
+
+    return this.calendarHelper.addDays(date, diff + (relation.which * 7 * relation.when));
   }
   // </editor-fold>
 }
