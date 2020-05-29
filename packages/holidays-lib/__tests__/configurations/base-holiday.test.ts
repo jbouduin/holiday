@@ -23,8 +23,8 @@ describe.each([
 ])('base holiday > cycle > %s', (fileName: string, expected: Cycle) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
   test(`value`, () => expect(Cycle[holiday.cycle]).toBe(Cycle[expected]));
 });
@@ -35,8 +35,8 @@ describe.each([
 ])('base holiday > valid from > $s', (fileName: string, expected: Cycle) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
   test(`value`, () => expect(holiday.validFrom).toBe(expected));
 });
@@ -47,8 +47,8 @@ describe.each([
 ])('base holiday > valid to > %s', (fileName: string, expected: Cycle) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
   test(`value`, () => expect(holiday.validTo).toBe(expected));
 });
@@ -61,8 +61,8 @@ describe.each([
 ])('base holiday > category > %s', (fileName: string, expected: Category) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
   test(`value`, () => expect(Category[holiday.category]).toBe(Category[expected]));
 });
@@ -81,10 +81,10 @@ describe.each([
 ])('invalid base holiday configurations > %s', (fileName: string, expected: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(0));
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(2));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
+  test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
-  test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
+  test('NO_VALID_HOLIDAYS_IN_COLLECTION error exists', () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === expected);
-  test(`expected error exists`, () => expect(expectedError.length).toBe(1));
+  test('expected error exists', () => expect(expectedError.length).toBe(1));
 });

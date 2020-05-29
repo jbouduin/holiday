@@ -73,5 +73,5 @@ describe.each([
   const configuration = new ConfigurationFactory().loadByHierarchy(iso);
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
   test('description correct', () => expect(configuration.description).toBe(description));
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
 });

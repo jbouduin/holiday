@@ -3,6 +3,7 @@ import * as path from 'path';
 import { ConfigurationFactory } from '../../src/configuration';
 import { ErrorKey } from '../../src/configuration';
 import { IFixedWeekday, IRelationWhichWeekdayWhen, IRelativeHoliday } from '../../src/configuration';
+import { HolidayType } from '../../src/configuration';
 import { Month, Weekday, When, Which } from '../../src/configuration';
 
 const dataRoot = './data/relative-to-weekday-holiday';
@@ -23,8 +24,8 @@ describe.each([
 ])('relative to weekday > fix month > %s', (fileName: string, expected: Month) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday> =
     configuration.holidays[0] as IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>;
   test(`month`, () => expect(Month[holiday.fix.month]).toBe(Month[expected]));
@@ -41,8 +42,8 @@ describe.each([
 ])('relative to weekday > fix weekday > %s', (fileName: string, expected: Weekday) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday> =
     configuration.holidays[0] as IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>;
   test(`weekday`, () => expect(Weekday[holiday.fix.weekday]).toBe(Weekday[expected]));
@@ -57,8 +58,8 @@ describe.each([
 ])('relative to weekday > fix which > %s', (fileName: string, expected: Which) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday> =
     configuration.holidays[0] as IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>;
   test(`which`, () => expect(Which[holiday.fix.which]).toBe(Which[expected]));
@@ -75,8 +76,8 @@ describe.each([
 ])('relative to weekday > weekday > %s', (fileName: string, expected: Weekday) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday> =
     configuration.holidays[0] as IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>;
   test(`weekday`, () => expect(Weekday[holiday.relation.weekday]).toBe(Weekday[expected]));
@@ -88,8 +89,8 @@ describe.each([
 ])('relative to weekday > relation when > %s', (fileName: string, expected: When) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday> =
     configuration.holidays[0] as IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>;
   test(`which`, () => expect(When[holiday.relation.when]).toBe(When[expected]));
@@ -104,8 +105,8 @@ describe.each([
 ])('relative to weekday > relation which > %s', (fileName: string, expected: Which) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday> =
     configuration.holidays[0] as IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>;
   test(`which`, () => expect(Which[holiday.relation.which]).toBe(Which[expected]));
@@ -137,19 +138,30 @@ describe.each([
 ])('relative to weekday > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(0));
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(2));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
+  test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
-  test(`NO_VALID_HOLIDAYS_IN_COLLECTION error exists`, () => expect(noValidHolidaysError.length).toBe(1));
+  test('NO_VALID_HOLIDAYS_IN_COLLECTION error exists', () => expect(noValidHolidaysError.length).toBe(1));
   const expectedError = configuration.errors.filter(error => error.key === key);
-  test(`expected error exists`, () => expect(expectedError.length).toBe(1));
+  test('expected error exists', () => expect(expectedError.length).toBe(1));
 });
 
-describe('relative to weekday > translationkey', () => {
+describe('relative to weekday > translation-key', () => {
   const file = path.join(__dirname, `${dataRoot}/translation-key.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`number of errors`, () => expect(configuration.errors.length).toBe(0));
-  test(`number of holidays`, () => expect(configuration.holidays.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
   test(`translation-key`, () => expect(holiday.translationKey).toBeDefined());
+});
+
+describe('relative to weekday > holidayType', () => {
+  const file = path.join(__dirname, `${dataRoot}/holiday-type.json`);
+  const configuration = new ConfigurationFactory().loadByFileName(file);
+  test('number of errors', () => expect(configuration.errors.length).toBe(0));
+  test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
+  const holiday = configuration.holidays[0];
+  test(
+    `holidayType value`,
+    () => expect(HolidayType[holiday.holidayType]).toBe(HolidayType[HolidayType.RELATIVE_TO_WEEKDAY]));
 });

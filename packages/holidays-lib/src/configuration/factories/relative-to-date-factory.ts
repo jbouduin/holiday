@@ -33,7 +33,7 @@ export class RelativeToDateFactory
     validTo: number): IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> {
 
     return new RelativeHoliday(
-      HolidayType.RELATIVE_BETWEEN_FIXED,
+      HolidayType.RELATIVE_TO_DATE,
       key,
       category,
       cycle,

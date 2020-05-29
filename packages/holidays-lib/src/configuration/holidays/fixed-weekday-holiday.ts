@@ -20,7 +20,7 @@ export class FixedWeekdayHoliday extends BaseHoliday<string> implements IFixedWe
     validFrom: number,
     validTo: number,
     fixedWeekday: IFixedWeekday) {
-    super(HolidayType.FIXED_DATE, key, category, cycle, validFrom, validTo);
+    super(HolidayType.FIXED_WEEKDAY, key, category, cycle, validFrom, validTo);
     this.month = fixedWeekday.month;
     this.weekday = fixedWeekday.weekday;
     this.which = fixedWeekday.which;
