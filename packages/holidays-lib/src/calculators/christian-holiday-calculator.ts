@@ -14,9 +14,6 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
   // <editor-fold desc='Abstract method implementation'>
   public calculateDate(holiday: IChristianHoliday, year: number): Date | undefined
   {
-    if (!this.calendarHelper.occurs(holiday, year)) {
-      return undefined;
-    }
     const easternSunday = this.calendarHelper.getEasternSunday(holiday.chronology, year);
     switch (holiday.key) {
       case ChristianHolidayType.CLEAN_MONDAY:

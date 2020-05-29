@@ -1,8 +1,11 @@
 import { ChronologyType, Cycle } from '../configuration';
-import { BaseHoliday, IBaseHoliday, IFixedDateHoliday } from '../configuration';
+import { Which } from '../configuration';
+import { BaseHoliday, IBaseHoliday, IFixedDate, IFixedWeekday } from '../configuration';
 
 export interface ICalendarHelper {
   addDays(date: Date, days: number): Date;
+  calculateFixedDate(fix: IFixedDate, year: number): Date;
+  calculateFixedWeekday(fix: IFixedWeekday, year: number): Date;
   getEasternSunday(chronology: ChronologyType, year: number): Date;
   occurs(holiday: IBaseHoliday<any>, year: number): boolean;
 }
@@ -16,6 +19,28 @@ export class CalendarHelper implements ICalendarHelper {
   // <editor-fold desc='ICalendar interface methods'>
   public addDays(date: Date, days: number): Date {
     return new Date(date.getTime() + (days * 1000 * 60 * 60 * 24));
+  }
+
+  public calculateFixedDate(fix: IFixedDate, year: number): Date {
+    return new Date(Date.UTC(year, fix.month, fix.day));
+  }
+
+  public calculateFixedWeekday(fix: IFixedWeekday, year: number): Date {
+    if (fix.which === Which.LAST)
+    {
+      const lastDayOfMonth = new Date(Date.UTC(year, fix.month + 1, 0));
+      const dayOfLastDayOfMonth = lastDayOfMonth.getDay();
+      return this.addDays(lastDayOfMonth, fix.weekday - lastDayOfMonth.getDay());
+    } else {
+      const firstDayOfMonth = new Date(Date.UTC(year, fix.month, 1));
+      const dayOfFirstDayOfMonth = firstDayOfMonth.getDay();
+      return this.addDays(firstDayOfMonth,
+        (dayOfFirstDayOfMonth > fix.weekday ?
+          fix.weekday - dayOfFirstDayOfMonth + 7:
+          fix.weekday - dayOfFirstDayOfMonth) +
+          fix.which * 7
+      );
+    }
   }
 
   public getEasternSunday(chronology: ChronologyType, year: number): Date {

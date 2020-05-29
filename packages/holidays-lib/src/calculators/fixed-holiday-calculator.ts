@@ -1,4 +1,4 @@
-import { IFixedDateHoliday } from '../configuration';
+import { IFixedDate, IFixedDateHoliday } from '../configuration';
 import { IBaseCalculator, BaseCalculator } from './base-calculator';
 
 export interface IFixedHolidayCalculator extends IBaseCalculator<IFixedDateHoliday>{ }
@@ -14,10 +14,7 @@ export class FixedHolidayCalculator extends BaseCalculator<IFixedDateHoliday> im
   // <editor-fold desc='Abstract method implementation'>
   public calculateDate(holiday: IFixedDateHoliday, year: number): Date | undefined
   {
-    if (!this.calendarHelper.occurs(holiday, year)) {
-      return undefined;
-    }
-    return new Date(Date.UTC(year, holiday.month, holiday.day));
+    return this.calendarHelper.calculateFixedDate(holiday as IFixedDate, year);
   }
   // </editor-fold>
 }

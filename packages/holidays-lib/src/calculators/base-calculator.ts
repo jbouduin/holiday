@@ -25,6 +25,9 @@ export abstract class BaseCalculator<T extends IBaseHoliday<any>> implements IBa
 
   // <editor-fold desc='Private abstract methods'>
   public calculate(holiday: T, year: number): Date | undefined {
+    if (!this.calendarHelper.occurs(holiday, year)) {
+      return undefined;
+    }
     let result: Date | undefined = this.calculateDate(holiday, year);
     if (result && holiday.moves.length > 0) {
       result = this.mover.moveDate(holiday.moves, result);
