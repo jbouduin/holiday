@@ -1,3 +1,4 @@
+import * as fs from 'fs';
 import * as path from 'path';
 
 import { IConfiguration } from '../../src/configuration';
@@ -17,13 +18,13 @@ describe.each([
   ['invalid.description.missing', ErrorKey.DESCRIPTION_NOT_SPECIFIED, '/invalid.description.missing'],
   ['invalid.hierarchy.empty', ErrorKey.HIERARCHY_NOT_SPECIFIED, location],
   ['invalid.hierarchy.missing', ErrorKey.HIERARCHY_NOT_SPECIFIED, location],
-])('Configuration > Invalid configurations', (fileName: string, key: ErrorKey, location: string) => {
+])('Configuration > Invalid configurations > %s', (fileName: string, key: ErrorKey, location: string) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
   const configuration = new ConfigurationFactory().loadByFileName(file);
-  test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(1));
   const error = configuration.errors[0];
-  test(`${fileName} > Error key`, () => expect(error.key).toBe(key));
-  test(`${fileName} > Location`, () => expect(error.location).toBe(location));
+  test('Error key', () => expect(error.key).toBe(key));
+  test('Location', () => expect(error.location).toBe(location));
 });
 
 describe('Configuration > Valid configuration', () => {
@@ -51,10 +52,17 @@ describe('Configuration > Only an invalid', () => {
 describe.each([
   [''],
   ['/xx']
-])('Configuration > Invalid hierarchy', (hierarchy: string) => {
+])('Configuration > Invalid hierarchy > %s', (hierarchy: string) => {
   const configuration = new ConfigurationFactory().loadByHierarchy(hierarchy);
-  test(`${hierarchy} > number of errors`, () => expect(configuration.errors.length).toBe(1));
+  test('number of errors', () => expect(configuration.errors.length).toBe(1));
   const error = configuration.errors[0];
-  test(`${hierarchy} > Error key`, () => expect(error.key).toBe(ErrorKey.HIERARCHY_INVALID));
-  test(`${hierarchy} > Location`, () => expect(error.location).toBe(location));
+  test('Error key', () => expect(error.key).toBe(ErrorKey.HIERARCHY_INVALID));
+  test('Location', () => expect(error.location).toBe(location));
 });
+
+test('read the configurations.json', () => {
+  const fileName = path.join(__dirname, `../../src/assets/configurations.json`);
+  const dataString = fs.readFileSync(fileName, 'utf-8');
+  const parse = JSON.parse(dataString);
+  expect(parse).toBeDefined();
+})

@@ -1,6 +1,5 @@
 export interface IHierarchy {
-  parent: IHierarchy | undefined;
-  name: string;
+  code: string;
   description: string;
-
+  children: Array<IHierarchy> | undefined;
 }

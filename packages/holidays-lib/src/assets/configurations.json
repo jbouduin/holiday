@@ -1,0 +1,2430 @@
+[
+  {
+    "code": "al",
+    "description": "Albania"
+  },
+  {
+    "code": "ar",
+    "description": "Argentina"
+  },
+  {
+    "code": "at",
+    "description": "Austria",
+    "children": [
+      {
+        "code": "b",
+        "description": "Burgenland"
+      },
+      {
+        "code": "k",
+        "description": "Kärnten"
+      },
+      {
+        "code": "la",
+        "description": "Niederösterreich"
+      },
+      {
+        "code": "ua",
+        "description": "Oberösterreich"
+      },
+      {
+        "code": "s",
+        "description": "Salzburg"
+      },
+      {
+        "code": "st",
+        "description": "Steiermark"
+      },
+      {
+        "code": "t",
+        "description": "Tirol"
+      },
+      {
+        "code": "va",
+        "description": "Vorarlberg"
+      },
+      {
+        "code": "w",
+        "description": "Wien"
+      }
+    ]
+  },
+  {
+    "code": "au",
+    "description": "Australia",
+    "children": [
+      {
+        "code": "act",
+        "description": "Australian Capital Territory"
+      },
+      {
+        "code": "nsw",
+        "description": "New South Wales"
+      },
+      {
+        "code": "nt",
+        "description": "Nothern Territory"
+      },
+      {
+        "code": "qld",
+        "description": "Queensland"
+      },
+      {
+        "code": "sa",
+        "description": "South Australia"
+      },
+      {
+        "code": "tas",
+        "description": "Tasmania",
+        "children": [
+          {
+            "code": "ho",
+            "description": "Hobard Area"
+          },
+          {
+            "code": "nh",
+            "description": "Non-Hobard Area"
+          }
+        ]
+      },
+      {
+        "code": "vic",
+        "description": "Victoria"
+      },
+      {
+        "code": "wa",
+        "description": "West Australia"
+      }
+    ]
+  },
+  {
+    "code": "ba",
+    "description": "Bosnia and Herzegovina",
+    "children": [
+      {
+        "code": "rs",
+        "description": "Republika Srpska"
+      },
+      {
+        "code": "fbh",
+        "description": "Federation of Bosnia and Herzegovina"
+      }
+    ]
+  },
+  {
+    "code": "be",
+    "description": "Belgium"
+  },
+  {
+    "code": "bg",
+    "description": "Bulgaria"
+  },
+  {
+    "code": "bo",
+    "description": "Bolivia"
+  },
+  {
+    "code": "br",
+    "description": "Brazil",
+    "children": [
+      {
+        "code": "rj",
+        "description": "Rio de Janeiro",
+        "children": [
+          {
+            "code": "crj",
+            "description": "City of Rio de Janeiro"
+          }
+        ]
+      },
+      {
+        "code": "s",
+        "description": "Sao Paulo",
+        "children": [
+          {
+            "code": "cs",
+            "description": "City of Sao Paulo"
+          }
+        ]
+      },
+      {
+        "code": "mg",
+        "description": "Minas Gerais"
+      },
+      {
+        "code": "ms",
+        "description": "Mato Grosso do Sul",
+        "children": [
+          {
+            "code": "cg",
+            "description": "Campo Grande"
+          },
+          {
+            "code": "do",
+            "description": "Dourados"
+          }
+        ]
+      },
+      {
+        "code": "pr",
+        "description": "Parana"
+      },
+      {
+        "code": "rs",
+        "description": "Rio Grande do Sul",
+        "children": [
+          {
+            "code": "sm",
+            "description": "Santa Maria"
+          }
+        ]
+      },
+      {
+        "code": "rn",
+        "description": "Rio Grande do Norte",
+        "children": [
+          {
+            "code": "na",
+            "description": "Natal"
+          }
+        ]
+      },
+      {
+        "code": "go",
+        "description": "Goiás"
+      },
+      {
+        "code": "pe",
+        "description": "Pernambuco"
+      }
+    ]
+  },
+  {
+    "code": "by",
+    "description": "Belarus"
+  },
+  {
+    "code": "ca",
+    "description": "Canada",
+    "children": [
+      {
+        "code": "on",
+        "description": "Ontario"
+      },
+      {
+        "code": "yt",
+        "description": "Yukon"
+      },
+      {
+        "code": "qc",
+        "description": "Quebec"
+      },
+      {
+        "code": "ns",
+        "description": "Nova Scotia"
+      },
+      {
+        "code": "nb",
+        "description": "New Brunswick"
+      },
+      {
+        "code": "mb",
+        "description": "Manitoba"
+      },
+      {
+        "code": "nt",
+        "description": "Northwest Territories"
+      },
+      {
+        "code": "nu",
+        "description": "Nunavut"
+      },
+      {
+        "code": "bc",
+        "description": "British Columbia"
+      },
+      {
+        "code": "pe",
+        "description": "Prince Edward Island"
+      },
+      {
+        "code": "sk",
+        "description": "Saskatchewan"
+      },
+      {
+        "code": "ab",
+        "description": "Alberta"
+      },
+      {
+        "code": "nl",
+        "description": "Newfoundland and Labrador"
+      }
+    ]
+  },
+  {
+    "code": "ch",
+    "description": "Switzerland",
+    "children": [
+      {
+        "code": "ag",
+        "description": "Aargau"
+      },
+      {
+        "code": "ai",
+        "description": "Appenzell Innerrhoden"
+      },
+      {
+        "code": "ar",
+        "description": "Appenzell Ausserrhoden"
+      },
+      {
+        "code": "be",
+        "description": "Bern"
+      },
+      {
+        "code": "bl",
+        "description": "Basel-Landschaft"
+      },
+      {
+        "code": "bs",
+        "description": "Basel-Stadt"
+      },
+      {
+        "code": "fr",
+        "description": "Freiburg"
+      },
+      {
+        "code": "ge",
+        "description": "Genf"
+      },
+      {
+        "code": "gl",
+        "description": "Glarus"
+      },
+      {
+        "code": "gr",
+        "description": "Graubünden"
+      },
+      {
+        "code": "ju",
+        "description": "Jura"
+      },
+      {
+        "code": "lu",
+        "description": "Luzern"
+      },
+      {
+        "code": "ne",
+        "description": "Neuenburg"
+      },
+      {
+        "code": "nw",
+        "description": "Nidwalden"
+      },
+      {
+        "code": "ow",
+        "description": "Obwalden"
+      },
+      {
+        "code": "sg",
+        "description": "St.Gallen"
+      },
+      {
+        "code": "sh",
+        "description": "Schaffhausen"
+      },
+      {
+        "code": "so",
+        "description": "Solothurn"
+      },
+      {
+        "code": "sz",
+        "description": "Schwyz"
+      },
+      {
+        "code": "tg",
+        "description": "Thurgau"
+      },
+      {
+        "code": "ti",
+        "description": "Tessin"
+      },
+      {
+        "code": "ur",
+        "description": "Uri"
+      },
+      {
+        "code": "vd",
+        "description": "Waadt"
+      },
+      {
+        "code": "vs",
+        "description": "Wallis"
+      },
+      {
+        "code": "zg",
+        "description": "Zug"
+      },
+      {
+        "code": "zh",
+        "description": "Zürich"
+      }
+    ]
+  },
+  {
+    "code": "cl",
+    "description": "Chile"
+  },
+  {
+    "code": "co",
+    "description": "Colombia"
+  },
+  {
+    "code": "cr",
+    "description": "Costa Rica"
+  },
+  {
+    "code": "cz",
+    "description": "Czech Republic"
+  },
+  {
+    "code": "de",
+    "description": "Germany",
+    "children": [
+      {
+        "code": "bb",
+        "description": "Brandenburg"
+      },
+      {
+        "code": "bw",
+        "description": "Baden-Württenberg"
+      },
+      {
+        "code": "by",
+        "description": "Bayern",
+        "children": [
+          {
+            "code": "mu",
+            "description": "Munich"
+          },
+          {
+            "code": "ag",
+            "description": "Augsburg"
+          },
+          {
+            "code": "wu",
+            "description": "Würzburg"
+          },
+          {
+            "code": "re",
+            "description": "Regensburg"
+          },
+          {
+            "code": "in",
+            "description": "Ingolstadt"
+          }
+        ]
+      },
+      {
+        "code": "he",
+        "description": "Hessen"
+      },
+      {
+        "code": "mv",
+        "description": "Mecklenburg-Vorpommern"
+      },
+      {
+        "code": "nw",
+        "description": "Nordrhein-Westfalen"
+      },
+      {
+        "code": "rp",
+        "description": "Rheinland-Pfalz"
+      },
+      {
+        "code": "sl",
+        "description": "Saarland"
+      },
+      {
+        "code": "sn",
+        "description": "Sachsen"
+      },
+      {
+        "code": "st",
+        "description": "Sachsen-Anhalt"
+      },
+      {
+        "code": "th",
+        "description": "Thüringen"
+      }
+    ]
+  },
+  {
+    "code": "dk",
+    "description": "Denmark"
+  },
+  {
+    "code": "ec",
+    "description": "Ecuador"
+  },
+  {
+    "code": "ee",
+    "description": "Estonia"
+  },
+  {
+    "code": "es",
+    "description": "Spain",
+    "children": [
+      {
+        "code": "an",
+        "description": "Andalucia"
+      },
+      {
+        "code": "ar",
+        "description": "Aragon"
+      },
+      {
+        "code": "ce",
+        "description": "Ceuta"
+      },
+      {
+        "code": "ml",
+        "description": "Melilla"
+      },
+      {
+        "code": "cl",
+        "description": "Castile and Leon"
+      },
+      {
+        "code": "cm",
+        "description": "Castile - La Mancha"
+      },
+      {
+        "code": "cn",
+        "description": "Canary Islands"
+      },
+      {
+        "code": "ct",
+        "description": "Catalonia"
+      },
+      {
+        "code": "ex",
+        "description": "Extremadura"
+      },
+      {
+        "code": "ga",
+        "description": "Galicia"
+      },
+      {
+        "code": "ib",
+        "description": "Balearic Island"
+      },
+      {
+        "code": "lo",
+        "description": "La Rioja"
+      },
+      {
+        "code": "m",
+        "description": "Madrid"
+      },
+      {
+        "code": "mu",
+        "description": "Murcia"
+      },
+      {
+        "code": "na",
+        "description": "Navarre"
+      },
+      {
+        "code": "o",
+        "description": "Asturias"
+      },
+      {
+        "code": "pv",
+        "description": "Euskadi"
+      },
+      {
+        "code": "s",
+        "description": "Cantabria"
+      },
+      {
+        "code": "vc",
+        "description": "Valencia"
+      }
+    ]
+  },
+  {
+    "code": "et",
+    "description": "Ethiopia"
+  },
+  {
+    "code": "fi",
+    "description": "Finland"
+  },
+  {
+    "code": "fr",
+    "description": "France",
+    "children": [
+      {
+        "code": "ma",
+        "description": "Martinique"
+      },
+      {
+        "code": "gu",
+        "description": "Guadeloupe"
+      },
+      {
+        "code": "gy",
+        "description": "Guyane"
+      },
+      {
+        "code": "lr",
+        "description": "La Reunion"
+      },
+      {
+        "code": "br",
+        "description": "Bas-Rhin"
+      },
+      {
+        "code": "hr",
+        "description": "Haut-Rhin"
+      },
+      {
+        "code": "mo",
+        "description": "Moselle"
+      }
+    ]
+  },
+  {
+    "code": "gr",
+    "description": "Greece"
+  },
+  {
+    "code": "hr",
+    "description": "Croatia"
+  },
+  {
+    "code": "hu",
+    "description": "Hungary"
+  },
+  {
+    "code": "ie",
+    "description": "Ireland"
+  },
+  {
+    "code": "in",
+    "description": "India",
+    "children": [
+      {
+        "code": "ap",
+        "description": "Andhra Pradesh"
+      },
+      {
+        "code": "ar",
+        "description": "Arunachal Pradesh"
+      },
+      {
+        "code": "as",
+        "description": "Assam"
+      },
+      {
+        "code": "br",
+        "description": "Bihar"
+      },
+      {
+        "code": "ct",
+        "description": "Chhattisgarh"
+      },
+      {
+        "code": "ga",
+        "description": "Goa"
+      },
+      {
+        "code": "gj",
+        "description": "Gujarat"
+      },
+      {
+        "code": "hr",
+        "description": "Haryana"
+      },
+      {
+        "code": "hp",
+        "description": "Himachal Pradesh"
+      },
+      {
+        "code": "jk",
+        "description": "Jammu and Kashmir"
+      },
+      {
+        "code": "jh",
+        "description": "Jharkhand"
+      },
+      {
+        "code": "ka",
+        "description": "Karnataka"
+      },
+      {
+        "code": "kl",
+        "description": "Kerala"
+      },
+      {
+        "code": "mp",
+        "description": "Madhya Pradesh"
+      },
+      {
+        "code": "mh",
+        "description": "Maharashtra"
+      },
+      {
+        "code": "mn",
+        "description": "Manipur"
+      },
+      {
+        "code": "ml",
+        "description": "Meghalaya"
+      },
+      {
+        "code": "mz",
+        "description": "Mizoram"
+      },
+      {
+        "code": "nl",
+        "description": "Nagaland"
+      },
+      {
+        "code": "or",
+        "description": "Orissa"
+      },
+      {
+        "code": "pb",
+        "description": "Punjab"
+      },
+      {
+        "code": "rj",
+        "description": "Rajasthan"
+      },
+      {
+        "code": "sk",
+        "description": "Sikkim"
+      },
+      {
+        "code": "tn",
+        "description": "Tamil Nadu"
+      },
+      {
+        "code": "tr",
+        "description": "Tripura"
+      },
+      {
+        "code": "up",
+        "description": "Uttar Pradesh"
+      },
+      {
+        "code": "ul",
+        "description": "Uttarakhand"
+      },
+      {
+        "code": "wb",
+        "description": "West Bengal"
+      },
+      {
+        "code": "an",
+        "description": "Andaman and Nicobar Islands"
+      },
+      {
+        "code": "ch",
+        "description": "Chandigarh"
+      },
+      {
+        "code": "dn",
+        "description": "Dadra and Nagar Haveli"
+      },
+      {
+        "code": "dd",
+        "description": "Daman and Diu"
+      },
+      {
+        "code": "ld",
+        "description": "Lakshadweep"
+      },
+      {
+        "code": "dl",
+        "description": "Delhi"
+      },
+      {
+        "code": "py",
+        "description": "Puducherry"
+      }
+    ]
+  },
+  {
+    "code": "is",
+    "description": "Iceland"
+  },
+  {
+    "code": "it",
+    "description": "Italy",
+    "children": [
+      {
+        "code": "bz",
+        "description": "Südtirol"
+      }
+    ]
+  },
+  {
+    "code": "jp",
+    "description": "Japan"
+  },
+  {
+    "code": "kz",
+    "description": "Kazakhstan"
+  },
+  {
+    "code": "li",
+    "description": "Liechtenstein"
+  },
+  {
+    "code": "lt",
+    "description": "Lithuania"
+  },
+  {
+    "code": "lu",
+    "description": "Luxembourg",
+    "children": [
+      {
+        "code": "clu",
+        "description": "City of Luxembourg"
+      }
+    ]
+  },
+  {
+    "code": "lv",
+    "description": "Latvia"
+  },
+  {
+    "code": "md",
+    "description": "Moldova",
+    "children": [
+      {
+        "code": "bti",
+        "description": "Balti"
+      }
+    ]
+  },
+  {
+    "code": "me",
+    "description": "Montenegro"
+  },
+  {
+    "code": "mk",
+    "description": "Macedonia"
+  },
+  {
+    "code": "mt",
+    "description": "Malta"
+  },
+  {
+    "code": "mx",
+    "description": "Mexico",
+    "children": [
+      {
+        "code": "pue",
+        "description": "Puebla"
+      }
+    ]
+  },
+  {
+    "code": "ng",
+    "description": "Nigeria",
+    "children": [
+      {
+        "code": "lag",
+        "description": "Lagos"
+      }
+    ]
+  },
+  {
+    "code": "ni",
+    "description": "Nicaragua",
+    "children": [
+      {
+        "code": "bo",
+        "description": "Boaco"
+      },
+      {
+        "code": "so",
+        "description": "Somoto"
+      },
+      {
+        "code": "mn",
+        "description": "Managua"
+      },
+      {
+        "code": "na",
+        "description": "Nandaime"
+      },
+      {
+        "code": "ni",
+        "description": "Niquinohomo"
+      },
+      {
+        "code": "mo",
+        "description": "Moyogalpa"
+      },
+      {
+        "code": "om",
+        "description": "Ometepe"
+      }
+    ]
+  },
+  {
+    "code": "nl",
+    "description": "The Netherlands"
+  },
+  {
+    "code": "no",
+    "description": "Norway"
+  },
+  {
+    "code": "nsye-euronext",
+    "description": "nsye-euronext"
+  },
+  {
+    "code": "nyse",
+    "description": "New York Stock Exchange"
+  },
+  {
+    "code": "pa",
+    "description": "Panama"
+  },
+  {
+    "code": "pe",
+    "description": "Peru"
+  },
+  {
+    "code": "pl",
+    "description": "Poland"
+  },
+  {
+    "code": "pt",
+    "description": "Portugal",
+    "children": [
+      {
+        "code": "ABT",
+        "description": "Abrantes"
+      },
+      {
+        "code": "AGD",
+        "description": "Águeda"
+      },
+      {
+        "code": "AGB",
+        "description": "Aguiar da Beira"
+      },
+      {
+        "code": "ADL",
+        "description": "Alandroal"
+      },
+      {
+        "code": "ALB",
+        "description": "Albergaria-a-Velha"
+      },
+      {
+        "code": "ABF",
+        "description": "Albufeira"
+      },
+      {
+        "code": "ASL",
+        "description": "Alcácer do Sal"
+      },
+      {
+        "code": "ACN",
+        "description": "Alcanena"
+      },
+      {
+        "code": "ACB",
+        "description": "Alcobaça"
+      },
+      {
+        "code": "ACH",
+        "description": "Alcochete"
+      },
+      {
+        "code": "ACT",
+        "description": "Alcoutim"
+      },
+      {
+        "code": "ALQ",
+        "description": "Alenquer"
+      },
+      {
+        "code": "AFE",
+        "description": "Alfândega da Fé"
+      },
+      {
+        "code": "ALJ",
+        "description": "Alijó"
+      },
+      {
+        "code": "AJZ",
+        "description": "Aljezur"
+      },
+      {
+        "code": "AJT",
+        "description": "Aljustrel"
+      },
+      {
+        "code": "ALM",
+        "description": "Almada"
+      },
+      {
+        "code": "ALD",
+        "description": "Almeida"
+      },
+      {
+        "code": "ALR",
+        "description": "Almeirim"
+      },
+      {
+        "code": "ADV",
+        "description": "Almodôvar"
+      },
+      {
+        "code": "APC",
+        "description": "Alpiarça"
+      },
+      {
+        "code": "ALT",
+        "description": "Alter do Chão"
+      },
+      {
+        "code": "AVZ",
+        "description": "Alvaiázere"
+      },
+      {
+        "code": "AVT",
+        "description": "Alvito"
+      },
+      {
+        "code": "AMD",
+        "description": "Amadora"
+      },
+      {
+        "code": "AMT",
+        "description": "Amarante"
+      },
+      {
+        "code": "AMR",
+        "description": "Amares"
+      },
+      {
+        "code": "AND",
+        "description": "Anadia"
+      },
+      {
+        "code": "AGH",
+        "description": "Angra do Heroísmo"
+      },
+      {
+        "code": "ANS",
+        "description": "Ansião"
+      },
+      {
+        "code": "AVV",
+        "description": "Arcos de Valdevez"
+      },
+      {
+        "code": "AGN",
+        "description": "Arganil"
+      },
+      {
+        "code": "AMM",
+        "description": "Armamar"
+      },
+      {
+        "code": "ARC",
+        "description": "Arouca"
+      },
+      {
+        "code": "ARL",
+        "description": "Arraiolos"
+      },
+      {
+        "code": "ARR",
+        "description": "Arronches"
+      },
+      {
+        "code": "ARV",
+        "description": "Arruda dos Vinhos"
+      },
+      {
+        "code": "AVR",
+        "description": "Aveiro"
+      },
+      {
+        "code": "AVS",
+        "description": "Avis"
+      },
+      {
+        "code": "AZB",
+        "description": "Azambuja"
+      },
+      {
+        "code": "BAO",
+        "description": "Baião"
+      },
+      {
+        "code": "BCL",
+        "description": "Barcelos"
+      },
+      {
+        "code": "BRC",
+        "description": "Barrancos"
+      },
+      {
+        "code": "BRR",
+        "description": "Barreiro"
+      },
+      {
+        "code": "BTL",
+        "description": "Batalha"
+      },
+      {
+        "code": "BJA",
+        "description": "Beja"
+      },
+      {
+        "code": "BMT",
+        "description": "Belmonte"
+      },
+      {
+        "code": "BNV",
+        "description": "Benavente"
+      },
+      {
+        "code": "BBR",
+        "description": "Bombarral"
+      },
+      {
+        "code": "BRB",
+        "description": "Borba"
+      },
+      {
+        "code": "BTC",
+        "description": "Boticas"
+      },
+      {
+        "code": "BRG",
+        "description": "Braga"
+      },
+      {
+        "code": "BGC",
+        "description": "Bragança"
+      },
+      {
+        "code": "CBC",
+        "description": "Cabeceiras de Basto"
+      },
+      {
+        "code": "CDV",
+        "description": "Cadaval"
+      },
+      {
+        "code": "CLD",
+        "description": "Caldas da Rainha"
+      },
+      {
+        "code": "CHT",
+        "description": "Calheta (Açores)"
+      },
+      {
+        "code": "CLT",
+        "description": "Calheta (Madeira)"
+      },
+      {
+        "code": "CML",
+        "description": "Câmara de Lobos"
+      },
+      {
+        "code": "CMN",
+        "description": "Caminha"
+      },
+      {
+        "code": "CMR",
+        "description": "Campo Maior"
+      },
+      {
+        "code": "CNT",
+        "description": "Cantanhede"
+      },
+      {
+        "code": "CRZ",
+        "description": "Carrazeda de Ansiães"
+      },
+      {
+        "code": "CTX",
+        "description": "Cartaxo"
+      },
+      {
+        "code": "CSC",
+        "description": "Cascais"
+      },
+      {
+        "code": "CTB",
+        "description": "Castelo Branco"
+      },
+      {
+        "code": "CPV",
+        "description": "Castelo de Paiva"
+      },
+      {
+        "code": "CVD",
+        "description": "Castelo de Vide"
+      },
+      {
+        "code": "CDR",
+        "description": "Castro Daire"
+      },
+      {
+        "code": "CTM",
+        "description": "Castro Marim"
+      },
+      {
+        "code": "CVR",
+        "description": "Castro Verde"
+      },
+      {
+        "code": "CLB",
+        "description": "Celorico da Beira"
+      },
+      {
+        "code": "CBT",
+        "description": "Celorico de Basto"
+      },
+      {
+        "code": "CHM",
+        "description": "Chamusca"
+      },
+      {
+        "code": "CHV",
+        "description": "Chaves"
+      },
+      {
+        "code": "CNF",
+        "description": "Cinfães"
+      },
+      {
+        "code": "CBR",
+        "description": "Coimbra"
+      },
+      {
+        "code": "CDN",
+        "description": "Condeixa-a-Nova"
+      },
+      {
+        "code": "CNS",
+        "description": "Constância"
+      },
+      {
+        "code": "CCH",
+        "description": "Coruche"
+      },
+      {
+        "code": "CVL",
+        "description": "Covilhã"
+      },
+      {
+        "code": "CRT",
+        "description": "Crato"
+      },
+      {
+        "code": "CBA",
+        "description": "Cuba"
+      },
+      {
+        "code": "ELV",
+        "description": "Elvas"
+      },
+      {
+        "code": "ENT",
+        "description": "Entroncamento"
+      },
+      {
+        "code": "ESP",
+        "description": "Espinho"
+      },
+      {
+        "code": "EPS",
+        "description": "Esposende"
+      },
+      {
+        "code": "ETR",
+        "description": "Estarreja"
+      },
+      {
+        "code": "ETZ",
+        "description": "Estremoz"
+      },
+      {
+        "code": "EVR",
+        "description": "Évora"
+      },
+      {
+        "code": "FAF",
+        "description": "Fafe"
+      },
+      {
+        "code": "FAR",
+        "description": "Faro"
+      },
+      {
+        "code": "FLG",
+        "description": "Felgueiras"
+      },
+      {
+        "code": "FAL",
+        "description": "Ferreira do Alentejo"
+      },
+      {
+        "code": "FZZ",
+        "description": "Ferreira do Zêzere"
+      },
+      {
+        "code": "FIG",
+        "description": "Figueira da Foz"
+      },
+      {
+        "code": "FCR",
+        "description": "Figueira de Castelo Rodrigo"
+      },
+      {
+        "code": "FVN",
+        "description": "Figueiró dos Vinhos"
+      },
+      {
+        "code": "FAG",
+        "description": "Fornos de Algodres"
+      },
+      {
+        "code": "FEC",
+        "description": "Freixo de Espada à Cinta"
+      },
+      {
+        "code": "FTR",
+        "description": "Fronteira"
+      },
+      {
+        "code": "FNC",
+        "description": "Funchal"
+      },
+      {
+        "code": "FND",
+        "description": "Fundão"
+      },
+      {
+        "code": "GAV",
+        "description": "Gavião"
+      },
+      {
+        "code": "GOI",
+        "description": "Góis"
+      },
+      {
+        "code": "GLG",
+        "description": "Golegã"
+      },
+      {
+        "code": "GDM",
+        "description": "Gondomar"
+      },
+      {
+        "code": "GVA",
+        "description": "Gouveia"
+      },
+      {
+        "code": "GDL",
+        "description": "Grândola"
+      },
+      {
+        "code": "GRD",
+        "description": "Guarda"
+      },
+      {
+        "code": "GMR",
+        "description": "Guimarães"
+      },
+      {
+        "code": "HRT",
+        "description": "Horta"
+      },
+      {
+        "code": "IDN",
+        "description": "Idanha-a-Nova"
+      },
+      {
+        "code": "ILH",
+        "description": "Ílhavo"
+      },
+      {
+        "code": "LAG",
+        "description": "Lagoa (Açores)"
+      },
+      {
+        "code": "LGA",
+        "description": "Lagoa (Algarve)"
+      },
+      {
+        "code": "LGS",
+        "description": "Lagos"
+      },
+      {
+        "code": "LGF",
+        "description": "Lajes das Flores"
+      },
+      {
+        "code": "LGP",
+        "description": "Lajes do Pico"
+      },
+      {
+        "code": "LMG",
+        "description": "Lamego"
+      },
+      {
+        "code": "LRA",
+        "description": "Leiria"
+      },
+      {
+        "code": "LSB",
+        "description": "Lisboa"
+      },
+      {
+        "code": "LLE",
+        "description": "Loulé"
+      },
+      {
+        "code": "LRS",
+        "description": "Loures"
+      },
+      {
+        "code": "LNH",
+        "description": "Lourinhã"
+      },
+      {
+        "code": "LSA",
+        "description": "Lousã"
+      },
+      {
+        "code": "MAC",
+        "description": "Mação"
+      },
+      {
+        "code": "MCD",
+        "description": "Macedo de Cavaleiros"
+      },
+      {
+        "code": "MCH",
+        "description": "Machico"
+      },
+      {
+        "code": "MAD",
+        "description": "Madalena"
+      },
+      {
+        "code": "MFR",
+        "description": "Mafra"
+      },
+      {
+        "code": "MAI",
+        "description": "Maia"
+      },
+      {
+        "code": "MGL",
+        "description": "Mangualde"
+      },
+      {
+        "code": "MTG",
+        "description": "Manteigas"
+      },
+      {
+        "code": "MCN",
+        "description": "Marco de Canaveses"
+      },
+      {
+        "code": "MGR",
+        "description": "Marinha Grande"
+      },
+      {
+        "code": "MRV",
+        "description": "Marvão"
+      },
+      {
+        "code": "MTS",
+        "description": "Matosinhos"
+      },
+      {
+        "code": "MLD",
+        "description": "Mealhada"
+      },
+      {
+        "code": "MED",
+        "description": "Mêda"
+      },
+      {
+        "code": "MLG",
+        "description": "Melgaço"
+      },
+      {
+        "code": "MTL",
+        "description": "Mértola"
+      },
+      {
+        "code": "MSF",
+        "description": "Mesão Frio"
+      },
+      {
+        "code": "MIR",
+        "description": "Mira"
+      },
+      {
+        "code": "MCV",
+        "description": "Miranda do Corvo"
+      },
+      {
+        "code": "MDR",
+        "description": "Miranda do Douro"
+      },
+      {
+        "code": "MDL",
+        "description": "Mirandela"
+      },
+      {
+        "code": "MGD",
+        "description": "Mogadouro"
+      },
+      {
+        "code": "MBR",
+        "description": "Moimenta da Beira"
+      },
+      {
+        "code": "MTA",
+        "description": "Moita"
+      },
+      {
+        "code": "MNC",
+        "description": "Monção"
+      },
+      {
+        "code": "MCQ",
+        "description": "Monchique"
+      },
+      {
+        "code": "MDB",
+        "description": "Mondim de Basto"
+      },
+      {
+        "code": "MFT",
+        "description": "Monforte"
+      },
+      {
+        "code": "MTR",
+        "description": "Montalegre"
+      },
+      {
+        "code": "MMN",
+        "description": "Montemor-o-Novo"
+      },
+      {
+        "code": "MMV",
+        "description": "Montemor-o-Velho"
+      },
+      {
+        "code": "MTJ",
+        "description": "Montijo"
+      },
+      {
+        "code": "MOR",
+        "description": "Mora"
+      },
+      {
+        "code": "MRT",
+        "description": "Mortágua"
+      },
+      {
+        "code": "MRA",
+        "description": "Moura"
+      },
+      {
+        "code": "MOU",
+        "description": "Mourão"
+      },
+      {
+        "code": "MUR",
+        "description": "Murça"
+      },
+      {
+        "code": "MRS",
+        "description": "Murtosa"
+      },
+      {
+        "code": "NZR",
+        "description": "Nazaré"
+      },
+      {
+        "code": "NLS",
+        "description": "Nelas"
+      },
+      {
+        "code": "NIS",
+        "description": "Nisa"
+      },
+      {
+        "code": "OBD",
+        "description": "Óbidos"
+      },
+      {
+        "code": "ODM",
+        "description": "Odemira"
+      },
+      {
+        "code": "ODV",
+        "description": "Odivelas"
+      },
+      {
+        "code": "OER",
+        "description": "Oeiras"
+      },
+      {
+        "code": "OLR",
+        "description": "Oleiros"
+      },
+      {
+        "code": "OAZ",
+        "description": "Oliveira de Azeméis"
+      },
+      {
+        "code": "OFR",
+        "description": "Oliveira de Frades"
+      },
+      {
+        "code": "OBR",
+        "description": "Oliveira do Bairro"
+      },
+      {
+        "code": "OHP",
+        "description": "Oliveira do Hospital"
+      },
+      {
+        "code": "ORM",
+        "description": "Ourém"
+      },
+      {
+        "code": "ORQ",
+        "description": "Ourique"
+      },
+      {
+        "code": "OVR",
+        "description": "Ovar"
+      },
+      {
+        "code": "PFR",
+        "description": "Paços de Ferreira"
+      },
+      {
+        "code": "PLM",
+        "description": "Palmela"
+      },
+      {
+        "code": "PPS",
+        "description": "Pampilhosa da Serra"
+      },
+      {
+        "code": "PRD",
+        "description": "Paredes"
+      },
+      {
+        "code": "PCR",
+        "description": "Paredes de Coura"
+      },
+      {
+        "code": "PCV",
+        "description": "Penacova"
+      },
+      {
+        "code": "PNF",
+        "description": "Penafiel"
+      },
+      {
+        "code": "PNC",
+        "description": "Penamacor"
+      },
+      {
+        "code": "PND",
+        "description": "Penedono"
+      },
+      {
+        "code": "PNL",
+        "description": "Penela"
+      },
+      {
+        "code": "PNI",
+        "description": "Peniche"
+      },
+      {
+        "code": "PRG",
+        "description": "Peso da Régua"
+      },
+      {
+        "code": "PNH",
+        "description": "Pinhel"
+      },
+      {
+        "code": "PBL",
+        "description": "Pombal"
+      },
+      {
+        "code": "PDL",
+        "description": "Ponta Delgada"
+      },
+      {
+        "code": "PTS",
+        "description": "Ponta do Sol"
+      },
+      {
+        "code": "PTB",
+        "description": "Ponte da Barca"
+      },
+      {
+        "code": "PTL",
+        "description": "Ponte de Lima"
+      },
+      {
+        "code": "PSR",
+        "description": "Ponte de Sor"
+      },
+      {
+        "code": "PTG",
+        "description": "Portalegre"
+      },
+      {
+        "code": "PRL",
+        "description": "Portel"
+      },
+      {
+        "code": "PTM",
+        "description": "Portimão"
+      },
+      {
+        "code": "PRT",
+        "description": "Porto"
+      },
+      {
+        "code": "PMS",
+        "description": "Porto de Mós"
+      },
+      {
+        "code": "PMZ",
+        "description": "Porto Moniz"
+      },
+      {
+        "code": "PST",
+        "description": "Porto Santo"
+      },
+      {
+        "code": "PVL",
+        "description": "Póvoa de Lanhoso"
+      },
+      {
+        "code": "PVZ",
+        "description": "Póvoa de Varzim"
+      },
+      {
+        "code": "PVC",
+        "description": "Povoação"
+      },
+      {
+        "code": "VPV",
+        "description": "Praia da Vitória"
+      },
+      {
+        "code": "PNV",
+        "description": "Proença-a-Nova"
+      },
+      {
+        "code": "RDD",
+        "description": "Redondo"
+      },
+      {
+        "code": "RMZ",
+        "description": "Reguengos de Monsaraz"
+      },
+      {
+        "code": "RSD",
+        "description": "Resende"
+      },
+      {
+        "code": "RBR",
+        "description": "Ribeira Brava"
+      },
+      {
+        "code": "RPN",
+        "description": "Ribeira de Pena"
+      },
+      {
+        "code": "RGR",
+        "description": "Ribeira Grande"
+      },
+      {
+        "code": "RMR",
+        "description": "Rio Maior"
+      },
+      {
+        "code": "SBS",
+        "description": "Sabrosa"
+      },
+      {
+        "code": "SBG",
+        "description": "Sabugal"
+      },
+      {
+        "code": "SMG",
+        "description": "Salvaterra de Magos"
+      },
+      {
+        "code": "SCD",
+        "description": "Santa Comba Dão"
+      },
+      {
+        "code": "SCR",
+        "description": "Santa Cruz"
+      },
+      {
+        "code": "SCG",
+        "description": "Santa Cruz da Graciosa"
+      },
+      {
+        "code": "SCF",
+        "description": "Santa Cruz das Flores"
+      },
+      {
+        "code": "VFR",
+        "description": "Santa Maria da Feira"
+      },
+      {
+        "code": "SMP",
+        "description": "Santa Marta de Penaguião"
+      },
+      {
+        "code": "STN",
+        "description": "Santana"
+      },
+      {
+        "code": "STR",
+        "description": "Santarém"
+      },
+      {
+        "code": "STC",
+        "description": "Santiago do Cacém"
+      },
+      {
+        "code": "STS",
+        "description": "Santo Tirso"
+      },
+      {
+        "code": "SBA",
+        "description": "São Brás de Alportel"
+      },
+      {
+        "code": "SJM",
+        "description": "São João da Madeira"
+      },
+      {
+        "code": "SPS",
+        "description": "São Pedro do Sul"
+      },
+      {
+        "code": "SRQ",
+        "description": "São Roque do Pico"
+      },
+      {
+        "code": "SVC",
+        "description": "São Vicente"
+      },
+      {
+        "code": "SRD",
+        "description": "Sardoal"
+      },
+      {
+        "code": "SAT",
+        "description": "Sátão"
+      },
+      {
+        "code": "SEI",
+        "description": "Seia"
+      },
+      {
+        "code": "SXL",
+        "description": "Seixal"
+      },
+      {
+        "code": "SRN",
+        "description": "Sernancelhe"
+      },
+      {
+        "code": "SRT",
+        "description": "Sertã"
+      },
+      {
+        "code": "SSB",
+        "description": "Sesimbra"
+      },
+      {
+        "code": "STB",
+        "description": "Setúbal"
+      },
+      {
+        "code": "SVV",
+        "description": "Sever do Vouga"
+      },
+      {
+        "code": "SLV",
+        "description": "Silves"
+      },
+      {
+        "code": "SNS",
+        "description": "Sines"
+      },
+      {
+        "code": "SNT",
+        "description": "Sintra"
+      },
+      {
+        "code": "SMA",
+        "description": "Sobral de Monte Agraço"
+      },
+      {
+        "code": "SRE",
+        "description": "Soure"
+      },
+      {
+        "code": "SSL",
+        "description": "Sousel"
+      },
+      {
+        "code": "TBU",
+        "description": "Tábua"
+      },
+      {
+        "code": "TBC",
+        "description": "Tabuaço"
+      },
+      {
+        "code": "TRC",
+        "description": "Tarouca"
+      },
+      {
+        "code": "TVR",
+        "description": "Tavira"
+      },
+      {
+        "code": "TBR",
+        "description": "Terras de Bouro"
+      },
+      {
+        "code": "TMR",
+        "description": "Tomar"
+      },
+      {
+        "code": "TND",
+        "description": "Tondela"
+      },
+      {
+        "code": "TMC",
+        "description": "Torre de Moncorvo"
+      },
+      {
+        "code": "TNV",
+        "description": "Torres Novas"
+      },
+      {
+        "code": "TVD",
+        "description": "Torres Vedras"
+      },
+      {
+        "code": "TCR",
+        "description": "Trancoso"
+      },
+      {
+        "code": "TRF",
+        "description": "Trofa"
+      },
+      {
+        "code": "VGS",
+        "description": "Vagos"
+      },
+      {
+        "code": "VAC",
+        "description": "Vale de Cambra"
+      },
+      {
+        "code": "VLC",
+        "description": "Valença"
+      },
+      {
+        "code": "VLG",
+        "description": "Valongo"
+      },
+      {
+        "code": "VPC",
+        "description": "Valpaços"
+      },
+      {
+        "code": "VLS",
+        "description": "Velas"
+      },
+      {
+        "code": "VND",
+        "description": "Vendas Novas"
+      },
+      {
+        "code": "VNT",
+        "description": "Viana do Alentejo"
+      },
+      {
+        "code": "VCT",
+        "description": "Viana do Castelo"
+      },
+      {
+        "code": "VDG",
+        "description": "Vidigueira"
+      },
+      {
+        "code": "VRM",
+        "description": "Vieira do Minho"
+      },
+      {
+        "code": "VBP",
+        "description": "Vila do Bispo"
+      },
+      {
+        "code": "VCD",
+        "description": "Vila do Conde"
+      },
+      {
+        "code": "VPT",
+        "description": "Vila do Porto"
+      },
+      {
+        "code": "VFL",
+        "description": "Vila Flor"
+      },
+      {
+        "code": "VFX",
+        "description": "Vila Franca de Xira"
+      },
+      {
+        "code": "VFC",
+        "description": "Vila Franca do Campo"
+      },
+      {
+        "code": "VNB",
+        "description": "Vila Nova da Barquinha"
+      },
+      {
+        "code": "VNC",
+        "description": "Vila Nova de Cerveira"
+      },
+      {
+        "code": "VNF",
+        "description": "Vila Nova de Famalicão"
+      },
+      {
+        "code": "VLF",
+        "description": "Vila Nova de Foz Côa"
+      },
+      {
+        "code": "VNG",
+        "description": "Vila Nova de Gaia"
+      },
+      {
+        "code": "VNP",
+        "description": "Vila Nova de Paiva"
+      },
+      {
+        "code": "PRS",
+        "description": "Vila Nova de Poiares"
+      },
+      {
+        "code": "VPA",
+        "description": "Vila Pouca de Aguiar"
+      },
+      {
+        "code": "VRL",
+        "description": "Vila Real"
+      },
+      {
+        "code": "VRS",
+        "description": "Vila Real de Santo António"
+      },
+      {
+        "code": "VVR",
+        "description": "Vila Velha de Ródão"
+      },
+      {
+        "code": "VVD",
+        "description": "Vila Verde"
+      },
+      {
+        "code": "VVC",
+        "description": "Vila Viçosa"
+      },
+      {
+        "code": "VMS",
+        "description": "Vimioso"
+      },
+      {
+        "code": "VNH",
+        "description": "Vinhais"
+      },
+      {
+        "code": "VIS",
+        "description": "Viseu"
+      },
+      {
+        "code": "VIZ",
+        "description": "Vizela"
+      },
+      {
+        "code": "VZL",
+        "description": "Vouzela"
+      }
+    ]
+  },
+  {
+    "code": "py",
+    "description": "Paraguay"
+  },
+  {
+    "code": "ro",
+    "description": "Romania"
+  },
+  {
+    "code": "rs",
+    "description": "Serbia"
+  },
+  {
+    "code": "ru",
+    "description": "Russian Federation"
+  },
+  {
+    "code": "se",
+    "description": "Sweden"
+  },
+  {
+    "code": "si",
+    "description": "Slovenia"
+  },
+  {
+    "code": "sk",
+    "description": "Slovakia"
+  },
+  {
+    "code": "target",
+    "description": "Trans-European Automated Real-time Gross settlement Express Transfer system closing dates"
+  },
+  {
+    "code": "ua",
+    "description": "Ukraine"
+  },
+  {
+    "code": "uk",
+    "description": "United Kingdom",
+    "children": [
+      {
+        "code": "al",
+        "description": "Alderney"
+      },
+      {
+        "code": "en",
+        "description": "England"
+      },
+      {
+        "code": "gu",
+        "description": "Guernsey"
+      },
+      {
+        "code": "im",
+        "description": "Isle of Man"
+      },
+      {
+        "code": "je",
+        "description": "Jersey"
+      },
+      {
+        "code": "ni",
+        "description": "Northern Ireland"
+      },
+      {
+        "code": "sc",
+        "description": "Scotland"
+      },
+      {
+        "code": "wa",
+        "description": "Wales"
+      }
+    ]
+  },
+  {
+    "code": "us",
+    "description": "United States",
+    "children": [
+      {
+        "code": "al",
+        "description": "Alabama"
+      },
+      {
+        "code": "ak",
+        "description": "Alaska"
+      },
+      {
+        "code": "az",
+        "description": "Arizona"
+      },
+      {
+        "code": "ar",
+        "description": "Arkansas"
+      },
+      {
+        "code": "ca",
+        "description": "California",
+        "children": [
+          {
+            "code": "be",
+            "description": "Berkeley"
+          }
+        ]
+      },
+      {
+        "code": "co",
+        "description": "Colorado"
+      },
+      {
+        "code": "ct",
+        "description": "Connecticut"
+      },
+      {
+        "code": "de",
+        "description": "Delaware"
+      },
+      {
+        "code": "fl",
+        "description": "Florida"
+      },
+      {
+        "code": "ga",
+        "description": "Georgia"
+      },
+      {
+        "code": "hi",
+        "description": "Hawaii"
+      },
+      {
+        "code": "id",
+        "description": "Idaho"
+      },
+      {
+        "code": "il",
+        "description": "Illinois"
+      },
+      {
+        "code": "in",
+        "description": "Indiana"
+      },
+      {
+        "code": "ia",
+        "description": "Iowa"
+      },
+      {
+        "code": "ks",
+        "description": "Kansas"
+      },
+      {
+        "code": "ky",
+        "description": "Kentucky"
+      },
+      {
+        "code": "la",
+        "description": "Louisiana"
+      },
+      {
+        "code": "me",
+        "description": "Maine"
+      },
+      {
+        "code": "md",
+        "description": "Maryland"
+      },
+      {
+        "code": "ma",
+        "description": "Massachusetts",
+        "children": [
+          {
+            "code": "sc",
+            "description": "Suffolk County"
+          },
+          {
+            "code": "ca",
+            "description": "Cambridge"
+          }
+        ]
+      },
+      {
+        "code": "mi",
+        "description": "Michigan"
+      },
+      {
+        "code": "mn",
+        "description": "Minnesota"
+      },
+      {
+        "code": "ms",
+        "description": "Mississippi"
+      },
+      {
+        "code": "mo",
+        "description": "Missouri"
+      },
+      {
+        "code": "mt",
+        "description": "Montana"
+      },
+      {
+        "code": "ne",
+        "description": "Nebraska"
+      },
+      {
+        "code": "nv",
+        "description": "Nevada"
+      },
+      {
+        "code": "nh",
+        "description": "New Hampshire"
+      },
+      {
+        "code": "nj",
+        "description": "New Jersey"
+      },
+      {
+        "code": "nm",
+        "description": "New Mexico"
+      },
+      {
+        "code": "ny",
+        "description": "New York",
+        "children": [
+          {
+            "code": "nyc",
+            "description": "New York City"
+          }
+        ]
+      },
+      {
+        "code": "nc",
+        "description": "North Carolina",
+        "children": [
+          {
+            "code": "ce",
+            "description": "Charlotte"
+          },
+          {
+            "code": "me",
+            "description": "Mecklenburg"
+          }
+        ]
+      },
+      {
+        "code": "nd",
+        "description": "North Dakota"
+      },
+      {
+        "code": "oh",
+        "description": "Ohio"
+      },
+      {
+        "code": "ok",
+        "description": "Oklahoma"
+      },
+      {
+        "code": "or",
+        "description": "Oregon"
+      },
+      {
+        "code": "pa",
+        "description": "Pennsylvania"
+      },
+      {
+        "code": "ri",
+        "description": "Rhode Island"
+      },
+      {
+        "code": "sc",
+        "description": "South Carolina"
+      },
+      {
+        "code": "sd",
+        "description": "South Dakota"
+      },
+      {
+        "code": "tn",
+        "description": "Tennesee"
+      },
+      {
+        "code": "tx",
+        "description": "Texas"
+      },
+      {
+        "code": "ut",
+        "description": "Utah"
+      },
+      {
+        "code": "vt",
+        "description": "Vermont"
+      },
+      {
+        "code": "va",
+        "description": "Virginia"
+      },
+      {
+        "code": "wa",
+        "description": "Washington"
+      },
+      {
+        "code": "dc",
+        "description": "District of Columbia"
+      },
+      {
+        "code": "wv",
+        "description": "West Virginia"
+      },
+      {
+        "code": "wi",
+        "description": "Wisconsin"
+      },
+      {
+        "code": "wy",
+        "description": "Wyoming"
+      }
+    ]
+  },
+  {
+    "code": "uy",
+    "description": "Uruguay"
+  },
+  {
+    "code": "ve",
+    "description": "Venezuela"
+  },
+  {
+    "code": "za",
+    "description": "South Africa"
+  }
+]
