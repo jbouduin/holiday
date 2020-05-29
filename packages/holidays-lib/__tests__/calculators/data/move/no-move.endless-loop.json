@@ -1,0 +1,12 @@
+{
+  "hierarchy": "january",
+  "description": "january",
+  "holidays": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1,
+      "moves": [
+        { "condition": "IS_WEDNESDAY", "moveTo": "NEXT", "weekday": "SATURDAY" },
+        { "condition": "IS_SATURDAY", "moveTo": "NEXT", "weekday": "WEDNESDAY" }
+      ]
+    }
+  ]
+}

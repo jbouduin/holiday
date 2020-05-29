@@ -12,7 +12,7 @@ export class FixedWeekdayCalculator extends BaseCalculator<IFixedWeekdayHoliday>
   // </editor-fold>
 
   // <editor-fold desc='Abstract method implementation'>
-  public calculate(holiday: IFixedWeekdayHoliday, year: number): Date | undefined
+  public calculateDate(holiday: IFixedWeekdayHoliday, year: number): Date | undefined
   {
     if (!this.calendarHelper.occurs(holiday, year)) {
       return undefined;

@@ -12,7 +12,7 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
   // </editor-fold>
 
   // <editor-fold desc='Abstract method implementation'>
-  public calculate(holiday: IChristianHoliday, year: number): Date | undefined
+  public calculateDate(holiday: IChristianHoliday, year: number): Date | undefined
   {
     if (!this.calendarHelper.occurs(holiday, year)) {
       return undefined;
