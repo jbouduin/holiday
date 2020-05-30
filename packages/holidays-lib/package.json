@@ -1,5 +1,5 @@
 {
-  "name": "@jbouduin/holiday-lib",
+  "name": "@jbouduin/holidays-lib",
   "version": "0.0.1",
   "description": "Get World-Wide Holidays",
   "main": "lib/index.js",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbouduin/holiday.git"
+    "url": "git+https://github.com/jbouduin/holidays-lib.git"
   },
   "keywords": [
     "Holidays",
