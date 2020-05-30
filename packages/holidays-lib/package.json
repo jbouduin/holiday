@@ -1,5 +1,5 @@
 {
-  "name": "ww-holiday",
+  "name": "@jbouduin/holiday-lib",
   "version": "0.0.1",
   "description": "Get World-Wide Holidays",
   "main": "lib/index.js",
@@ -20,11 +20,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbouduin/ww-holiday.git"
+    "url": "git+https://github.com/jbouduin/holiday.git"
   },
   "keywords": [
     "Holidays",
-    "Banking Holidays"
+    "Banking Holidays",
+    "Holiday calculation"
   ],
   "author": "Johan Bouduin",
   "license": "MIT",
@@ -32,7 +33,6 @@
     "@types/command-line-args": "^5.0.0",
     "@types/glob": "^7.1.1",
     "@types/jest": "^25.2.3",
-    "@types/lodash": "^4.14.152",
     "command-line-args": "^5.1.1",
     "glob": "^7.1.6",
     "jest": "^26.0.1",
