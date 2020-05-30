@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 
 // these tests only test the conformity of the json files
 describe.each([
@@ -70,7 +70,7 @@ describe.each([
   [ 'ua', 'Ukraine'],
   [ 'za', 'South Africa']
 ])('Configuration %s (%s)', (iso, description) => {
-  const configuration = new ConfigurationFactory().loadByHierarchy(iso);
+  const configuration = new Holidays().loadByHierarchy(iso);
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
   test('description correct', () => expect(configuration.description).toBe(description));
   test('number of errors', () => expect(configuration.errors.length).toBe(0));

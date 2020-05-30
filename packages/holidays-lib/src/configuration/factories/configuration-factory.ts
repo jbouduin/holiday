@@ -15,8 +15,7 @@ import { RelativeToDateFactory } from './relative-to-date-factory';
 import { RelativeToWeekdayFactory } from './relative-to-weekday-factory';
 
 export interface IConfigurationFactory {
-  loadByHierarchy (hierarchy: string): IConfiguration;
-  loadByFileName(fileName: string): IConfiguration;
+  loadConfiguration(parent: string, obj: any): IConfiguration;
 }
 
 export class ConfigurationFactory implements IConfigurationFactory {
@@ -26,47 +25,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
   // </editor-fold>
 
   // <editor-fold desc='IConfigurationFactory interface methods'>
-  public loadByHierarchy (hierarchy: string): IConfiguration {
-    const root = hierarchy.split('/')[0];
-    if (root.length === 0) {
-      const result = new Configuration('', '');
-      result.addError(ErrorKey.HIERARCHY_INVALID, 'root', hierarchy);
-      return result;
-    }
-
-    const fileName = path.join(__dirname, `../../assets/configurations/${root}.json`);
-    return this.loadByFileName(fileName);
-  }
-
-  public loadByFileName(fileName: string): IConfiguration {
-    const result = new Configuration('', '');
-    if (!fs.existsSync(fileName)) {
-      result.addError(ErrorKey.FILE_NOT_FOUND, 'root', fileName);
-      return result;
-    }
-
-    let data: string;
-    try {
-      data = fs.readFileSync(fileName, 'utf-8');
-    } catch (error) {
-      result.addError(ErrorKey.COULD_NOT_READ_FILE, 'root', fileName, error);
-      return result;
-    }
-
-    let obj: any;
-    try {
-      obj = JSON.parse(data);
-    } catch (error) {
-      result.addError(ErrorKey.INVALID_FILE_CONTENTS, 'root', fileName, error);
-      return result;
-    }
-
-    return this.loadConfiguration('root', obj);
-  }
-  // </editor-fold>
-
-  // <editor-fold desc='Private methods'>
-  private loadConfiguration(parent: string, obj: any): IConfiguration {
+  public loadConfiguration(parent: string, obj: any): IConfiguration {
     const result = new Configuration(obj.hierarchy, obj.description);
     let hierarchy: string;
 

@@ -1,5 +1,5 @@
 import * as path from 'path';
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 import { ErrorKey } from '../../src/configuration';
 import { IBaseHoliday } from '../../src/configuration';
 import { Condition } from '../../src/configuration';
@@ -19,7 +19,7 @@ describe.each([
   ['condition.07.is-weekend', Condition.IS_WEEKEND]
 ])('move > condition > %s', (fileName: string, expected: Condition) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IBaseHoliday<any> = configuration.holidays[0] as IBaseHoliday<any>;
@@ -43,7 +43,7 @@ describe.each([
   ['invalid.weekday.value', ErrorKey.MOVE_WEEKDAY_INVALID]
 ])('moves > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
   test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
@@ -57,7 +57,7 @@ describe.each([
   ['move-to.previous', MoveTo.PREVIOUS]
 ])('move > moveTo > %s', (fileName: string, expected: MoveTo) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IBaseHoliday<any> = configuration.holidays[0] as IBaseHoliday<any>;
@@ -71,7 +71,7 @@ describe.each([
   ['moves.not-defined', 0]
 ])('moves > %s', (fileName: string, expected: number) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IBaseHoliday<any> = configuration.holidays[0] as IBaseHoliday<any>;

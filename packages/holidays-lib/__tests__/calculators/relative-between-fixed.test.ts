@@ -2,7 +2,7 @@ import * as path from 'path';
 
 import { RelativeHolidayCalculator } from '../../src/calculators';
 import { IRelativeHoliday, IRelationWeekday, IBetweenFixedDates } from '../../src/configuration';
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 
 const dataRoot = './data/relative-between-fixed';
 
@@ -16,7 +16,7 @@ describe.each([
   [ '06.saturday', 2020, new Date(Date.UTC(2020, 0, 25))]
 ])('relative between > first day of range is sunday> %s', (fileName, year, expected) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> =
@@ -38,7 +38,7 @@ describe.each([
   [ '06.saturday', 2015, new Date(Date.UTC(2015, 0, 24))]
 ])('relative between > last day of range is sunday> %s', (fileName, year, expected) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWeekday, IBetweenFixedDates> =

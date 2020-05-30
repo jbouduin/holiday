@@ -2,7 +2,7 @@ import * as path from 'path';
 
 import { RelativeHolidayCalculator } from '../../src/calculators';
 import { IFixedDate, IRelationWhichWeekdayWhen, IRelativeHoliday } from '../../src/configuration';
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 
 const dataRoot = './data/relative-to-date';
 
@@ -16,7 +16,7 @@ describe.each([
   ['first.06.saturday.after', 2020, new Date(Date.UTC(2020, 0, 25))]
 ])('first after > %s', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -36,7 +36,7 @@ describe.each([
   ['first.06.saturday.before', 2020, new Date(Date.UTC(2020, 0, 18))]
 ])('first before > %s', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -55,7 +55,7 @@ describe.each([
   ['04.fourth.00.sunday.before', 2020, new Date(Date.UTC(2019, 11, 29))],
 ])('x-th before after > %s', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -75,7 +75,7 @@ describe.each([
   ['04.fourth.01.monday.before', 2020, new Date(Date.UTC(2019, 11, 23))],
 ])('x-th before after > %s', (fileName: string, year: number, expected: Date) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =

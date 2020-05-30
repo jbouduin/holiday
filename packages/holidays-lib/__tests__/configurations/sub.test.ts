@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 import { ErrorKey } from '../../src/configuration';
 import { IFixedDateHoliday } from '../../src/configuration';
 import { Month } from '../../src/configuration';
@@ -9,7 +9,7 @@ const dataRoot = './data/sub';
 
 describe('valid with 3 levels', () => {
   const file = path.join(__dirname, `${dataRoot}/valid.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
 
   test('parent > hierarchy', () => expect(configuration.hierarchy).toBe('parent'));
   test('parent > description', () => expect(configuration.description).toBe('parent'));
@@ -54,7 +54,7 @@ describe('valid with 3 levels', () => {
 
 describe('errors on all 3 levels', () => {
   const file = path.join(__dirname, `${dataRoot}/with-errors.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
 
   test('parent > hierarchy', () => expect(configuration.hierarchy).toBe('parent'));
   test('parent > description', () => expect(configuration.description).toBe('parent'));

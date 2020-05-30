@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 import { IFixedDateHoliday } from '../../src/configuration';
 import { FixedHolidayCalculator } from '../../src/calculators';
 
@@ -66,7 +66,7 @@ describe.each([
   ['valid-to', 2001, undefined]
 ])('fixed date calculator', (fileName, year, expected) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;

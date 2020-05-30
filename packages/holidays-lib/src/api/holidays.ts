@@ -1,24 +1,7 @@
-import { IHoliday } from './holiday';
-import { IHierarchy } from './hierarchy';
+import { IHierarchy, IHoliday } from '../configuration/api';
 
-export class Holidays {
-
-  // <editor-fold desc='Constructor & C°'>
-  public constructor(language?: string) {
-
-  }
-  // </editor-fold>
-
-  // <editor-fold desc='Public methods'>
-  public getHierarchyTree(): Array<IHierarchy> {
-    return new Array<IHierarchy>();
-  }
-  public getHolidays(year: number, path: string, deep: boolean): Array<IHoliday> {
-    return new Array<IHoliday>();
-  }
-
-  public getSupportedLanguages(): Array<string> {
-    return new Array<string>();
-  }
-  // </editor-fold>
+export interface IHolidays {
+  getHierarchyTree(): Array<IHierarchy>;
+  getHolidays(path: string, year: number, deep?: boolean): Array<IHoliday>;
+  getSupportedLanguages(): Array<string>;
 }

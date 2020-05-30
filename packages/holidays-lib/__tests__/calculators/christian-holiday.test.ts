@@ -1,7 +1,7 @@
 import * as path from 'path';
 
 import { ChristianHolidayCalculator } from '../../src/calculators';
-import { ConfigurationFactory } from '../../src/configuration';
+import { Holidays } from '../../src/api';
 import { IChristianHoliday } from '../../src/configuration';
 
 const dataRoot = './data/christian';
@@ -116,7 +116,7 @@ describe.each([
   ['valid-to', 2020, undefined]
 ])('Christian holiday date calculator', (fileName, year, expected) => {
   const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new ConfigurationFactory().loadByFileName(file);
+  const configuration = new Holidays().loadByFileName(file);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IChristianHoliday = configuration.holidays[0] as IChristianHoliday;
