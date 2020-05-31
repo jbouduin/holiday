@@ -1,0 +1,9 @@
+{
+  "hierarchy": "a1",
+  "description": "Hierarchy A1",
+  "holidays": [
+    {
+      "holidayType": "CHRISTIAN",
+      "key": "EASTER"
+    },
+    {

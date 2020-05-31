@@ -21,7 +21,7 @@ export class Holidays implements IHolidays {
     return this.hierarchyCalculator.getHierarchyTree();
   }
 
-  public getHolidays(path: string, year: number, deep?: boolean): Promise<Array<IHoliday>> {
+  public getHolidays(path: string, year: number, deep: boolean): Promise<Array<IHoliday>> {
     return this.hierarchyCalculator.getHolidays(path, year, deep);
   }
 

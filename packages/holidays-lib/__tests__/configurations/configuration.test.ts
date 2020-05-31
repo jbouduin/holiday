@@ -5,8 +5,6 @@ const dataRoot = './configurations/data/configuration';
 const location = 'root';
 
 describe.each([
-  // TODO ['a.missing.file', ErrorKey.FILE_NOT_FOUND, location],
-  // TODO ['directory', ErrorKey.COULD_NOT_READ_FILE, location],
   ['invalid.collection.empty', ErrorKey.HOLIDAY_COLLECTION_EMPTY, '/invalid.collection.empty'],
   ['invalid.collection.missing', ErrorKey.HOLIDAY_COLLECTION_MISSING, '/invalid.collection.missing'],
   ['invalid.content', ErrorKey.INVALID_FILE_CONTENTS, location],

@@ -1,0 +1,38 @@
+[
+  {
+    "code": "A1",
+    "description": "Hierarchy A1"
+  },
+  {
+    "code": "A2",
+    "description": "Hierarchy A2",
+    "children": [
+      {
+        "code": "B1",
+        "description": "Hierarchy B1",
+      },
+      {
+        "code": "B2",
+        "description": "Hierarchy B2",
+      },
+      {
+        "code": "B3",
+        "description": "Hierarchy B3",
+        "children": [
+          {
+            "code": "C1",
+            "description": "Hierarchy C1",
+          },
+          {
+            "code": "C2",
+            "description": "Hierarchy C2",
+          },
+          {
+            "code": "C3",
+            "description": "Hierarchy C3",
+          }
+        ]
+      }
+    ]
+  }
+]

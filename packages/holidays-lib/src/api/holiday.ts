@@ -1,6 +1,6 @@
 export interface IHoliday {
-  parentHierarchy: string | undefined;
-  hierarchy: string;
+  // parentHierarchy: string | undefined;
+  // hierarchy: string;
   name: string;
-  date: string;
+  date: Date;
 }

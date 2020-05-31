@@ -72,7 +72,6 @@ describe.each([
   ['invalid.to.lt-from', ErrorKey.VALID_TO_BEFORE_VALID_FROM]
 ])('invalid base holiday configurations > %s', (fileName: string, expected: ErrorKey) => {
   const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
-  console.log(configuration.errors);
   test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
   test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
