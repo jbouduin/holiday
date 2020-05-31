@@ -24,7 +24,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
 
   // <editor-fold desc='IConfigurationFactory interface methods'>
   public loadConfigurationFromString(parent: string, asString: string): IConfiguration {
-    let configuration: IConfiguration = new Configuration('', '');
+    const configuration: IConfiguration = new Configuration('', '');
     let obj: any;
     try {
       obj = JSON.parse(asString);

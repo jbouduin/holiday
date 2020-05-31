@@ -1,5 +1,6 @@
 import { IFileProvider, IHoliday, IHierarchy } from '../api';
-import { ConfigurationFactory, IBaseHoliday, IChristianHoliday, HolidayType, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday  } from '../configuration';
+import { IBaseHoliday, IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday  } from '../configuration';
+import { ConfigurationFactory, HolidayType  } from '../configuration';
 import { HierarchyFilter } from './hierarchy-filter';
 import { ChristianHolidayCalculator } from './christian-holiday-calculator';
 import { FixedHolidayCalculator } from './fixed-holiday-calculator';

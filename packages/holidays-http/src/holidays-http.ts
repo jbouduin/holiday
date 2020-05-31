@@ -16,13 +16,15 @@ export class HolidaysHttp implements IHolidays {
   // </editor-fold>
 
   // <editor-fold desc='IHolidays interface methods'>
-  getHierarchyTree(): Promise<Array<IHierarchy>> {
+  public getHierarchyTree(): Promise<Array<IHierarchy>> {
     return Promise.resolve(new Array<IHierarchy>());
   }
-  getHolidays(path: string, year: number, deep?: boolean | undefined): Promise<Array<IHoliday>> {
+
+  public getHolidays(path: string, year: number, deep?: boolean | undefined): Promise<Array<IHoliday>> {
     return Promise.resolve(new Array<IHoliday>());
   }
-  getSupportedLanguages(): Promise<Array<string>> {
+
+  public getSupportedLanguages(): Promise<Array<string>> {
     return Promise.resolve(new Array<string>());
   }
   // </editor-fold>
