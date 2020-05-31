@@ -52,10 +52,3 @@ describe('Configuration > Only an invalid', () => {
 //   test('Error key', () => expect(error.key).toBe(ErrorKey.HIERARCHY_INVALID));
 //   test('Location', () => expect(error.location).toBe(location));
 // });
-
-// TODO test('read the configurations.json', () => {
-//   const fileName = path.join(__dirname, `../../src/assets/configurations.json`);
-//   const dataString = fs.readFileSync(fileName, 'utf-8');
-//   const parse = JSON.parse(dataString);
-//   expect(parse).toBeDefined();
-// })

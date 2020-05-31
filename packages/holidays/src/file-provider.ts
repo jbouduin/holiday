@@ -5,14 +5,24 @@ import { IFileProvider } from '@jbouduin/holidays-lib';
 
 export class FileProvider implements IFileProvider {
 
+  // <editor-fold desc='Private properties'>
+  private assetsPath: string;
+  // </editor-fold>
+
+  // <editor-fold desc='Constructor & C°'>
+  public constructor(assetsPath: string) {
+    this.assetsPath = assetsPath;
+  }
+  // </editor-fold>
+
   // <editor-fold desc='IFileProvider interface methods'>
-  loadHierarchies(): Promise<string> {
-    const fileName = path.join(__dirname, '../assets/configurations.json');
+  public loadHierarchies(): Promise<string> {
+    const fileName = path.join(__dirname, `${this.assetsPath}/configurations.json`);
     return fs.readFile(fileName, 'utf-8');
   }
 
-  loadConfiguration(rootHierarchy: string): Promise<string> {
-    const fileName = path.join(__dirname, `../assets/configurations/${rootHierarchy}.json`);
+  public loadConfiguration(rootHierarchy: string): Promise<string> {
+    const fileName = path.join(__dirname, `${this.assetsPath}/configurations/${rootHierarchy}.json`);
     return fs.readFile(fileName, 'utf-8');
   }
   // </editor-fold>

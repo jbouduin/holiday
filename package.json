@@ -1,6 +1,10 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "test": "jest",
+    "test-coverage": "jest --coverage"
+  },
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
     "@types/glob": "^7.1.1",
