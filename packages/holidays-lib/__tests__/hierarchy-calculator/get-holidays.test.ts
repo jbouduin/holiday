@@ -99,3 +99,21 @@ test('calculate a move from requested to next and from previous to requested yea
     expect(holidays[0].date).toStrictEqual(new Date(Date.UTC(2021, 0, 4)));
   });
 });
+
+test('calculate an Islamic holiday (ID_AL_FITR)', async () => {
+  const calculator = new HierarchyCalculator('en', new FileProvider('./data/valid'));
+  return calculator.getHolidays('09', 2020, false).then( holidays => {
+    expect(holidays.length).toBe(0);
+    // expect(IslamicHolidayType[holidays[0].key]).toBe(IslamicHolidayType[IslamicHolidayType.ID_AL_FITR]);
+    // expect(holidays[0].date).toStrictEqual(new Date(Date.UTC(2022, 3, 24)));
+  });
+});
+
+test('calculate an Ethiopian-Orthodox holiday (MESKEL)', async () => {
+  const calculator = new HierarchyCalculator('en', new FileProvider('./data/valid'));
+  return calculator.getHolidays('10', 2020, false).then( holidays => {
+    expect(holidays.length).toBe(0);
+    // expect(EthiopianOrthodoxHolidayType[holidays[0].key]).toBe(EthiopianOrthodoxHolidayType[EthiopianOrthodoxHolidayType.MESKEL]);
+    // expect(holidays[0].date).toStrictEqual(new Date(Date.UTC(2022, 3, 24)));
+  });
+});

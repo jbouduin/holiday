@@ -1,0 +1,7 @@
+{
+  "hierarchy": "10",
+  "description": "a configuration with an Ethiopian-Orthodox holiday",
+  "holidays": [
+    { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "MESKEL" }
+  ]
+}

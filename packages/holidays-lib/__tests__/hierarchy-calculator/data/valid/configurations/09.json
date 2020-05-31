@@ -1,0 +1,7 @@
+{
+  "hierarchy": "09",
+  "description": "a configuration with an Islamic holiday",
+  "holidays": [
+    { "holidayType": "ISLAMIC", "key": "ID_AL_FITR" }
+  ]
+}
