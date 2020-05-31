@@ -1,0 +1,20 @@
+{
+  "hierarchy": "06",
+  "description": "a configuration with ELECTION",
+  "holidays": [
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key": "ELECTION",
+      "relation": {
+        "weekday": "TUESDAY",
+        "when": "AFTER"
+      },
+      "fix": {
+        "which": "FIRST",
+        "weekday": "MONDAY",
+        "month": "NOVEMBER"
+      },
+      "cycle": "EVEN_YEARS"
+    }
+  ]
+}

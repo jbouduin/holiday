@@ -1,0 +1,14 @@
+{
+  "hierarchy": "03",
+  "description": "a configuration with THANKSGIVING",
+  "holidays": [
+    {
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "THANKSGIVING",
+      "which": "FOURTH",
+      "weekday": "THURSDAY",
+      "month": "NOVEMBER",
+      "validFrom": 1863
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "hierarchy": "02",
+  "description": "a configuration with a crhristian holiday",
+  "holidays": [
+    { "holidayType": "CHRISTIAN", "key": "EASTER", "chronology": "JULIAN" }
+  ]
+}

@@ -30,10 +30,14 @@ export class HierarchyCalculator implements IHierarchyCalculator {
     const root = hierarchy.split('/')[0];
     const dataString = await this.fileProvider.loadConfiguration(root);
     const configuration = new ConfigurationFactory().loadConfigurationFromString('root', dataString);
-    return new HierarchyFilter()
-      .filterConfigurationByHierarchy(configuration, hierarchy, deep)
-      .map( (holiday: IBaseHoliday<any>) => this.calculateHoliday(holiday, year))
-      .filter( (holiday: IHoliday | undefined) => holiday !== undefined) as Array<IHoliday>;
+    const holidays = new HierarchyFilter().filterConfigurationByHierarchy(configuration, hierarchy, deep);
+    const result = new Array<IHoliday | undefined>();
+    holidays.forEach(holiday => result.push(this.calculateHoliday(holiday, year - 1)));
+    holidays.forEach(holiday => result.push(this.calculateHoliday(holiday, year)));
+    holidays.forEach(holiday => result.push(this.calculateHoliday(holiday, year + 1)));
+    return result.filter( (holiday: IHoliday | undefined) =>
+      holiday !== undefined && holiday.date.getFullYear() === year
+    ) as Array<IHoliday>;
   }
 
   public async getHierarchyTree(): Promise<Array<IHierarchy>> {
@@ -49,18 +53,23 @@ export class HierarchyCalculator implements IHierarchyCalculator {
     switch(holiday.holidayType) {
       case HolidayType.CHRISTIAN: {
         date = new ChristianHolidayCalculator().calculate(holiday as IChristianHoliday, year);
+        break;
       }
       case HolidayType.ETHIOPIAN_ORTHODOX: {
         date = undefined;
+        break;
       }
       case HolidayType.FIXED_DATE: {
         date = new FixedHolidayCalculator().calculate(holiday as IFixedDateHoliday, year);
+        break;
       }
       case HolidayType.FIXED_WEEKDAY: {
         date = new FixedWeekdayCalculator().calculate(holiday as IFixedWeekdayHoliday, year);
+        break;
       }
       case HolidayType.ISLAMIC: {
         date = undefined;
+        break;
       }
       case HolidayType.RELATIVE_BETWEEN_FIXED:
       case HolidayType.RELATIVE_TO_DATE:
@@ -69,16 +78,18 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       }
     }
 
-    let result: IHoliday;
+    let result: IHoliday | undefined;
     if (date) {
       result = {
         date,
+        key: holiday.key,
         name: holiday.key
       };
       return result;
     } else {
-      return undefined;
+      result = undefined;
     }
+    return result;
   }
   // </editor-fold>
 

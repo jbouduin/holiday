@@ -1,0 +1,12 @@
+{
+  "hierarchy": "07",
+  "description": "a configuration with a move to the previous year in 2019 and 2020",
+  "holidays": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1,
+      "moves": [
+        { "condition": "IS_WEDNESDAY", "moveTo": "PREVIOUS", "weekday": "MONDAY" },
+        { "condition": "IS_TUESDAY", "moveTo": "PREVIOUS", "weekday": "MONDAY" }
+      ]
+    }
+  ]
+}

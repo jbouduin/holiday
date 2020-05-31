@@ -1,0 +1,23 @@
+{
+  "hierarchy": "04",
+  "description": "a configuration with HUSBANDS_DAY",
+  "holidays": [
+    {
+      "holidayType": "RELATIVE_BETWEEN_FIXED",
+      "key": "HUSBANDS_DAY",
+      "relation": {
+        "weekday": "FRIDAY"
+      },
+      "fix": {
+        "from": {
+          "month": "JANUARY",
+          "day": 19
+        },
+        "to": {
+          "month": "JANUARY",
+          "day": 25
+        }
+      }
+    }
+  ]
+}

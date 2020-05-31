@@ -1,0 +1,13 @@
+{
+  "hierarchy": "08",
+  "description": "a configuration with a move to the next year in 2020 and 2021",
+  "holidays": [
+    {
+      "holidayType": "FIXED_DATE", "key": "NEW_YEARS_EVE", "month": "DECEMBER", "day": 31,
+      "moves": [
+        { "condition": "IS_THURSDAY", "moveTo": "NEXT", "weekday": "MONDAY" },
+        { "condition": "IS_FRIDAY", "moveTo": "NEXT", "weekday": "MONDAY" }
+      ]
+    }
+  ]
+}

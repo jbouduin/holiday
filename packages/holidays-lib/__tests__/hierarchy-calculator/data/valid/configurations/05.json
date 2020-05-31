@@ -1,0 +1,18 @@
+{
+  "hierarchy": "05",
+  "description": "a configuration with VICTORIA_DAY",
+  "holidays": [
+    {
+      "holidayType": "RELATIVE_TO_DATE",
+      "key": "VICTORIA_DAY",
+      "relation": {
+        "weekday": "MONDAY",
+        "when": "BEFORE"
+      },
+      "fix": {
+        "month": "MAY",
+        "day": 24
+      }
+    }
+  ]
+}

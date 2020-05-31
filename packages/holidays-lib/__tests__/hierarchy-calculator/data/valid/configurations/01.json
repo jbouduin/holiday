@@ -1,0 +1,7 @@
+{
+  "hierarchy": "01",
+  "description": "a configuration with a fixed date",
+  "holidays": [
+    { "holidayType": "FIXED_DATE", "key": "NEW_YEAR", "month": "JANUARY", "day": 1 }
+  ]
+}
