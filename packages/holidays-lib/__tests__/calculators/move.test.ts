@@ -1,10 +1,8 @@
-import * as path from 'path';
-
 import { FixedHolidayCalculator } from '../../src/calculators';
 import { IFixedDateHoliday } from '../../src/configuration';
-import { Holidays } from '../../src/api';
+import { Loader } from '../loader';
 
-const dataRoot = './data/move';
+const dataRoot = './calculators/data/move';
 
 describe.each([
   ['detect-move.00.sunday', 2017, new Date(Date.UTC(2017, 0, 1))],
@@ -17,8 +15,7 @@ describe.each([
   ['detect-move.07.weekend', 2011, new Date(Date.UTC(2011, 0, 1))],
   ['detect-move.07.weekend', 2017, new Date(Date.UTC(2017, 0, 1))], // sunday
 ])('detect move > %s', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;
@@ -39,8 +36,7 @@ describe.each([
   ['move-to-next.05.friday', 2011, new Date(Date.UTC(2011, 0, 7))],
   ['move-to-next.06.saturday', 2018, new Date(Date.UTC(2018, 0, 6))]
 ])('to next > %s', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;
@@ -58,8 +54,7 @@ describe.each([
   ['move-to-previous.05.friday', 2011, new Date(Date.UTC(2010, 11, 31))],
   ['move-to-previous.06.saturday', 2018, new Date(Date.UTC(2017, 11, 30))]
 ])('to previous > %s', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;
@@ -71,8 +66,7 @@ describe.each([
 describe.each([
   ['move.chain', 2020, new Date(Date.UTC(2020, 0, 3))]
 ])('move chain > %s', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;
@@ -86,8 +80,7 @@ describe.each([
   ['no-move.endless-loop', 2020, new Date(Date.UTC(2020, 0, 1))],
   ['no-move.none-defined', 2020, new Date(Date.UTC(2020, 0, 1))],
 ])('no move > %s', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;

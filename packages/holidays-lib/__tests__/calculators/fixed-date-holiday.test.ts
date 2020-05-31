@@ -1,10 +1,8 @@
-import * as path from 'path';
-
-import { Holidays } from '../../src/api';
 import { IFixedDateHoliday } from '../../src/configuration';
 import { FixedHolidayCalculator } from '../../src/calculators';
+import { Loader } from '../loader';
 
-const dataRoot = './data/fixed-date';
+const dataRoot = './calculators/data/fixed-date';
 
 describe.each([
   // single months
@@ -64,9 +62,8 @@ describe.each([
   ['valid-to', 1999, new Date(Date.UTC(1999,0, 1))],
   ['valid-to', 2000, new Date(Date.UTC(2000, 0, 1))],
   ['valid-to', 2001, undefined]
-])('fixed date calculator', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+])('fixed date calculator', (fileName: string, year: number, expected: Date | undefined) => {
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IFixedDateHoliday = configuration.holidays[0] as IFixedDateHoliday;

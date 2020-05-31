@@ -1,12 +1,10 @@
-import * as path from 'path';
-import { Holidays } from '../../src/api';
 import { ErrorKey } from '../../src/configuration';
 import { IBaseHoliday } from '../../src/configuration';
 import { Condition } from '../../src/configuration';
 import { MoveTo } from '../../src/configuration';
-import { Weekday } from '../../src/configuration';
+import { Loader } from '../loader';
 
-const dataRoot = './data/move';
+const dataRoot = './configurations/data/move';
 
 describe.each([
   ['condition.00.is-sunday', Condition.IS_SUNDAY],
@@ -18,8 +16,7 @@ describe.each([
   ['condition.06.is-saturday', Condition.IS_SATURDAY],
   ['condition.07.is-weekend', Condition.IS_WEEKEND]
 ])('move > condition > %s', (fileName: string, expected: Condition) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IBaseHoliday<any> = configuration.holidays[0] as IBaseHoliday<any>;
@@ -42,8 +39,7 @@ describe.each([
   ['invalid.weekday.missing', ErrorKey.MOVE_WEEKDAY_MISSING],
   ['invalid.weekday.value', ErrorKey.MOVE_WEEKDAY_INVALID]
 ])('moves > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
   test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
@@ -56,8 +52,7 @@ describe.each([
   ['move-to.next', MoveTo.NEXT],
   ['move-to.previous', MoveTo.PREVIOUS]
 ])('move > moveTo > %s', (fileName: string, expected: MoveTo) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IBaseHoliday<any> = configuration.holidays[0] as IBaseHoliday<any>;
@@ -70,8 +65,7 @@ describe.each([
   ['moves.multiple', 2],
   ['moves.not-defined', 0]
 ])('moves > %s', (fileName: string, expected: number) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IBaseHoliday<any> = configuration.holidays[0] as IBaseHoliday<any>;

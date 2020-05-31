@@ -1,3 +1,4 @@
-export * from '../configuration/api/hierarchy';
-export * from '../configuration/api/holiday';
+export * from './file-provider';
+export * from './hierarchy';
+export * from './holiday';
 export * from './holidays';

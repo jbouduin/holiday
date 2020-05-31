@@ -1,11 +1,10 @@
-import * as path from 'path';
-
-import { Holidays } from '../../src/api';
 import { ErrorKey } from '../../src/configuration';
 import { IFixedDate, IRelationWhichWeekdayWhen, IRelativeHoliday } from '../../src/configuration';
 import { HolidayType } from '../../src/configuration';
 import { Month, Weekday, When, Which } from '../../src/configuration';
-const dataRoot = './data/relative-to-date-holiday';
+import { Loader } from '../loader';
+
+const dataRoot = './configurations/data/relative-to-date-holiday';
 
 describe.each([
   ['relation.which.01.first', Which.FIRST ],
@@ -14,8 +13,7 @@ describe.each([
   ['relation.which.04.fourth', Which.FOURTH ],
   ['relation.which.missing', Which.FIRST]
 ])('relative to date > relation which > %s', (fileName: string, expected: Which) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -32,8 +30,7 @@ describe.each([
   ['relation.weekday.05.friday', Weekday.FRIDAY],
   ['relation.weekday.06.saturday', Weekday.SATURDAY]
 ])('relative to date > weekday > %s', (fileName: string, expected: Weekday) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -55,8 +52,7 @@ describe.each([
   ['fix.in.11.november', Month.NOVEMBER ],
   ['fix.in.12.december', Month.DECEMBER ]
 ])('relative to date > fix month/day > %s', (fileName: string, expected: Month) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -69,8 +65,7 @@ describe.each([
   ['relation.when.before', When.BEFORE ],
   ['relation.when.after', When.AFTER ]
 ])('relative to date > relation when > %s', (fileName: string, expected: When) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedDate> =
@@ -100,8 +95,7 @@ describe.each([
   ['invalid.relation.when.missing', 2, ErrorKey.RELATION_WHEN_MISSING],
   ['invalid.relation.when.value', 2, ErrorKey.RELATION_WHEN_INVALID]
 ])('relative to date > invalid configurations > %s', (fileName: string, expectedNumber: number, key: ErrorKey) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
   test('number of errors', () => expect(configuration.errors.length).toBe(expectedNumber));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
@@ -111,8 +105,7 @@ describe.each([
 });
 
 describe('relative to date > translationkey', () => {
-  const file = path.join(__dirname, `${dataRoot}/translation-key.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/translation-key.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
@@ -120,8 +113,7 @@ describe('relative to date > translationkey', () => {
 });
 
 describe('relative to date > holidayType', () => {
-  const file = path.join(__dirname, `${dataRoot}/holiday-type.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/holiday-type.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];

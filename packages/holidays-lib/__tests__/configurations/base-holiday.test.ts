@@ -1,14 +1,10 @@
-import * as path from 'path';
-
-import { IConfiguration } from '../../src/configuration';
-import { Holidays } from '../../src/api';
 import { ErrorKey } from '../../src/configuration';
 import { BaseHoliday } from '../../src/configuration';
 import { Category } from '../../src/configuration';
 import { Cycle } from '../../src/configuration';
-import { HolidayType } from '../../src/configuration';
+import { Loader } from '../loader';
 
-const dataRoot = './data/base-holiday';
+const dataRoot = './configurations/data/base-holiday';
 
 describe.each([
   ['cycle.empty', Cycle.EVERY_YEAR],
@@ -21,8 +17,7 @@ describe.each([
   ['cycle.six-years', Cycle.SIX_YEARS],
   ['cycle.two-years', Cycle.TWO_YEARS]
 ])('base holiday > cycle > %s', (fileName: string, expected: Cycle) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
@@ -33,8 +28,7 @@ describe.each([
   ['from.not-specified', BaseHoliday.undefinedValidFrom],
   ['from.1986', 1986]
 ])('base holiday > valid from > $s', (fileName: string, expected: Cycle) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
@@ -45,8 +39,7 @@ describe.each([
   ['to.not-specified', BaseHoliday.undefinedValidTo],
   ['to.1986', 1986]
 ])('base holiday > valid to > %s', (fileName: string, expected: Cycle) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
@@ -59,8 +52,7 @@ describe.each([
   ['category.official', Category.OFFICIAL_HOLIDAY],
   ['category.unofficial', Category.UNOFFICIAL_HOLIDAY]
 ])('base holiday > category > %s', (fileName: string, expected: Category) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
@@ -79,8 +71,8 @@ describe.each([
   ['invalid.to.alphanumeric', ErrorKey.VALID_TO_INVALID],
   ['invalid.to.lt-from', ErrorKey.VALID_TO_BEFORE_VALID_FROM]
 ])('invalid base holiday configurations > %s', (fileName: string, expected: ErrorKey) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
+  console.log(configuration.errors);
   test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
   test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);

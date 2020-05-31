@@ -1,29 +1,33 @@
-import { IHoliday, IHierarchy } from '../configuration/api';
-import { IConfiguration } from '../configuration';
+import { IFileProvider, IHoliday, IHierarchy } from '../api';
+import { ConfigurationFactory } from '../configuration';
 
 export interface IHierarchyCalculator {
-  getHolidays(configurationLoader: (path: string) => IConfiguration, path: string, year: number, deep?: boolean): Array<IHoliday>;
-  getHierarchyTree(hierarchyLoader: () => string): Array<IHierarchy>;
+  getHolidays(hierarchy: string, year: number, deep?: boolean): Promise<Array<IHoliday>>;
+  getHierarchyTree(): Promise<Array<IHierarchy>>;
 }
 
 export class HierarchyCalculator implements IHierarchyCalculator {
 
   // <editor-fold desc='private properties'>
   private currentLanguage: string;
+  private fileProvider: IFileProvider;
   // </editor-fold>
 
   // <editor-fold desc='Constructor'>
-  public constructor(language: string) {
+  public constructor(language: string, fileProvider: IFileProvider) {
     this.currentLanguage = language;
+    this.fileProvider = fileProvider
   }
   // </editor-fold>
-  public getHolidays(configurationLoader: (path: string) => IConfiguration, path: string, year: number, deep?: boolean): Array<IHoliday> {
-    const configuration = configurationLoader(path);
+  public async getHolidays(hierarchy: string, year: number, deep?: boolean): Promise<Array<IHoliday>> {
+    const root = hierarchy.split('/')[0];
+    const dataString = await this.fileProvider.loadConfiguration(root);
+    const configuration = new ConfigurationFactory().loadConfigurationFromString('root', dataString);
     return new Array<IHoliday>();
   }
 
-  public getHierarchyTree(hierarchyLoader: () => string): Array<IHierarchy> {
-    const dataString = hierarchyLoader();
+  public async getHierarchyTree(): Promise<Array<IHierarchy>> {
+    const dataString = await this.fileProvider.loadHierarchies();
     const parse: Array<IHierarchy> = JSON.parse(dataString);
     return parse;
   }

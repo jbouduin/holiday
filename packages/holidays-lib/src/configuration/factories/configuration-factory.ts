@@ -1,5 +1,3 @@
-import * as fs from 'fs';
-import * as path from 'path';
 import { ErrorKey } from '../errors';
 import { IBaseHoliday } from '../holidays';
 import { IConfiguration, Configuration } from '../configuration';
@@ -15,7 +13,7 @@ import { RelativeToDateFactory } from './relative-to-date-factory';
 import { RelativeToWeekdayFactory } from './relative-to-weekday-factory';
 
 export interface IConfigurationFactory {
-  loadConfiguration(parent: string, obj: any): IConfiguration;
+  loadConfigurationFromString(parent: string, asString: string): IConfiguration;
 }
 
 export class ConfigurationFactory implements IConfigurationFactory {
@@ -25,10 +23,22 @@ export class ConfigurationFactory implements IConfigurationFactory {
   // </editor-fold>
 
   // <editor-fold desc='IConfigurationFactory interface methods'>
-  public loadConfiguration(parent: string, obj: any): IConfiguration {
-    const result = new Configuration(obj.hierarchy, obj.description);
-    let hierarchy: string;
+  public loadConfigurationFromString(parent: string, asString: string): IConfiguration {
+    let configuration: IConfiguration = new Configuration('', '');
+    let obj: any;
+    try {
+      obj = JSON.parse(asString);
+    } catch (error) {
+      configuration.addError(ErrorKey.INVALID_FILE_CONTENTS, 'root', error);
+      return configuration;
+    }
+    return this.loadConfiguration(parent, obj);
+  }
 
+  private loadConfiguration(parent: string, obj: any)
+  {
+    let hierarchy: string;
+    const result = new Configuration(obj.hierarchy, obj.description);
     if (!result.hierarchy) {
       result.addError(ErrorKey.HIERARCHY_NOT_SPECIFIED, parent);
       hierarchy = parent;

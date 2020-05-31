@@ -1,10 +1,8 @@
-import * as path from 'path';
-
 import { ChristianHolidayCalculator } from '../../src/calculators';
-import { Holidays } from '../../src/api';
 import { IChristianHoliday } from '../../src/configuration';
+import { Loader } from '../loader';
 
-const dataRoot = './data/christian';
+const dataRoot = './calculators/data/christian';
 
 describe.each([
   // Easter Julian
@@ -114,9 +112,8 @@ describe.each([
   ['13.corpus-christi', 2020, new Date(Date.UTC(2020, 5, 11))],
   ['14.sacred-heart', 2020, new Date(Date.UTC(2020, 5, 19))],
   ['valid-to', 2020, undefined]
-])('Christian holiday date calculator', (fileName, year, expected) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+])('Christian holiday date calculator', (fileName: string, year: number, expected: Date | undefined) => {
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test(`${fileName} > number of errors`, () => expect(configuration.errors.length).toBe(0));
   test(`${fileName} > number of holidays`, () => expect(configuration.holidays.length).toBe(1));
   const holiday: IChristianHoliday = configuration.holidays[0] as IChristianHoliday;

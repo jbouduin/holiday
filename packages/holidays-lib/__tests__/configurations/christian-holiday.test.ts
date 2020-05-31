@@ -1,11 +1,9 @@
-import * as path from 'path';
-
-import { Holidays } from '../../src/api';
 import { ErrorKey } from '../../src/configuration';
 import { IChristianHoliday, ChristianHolidayType } from '../../src/configuration';
 import { HolidayType , ChronologyType } from '../../src/configuration';
+import { Loader } from '../loader';
 
-const dataRoot = './data/christian-holiday';
+const dataRoot = './configurations/data/christian-holiday';
 
 describe.each([
   ['type.ascension_day', ChristianHolidayType.ASCENSION_DAY],
@@ -28,8 +26,7 @@ describe.each([
   ['type.whit_sunday', ChristianHolidayType.WHIT_SUNDAY],
   ['type.whit_monday', ChristianHolidayType.WHIT_MONDAY]
 ])('Christian holiday > key > %s ', (fileName: string, expected: ChristianHolidayType) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IChristianHoliday = configuration.holidays[0] as IChristianHoliday;
@@ -43,8 +40,7 @@ describe.each([
   ['chronology.julian', ChronologyType.JULIAN],
   ['chronology.not-specified', ChronologyType.GREGORIAN]
 ])('Christian holiday > chronology > %s', (fileName: string, expected: ChronologyType) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IChristianHoliday = configuration.holidays[0] as IChristianHoliday;
@@ -58,8 +54,7 @@ describe.each([
   ['invalid.type.value', ErrorKey.CHRISTIAN_TYPE_INVALID],
   ['invalid.type.missing', ErrorKey.CHRISTIAN_TYPE_MISSING]
 ])('Christian Holiday > invalid configurations > %s', (fileName: string, key: ErrorKey) => {
-  const file = path.join(__dirname, `${dataRoot}/${fileName}.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/${fileName}.json`);
   test('number of holidays', () => expect(configuration.holidays.length).toBe(0));
   test('number of errors', () => expect(configuration.errors.length).toBe(2));
   const noValidHolidaysError = configuration.errors.filter(error => error.key === ErrorKey.NO_VALID_HOLIDAYS_IN_COLLECTION);
@@ -69,8 +64,7 @@ describe.each([
 })
 
 describe('Christian holiday > translation key', () => {
-  const file = path.join(__dirname, `${dataRoot}/translation-key.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/translation-key.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
@@ -78,8 +72,7 @@ describe('Christian holiday > translation key', () => {
 });
 
 describe('Christian holiday > holidayType', () => {
-  const file = path.join(__dirname, `${dataRoot}/holiday-type.json`);
-  const configuration = new Holidays().loadByFileName(file);
+  const configuration = Loader.loadConfiguration(`${dataRoot}/holiday-type.json`);
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday = configuration.holidays[0];
