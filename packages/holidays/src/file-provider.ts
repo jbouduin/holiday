@@ -16,13 +16,18 @@ export class FileProvider implements IFileProvider {
   // </editor-fold>
 
   // <editor-fold desc='IFileProvider interface methods'>
+  public loadConfiguration(rootHierarchy: string): Promise<string> {
+    const fileName = path.join(__dirname, `${this.assetsPath}/configurations/${rootHierarchy}.json`);
+    return fs.readFile(fileName, 'utf-8');
+  }
+
   public loadHierarchies(): Promise<string> {
     const fileName = path.join(__dirname, `${this.assetsPath}/configurations.json`);
     return fs.readFile(fileName, 'utf-8');
   }
 
-  public loadConfiguration(rootHierarchy: string): Promise<string> {
-    const fileName = path.join(__dirname, `${this.assetsPath}/configurations/${rootHierarchy}.json`);
+  public loadLanguages(): Promise<string> {
+    const fileName = path.join(__dirname, `${this.assetsPath}/languages.json`);
     return fs.readFile(fileName, 'utf-8');
   }
   // </editor-fold>

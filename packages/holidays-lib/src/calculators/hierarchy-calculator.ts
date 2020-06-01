@@ -10,6 +10,7 @@ import { RelativeHolidayCalculator } from './relative-holiday-calculator';
 export interface IHierarchyCalculator {
   getHolidays(hierarchy: string, year: number, deep: boolean): Promise<Array<IHoliday>>;
   getHierarchyTree(): Promise<Array<IHierarchy>>;
+  getSupportedLanguages(): Promise<Array<string>>;
 }
 
 export class HierarchyCalculator implements IHierarchyCalculator {
@@ -44,6 +45,12 @@ export class HierarchyCalculator implements IHierarchyCalculator {
   public async getHierarchyTree(): Promise<Array<IHierarchy>> {
     const dataString = await this.fileProvider.loadHierarchies();
     const parse: Array<IHierarchy> = JSON.parse(dataString);
+    return parse;
+  }
+
+  public async getSupportedLanguages(): Promise<Array<string>> {
+    const dataString = await this.fileProvider.loadLanguages();
+    const parse: Array<string> = JSON.parse(dataString);
     return parse;
   }
   // </editor-fold>

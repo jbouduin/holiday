@@ -25,5 +25,10 @@ export class FileProvider implements IFileProvider {
     const fileName = path.join(__dirname, `${this.assetsPath}/configurations/${rootHierarchy}.json`);
     return fs.readFile(fileName, 'utf-8');
   }
+
+  public loadLanguages(): Promise<string> {
+    const fileName = path.join(__dirname, `${this.assetsPath}/languages.json`);
+    return fs.readFile(fileName, 'utf-8');
+  }
   // </editor-fold>
 }

@@ -26,7 +26,7 @@ export class Holidays implements IHolidays {
   }
 
   public getSupportedLanguages(): Promise<Array<string>> {
-    return Promise.resolve(new Array<string>());
+    return this.hierarchyCalculator.getSupportedLanguages();
   }
   // </editor-fold>
 }

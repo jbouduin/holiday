@@ -34,3 +34,18 @@ test('load-configurations > file not found > is a directory', async () => {
   const provider = new FileProvider('../__tests__/data');
   return provider.loadConfiguration('de').catch( e => expect(e.code).toMatch('EISDIR'));
 });
+
+test('load-languages', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadLanguages()).toBeDefined();
+});
+
+test('load-languages > file not found > wrong directory', async () => {
+  const provider = new FileProvider('../../holidays-lib/src/asset');
+  return provider.loadLanguages().catch( e => expect(e.code).toMatch('ENOENT'));
+});
+
+test('load-languages > file not found > is a directory', async () => {
+  const provider = new FileProvider('../__tests__/data');
+  return provider.loadLanguages().catch( e => expect(e.code).toMatch('EISDIR'));
+});
