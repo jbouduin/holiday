@@ -5,16 +5,17 @@ import * as commandLineArgs from 'command-line-args';
 
 class Main {
 
+  // <editor-fold desc='Private properties'>
   private unknownKey = '__UNKNOWN__';
-  // private params: any;
   private commandLineOptions = [
     { name: 'file', alias: 'f', type: String },
     { name: 'input', alias: 'i', type: String },
     { name: 'output', alias: 'o', type: String }
   ];
+  // </editor-fold>
 
   // <editor-fold desc='Main method'>
-  public execute(args: Array<any>) {
+  public execute() {
 
     let params: any;
     try {
@@ -28,7 +29,7 @@ class Main {
       this.convertFile(params.file, params.output);
     } else if (params.input){
       const pattern = `${params.input}/*.xml`;
-      const files = glob(
+      glob(
         pattern,
         (err: Error | null, files: Array<string>) => {
           if (err) {
@@ -64,12 +65,20 @@ class Main {
     const configuration = JSON.parse(asString);
     try {
       const json = this.processConfiguration(configuration.configuration);
-      fs.writeFile(`${outputDir}/${json.hierarchy.replace('_', '-')}.json`, JSON.stringify(json, null, 2), (err) => {} );
+      fs.writeFile(
+        `${outputDir}/${json.hierarchy.replace('_', '-')}.json`,
+        JSON.stringify(json, null, 2),
+        (err) => {
+          if (err) {
+            console.error('Error:', err);
+          }
+        }
+      );
     } catch(error) {
       console.log(fileName, error);
     }
-
   }
+
   private convertAttributeNames(value: string, parentElement: any) {
     if (value === 'descriptionPropertiesKey') {
       return 'key';
@@ -84,7 +93,6 @@ class Main {
 
   // <editor-fold desc='Processing a configuration recursively'>
   private processConfiguration(configuration: any): any {
-    // console.log('processing', JSON.stringify(configuration, null, 2));
     const holidays = new Array<any>();
 
     if (configuration.holidays.christianholiday) {
@@ -466,4 +474,4 @@ class Main {
   // </editor-fold>
 }
 
-new Main().execute(process.argv);
+new Main().execute();
