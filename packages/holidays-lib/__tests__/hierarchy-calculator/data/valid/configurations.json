@@ -1,34 +1,42 @@
 [
   {
     "code": "A1",
+    "fullPath": "A1",
     "description": "Hierarchy A1"
   },
   {
     "code": "A2",
+    "fullPath": "A2",
     "description": "Hierarchy A2",
     "children": [
       {
         "code": "B1",
+        "fullPath": "A2/B1",
         "description": "Hierarchy B1"
       },
       {
         "code": "B2",
+        "fullPath": "A2/B2",
         "description": "Hierarchy B2"
       },
       {
         "code": "B3",
+        "fullPath": "A2/B3",
         "description": "Hierarchy B3",
         "children": [
           {
             "code": "C1",
+            "fullPath": "A2/B3/C1",
             "description": "Hierarchy C1"
           },
           {
             "code": "C2",
+            "fullPath": "A2/B3/C2",
             "description": "Hierarchy C2"
           },
           {
             "code": "C3",
+            "fullPath": "A2/B3/C3",
             "description": "Hierarchy C3"
           }
         ]

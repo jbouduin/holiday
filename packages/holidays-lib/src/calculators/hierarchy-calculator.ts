@@ -43,9 +43,21 @@ export class HierarchyCalculator implements IHierarchyCalculator {
   }
 
   public async getHierarchyTree(): Promise<Array<IHierarchy>> {
-    const dataString = await this.fileProvider.loadHierarchies();
-    const parse: Array<IHierarchy> = JSON.parse(dataString);
-    return parse;
+    const loadPromises: Array<Promise<string>> = [
+      this.fileProvider.loadHierarchies(),
+      this.fileProvider.loadHierarchyTranslations(this.currentLanguage),
+      this.fileProvider.loadHierarchyTranslations()
+    ];
+    let result: Array<IHierarchy>;
+    let translations: any;
+    let fallback: any;
+    return Promise.all(loadPromises).then( (strings: Array<string>) =>
+    {
+      result = JSON.parse(strings[0]);
+      translations = JSON.parse(strings[1]);
+      fallback = JSON.parse(strings[2]);
+      return this.translateHierarchyTree(result, translations, fallback);
+    });
   }
 
   public async getSupportedLanguages(): Promise<Array<string>> {
@@ -98,6 +110,24 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       result = undefined;
     }
     return result;
+  }
+
+  private translateHierarchyTree(tree: Array<IHierarchy>, translations: any, fallback: any): Array<IHierarchy> {
+    tree.forEach( (hierarchy: IHierarchy) => this.translateHierarchy(hierarchy, translations, fallback));
+    return tree;
+  }
+
+  private translateHierarchy(hierachy: IHierarchy, translations: any, fallback: any): IHierarchy {
+    if (hierachy.children) {
+      hierachy.children.forEach( (hierarchy: IHierarchy) => this.translateHierarchy(hierarchy, translations, fallback));
+    }
+    if (translations[hierachy.fullPath]) {
+      hierachy.description = translations[hierachy.fullPath];
+    } else if
+    (fallback[hierachy.fullPath]) {
+      hierachy.description = fallback[hierachy.fullPath];
+    }
+    return hierachy;
   }
   // </editor-fold>
 
