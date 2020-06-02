@@ -1,0 +1,45 @@
+{
+  "hierarchy": "trrw",
+  "description": "translations of relative to weekday",
+  "holidays": [
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key": "RW_EN",
+      "relation": {
+        "weekday": "TUESDAY",
+        "when": "AFTER"
+      },
+      "fix": {
+        "which": "FIRST",
+        "weekday": "MONDAY",
+        "month": "NOVEMBER"
+      }
+    },
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key": "RW_FALLBACK",
+      "relation": {
+        "weekday": "TUESDAY",
+        "when": "AFTER"
+      },
+      "fix": {
+        "which": "FIRST",
+        "weekday": "MONDAY",
+        "month": "NOVEMBER"
+      }
+    },
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key": "RW_NO_TRANSLATION",
+      "relation": {
+        "weekday": "TUESDAY",
+        "when": "AFTER"
+      },
+      "fix": {
+        "which": "FIRST",
+        "weekday": "MONDAY",
+        "month": "NOVEMBER"
+      }
+    }
+  ]
+}

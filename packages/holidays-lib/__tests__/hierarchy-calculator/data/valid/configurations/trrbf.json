@@ -1,0 +1,57 @@
+{
+  "hierarchy": "trrbf",
+  "description": "translations of relative between weekdays",
+  "holidays": [
+    {
+      "holidayType": "RELATIVE_BETWEEN_FIXED",
+      "key": "RBF_EN",
+      "relation": {
+        "weekday": "FRIDAY"
+      },
+      "fix": {
+        "from": {
+          "month": "JANUARY",
+          "day": 19
+        },
+        "to": {
+          "month": "JANUARY",
+          "day": 25
+        }
+      }
+    },
+    {
+      "holidayType": "RELATIVE_BETWEEN_FIXED",
+      "key": "RBF_FALLBACK",
+      "relation": {
+        "weekday": "FRIDAY"
+      },
+      "fix": {
+        "from": {
+          "month": "JANUARY",
+          "day": 19
+        },
+        "to": {
+          "month": "JANUARY",
+          "day": 25
+        }
+      }
+    },
+    {
+      "holidayType": "RELATIVE_BETWEEN_FIXED",
+      "key": "RBF_NO_TRANSLATION",
+      "relation": {
+        "weekday": "FRIDAY"
+      },
+      "fix": {
+        "from": {
+          "month": "JANUARY",
+          "day": 19
+        },
+        "to": {
+          "month": "JANUARY",
+          "day": 25
+        }
+      }
+    }
+  ]
+}

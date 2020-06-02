@@ -1,0 +1,9 @@
+{
+  "hierarchy": "tre",
+  "description": "translations of Ethiopian-Orthodox Holidays",
+  "holidays": [
+    { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "ENKUTATASH" },
+    { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "MESKEL" },
+    { "holidayType": "ETHIOPIAN_ORTHODOX", "key": "TIMKAT" }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "hierarchy": "trc",
+  "description": "translations of Christian Holidays",
+  "holidays": [
+    { "holidayType": "CHRISTIAN", "key": "EASTER" },
+    { "holidayType": "CHRISTIAN", "key": "PENTECOST" },
+    { "holidayType": "CHRISTIAN", "key": "WHIT_SUNDAY" }
+  ]
+}

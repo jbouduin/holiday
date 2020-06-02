@@ -26,7 +26,7 @@ export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implemen
 
   // <editor-fold desc='Abstract method implementations'>
   public get translationKey(): string {
-    return ChristianHolidayType[this.key];
+    return 'CHRISTIAN.' + ChristianHolidayType[this.key];
   }
   // </editor-fold>
 }

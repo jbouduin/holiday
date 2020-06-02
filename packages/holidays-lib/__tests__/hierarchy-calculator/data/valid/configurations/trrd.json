@@ -1,0 +1,42 @@
+{
+  "hierarchy": "trrd",
+  "description": "translations of relative to date",
+  "holidays": [
+    {
+      "holidayType": "RELATIVE_TO_DATE",
+      "key": "RD_EN",
+      "relation": {
+        "weekday": "MONDAY",
+        "when": "BEFORE"
+      },
+      "fix": {
+        "month": "MAY",
+        "day": 24
+      }
+    },
+    {
+      "holidayType": "RELATIVE_TO_DATE",
+      "key": "RD_FALLBACK",
+      "relation": {
+        "weekday": "MONDAY",
+        "when": "BEFORE"
+      },
+      "fix": {
+        "month": "MAY",
+        "day": 24
+      }
+    },
+    {
+      "holidayType": "RELATIVE_TO_DATE",
+      "key": "RD_NO_TRANSLATION",
+      "relation": {
+        "weekday": "MONDAY",
+        "when": "BEFORE"
+      },
+      "fix": {
+        "month": "MAY",
+        "day": 24
+      }
+    }
+  ]
+}

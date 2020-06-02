@@ -1,5 +1,5 @@
 import { IFileProvider, IHoliday, IHierarchy } from '../api';
-import { IBaseHoliday, IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday  } from '../configuration';
+import { IBaseHoliday, IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday, IConfiguration  } from '../configuration';
 import { ConfigurationFactory, HolidayType  } from '../configuration';
 import { HierarchyFilter } from './hierarchy-filter';
 import { ChristianHolidayCalculator } from './christian-holiday-calculator';
@@ -11,6 +11,20 @@ export interface IHierarchyCalculator {
   getHolidays(hierarchy: string, year: number, deep: boolean): Promise<Array<IHoliday>>;
   getHierarchyTree(): Promise<Array<IHierarchy>>;
   getSupportedLanguages(): Promise<Array<string>>;
+}
+
+class CalculatedHoliday implements IHoliday {
+  public date: Date;
+  public key: string;
+  public name: string;
+  public translationKey: string;
+
+  public constructor(date: Date, key: string, translationKey: string) {
+    this.date = date;
+    this.key = key;
+    this.name = key;
+    this.translationKey = translationKey
+  }
 }
 
 export class HierarchyCalculator implements IHierarchyCalculator {
@@ -30,16 +44,27 @@ export class HierarchyCalculator implements IHierarchyCalculator {
   // <editor-fold desc='IHierarchyCalculator interface methods'>
   public async getHolidays(hierarchy: string, year: number, deep: boolean): Promise<Array<IHoliday>> {
     const root = hierarchy.split('/')[0];
-    const dataString = await this.fileProvider.loadConfiguration(root);
-    const configuration = new ConfigurationFactory().loadConfigurationFromString('root', dataString);
-    const holidays = new HierarchyFilter().filterConfigurationByHierarchy(configuration, hierarchy, deep);
-    const result = new Array<IHoliday | undefined>();
-    holidays.forEach(holiday => result.push(this.calculateHoliday(holiday, year - 1)));
-    holidays.forEach(holiday => result.push(this.calculateHoliday(holiday, year)));
-    holidays.forEach(holiday => result.push(this.calculateHoliday(holiday, year + 1)));
-    return result.filter( (holiday: IHoliday | undefined) =>
-      holiday !== undefined && holiday.date.getFullYear() === year
-    ) as Array<IHoliday>;
+    const loadPromises: Array<Promise<string>> = [
+      this.fileProvider.loadConfiguration(root),
+      this.fileProvider.loadHolidayTranslations(this.currentLanguage),
+      this.fileProvider.loadHolidayTranslations()
+    ];
+
+    return Promise.all(loadPromises).then( strings => {
+      const configuration: IConfiguration = new ConfigurationFactory().loadConfigurationFromString('root', strings[0]);
+      const translations: any = JSON.parse(strings[1]);
+      const fallback: any = JSON.parse(strings[2]);
+      const holidays: Array<IBaseHoliday<any>> = new HierarchyFilter().filterConfigurationByHierarchy(configuration, hierarchy, deep);
+      const calculatedHolidays = new Array<CalculatedHoliday | undefined>();
+      holidays.forEach(holiday => calculatedHolidays.push(this.calculateHoliday(holiday, year - 1)));
+      holidays.forEach(holiday => calculatedHolidays.push(this.calculateHoliday(holiday, year)));
+      holidays.forEach(holiday => calculatedHolidays.push(this.calculateHoliday(holiday, year + 1)));
+      const result: Array<CalculatedHoliday> = calculatedHolidays.filter( (holiday: IHoliday | undefined) =>
+        holiday !== undefined && holiday.date.getFullYear() === year
+      ) as Array<CalculatedHoliday>;
+      result.forEach( (calculated: CalculatedHoliday) => this.translateHoliday(calculated, translations, fallback));
+      return result as Array<IHoliday>;
+    });
   }
 
   public async getHierarchyTree(): Promise<Array<IHierarchy>> {
@@ -48,14 +73,14 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       this.fileProvider.loadHierarchyTranslations(this.currentLanguage),
       this.fileProvider.loadHierarchyTranslations()
     ];
-    let result: Array<IHierarchy>;
-    let translations: any;
-    let fallback: any;
+    // let result: Array<IHierarchy>;
+    // let translations: any;
+    // let fallback: any;
     return Promise.all(loadPromises).then( (strings: Array<string>) =>
     {
-      result = JSON.parse(strings[0]);
-      translations = JSON.parse(strings[1]);
-      fallback = JSON.parse(strings[2]);
+      const result: Array<IHierarchy> = JSON.parse(strings[0]);
+      const translations: any = JSON.parse(strings[1]);
+      const fallback: any = JSON.parse(strings[2]);
       return this.translateHierarchyTree(result, translations, fallback);
     });
   }
@@ -68,7 +93,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
   // </editor-fold>
 
   // <editor-fold desc='Private methods'>
-  private calculateHoliday(holiday: IBaseHoliday<any>, year: number): IHoliday | undefined {
+  private calculateHoliday(holiday: IBaseHoliday<any>, year: number): CalculatedHoliday | undefined {
     let date: Date | undefined;
     switch(holiday.holidayType) {
       case HolidayType.CHRISTIAN: {
@@ -98,18 +123,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       }
     }
 
-    let result: IHoliday | undefined;
-    if (date) {
-      result = {
-        date,
-        key: holiday.key,
-        name: holiday.key
-      };
-      return result;
-    } else {
-      result = undefined;
-    }
-    return result;
+    return date ? new CalculatedHoliday(date, holiday.key, holiday.translationKey) : undefined;
   }
 
   private translateHierarchyTree(tree: Array<IHierarchy>, translations: any, fallback: any): Array<IHierarchy> {
@@ -117,7 +131,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
     return tree;
   }
 
-  private translateHierarchy(hierachy: IHierarchy, translations: any, fallback: any): IHierarchy {
+  private translateHierarchy(hierachy: IHierarchy, translations: any, fallback: any): void {
     if (hierachy.children) {
       hierachy.children.forEach( (hierarchy: IHierarchy) => this.translateHierarchy(hierarchy, translations, fallback));
     }
@@ -127,7 +141,17 @@ export class HierarchyCalculator implements IHierarchyCalculator {
     (fallback[hierachy.fullPath]) {
       hierachy.description = fallback[hierachy.fullPath];
     }
-    return hierachy;
+  }
+
+  private translateHoliday(holiday: CalculatedHoliday, translations: any, fallback: any): void {
+    if (translations[holiday.translationKey]) {
+      holiday.name = translations[holiday.translationKey];
+    } else if
+    (fallback[holiday.translationKey]) {
+      holiday.name = fallback[holiday.translationKey];
+    } else {
+      holiday.name = holiday.translationKey;
+    }
   }
   // </editor-fold>
 

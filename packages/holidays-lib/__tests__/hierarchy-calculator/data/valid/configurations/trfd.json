@@ -1,0 +1,9 @@
+{
+  "hierarchy": "trfd",
+  "description": "translations of fixed dates",
+  "holidays": [
+    { "holidayType": "FIXED_DATE", "key": "FD_EN", "month": "JANUARY", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "FD_FALLBACK", "month": "JANUARY", "day": 1 },
+    { "holidayType": "FIXED_DATE", "key": "FD_NO_TRANSLATION", "month": "JANUARY", "day": 1 }
+  ]
+}

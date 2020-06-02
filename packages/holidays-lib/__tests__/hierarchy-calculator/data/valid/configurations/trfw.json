@@ -1,0 +1,30 @@
+{
+  "hierarchy": "trfw",
+  "description": "translations of fixed weekdays",
+  "holidays": [
+    {
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "FW_EN",
+      "which": "FOURTH",
+      "weekday": "THURSDAY",
+      "month": "NOVEMBER",
+      "validFrom": 1863
+    },
+    {
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "FW_FALLBACK",
+      "which": "FOURTH",
+      "weekday": "THURSDAY",
+      "month": "NOVEMBER",
+      "validFrom": 1863
+    },
+    {
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "FW_NO_TRANSLATION",
+      "which": "FOURTH",
+      "weekday": "THURSDAY",
+      "month": "NOVEMBER",
+      "validFrom": 1863
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "hierarchy": "tri",
+  "description": "translations of ISLAMIC Holidays",
+  "holidays": [
+    { "holidayType": "ISLAMIC", "key": "LAILAT_AL_BARAT" },
+    { "holidayType": "ISLAMIC", "key": "LAILAT_AL_MIRAJ" },
+    { "holidayType": "ISLAMIC", "key": "LAILAT_AL_QADR" }
+  ]
+}
