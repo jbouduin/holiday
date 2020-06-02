@@ -49,3 +49,23 @@ test('load-languages > file not found > is a directory', async () => {
   const provider = new FileProvider('../__tests__/data');
   return provider.loadLanguages().catch( e => expect(e.code).toMatch('EISDIR'));
 });
+
+test('load-hierachy-translations', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadHierarchyTranslations('en')).toBeDefined();
+});
+
+test('load-holidays-translations > file not found > wrong directory', async () => {
+  const provider = new FileProvider('../../holidays-lib/src/asset');
+  return provider.loadHierarchyTranslations('en').catch( e => expect(e.code).toMatch('ENOENT'));
+});
+
+test('load-holidays-translations', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadHolidayTranslations('en')).toBeDefined();
+});
+
+test('load-holidays-translations > file not found > wrong directory', async () => {
+  const provider = new FileProvider('../../holidays-lib/src/asset');
+  return provider.loadHolidayTranslations('en').catch( e => expect(e.code).toMatch('ENOENT'));
+});
