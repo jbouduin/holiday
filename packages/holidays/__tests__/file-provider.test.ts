@@ -1,4 +1,11 @@
+import * as path from 'path';
+
 import { FileProvider } from '../src/file-provider';
+
+test('load-hierarchies > absolute path', () => {
+  const provider = new FileProvider(path.join(__dirname, '../../holidays-lib/src/assets'));
+  return expect(provider.loadHierarchies()).toBeDefined();
+});
 
 test('load-hierarchies', () => {
   const provider = new FileProvider('../../holidays-lib/src/assets');
@@ -50,9 +57,19 @@ test('load-languages > file not found > is a directory', async () => {
   return provider.loadLanguages().catch( e => expect(e.code).toMatch('EISDIR'));
 });
 
-test('load-hierachy-translations', () => {
+test('load-hierachy-translations > en', () => {
   const provider = new FileProvider('../../holidays-lib/src/assets');
   return expect(provider.loadHierarchyTranslations('en')).toBeDefined();
+});
+
+test('load-hierachy-translations > empty', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadHierarchyTranslations('')).toBeDefined();
+});
+
+test('load-hierachy-translations > undefined', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadHierarchyTranslations()).toBeDefined();
 });
 
 test('load-holidays-translations > file not found > wrong directory', async () => {
@@ -60,9 +77,19 @@ test('load-holidays-translations > file not found > wrong directory', async () =
   return provider.loadHierarchyTranslations('en').catch( e => expect(e.code).toMatch('ENOENT'));
 });
 
-test('load-holidays-translations', () => {
+test('load-holidays-translations > en', () => {
   const provider = new FileProvider('../../holidays-lib/src/assets');
   return expect(provider.loadHolidayTranslations('en')).toBeDefined();
+});
+
+test('load-holidays-translations > empty', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadHolidayTranslations('')).toBeDefined();
+});
+
+test('load-holidays-translations > undefined', () => {
+  const provider = new FileProvider('../../holidays-lib/src/assets');
+  return expect(provider.loadHolidayTranslations()).toBeDefined();
 });
 
 test('load-holidays-translations > file not found > wrong directory', async () => {

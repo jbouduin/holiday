@@ -1,22 +1,25 @@
 import * as fs from 'fs';
 import * as glob from 'glob';
-import * as convert from 'xml-js';
+import * as path from 'path';
 import * as commandLineArgs from 'command-line-args';
 
-import { IConfiguration, ConfigurationFactory } from '../src/configuration';
-import { IHierarchy } from '../src/api/hierarchy';
+import { IConfiguration, ConfigurationFactory } from '../packages/holidays-lib/src/configuration';
+import { IFileProvider, IHierarchy } from '../packages/holidays-lib/src/api/';
+import { FileProvider } from '../packages/holidays/src/file-provider';
 
 class Hierarchy implements IHierarchy {
 
   // <editor-fold desc='IHierarchy interface properties'>
   public code: string;
+  public fullPath: string;
   public description: string;
   public children: Array<IHierarchy> | undefined;
   // </editor-fold>
 
   // <editor-fold desc='Constructor & C°'>
-  public constructor(code: string, description: string) {
+  public constructor(code: string, fullPath: string, description: string) {
     this.code = code;
+    this.fullPath = fullPath;
     this.description = description;
   }
   // </editor-fold>
@@ -29,7 +32,7 @@ class Main {
   ];
 
   // <editor-fold desc='Main method'>
-  public execute(args: Array<any>) {
+  public execute() {
     let params: any;
     try {
       params = commandLineArgs(this.commandLineOptions);
@@ -37,8 +40,9 @@ class Main {
       console.error(error);
       return
     }
-    const pattern = `${params.input}/*.json`;
-    const files = glob(
+    const pattern = `${params.input}/configurations/*.json`;
+    const fileProvider: IFileProvider = new FileProvider(path.join(__dirname, params.input));
+    glob(
       pattern,
       (err: Error | null, files: Array<string>) => {
         if (err) {
@@ -48,18 +52,25 @@ class Main {
           console.error('no files found');
         } else {
           let cnt = 0;
-          const hierarchies = new Array<IHierarchy>();
 
-          files.forEach( (file: any) => {
-            const hierarchy = this.processFile(file);
-            if (hierarchy) {
-              hierarchies.push(hierarchy);
-            }
+          const allFiles = files.map( (file: any) => {
             cnt++;
             console.log(file);
+            return this.processFile(fileProvider, file);
           });
-          console.log(`processed ${cnt} files`);
-          fs.writeFile(`${params.input}/../configurations.json`, JSON.stringify(hierarchies, null, 2), (err) => {} );
+          Promise.all(allFiles).then(allHierarchies => {
+
+            console.log(`processed ${cnt} files`);
+            fs.writeFile(
+              `${params.input}/configurations.json`,
+              JSON.stringify(allHierarchies, null, 2),
+              (err) => {
+                if (err) {
+                  console.log(err);
+                }
+              });
+          });
+
         }
       }
     );
@@ -67,20 +78,25 @@ class Main {
   // </editor-fold>
 
   // <editor-fold desc='Private methods'>
-  private processFile(fileName: string): IHierarchy | undefined {
-    const configuration = new ConfigurationFactory().loadByFileName(fileName);
-    return this.processConfiguration(configuration);
+  private async processFile(fileprovider: IFileProvider, fullFileName: string): Promise<IHierarchy> {
+    const fileName = fullFileName.replace(/\\/g, '/').split('/').pop() || '';
+    const hierarchy = fileName.split('.')[0];
+    return fileprovider.loadConfiguration(hierarchy).then(asString => {
+      const configuration = new ConfigurationFactory().loadConfigurationFromString('root', asString);
+      return this.processConfiguration(configuration, '');
+    });
   }
 
-  private processConfiguration(configuration: IConfiguration): IHierarchy {
-    const hierarchy = new Hierarchy(configuration.hierarchy, configuration.description);
+  private processConfiguration(configuration: IConfiguration, parentFullPath: string): IHierarchy {
+    const fullPath = `${parentFullPath}${parentFullPath ? '/' : ''}${configuration.hierarchy}`;
+    const hierarchy = new Hierarchy(configuration.hierarchy, fullPath, configuration.description);
     if (configuration.subConfigurations.length > 0)
     {
-      hierarchy.children = configuration.subConfigurations.map( (sub: IConfiguration) => this.processConfiguration(sub));
+      hierarchy.children = configuration.subConfigurations.map( (sub: IConfiguration) => this.processConfiguration(sub, fullPath));
     }
     return hierarchy;
   }
   // </editor-fold>
 }
 
-new Main().execute(process.argv);
+new Main().execute();
