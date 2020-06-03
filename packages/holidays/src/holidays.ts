@@ -12,7 +12,7 @@ export class Holidays implements IHolidays {
 
   // <editor-fold desc='Constructor & C°'>
   public constructor(assetsPath: string, language?: string) {
-    this.hierarchyCalculator = new HierarchyCalculator(language || 'en_GB', new FileProvider(assetsPath));
+    this.hierarchyCalculator = new HierarchyCalculator(language || 'en', new FileProvider(assetsPath));
   }
   // </editor-fold>
 
