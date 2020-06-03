@@ -19,6 +19,6 @@
   "author": "Johan Bouduin",
   "license": "MIT",
   "dependencies": {
-    "@jbouduin/holidays-lib": "file:../holidays-lib"
+    "@jbouduin/holidays-lib": "0.0.1-alpha.0"
   }
 }

@@ -10,14 +10,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint -p tsconfig.json",
-    "test": "echo \"Error: run tests from root\" && exit 1",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "version": "git add -A src",
-    "postversion": "git push && git push --tags",
-    "clear-assets": "rimraf ",
-    "copy-old:assets": "cpx src/assets/**/*.json lib/assets",
-    "copy:assets": "copyfiles \"src/assets/**/*.json\" lib/assets"
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "repository": {
     "type": "git",

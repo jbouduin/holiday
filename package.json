@@ -21,10 +21,5 @@
     "tslint": "^6.1.2",
     "typescript": "^3.9.3",
     "xml-js": "^1.6.11"
-  },
-  "dependencies": {
-    "@jbouduin/holidays": "file:packages\\holidays",
-    "@jbouduin/holidays-http": "file:packages\\holidays-http",
-    "@jbouduin/holidays-lib": "file:packages\\holidays-lib"
   }
 }
