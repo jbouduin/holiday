@@ -5,6 +5,9 @@
     "publish": {
       "ignoreChanges": ["ignored-file", "*.md"],
       "message": "publish %s"
+    },
+    "version": {
+      "allowBranch": "master"
     }
   },
   "packages": [
