@@ -2,10 +2,14 @@
   "name": "root",
   "private": false,
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage && coveralls < coverage/lcov.info",
     "test-coverage": "jest --coverage",
     "preversion": "npm run test && lerna run lint",
     "postinstall": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbouduin/holiday.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -13,6 +17,7 @@
     "@types/glob": "^7.1.1",
     "@types/jest": "^25.2.3",
     "command-line-args": "^5.1.1",
+    "coveralls": "^3.1.0",
     "glob": "^7.1.6",
     "jest": "^26.0.1",
     "lerna": "^3.22.0",
