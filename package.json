@@ -1,10 +1,13 @@
 {
   "name": "root",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "jest",
-    "test-coverage": "jest --coverage"
+    "test-coverage": "jest --coverage",
+    "preversion": "npm run test && lerna run lint",
+    "lerna:bootstrap": "lerna bootstrap"
   },
+  "license": "MIT",
   "devDependencies": {
     "@types/command-line-args": "^5.0.0",
     "@types/glob": "^7.1.1",
@@ -18,5 +21,10 @@
     "tslint": "^6.1.2",
     "typescript": "^3.9.3",
     "xml-js": "^1.6.11"
+  },
+  "dependencies": {
+    "@jbouduin/holidays": "file:packages\\holidays",
+    "@jbouduin/holidays-http": "file:packages\\holidays-http",
+    "@jbouduin/holidays-lib": "file:packages\\holidays-lib"
   }
 }

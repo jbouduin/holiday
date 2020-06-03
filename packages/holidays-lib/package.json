@@ -1,6 +1,6 @@
 {
   "name": "@jbouduin/holidays-lib",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "Get World-Wide Holidays",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -8,18 +8,20 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc && npm run copy:assets",
+    "build": "tsc",
     "lint": "tslint -p tsconfig.json",
+    "test": "echo \"Error: run tests from root\" && exit 1",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
     "version": "git add -A src",
     "postversion": "git push && git push --tags",
-    "copy:assets": "cpx src/assets/**/*.json lib/assets"
+    "clear-assets": "rimraf ",
+    "copy-old:assets": "cpx src/assets/**/*.json lib/assets",
+    "copy:assets": "copyfiles \"src/assets/**/*.json\" lib/assets"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbouduin/holidays-lib.git"
+    "url": "git+https://github.com/jbouduin/holiday.git"
   },
   "keywords": [
     "Holidays",
@@ -27,19 +29,5 @@
     "Holiday calculation"
   ],
   "author": "Johan Bouduin",
-  "license": "MIT",
-  "devDependencies": {
-    "@types/command-line-args": "^5.0.0",
-    "@types/glob": "^7.1.1",
-    "@types/jest": "^25.2.3",
-    "command-line-args": "^5.1.1",
-    "glob": "^7.1.6",
-    "jest": "^26.0.1",
-    "ts-jest": "^26.0.0",
-    "ts-node": "^8.10.1",
-    "tslint": "^6.1.2",
-    "typescript": "^3.9.3",
-    "xml-js": "^1.6.11"
-  },
-  "dependencies": {}
+  "license": "MIT"
 }

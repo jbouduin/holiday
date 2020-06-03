@@ -1,6 +1,6 @@
 {
   "name": "@jbouduin/holidays-http",
-  "version": "0.0.1",
+  "version": "0.0.1-alpha.0",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -9,15 +9,16 @@
   ],
   "scripts": {
     "build": "tsc",
-    "lint": "tslint -p tsconfig.json"
+    "lint": "tslint -p tsconfig.json",
+    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jbouduin/holidays-http"
+    "url": "git+https://github.com/jbouduin/holiday.git"
   },
   "author": "Johan Bouduin",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@jbouduin/holidays-lib": "0.0.1"
+    "@jbouduin/holidays-lib": "file:../holidays-lib"
   }
 }
