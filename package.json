@@ -5,7 +5,7 @@
     "test": "jest",
     "test-coverage": "jest --coverage",
     "preversion": "npm run test && lerna run lint",
-    "lerna:bootstrap": "lerna bootstrap"
+    "postinstall": "lerna bootstrap"
   },
   "license": "MIT",
   "devDependencies": {
