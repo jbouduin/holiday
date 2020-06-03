@@ -24,5 +24,8 @@
     "Holiday calculation"
   ],
   "author": "Johan Bouduin",
-  "license": "MIT"
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
 }

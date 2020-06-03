@@ -20,5 +20,8 @@
   "license": "MIT",
   "dependencies": {
     "@jbouduin/holidays-lib": "^0.0.1-alpha.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
