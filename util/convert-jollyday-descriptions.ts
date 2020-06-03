@@ -3,6 +3,23 @@ import * as readline  from 'readline';
 import * as glob from 'glob';
 
 import * as commandLineArgs from 'command-line-args';
+// function utf8Encode(unicodeString: string) {
+//     if (typeof unicodeString != 'string') throw new TypeError('parameter ‘unicodeString’ is not a string');
+//     const utf8String = unicodeString.replace(
+//         /[\u0080-\u07ff]/g,  // U+0080 - U+07FF => 2 bytes 110yyyyy, 10zzzzzz
+//         function(c) {
+//           console.log(c);
+//             var cc = c.charCodeAt(0);
+//             return String.fromCharCode(0xc0 | cc>>6, 0x80 | cc&0x3f); }
+//     ).replace(
+//         /[\u0800-\uffff]/g,  // U+0800 - U+FFFF => 3 bytes 1110xxxx, 10yyyyyy, 10zzzzzz
+//         function(c) {
+//             var cc = c.charCodeAt(0);
+//             console.log(c);
+//             return String.fromCharCode(0xe0 | cc>>12, 0x80 | cc>>6&0x3F, 0x80 | cc&0x3f); }
+//     );
+//     return utf8String;
+// }
 
 class Main {
 
@@ -79,7 +96,7 @@ class Main {
   }
 
   private async convert(fileName: string, outputFile: string, keyTransformer: (key: string) => string) {
-    const fileStream = fs.createReadStream(fileName, 'utf-8');
+    const fileStream = fs.createReadStream(fileName);
     const rl = readline.createInterface({
       input: fileStream,
       crlfDelay: Infinity
@@ -92,7 +109,7 @@ class Main {
       if (trimmed.length > 0 && !trimmed.startsWith('#'))
       {
         const split = line.split('=').map(entry => entry.trim());
-        result[keyTransformer(split[0])] = split[1];
+        result[keyTransformer(split[0])] = this.translationTransformer(split[1]);
       }
     }
     console.log(JSON.stringify(result, null, 2));
@@ -118,6 +135,41 @@ class Main {
       .replace('ethiopian.orthodox', 'ETHIOPIAN_ORTHODOX');
   }
 
+  private translationTransformer(translation: string): string {
+    return translation
+      .replace(/\\u00B4/g, '´')
+      .replace(/\\u00C1/g, 'Á')
+      .replace(/\\u00C2/g, 'Â')
+      .replace(/\\u00C4/g, 'Ä')
+      .replace(/\\u00C9/g, 'É')
+      .replace(/\\u00CD/g, 'Í')
+      .replace(/\\u00CE/g, 'Î')
+      .replace(/\\u00E0/g, 'à')
+      .replace(/\\u00E1/g, 'á')
+      .replace(/\\u00E2/g, 'â')
+      .replace(/\\u00E3/g, 'ã')
+      .replace(/\\u00E4/g, 'ä')
+      .replace(/\\u00E6/g, 'æ')
+      .replace(/\\u00E7/g, 'ç')
+      .replace(/\\u00E8/g, 'è')
+      .replace(/\\u00E9/g, 'é')
+      .replace(/\\u00EA/g, 'ê')
+      .replace(/\\u00EB/g, 'ë')
+      .replace(/\\u00ED/g, 'í')
+      .replace(/\\u00EE/g, 'î')
+      .replace(/\\u00EF/g, 'ï')
+      .replace(/\\u00D6/g, 'Ö')
+      .replace(/\\u00DF/g, 'ß')
+      .replace(/\\u00F5/g, 'õ')
+      .replace(/\\u00FB/g, 'û')
+      .replace(/\\u00FA/g, 'ú')
+      .replace(/\\u00FC/g, 'ü')
+      .replace(/\\u00F3/g, 'ó')
+      .replace(/\\u00F4/g, 'ô')
+      .replace(/\\u00FC/g, 'ü')
+      .replace(/\\u00F6/g, 'ö')
+      .replace(/\\u0161/g, 'š');
+  }
   // </editor-fold>
 }
 
