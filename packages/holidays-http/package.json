@@ -8,7 +8,7 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build:package": "tsc",
     "lint": "tslint -p tsconfig.json",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },

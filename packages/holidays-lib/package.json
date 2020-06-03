@@ -8,9 +8,11 @@
     "lib/**/*"
   ],
   "scripts": {
-    "build": "tsc",
+    "build:package": "tsc",
     "lint": "tslint -p tsconfig.json",
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean:assets": "rimraf lib/assets",
+    "copy:assets": "copyfiles \"src/assets/**/*\" -u 1 lib"
   },
   "repository": {
     "type": "git",

@@ -5,7 +5,8 @@
     "test": "jest --coverage && coveralls < coverage/lcov.info",
     "test-coverage": "jest --coverage",
     "preversion": "npm run test && lerna run lint",
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run clean:assets && lerna run build:package && lerna run copy:assets"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,12 @@
     "@types/glob": "^7.1.1",
     "@types/jest": "^25.2.3",
     "command-line-args": "^5.1.1",
+    "copyfiles": "^2.3.0",
     "coveralls": "^3.1.0",
     "glob": "^7.1.6",
     "jest": "^26.0.1",
     "lerna": "^3.22.0",
+    "rimraf": "^3.0.2",
     "ts-jest": "^26.0.0",
     "ts-node": "^8.10.1",
     "tslint": "^6.1.2",
