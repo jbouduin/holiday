@@ -4,7 +4,8 @@
   "scripts": {
     "test": "jest --coverage && coveralls < coverage/lcov.info",
     "test-coverage": "jest --coverage",
-    "preversion": "npm run test && lerna run lint",
+    "test-local": "jest",
+    "preversion": "npm run test-local && lerna run lint",
     "postinstall": "lerna bootstrap",
     "build": "lerna run clean:assets && lerna run build:package && lerna run copy:assets"
   },
