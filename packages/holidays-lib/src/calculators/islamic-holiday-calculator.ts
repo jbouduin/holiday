@@ -22,6 +22,4 @@ export class IslamicHolidayCalculator extends BaseCalculator<IIslamicHoliday> im
 
   }
   // </editor-fold>
-
-
 }
