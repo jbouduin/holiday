@@ -1,5 +1,5 @@
-import { IMove } from '../configuration';
-import { Condition, MoveTo } from '../configuration';
+import { IMove } from '../../configuration';
+import { Condition, MoveTo } from '../../configuration';
 import { ICalendarHelper } from './calendar-helper';
 
 export interface IMover {

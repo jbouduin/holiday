@@ -1,6 +1,6 @@
 import { IBaseHoliday } from '../configuration';
-import { ICalendarHelper, CalendarHelper } from './calendar-helper';
-import { IMover, Mover } from './mover';
+import { ICalendarHelper, CalendarHelper } from './helpers';
+import { IMover, Mover } from './helpers';
 
 export interface IBaseCalculator<T extends IBaseHoliday<any>> {
   calculate(holiday: T, year: number): Date | undefined;

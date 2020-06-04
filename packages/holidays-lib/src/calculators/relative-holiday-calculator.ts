@@ -78,10 +78,6 @@ export class RelativeHolidayCalculator extends BaseCalculator<IRelativeHoliday<I
   }
 
   private applyRelation(relation: IRelationWhichWeekdayWhen, date: Date): Date {
-    // weekday: Weekday;
-    // when: When; (Before or After)
-    // which: Which (First .. Fourth);
-
     const dayOfFix = date.getDay();
     let diff = 0;
 

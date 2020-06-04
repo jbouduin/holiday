@@ -1,7 +1,9 @@
-import { IChristianHoliday, ChristianHolidayType } from '../configuration';
+import { IChristianHoliday, ChristianHolidayType, ChronologyType } from '../configuration';
 import { IBaseCalculator, BaseCalculator } from './base-calculator';
 
-export interface IChristianHolidayCalculator extends IBaseCalculator<IChristianHoliday>{ }
+export interface IChristianHolidayCalculator extends IBaseCalculator<IChristianHoliday>{
+  getEasternSunday(chronology: ChronologyType, year: number): Date;
+}
 
 export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday> implements IChristianHolidayCalculator {
 
@@ -12,9 +14,8 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
   // </editor-fold>
 
   // <editor-fold desc='Abstract method implementation'>
-  public calculateDate(holiday: IChristianHoliday, year: number): Date | undefined
-  {
-    const easternSunday = this.calendarHelper.getEasternSunday(holiday.chronology, year);
+  public calculateDate(holiday: IChristianHoliday, year: number): Date | undefined {
+    const easternSunday = this.getEasternSunday(holiday.chronology, year);
     switch (holiday.key) {
       case ChristianHolidayType.CLEAN_MONDAY:
       case ChristianHolidayType.SHROVE_MONDAY: {
@@ -65,6 +66,61 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
           return this.calendarHelper.addDays(easternSunday, 68);
       }
     }
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='IChristianHolidayCalculator interface methods'>
+  public getEasternSunday(chronology: ChronologyType, year: number): Date {
+    switch (chronology) {
+      case ChronologyType.JULIAN: {
+        // TODO: originally this checked on the year <= 1583. Took it out.
+        return this.getJulianEasternSunday(year);
+      }
+      case ChronologyType.GREGORIAN: {
+        return this.getGregorianEasterSunday(year);
+      }
+    }
+  }
+  // </editor-fold>
+
+  // <editor-fold desc='Private methods'>
+  private getJulianEasternSunday(year: number): Date {
+    // source: https://www.staff.science.uu.nl/~gent0113/easter/easter_text2a.htm
+    const a = this.calendarHelper.generalizedModulo (year, 19);
+    const goldenNumber = a + 1;
+    const b = this.calendarHelper.generalizedModulo (year, 4);
+    const c = this.calendarHelper.generalizedModulo (year, 7);
+    let d = this.calendarHelper.generalizedModulo ((19 * a + 15), 30);
+    if (goldenNumber === 1) {
+      d++;
+    }
+    const e= this.calendarHelper.generalizedModulo ((2 * b + 4 * c - d + 6), 7);
+    const fmj = 113 + d; // Easter full moon [days after -92 March]
+    const dmj = fmj + e + 1; // Easter Sunday [days after -92 March]
+    const esmj = Math.floor(dmj / 31); // month Easter Sunday [March = 3; April = 4]
+    const esdj = this.calendarHelper.generalizedModulo (dmj, 31) + 1; // day Easter Sunday
+
+    return this.calendarHelper.addDays(new Date(Date.UTC(year, esmj === 3 ? 2 : 3, esdj)), 13);
+  }
+
+  private getGregorianEasterSunday(year: number): Date {
+    // adapted jollyday code
+    const a = year % 19;
+    const b = Math.floor(year / 100);
+    const c = year % 100;
+    const d = b / 4;
+    const e = b % 4;
+    const f = Math.floor((b + 8) / 25);
+    const g = Math.floor((b - f + 1) / 3);
+    const h = (19 * a + b - d - g + 15) % 30;
+    const i = Math.floor(c / 4);
+    const j = c % 4;
+    const k = (32 + 2 *e + 2 * i - h - j) % 7;
+    const l = Math.floor((a + 11 * h + 22 * k) / 451);
+    const x = h + k - 7 * l + 114;
+    const month = Math.floor(x / 31);
+    const day = (x % 31) + 1;
+    return new Date(Date.UTC(year, month === 3 ? 2 : 3, day));
   }
   // </editor-fold>
 }
