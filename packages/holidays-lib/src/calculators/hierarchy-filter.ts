@@ -39,30 +39,6 @@ export class HierarchyFilter implements IHierarchyFilter {
       result = new Array<IBaseHoliday<any>>();
     }
 
-    // if (pathElements.length === 1) {
-    //   if (pathElements[0] === configuration.hierarchy) {
-    //     result = configuration.holidays;
-    //     if (deep) {
-    //
-    //     }
-    //   } else {
-    //     result = new Array<IBaseHoliday<any>>();
-    //   }
-    // } else if (pathElements.length > 1) {
-    //   const sub = configuration.subConfigurations.filter(sub => sub.hierarchy === pathElements[1]);
-    //   result = new Array<IBaseHoliday<any>>();
-    //   if (pathElements.filter( (element: string) => element === configuration.hierarchy).length === 1) {
-    //     result = result.concat(configuration.holidays);
-    //   }
-    //   if (sub.length > 0) {
-    //
-    //     result = result.concat(this.filterConfigurationByHierarchy(sub[0], sub[0].hierarchy, deep));
-    //   }
-    //
-    // } else {
-    //   result = new Array<IBaseHoliday<any>>();
-    // }
-
     return result;
   }
   // </editor-fold>

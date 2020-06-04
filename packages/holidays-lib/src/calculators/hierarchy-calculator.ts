@@ -73,9 +73,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       this.fileProvider.loadHierarchyTranslations(this.currentLanguage),
       this.fileProvider.loadHierarchyTranslations()
     ];
-    // let result: Array<IHierarchy>;
-    // let translations: any;
-    // let fallback: any;
+
     return Promise.all(loadPromises).then( (strings: Array<string>) =>
     {
       const result: Array<IHierarchy> = JSON.parse(strings[0]);
