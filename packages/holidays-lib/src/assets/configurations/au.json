@@ -20,10 +20,74 @@
     },
     {
       "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1,
+      "validTo": 2007,
+      "moves": [
+        {
+          "condition": "IS_SATURDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        },
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        }
+      ]
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1,
+      "validFrom": 2020
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEAR",
+      "month": "JANUARY",
+      "day": 1,
+      "validFrom": 2020,
+      "moves": [
+        {
+          "condition": "IS_SATURDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        },
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        }
+      ]
+    },
+    {
+      "holidayType": "FIXED_DATE",
       "key": "NATIONAL_DAY",
       "month": "JANUARY",
       "day": 26,
       "validTo": 2007
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NATIONAL_DAY",
+      "month": "JANUARY",
+      "day": 26,
+      "validFrom": 2008,
+      "moves": [
+        {
+          "condition": "IS_SATURDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        },
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        }
+      ]
     },
     {
       "holidayType": "FIXED_DATE",
@@ -34,10 +98,10 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "NEW_YEAR",
-      "month": "JANUARY",
-      "day": 1,
-      "validTo": 2007
+      "key": "ANZAC",
+      "month": "APRIL",
+      "day": 25,
+      "validFrom": 2020
     },
     {
       "holidayType": "FIXED_DATE",
@@ -66,6 +130,63 @@
           "weekday": "MONDAY"
         }
       ]
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25,
+      "validFrom": 2020
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS",
+      "month": "DECEMBER",
+      "day": 25,
+      "validFrom": 2020,
+      "moves": [
+        {
+          "condition": "IS_SATURDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        },
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        }
+      ]
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "BOXING_DAY",
+      "month": "DECEMBER",
+      "day": 26,
+      "validFrom": 2020
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "BOXING_DAY",
+      "month": "DECEMBER",
+      "day": 26,
+      "validFrom": 2020,
+      "moves": [
+        {
+          "condition": "IS_SATURDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        },
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "TUESDAY"
+        },
+        {
+          "condition": "IS_MONDAY",
+          "moveTo": "NEXT",
+          "weekday": "TUESDAY"
+        }
+      ]
     }
   ],
   "subConfigurations": [
@@ -79,6 +200,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -113,10 +235,30 @@
         },
         {
           "holidayType": "FIXED_DATE",
+          "key": "ANZAC",
+          "month": "APRIL",
+          "day": 25,
+          "validFrom": 2020,
+          "moves": [
+            {
+              "condition": "IS_SATURDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            },
+            {
+              "condition": "IS_SUNDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            }
+          ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS",
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -136,6 +278,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -175,7 +318,22 @@
           "key": "FAMILY_COMMUNITY",
           "which": "FIRST",
           "weekday": "TUESDAY",
-          "month": "NOVEMBER"
+          "month": "NOVEMBER",
+          "validTo": 2019
+        },
+        {
+          "holidayType": "RELATIVE_TO_DATE",
+          "key": "RECONCILIATION",
+          "relation": {
+            "which": "FIRST",
+            "weekday": "MONDAY",
+            "when": "AFTER"
+          },
+          "fix": {
+            "month": "MAY",
+            "day": 26
+          },
+          "validFrom": 2020
         }
       ]
     },
@@ -189,6 +347,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SUNDAY",
@@ -217,6 +376,7 @@
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -236,6 +396,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -262,6 +423,14 @@
           "which": "FIRST",
           "weekday": "MONDAY",
           "month": "OCTOBER"
+        },
+        {
+          "holidayType": "FIXED_WEEKDAY",
+          "key": "BANK_HOLIDAY",
+          "which": "FIRST",
+          "weekday": "MONDAY",
+          "month": "AUGUST",
+          "validFrom": 2020
         }
       ]
     },
@@ -275,6 +444,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -304,10 +474,25 @@
         },
         {
           "holidayType": "FIXED_DATE",
+          "key": "ANZAC",
+          "month": "APRIL",
+          "day": 25,
+          "validFrom": 2020,
+          "moves": [
+            {
+              "condition": "IS_SUNDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            }
+          ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS",
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -327,6 +512,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -373,6 +559,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SUNDAY",
@@ -397,10 +584,25 @@
         },
         {
           "holidayType": "FIXED_DATE",
+          "key": "ANZAC",
+          "month": "APRIL",
+          "day": 25,
+          "validFrom": 2020,
+          "moves": [
+            {
+              "condition": "IS_SUNDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            }
+          ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS",
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SUNDAY",
@@ -415,6 +617,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SUNDAY",
@@ -435,7 +638,42 @@
           "key": "QUEENS_BIRTHDAY",
           "which": "SECOND",
           "weekday": "MONDAY",
-          "month": "JUNE"
+          "month": "JUNE",
+          "validTo": 2019
+        },
+        {
+          "holidayType": "FIXED_WEEKDAY",
+          "key": "QUEENS_BIRTHDAY",
+          "which": "FIRST",
+          "weekday": "MONDAY",
+          "month": "OCTOBER",
+          "validFrom": 2020
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "br",
+          "description": "Brisbane Area",
+          "holidays": [
+            {
+              "holidayType": "RELATIVE_BETWEEN_FIXED",
+              "key": "EKKA",
+              "relation": {
+                "weekday": "WEDNESDAY"
+              },
+              "fix": {
+                "from": {
+                  "month": "AUGUST",
+                  "day": 10
+                },
+                "to": {
+                  "month": "AUGUST",
+                  "day": 16
+                }
+              },
+              "validFrom": 2020
+            }
+          ]
         }
       ]
     },
@@ -449,6 +687,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -461,6 +700,13 @@
               "weekday": "MONDAY"
             }
           ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "NATIONAL_DAY",
+          "month": "JANUARY",
+          "day": 26,
+          "validFrom": 2020
         },
         {
           "holidayType": "FIXED_DATE",
@@ -478,10 +724,25 @@
         },
         {
           "holidayType": "FIXED_DATE",
+          "key": "ANZAC",
+          "month": "APRIL",
+          "day": 25,
+          "validFrom": 2020,
+          "moves": [
+            {
+              "condition": "IS_SUNDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            }
+          ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS",
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -501,6 +762,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -511,6 +773,30 @@
               "condition": "IS_SUNDAY",
               "moveTo": "NEXT",
               "weekday": "MONDAY"
+            }
+          ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "PROCLAMATION",
+          "month": "DECEMBER",
+          "day": 26,
+          "validFrom": 2020,
+          "moves": [
+            {
+              "condition": "IS_SATURDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            },
+            {
+              "condition": "IS_SUNDAY",
+              "moveTo": "NEXT",
+              "weekday": "TUESDAY"
+            },
+            {
+              "condition": "IS_MONDAY",
+              "moveTo": "NEXT",
+              "weekday": "TUESDAY"
             }
           ]
         },
@@ -549,7 +835,8 @@
           "holidayType": "FIXED_DATE",
           "key": "ANZAC",
           "month": "APRIL",
-          "day": 25
+          "day": 25,
+          "validTo": 2019
         },
         {
           "holidayType": "FIXED_DATE",
@@ -557,6 +844,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -576,6 +864,7 @@
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -595,6 +884,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -626,7 +916,7 @@
       "subConfigurations": [
         {
           "hierarchy": "ho",
-          "description": "Hobard Area",
+          "description": "Hobart Area",
           "holidays": [
             {
               "holidayType": "FIXED_WEEKDAY",
@@ -639,7 +929,7 @@
         },
         {
           "hierarchy": "nh",
-          "description": "Non-Hobard Area",
+          "description": "Non-Hobart Area",
           "holidays": [
             {
               "holidayType": "FIXED_WEEKDAY",
@@ -660,7 +950,8 @@
           "holidayType": "FIXED_DATE",
           "key": "ANZAC",
           "month": "APRIL",
-          "day": 25
+          "day": 25,
+          "validTo": 2019
         },
         {
           "holidayType": "FIXED_DATE",
@@ -668,6 +959,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SUNDAY",
@@ -682,6 +974,7 @@
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -701,6 +994,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -734,12 +1028,20 @@
           "which": "FIRST",
           "weekday": "TUESDAY",
           "month": "NOVEMBER"
+        },
+        {
+          "holidayType": "FIXED_WEEKDAY",
+          "key": "AFL",
+          "which": "LAST",
+          "weekday": "FRIDAY",
+          "month": "SEPTEMBER",
+          "validFrom": 2020
         }
       ]
     },
     {
       "hierarchy": "wa",
-      "description": "West Australia",
+      "description": "Western Australia",
       "holidays": [
         {
           "holidayType": "FIXED_DATE",
@@ -747,6 +1049,7 @@
           "month": "JANUARY",
           "day": 1,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -781,10 +1084,30 @@
         },
         {
           "holidayType": "FIXED_DATE",
+          "key": "ANZAC",
+          "month": "APRIL",
+          "day": 25,
+          "validFrom": 2020,
+          "moves": [
+            {
+              "condition": "IS_SATURDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            },
+            {
+              "condition": "IS_SUNDAY",
+              "moveTo": "NEXT",
+              "weekday": "MONDAY"
+            }
+          ]
+        },
+        {
+          "holidayType": "FIXED_DATE",
           "key": "CHRISTMAS",
           "month": "DECEMBER",
           "day": 25,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -804,6 +1127,7 @@
           "month": "DECEMBER",
           "day": 26,
           "validFrom": 2008,
+          "validTo": 2019,
           "moves": [
             {
               "condition": "IS_SATURDAY",
@@ -829,11 +1153,20 @@
           "key": "FOUNDATION",
           "which": "FIRST",
           "weekday": "MONDAY",
-          "month": "JUNE"
+          "month": "JUNE",
+          "validTo": 2019
         },
         {
           "holidayType": "FIXED_WEEKDAY",
-          "key": "__UNKNOWN__",
+          "key": "WESTERN_AUSTRALIA",
+          "which": "FIRST",
+          "weekday": "MONDAY",
+          "month": "JUNE",
+          "validFrom": 2020
+        },
+        {
+          "holidayType": "FIXED_WEEKDAY",
+          "key": "QUEENS_BIRTHDAY",
           "which": "LAST",
           "weekday": "MONDAY",
           "month": "SEPTEMBER"

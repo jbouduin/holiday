@@ -256,7 +256,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "JUNE",
       "day": 12,
       "validFrom": 1992,

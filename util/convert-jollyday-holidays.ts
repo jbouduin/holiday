@@ -195,8 +195,8 @@ class Main {
       }
     }
     return {
-      hierarchy: configuration._attributes.hierarchy,
-      description: configuration._attributes.description || configuration._attributes.hierarchy,
+      hierarchy: configuration._attributes.hierarchy.replace('_', '-'),
+      description: configuration._attributes.description?.replace('_', '-') || configuration._attributes.hierarchy.replace('_', '-'),
       holidays: holidays,
       subConfigurations: subConfigurations
     };

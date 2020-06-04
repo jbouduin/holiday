@@ -10,14 +10,22 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "MEMORIAL_DAY",
+      "month": "MAY",
+      "day": 30,
+      "validFrom": 1869,
+      "validTo": 1967
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "INDEPENDENCE_DAY",
       "month": "JULY",
       "day": 4,
       "validFrom": 1776
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "VETERANS",
+      "key": "VETERANS_DAY",
       "month": "NOVEMBER",
       "day": 11,
       "validFrom": 1938
@@ -29,16 +37,24 @@
       "day": 25
     },
     {
-      "holidayType": "FIXED_DATE",
-      "key": "MEMORIAL",
-      "month": "MAY",
-      "day": 30,
-      "validFrom": 1869,
-      "validTo": 1967
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "MARTIN_LUTHER_KING",
+      "which": "THIRD",
+      "weekday": "MONDAY",
+      "month": "JANUARY",
+      "validFrom": 1986
     },
     {
       "holidayType": "FIXED_WEEKDAY",
-      "key": "MEMORIAL",
+      "key": "PRESIDENTS_DAY",
+      "which": "THIRD",
+      "weekday": "MONDAY",
+      "month": "FEBRUARY",
+      "validFrom": 1971
+    },
+    {
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "MEMORIAL_DAY",
       "which": "LAST",
       "weekday": "MONDAY",
       "month": "MAY",
@@ -54,11 +70,33 @@
     },
     {
       "holidayType": "FIXED_WEEKDAY",
+      "key": "COLUMBUS_DAY",
+      "which": "SECOND",
+      "weekday": "MONDAY",
+      "month": "OCTOBER",
+      "validFrom": 1937
+    },
+    {
+      "holidayType": "FIXED_WEEKDAY",
       "key": "THANKSGIVING",
       "which": "FOURTH",
       "weekday": "THURSDAY",
       "month": "NOVEMBER",
       "validFrom": 1863
+    },
+    {
+      "holidayType": "RELATIVE_TO_WEEKDAY",
+      "key": "ELECTION_DAY",
+      "relation": {
+        "weekday": "TUESDAY",
+        "when": "AFTER"
+      },
+      "fix": {
+        "which": "FIRST",
+        "weekday": "MONDAY",
+        "month": "NOVEMBER"
+      },
+      "cycle": "EVEN_YEARS"
     }
   ],
   "subConfigurations": [
@@ -629,7 +667,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"
@@ -671,7 +709,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"
@@ -684,7 +722,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"
@@ -878,7 +916,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"
@@ -1352,7 +1390,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"
@@ -1435,7 +1473,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"
@@ -1500,7 +1538,7 @@
           "holidays": [
             {
               "holidayType": "FIXED_DATE",
-              "key": "INDEPENDENCE",
+              "key": "INDEPENDENCE_DAY",
               "month": "MAY",
               "day": 20
             }
@@ -1512,7 +1550,7 @@
           "holidays": [
             {
               "holidayType": "FIXED_DATE",
-              "key": "INDEPENDENCE",
+              "key": "INDEPENDENCE_DAY",
               "month": "MAY",
               "day": 20
             }
@@ -1748,6 +1786,19 @@
           "weekday": "MONDAY",
           "month": "FEBRUARY",
           "validFrom": 1968
+        },
+        {
+          "holidayType": "RELATIVE_TO_WEEKDAY",
+          "key": "ELECTION_DAY",
+          "relation": {
+            "weekday": "TUESDAY",
+            "when": "AFTER"
+          },
+          "fix": {
+            "which": "FIRST",
+            "weekday": "MONDAY",
+            "month": "NOVEMBER"
+          }
         }
       ]
     },
@@ -2161,7 +2212,7 @@
         },
         {
           "holidayType": "FIXED_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "which": "SECOND",
           "weekday": "TUESDAY",
           "month": "SEPTEMBER"
@@ -2176,7 +2227,7 @@
         },
         {
           "holidayType": "RELATIVE_TO_WEEKDAY",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "relation": {
             "weekday": "TUESDAY",
             "when": "AFTER"

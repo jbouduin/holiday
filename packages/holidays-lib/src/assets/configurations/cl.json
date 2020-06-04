@@ -27,7 +27,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "ELECTION",
+      "key": "ELECTION_DAY",
       "month": "JANUARY",
       "day": 17,
       "validFrom": 2010,

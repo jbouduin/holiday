@@ -7,8 +7,13 @@ const dataRoot = './configurations/data/islamic-holiday';
 
 describe.each([
   ['type.aschura', IslamicHolidayType.ASCHURA],
+  ['type.arafaat', IslamicHolidayType.ARAFAAT],
   ['type.id_al_fitr', IslamicHolidayType.ID_AL_FITR],
+  ['type.id_al_fitr_2', IslamicHolidayType.ID_AL_FITR_2],
+  ['type.id_al_fitr_3', IslamicHolidayType.ID_AL_FITR_3],
   ['type.id_ul_adha', IslamicHolidayType.ID_UL_ADHA],
+  ['type.id_ul_adha_2', IslamicHolidayType.ID_UL_ADHA_2],
+  ['type.id_ul_adha_3', IslamicHolidayType.ID_UL_ADHA_3],
   ['type.lailat_al_barat', IslamicHolidayType.LAILAT_AL_BARAT],
   ['type.lailat_al_miraj', IslamicHolidayType.LAILAT_AL_MIRAJ],
   ['type.lailat_al_qadr', IslamicHolidayType.LAILAT_AL_QADR],

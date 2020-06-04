@@ -42,7 +42,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "SEPTEMBER",
       "day": 7
     },
@@ -114,7 +114,7 @@
       ]
     },
     {
-      "hierarchy": "s",
+      "hierarchy": "sp",
       "description": "Sao Paulo",
       "holidays": [
         {
@@ -132,7 +132,7 @@
       ],
       "subConfigurations": [
         {
-          "hierarchy": "cs",
+          "hierarchy": "csp",
           "description": "City of Sao Paulo",
           "holidays": [
             {
@@ -140,12 +140,6 @@
               "key": "FOUNDATION",
               "month": "JANUARY",
               "day": 25
-            },
-            {
-              "holidayType": "FIXED_DATE",
-              "key": "FOUNDATION",
-              "month": "NOVEMBER",
-              "day": 4
             }
           ]
         }
@@ -306,6 +300,44 @@
           "key": "LADY_CONCEICAO",
           "month": "DECEMBER",
           "day": 8
+        }
+      ]
+    },
+    {
+      "hierarchy": "pb",
+      "description": "Paraíba",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "JOAO_PESSOA_DAY",
+          "month": "JULY",
+          "day": 26
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "FOUNDATION",
+          "month": "AUGUST",
+          "day": 5
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "jpa",
+          "description": "João Pessoa",
+          "holidays": [
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "ST_JOHN",
+              "month": "JUNE",
+              "day": 24
+            },
+            {
+              "holidayType": "FIXED_DATE",
+              "key": "LADY_CONCEICAO",
+              "month": "DECEMBER",
+              "day": 8
+            }
+          ]
         }
       ]
     }

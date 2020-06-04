@@ -4,10 +4,6 @@
   "holidays": [
     {
       "holidayType": "CHRISTIAN",
-      "key": "EASTER"
-    },
-    {
-      "holidayType": "CHRISTIAN",
       "key": "GOOD_FRIDAY"
     },
     {
@@ -17,10 +13,6 @@
     {
       "holidayType": "CHRISTIAN",
       "key": "ASCENSION_DAY"
-    },
-    {
-      "holidayType": "CHRISTIAN",
-      "key": "WHIT_SUNDAY"
     },
     {
       "holidayType": "CHRISTIAN",
@@ -48,29 +40,66 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "UNIFICATION",
+      "key": "UNIFICATION_GERMANY",
       "month": "OCTOBER",
       "day": 3,
       "validFrom": 1990
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "CHRISTMAS",
+      "key": "REFORMATION_DAY",
+      "month": "OCTOBER",
+      "day": 31,
+      "validFrom": 2017,
+      "validTo": 2017
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "FIRST_CHRISTMAS_DAY",
       "month": "DECEMBER",
       "day": 25
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "STEPHENS",
+      "key": "SECOND_CHRISTMAS_DAY",
       "month": "DECEMBER",
       "day": 26
     }
   ],
   "subConfigurations": [
     {
+      "hierarchy": "be",
+      "description": "Berlin",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "INTERNATIONAL_WOMAN",
+          "month": "MARCH",
+          "day": 8,
+          "validFrom": 2019
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "LIBERATION",
+          "month": "MAY",
+          "day": 8,
+          "validFrom": 2020,
+          "validTo": 2020
+        }
+      ]
+    },
+    {
       "hierarchy": "bb",
       "description": "Brandenburg",
       "holidays": [
+        {
+          "holidayType": "CHRISTIAN",
+          "key": "EASTER"
+        },
+        {
+          "holidayType": "CHRISTIAN",
+          "key": "WHIT_SUNDAY"
+        },
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",
@@ -81,7 +110,7 @@
     },
     {
       "hierarchy": "bw",
-      "description": "Baden-Württenberg",
+      "description": "Baden-Württemberg",
       "holidays": [
         {
           "holidayType": "CHRISTIAN",
@@ -103,7 +132,7 @@
     },
     {
       "hierarchy": "by",
-      "description": "Bayern",
+      "description": "Bavaria",
       "holidays": [
         {
           "holidayType": "CHRISTIAN",
@@ -193,7 +222,7 @@
     },
     {
       "hierarchy": "he",
-      "description": "Hessen",
+      "description": "Hesse",
       "holidays": [
         {
           "holidayType": "CHRISTIAN",
@@ -215,7 +244,7 @@
     },
     {
       "hierarchy": "nw",
-      "description": "Nordrhein-Westfalen",
+      "description": "North Rhine-Westphalia",
       "holidays": [
         {
           "holidayType": "CHRISTIAN",
@@ -231,7 +260,7 @@
     },
     {
       "hierarchy": "rp",
-      "description": "Rheinland-Pfalz",
+      "description": "Rhineland-Palatinate",
       "holidays": [
         {
           "holidayType": "CHRISTIAN",
@@ -269,7 +298,7 @@
     },
     {
       "hierarchy": "sn",
-      "description": "Sachsen",
+      "description": "Saxony",
       "holidays": [
         {
           "holidayType": "FIXED_DATE",
@@ -293,7 +322,7 @@
     },
     {
       "hierarchy": "st",
-      "description": "Sachsen-Anhalt",
+      "description": "Saxony-Anhalt",
       "holidays": [
         {
           "holidayType": "FIXED_DATE",
@@ -311,13 +340,72 @@
     },
     {
       "hierarchy": "th",
-      "description": "Thüringen",
+      "description": "Thuringia",
       "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "CHILDRENS_DAY",
+          "month": "SEPTEMBER",
+          "day": 20,
+          "validFrom": 2019
+        },
         {
           "holidayType": "FIXED_DATE",
           "key": "REFORMATION_DAY",
           "month": "OCTOBER",
           "day": 31
+        }
+      ]
+    },
+    {
+      "hierarchy": "sh",
+      "description": "Schleswig-Holstein",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31,
+          "validFrom": 2018
+        }
+      ]
+    },
+    {
+      "hierarchy": "hh",
+      "description": "Hamburg",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31,
+          "validFrom": 2018
+        }
+      ]
+    },
+    {
+      "hierarchy": "hb",
+      "description": "Bremen",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31,
+          "validFrom": 2018
+        }
+      ]
+    },
+    {
+      "hierarchy": "ni",
+      "description": "Lower-Saxony",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "REFORMATION_DAY",
+          "month": "OCTOBER",
+          "day": 31,
+          "validFrom": 2018
         }
       ]
     }

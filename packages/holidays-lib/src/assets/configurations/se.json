@@ -48,6 +48,12 @@
     },
     {
       "holidayType": "FIXED_DATE",
+      "key": "CHRISTMAS_EVE",
+      "month": "DECEMBER",
+      "day": 24
+    },
+    {
+      "holidayType": "FIXED_DATE",
       "key": "CHRISTMAS",
       "month": "DECEMBER",
       "day": 25
@@ -57,6 +63,29 @@
       "key": "BOXING_DAY",
       "month": "DECEMBER",
       "day": 26
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "NEW_YEARS_EVE",
+      "month": "DECEMBER",
+      "day": 31
+    },
+    {
+      "holidayType": "RELATIVE_BETWEEN_FIXED",
+      "key": "MIDSUMMER_EVE",
+      "relation": {
+        "weekday": "FRIDAY"
+      },
+      "fix": {
+        "from": {
+          "month": "JUNE",
+          "day": 19
+        },
+        "to": {
+          "month": "JUNE",
+          "day": 25
+        }
+      }
     },
     {
       "holidayType": "RELATIVE_BETWEEN_FIXED",

@@ -68,7 +68,8 @@
       "holidayType": "FIXED_DATE",
       "key": "CHRISTMAS_EVE",
       "month": "DECEMBER",
-      "day": 24
+      "day": 24,
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "FIXED_DATE",
@@ -86,7 +87,8 @@
       "holidayType": "FIXED_DATE",
       "key": "NEW_YEARS_EVE",
       "month": "DECEMBER",
-      "day": 31
+      "day": 31,
+      "category": "UNOFFICIAL_HOLIDAY"
     }
   ],
   "subConfigurations": [
@@ -96,7 +98,7 @@
       "holidays": [
         {
           "holidayType": "FIXED_DATE",
-          "key": "MARTINS_TAG",
+          "key": "MARTINS_DAY",
           "month": "NOVEMBER",
           "day": 11
         }

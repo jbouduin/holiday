@@ -4,6 +4,11 @@
   "holidays": [
     {
       "holidayType": "CHRISTIAN",
+      "key": "GOOD_FRIDAY",
+      "validFrom": 2016
+    },
+    {
+      "holidayType": "CHRISTIAN",
       "key": "EASTER"
     },
     {
@@ -48,7 +53,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "OCTOBER",
       "day": 28
     },

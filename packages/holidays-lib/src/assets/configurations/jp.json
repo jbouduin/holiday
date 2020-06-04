@@ -79,7 +79,14 @@
       "key": "CULTURE_DAY",
       "month": "NOVEMBER",
       "day": 3,
-      "validFrom": 1948
+      "validFrom": 1948,
+      "moves": [
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        }
+      ]
     },
     {
       "holidayType": "FIXED_DATE",
@@ -126,6 +133,13 @@
       "day": 9,
       "validFrom": 1993,
       "validTo": 1993
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "MOUNTAIN_DAY",
+      "month": "AUGUST",
+      "day": 11,
+      "validFrom": 2016
     },
     {
       "holidayType": "FIXED_WEEKDAY",

@@ -27,6 +27,10 @@
       "key": "WHIT_MONDAY"
     },
     {
+      "holidayType": "CHRISTIAN",
+      "key": "PENTECOST"
+    },
+    {
       "holidayType": "FIXED_DATE",
       "key": "NEW_YEAR",
       "month": "JANUARY",
@@ -55,12 +59,6 @@
       "key": "STEPHENS",
       "month": "DECEMBER",
       "day": 26
-    },
-    {
-      "holidayType": "FIXED_DATE",
-      "key": "NEW_YEARS_EVE",
-      "month": "DECEMBER",
-      "day": 31
     }
   ]
 }

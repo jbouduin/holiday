@@ -26,7 +26,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "JULY",
       "day": 4,
       "moves": [
@@ -108,7 +108,7 @@
     },
     {
       "holidayType": "FIXED_WEEKDAY",
-      "key": "MEMORIAL",
+      "key": "MEMORIAL_DAY",
       "which": "LAST",
       "weekday": "MONDAY",
       "month": "MAY"

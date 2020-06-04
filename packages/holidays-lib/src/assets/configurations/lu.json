@@ -32,6 +32,13 @@
     },
     {
       "holidayType": "FIXED_DATE",
+      "key": "EUROPE_DAY",
+      "month": "MAY",
+      "day": 9,
+      "validFrom": 2019
+    },
+    {
+      "holidayType": "FIXED_DATE",
       "key": "NATIONAL_DAY",
       "month": "JUNE",
       "day": 23

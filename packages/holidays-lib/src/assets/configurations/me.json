@@ -43,7 +43,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "MAY",
       "day": 21
     },

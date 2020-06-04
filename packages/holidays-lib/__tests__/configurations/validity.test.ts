@@ -2,6 +2,7 @@ import { Loader } from '../loader';
 
 // these tests only test the conformity of the json files
 describe.each([
+  [ 'ae', 'United Arab Emirates' ],
   [ 'al', 'Albania' ],
   [ 'ar', 'Argentina' ],
   [ 'at', 'Austria' ],
@@ -20,13 +21,16 @@ describe.each([
   [ 'cz', 'Czech Republic' ],
   [ 'de', 'Germany' ],
   [ 'dk', 'Denmark' ],
+  [ 'dj-stoxx', 'DowJones STOXX' ],
   [ 'ec', 'Ecuador' ],
+  [ 'eg', 'Egypt' ],
   [ 'ee', 'Estonia' ],
   [ 'es', 'Spain' ],
   [ 'et', 'Ethiopia' ],
   [ 'fi', 'Finland'],
   [ 'fr', 'France' ],
-  [ 'gr', 'Greece'],
+  [ 'gb', 'United Kingdom' ],
+  [ 'gr', 'Greece' ],
   [ 'hr', 'Croatia' ],
   [ 'hu', 'Hungary' ],
   [ 'ie', 'Ireland' ],
@@ -36,6 +40,7 @@ describe.each([
   [ 'kz', 'Kazakhstan' ],
   [ 'jp', 'Japan' ],
   [ 'li', 'Liechtenstein' ],
+  [ 'lme', 'London metal exchange' ],
   [ 'lt', 'Lithuania' ],
   [ 'lu', 'Luxembourg' ],
   [ 'lv', 'Latvia' ],
@@ -50,6 +55,7 @@ describe.each([
   [ 'no', 'Norway' ],
   [ 'nsye-euronext', 'nsye-euronext'],
   [ 'nyse', 'New York Stock Exchange' ],
+  [ 'nz', 'New Zealand' ],
   [ 'pa', 'Panama' ],
   [ 'pe', 'Peru' ],
   [ 'pl', 'Poland' ],
@@ -62,7 +68,7 @@ describe.each([
   [ 'si', 'Slovenia' ],
   [ 'sk', 'Slovakia' ],
   [ 'target', 'Trans-European Automated Real-time Gross settlement Express Transfer system closing dates'],
-  [ 'uk', 'United Kingdom' ],
+  [ 'tr', 'Turkey' ],
   [ 'us', 'United States' ],
   [ 'uy', 'Uruguay' ],
   [ 've', 'Venezuela' ],
@@ -73,5 +79,4 @@ describe.each([
   test('hierarchy correct', () => expect(configuration.hierarchy).toBe(iso));
   test('description correct', () => expect(configuration.description).toBe(description));
   test('number of errors', () => expect(configuration.errors.length).toBe(0));
-
 });

@@ -1,5 +1,10 @@
 [
   {
+    "code": "ae",
+    "fullPath": "ae",
+    "description": "United Arab Emirates"
+  },
+  {
     "code": "al",
     "fullPath": "al",
     "description": "Albania"
@@ -84,7 +89,14 @@
       {
         "code": "qld",
         "fullPath": "au/qld",
-        "description": "Queensland"
+        "description": "Queensland",
+        "children": [
+          {
+            "code": "br",
+            "fullPath": "au/qld/br",
+            "description": "Brisbane Area"
+          }
+        ]
       },
       {
         "code": "sa",
@@ -99,12 +111,12 @@
           {
             "code": "ho",
             "fullPath": "au/tas/ho",
-            "description": "Hobard Area"
+            "description": "Hobart Area"
           },
           {
             "code": "nh",
             "fullPath": "au/tas/nh",
-            "description": "Non-Hobard Area"
+            "description": "Non-Hobart Area"
           }
         ]
       },
@@ -116,7 +128,7 @@
       {
         "code": "wa",
         "fullPath": "au/wa",
-        "description": "West Australia"
+        "description": "Western Australia"
       }
     ]
   },
@@ -170,13 +182,13 @@
         ]
       },
       {
-        "code": "s",
-        "fullPath": "br/s",
+        "code": "sp",
+        "fullPath": "br/sp",
         "description": "Sao Paulo",
         "children": [
           {
-            "code": "cs",
-            "fullPath": "br/s/cs",
+            "code": "csp",
+            "fullPath": "br/sp/csp",
             "description": "City of Sao Paulo"
           }
         ]
@@ -241,6 +253,18 @@
         "code": "pe",
         "fullPath": "br/pe",
         "description": "Pernambuco"
+      },
+      {
+        "code": "pb",
+        "fullPath": "br/pb",
+        "description": "Paraíba",
+        "children": [
+          {
+            "code": "jpa",
+            "fullPath": "br/pb/jpa",
+            "description": "João Pessoa"
+          }
+        ]
       }
     ]
   },
@@ -484,6 +508,11 @@
     "description": "Germany",
     "children": [
       {
+        "code": "be",
+        "fullPath": "de/be",
+        "description": "Berlin"
+      },
+      {
         "code": "bb",
         "fullPath": "de/bb",
         "description": "Brandenburg"
@@ -491,12 +520,12 @@
       {
         "code": "bw",
         "fullPath": "de/bw",
-        "description": "Baden-Württenberg"
+        "description": "Baden-Württemberg"
       },
       {
         "code": "by",
         "fullPath": "de/by",
-        "description": "Bayern",
+        "description": "Bavaria",
         "children": [
           {
             "code": "mu",
@@ -528,7 +557,7 @@
       {
         "code": "he",
         "fullPath": "de/he",
-        "description": "Hessen"
+        "description": "Hesse"
       },
       {
         "code": "mv",
@@ -538,12 +567,12 @@
       {
         "code": "nw",
         "fullPath": "de/nw",
-        "description": "Nordrhein-Westfalen"
+        "description": "North Rhine-Westphalia"
       },
       {
         "code": "rp",
         "fullPath": "de/rp",
-        "description": "Rheinland-Pfalz"
+        "description": "Rhineland-Palatinate"
       },
       {
         "code": "sl",
@@ -553,19 +582,44 @@
       {
         "code": "sn",
         "fullPath": "de/sn",
-        "description": "Sachsen"
+        "description": "Saxony"
       },
       {
         "code": "st",
         "fullPath": "de/st",
-        "description": "Sachsen-Anhalt"
+        "description": "Saxony-Anhalt"
       },
       {
         "code": "th",
         "fullPath": "de/th",
-        "description": "Thüringen"
+        "description": "Thuringia"
+      },
+      {
+        "code": "sh",
+        "fullPath": "de/sh",
+        "description": "Schleswig-Holstein"
+      },
+      {
+        "code": "hh",
+        "fullPath": "de/hh",
+        "description": "Hamburg"
+      },
+      {
+        "code": "hb",
+        "fullPath": "de/hb",
+        "description": "Bremen"
+      },
+      {
+        "code": "ni",
+        "fullPath": "de/ni",
+        "description": "Lower-Saxony"
       }
     ]
+  },
+  {
+    "code": "dj-stoxx",
+    "fullPath": "dj-stoxx",
+    "description": "DowJones STOXX"
   },
   {
     "code": "dk",
@@ -581,6 +635,11 @@
     "code": "ee",
     "fullPath": "ee",
     "description": "Estonia"
+  },
+  {
+    "code": "eg",
+    "fullPath": "eg",
+    "description": "Egypt"
   },
   {
     "code": "es",
@@ -625,7 +684,14 @@
       {
         "code": "ct",
         "fullPath": "es/ct",
-        "description": "Catalonia"
+        "description": "Catalonia",
+        "children": [
+          {
+            "code": "bcn",
+            "fullPath": "es/ct/bcn",
+            "description": "Barcelona"
+          }
+        ]
       },
       {
         "code": "ex",
@@ -692,7 +758,14 @@
   {
     "code": "fi",
     "fullPath": "fi",
-    "description": "Finland"
+    "description": "Finland",
+    "children": [
+      {
+        "code": "ax",
+        "fullPath": "fi/ax",
+        "description": "Aland"
+      }
+    ]
   },
   {
     "code": "fr",
@@ -733,6 +806,53 @@
         "code": "mo",
         "fullPath": "fr/mo",
         "description": "Moselle"
+      }
+    ]
+  },
+  {
+    "code": "gb",
+    "fullPath": "gb",
+    "description": "United Kingdom",
+    "children": [
+      {
+        "code": "al",
+        "fullPath": "gb/al",
+        "description": "Alderney"
+      },
+      {
+        "code": "en",
+        "fullPath": "gb/en",
+        "description": "England"
+      },
+      {
+        "code": "gu",
+        "fullPath": "gb/gu",
+        "description": "Guernsey"
+      },
+      {
+        "code": "im",
+        "fullPath": "gb/im",
+        "description": "Isle of Man"
+      },
+      {
+        "code": "je",
+        "fullPath": "gb/je",
+        "description": "Jersey"
+      },
+      {
+        "code": "ni",
+        "fullPath": "gb/ni",
+        "description": "Northern Ireland"
+      },
+      {
+        "code": "sc",
+        "fullPath": "gb/sc",
+        "description": "Scotland"
+      },
+      {
+        "code": "wa",
+        "fullPath": "gb/wa",
+        "description": "Wales"
       }
     ]
   },
@@ -971,6 +1091,11 @@
     "description": "Liechtenstein"
   },
   {
+    "code": "lme",
+    "fullPath": "lme",
+    "description": "London metal exchange"
+  },
+  {
     "code": "lt",
     "fullPath": "lt",
     "description": "Lithuania"
@@ -1104,6 +1229,73 @@
     "code": "nyse",
     "fullPath": "nyse",
     "description": "New York Stock Exchange"
+  },
+  {
+    "code": "nz",
+    "fullPath": "nz",
+    "description": "New Zealand",
+    "children": [
+      {
+        "code": "auk",
+        "fullPath": "nz/auk",
+        "description": "Auckland"
+      },
+      {
+        "code": "tki",
+        "fullPath": "nz/tki",
+        "description": "Taranaki"
+      },
+      {
+        "code": "hkb",
+        "fullPath": "nz/hkb",
+        "description": "Hawke's Bay"
+      },
+      {
+        "code": "wgn",
+        "fullPath": "nz/wgn",
+        "description": "Wellington"
+      },
+      {
+        "code": "mbh",
+        "fullPath": "nz/mbh",
+        "description": "Marlborough"
+      },
+      {
+        "code": "nsn",
+        "fullPath": "nz/nsn",
+        "description": "Nelson"
+      },
+      {
+        "code": "can",
+        "fullPath": "nz/can",
+        "description": "Canterbury"
+      },
+      {
+        "code": "cans",
+        "fullPath": "nz/cans",
+        "description": "Canterbury (South)"
+      },
+      {
+        "code": "wtc",
+        "fullPath": "nz/wtc",
+        "description": "Westland"
+      },
+      {
+        "code": "ota",
+        "fullPath": "nz/ota",
+        "description": "Otago"
+      },
+      {
+        "code": "stl",
+        "fullPath": "nz/stl",
+        "description": "Southland"
+      },
+      {
+        "code": "cit",
+        "fullPath": "nz/cit",
+        "description": "Chatham Islands"
+      }
+    ]
   },
   {
     "code": "pa",
@@ -2653,56 +2845,14 @@
     "description": "Trans-European Automated Real-time Gross settlement Express Transfer system closing dates"
   },
   {
+    "code": "tr",
+    "fullPath": "tr",
+    "description": "Turkey"
+  },
+  {
     "code": "ua",
     "fullPath": "ua",
     "description": "Ukraine"
-  },
-  {
-    "code": "uk",
-    "fullPath": "uk",
-    "description": "United Kingdom",
-    "children": [
-      {
-        "code": "al",
-        "fullPath": "uk/al",
-        "description": "Alderney"
-      },
-      {
-        "code": "en",
-        "fullPath": "uk/en",
-        "description": "England"
-      },
-      {
-        "code": "gu",
-        "fullPath": "uk/gu",
-        "description": "Guernsey"
-      },
-      {
-        "code": "im",
-        "fullPath": "uk/im",
-        "description": "Isle of Man"
-      },
-      {
-        "code": "je",
-        "fullPath": "uk/je",
-        "description": "Jersey"
-      },
-      {
-        "code": "ni",
-        "fullPath": "uk/ni",
-        "description": "Northern Ireland"
-      },
-      {
-        "code": "sc",
-        "fullPath": "uk/sc",
-        "description": "Scotland"
-      },
-      {
-        "code": "wa",
-        "fullPath": "uk/wa",
-        "description": "Wales"
-      }
-    ]
   },
   {
     "code": "us",

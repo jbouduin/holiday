@@ -38,7 +38,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "DECEMBER",
       "day": 6
     },
@@ -110,6 +110,20 @@
           "day": 6
         }
       }
+    }
+  ],
+  "subConfigurations": [
+    {
+      "hierarchy": "ax",
+      "description": "Aland",
+      "holidays": [
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "SELF_GOVERNANCE",
+          "month": "JUNE",
+          "day": 9
+        }
+      ]
     }
   ]
 }

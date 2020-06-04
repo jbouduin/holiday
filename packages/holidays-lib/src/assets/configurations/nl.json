@@ -8,7 +8,8 @@
     },
     {
       "holidayType": "CHRISTIAN",
-      "key": "GOOD_FRIDAY"
+      "key": "GOOD_FRIDAY",
+      "category": "UNOFFICIAL_HOLIDAY"
     },
     {
       "holidayType": "CHRISTIAN",
@@ -17,6 +18,10 @@
     {
       "holidayType": "CHRISTIAN",
       "key": "ASCENSION_DAY"
+    },
+    {
+      "holidayType": "CHRISTIAN",
+      "key": "WHIT_SUNDAY"
     },
     {
       "holidayType": "CHRISTIAN",
@@ -30,24 +35,62 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "QUEENS_BIRTHDAY",
+      "key": "KINGS_DAY",
       "month": "APRIL",
-      "day": 30
+      "day": 27,
+      "validFrom": 2014,
+      "moves": [
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "PREVIOUS",
+          "weekday": "SATURDAY"
+        }
+      ]
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "KINGS_DAY",
+      "key": "QUEENS_BIRTHDAY",
+      "month": "AUGUST",
+      "day": 31,
+      "validFrom": 1885,
+      "validTo": 1947
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "QUEENS_BIRTHDAY",
       "month": "APRIL",
-      "day": 26,
-      "validFrom": 2014
+      "day": 30,
+      "validFrom": 1948,
+      "validTo": 1979,
+      "moves": [
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "NEXT",
+          "weekday": "MONDAY"
+        }
+      ]
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "QUEENS_BIRTHDAY",
+      "month": "APRIL",
+      "day": 30,
+      "validFrom": 1980,
+      "validTo": 2013,
+      "moves": [
+        {
+          "condition": "IS_SUNDAY",
+          "moveTo": "PREVIOUS",
+          "weekday": "SATURDAY"
+        }
+      ]
     },
     {
       "holidayType": "FIXED_DATE",
       "key": "LIBERATION",
       "month": "MAY",
       "day": 5,
-      "cycle": "FIVE_YEARS",
-      "validFrom": 2000
+      "validFrom": 1990
     },
     {
       "holidayType": "FIXED_DATE",

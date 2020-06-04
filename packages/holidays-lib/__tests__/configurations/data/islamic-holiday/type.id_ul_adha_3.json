@@ -1,0 +1,7 @@
+{
+  "hierarchy": "islamic-holiday-only-type",
+  "description": "islamic-holiday-only-type",
+  "holidays": [
+    { "holidayType": "ISLAMIC", "key": "ID_UL_ADHA_3" }
+  ]
+}

@@ -292,6 +292,24 @@
           "key": "ASSUMPTION_DAY",
           "month": "AUGUST",
           "day": 15
+        },
+        {
+          "holidayType": "FIXED_DATE",
+          "key": "BOXING_DAY",
+          "month": "DECEMBER",
+          "day": 26
+        }
+      ],
+      "subConfigurations": [
+        {
+          "hierarchy": "bcn",
+          "description": "Barcelona",
+          "holidays": [
+            {
+              "holidayType": "CHRISTIAN",
+              "key": "WHIT_MONDAY"
+            }
+          ]
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "hierarchy": "uk",
+  "hierarchy": "gb",
   "description": "United Kingdom",
   "holidays": [
     {
@@ -52,11 +52,29 @@
       ]
     },
     {
+      "holidayType": "FIXED_DATE",
+      "key": "BANK_HOLIDAY",
+      "month": "MAY",
+      "day": 8,
+      "validFrom": 2020,
+      "validTo": 2020
+    },
+    {
       "holidayType": "FIXED_WEEKDAY",
       "key": "BANK_HOLIDAY",
       "which": "FIRST",
       "weekday": "MONDAY",
-      "month": "MAY"
+      "month": "MAY",
+      "validFrom": 1900,
+      "validTo": 2019
+    },
+    {
+      "holidayType": "FIXED_WEEKDAY",
+      "key": "BANK_HOLIDAY",
+      "which": "FIRST",
+      "weekday": "MONDAY",
+      "month": "MAY",
+      "validFrom": 2021
     },
     {
       "holidayType": "FIXED_WEEKDAY",

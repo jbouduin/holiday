@@ -142,7 +142,7 @@
       "holidays": [
         {
           "holidayType": "FIXED_DATE",
-          "key": "INDEPENDENCE",
+          "key": "INDEPENDENCE_DAY",
           "month": "MARCH",
           "day": 1
         },

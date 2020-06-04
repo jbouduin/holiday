@@ -79,10 +79,6 @@
           "key": "CORPUS_CHRISTI"
         },
         {
-          "holidayType": "CHRISTIAN",
-          "key": "CORPUS_CHRISTI"
-        },
-        {
           "holidayType": "FIXED_DATE",
           "key": "LABOUR_DAY",
           "month": "MAY",
@@ -269,6 +265,19 @@
         {
           "holidayType": "CHRISTIAN",
           "key": "WHIT_MONDAY"
+        },
+        {
+          "holidayType": "RELATIVE_TO_WEEKDAY",
+          "key": "GENEVAN_FAST",
+          "relation": {
+            "weekday": "THURSDAY",
+            "when": "AFTER"
+          },
+          "fix": {
+            "which": "FIRST",
+            "weekday": "SUNDAY",
+            "month": "SEPTEMBER"
+          }
         }
       ]
     },
@@ -885,6 +894,19 @@
           "key": "ST_BERCHTHOLD",
           "month": "JANUARY",
           "day": 2
+        },
+        {
+          "holidayType": "RELATIVE_TO_WEEKDAY",
+          "key": "FEDERAL_DAY_THANKSGIVING_MON",
+          "relation": {
+            "weekday": "MONDAY",
+            "when": "AFTER"
+          },
+          "fix": {
+            "which": "THIRD",
+            "weekday": "SUNDAY",
+            "month": "SEPTEMBER"
+          }
         }
       ]
     },

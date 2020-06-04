@@ -115,6 +115,12 @@
           "key": "EASTER_MONDAY"
         },
         {
+          "holidayType": "FIXED_DATE",
+          "key": "SAINT_JEAN_BAPTISTE_DAY",
+          "month": "JUNE",
+          "day": 24
+        },
+        {
           "holidayType": "FIXED_WEEKDAY",
           "key": "THANKSGIVING",
           "which": "SECOND",

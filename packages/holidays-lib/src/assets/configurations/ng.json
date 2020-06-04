@@ -40,7 +40,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "OCTOBER",
       "day": 1
     },
@@ -80,7 +80,7 @@
       "holidays": [
         {
           "holidayType": "FIXED_DATE",
-          "key": "ELECTION",
+          "key": "ELECTION_DAY",
           "month": "JUNE",
           "day": 12
         }

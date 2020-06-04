@@ -29,7 +29,9 @@
       "holidayType": "FIXED_DATE",
       "key": "NEW_YEAR",
       "month": "JANUARY",
-      "day": 2
+      "day": 2,
+      "validFrom": 1955,
+      "validTo": 2012
     },
     {
       "holidayType": "FIXED_DATE",
@@ -107,7 +109,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "DECEMBER",
       "day": 26
     }

@@ -1,6 +1,6 @@
 {
-  "hierarchy": "kz",
-  "description": "Kazakhstan",
+  "hierarchy": "tr",
+  "description": "Turkey",
   "holidays": [
     {
       "holidayType": "FIXED_DATE",
@@ -10,21 +10,9 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "CHRISTMAS",
-      "month": "JANUARY",
-      "day": 7
-    },
-    {
-      "holidayType": "FIXED_DATE",
-      "key": "INTERNATIONAL_WOMAN",
-      "month": "MARCH",
-      "day": 8
-    },
-    {
-      "holidayType": "FIXED_DATE",
-      "key": "SPRING_DAY",
-      "month": "MARCH",
-      "day": 22
+      "key": "TURKEY_CHILDRENS_DAY",
+      "month": "APRIL",
+      "day": 23
     },
     {
       "holidayType": "FIXED_DATE",
@@ -34,27 +22,31 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "VICTORY",
+      "key": "TURKEY_REMEMBRANCE_OF_ATATURK",
       "month": "MAY",
-      "day": 9
+      "day": 19
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "REPUBLIC_DAY",
+      "key": "TURKEY_DEMOCRATIC_UNITY_DAY",
       "month": "JULY",
-      "day": 6
+      "day": 15
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "CONSTITUTION_DAY",
+      "key": "TURKEY_VICTORY_DAY",
       "month": "AUGUST",
       "day": 30
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE_DAY",
-      "month": "DECEMBER",
-      "day": 16
+      "key": "TURKEY_REPUBLIC_DAY",
+      "month": "OCTOBER",
+      "day": 29
+    },
+    {
+      "holidayType": "ISLAMIC",
+      "key": "ID_AL_FITR"
     },
     {
       "holidayType": "ISLAMIC",

@@ -36,6 +36,13 @@
     },
     {
       "holidayType": "FIXED_DATE",
+      "key": "UNIFICATION",
+      "month": "JANUARY",
+      "day": 24,
+      "validFrom": 2017
+    },
+    {
+      "holidayType": "FIXED_DATE",
       "key": "LABOUR_DAY",
       "month": "MAY",
       "day": 1
@@ -45,6 +52,12 @@
       "key": "NAVY_DAY",
       "month": "AUGUST",
       "day": 15
+    },
+    {
+      "holidayType": "FIXED_DATE",
+      "key": "ST_ANDREW",
+      "month": "NOVEMBER",
+      "day": 30
     },
     {
       "holidayType": "FIXED_DATE",

@@ -62,7 +62,7 @@
     },
     {
       "holidayType": "FIXED_DATE",
-      "key": "INDEPENDENCE",
+      "key": "INDEPENDENCE_DAY",
       "month": "DECEMBER",
       "day": 1
     },
@@ -152,12 +152,7 @@
     {
       "hierarchy": "ACN",
       "description": "Alcanena",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "ACB",
@@ -206,10 +201,6 @@
       "hierarchy": "ALQ",
       "description": "Alenquer",
       "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        },
         {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
@@ -293,12 +284,7 @@
     {
       "hierarchy": "ALR",
       "description": "Almeirim",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "ADV",
@@ -327,12 +313,7 @@
     {
       "hierarchy": "ALT",
       "description": "Alter do Chão",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "AVZ",
@@ -349,12 +330,7 @@
     {
       "hierarchy": "AVT",
       "description": "Alvito",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "AMD",
@@ -395,12 +371,7 @@
     {
       "hierarchy": "AND",
       "description": "Anadia",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "AGH",
@@ -417,12 +388,7 @@
     {
       "hierarchy": "ANS",
       "description": "Ansião",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "AVV",
@@ -475,12 +441,7 @@
     {
       "hierarchy": "ARL",
       "description": "Arraiolos",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "ARR",
@@ -497,12 +458,7 @@
     {
       "hierarchy": "ARV",
       "description": "Arruda dos Vinhos",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "AVR",
@@ -529,12 +485,7 @@
     {
       "hierarchy": "AZB",
       "description": "Azambuja",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "BAO",
@@ -599,12 +550,7 @@
     {
       "hierarchy": "BJA",
       "description": "Beja",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "BMT",
@@ -621,12 +567,7 @@
     {
       "hierarchy": "BNV",
       "description": "Benavente",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "BBR",
@@ -805,12 +746,7 @@
     {
       "hierarchy": "CTX",
       "description": "Cartaxo",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "CSC",
@@ -880,10 +816,6 @@
       "description": "Castro Verde",
       "holidays": [
         {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        },
-        {
           "holidayType": "FIXED_DATE",
           "key": "CITY_DAY",
           "month": "JUNE",
@@ -918,12 +850,7 @@
     {
       "hierarchy": "CHM",
       "description": "Chamusca",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "CHV",
@@ -1090,12 +1017,7 @@
     {
       "hierarchy": "ETZ",
       "description": "Estremoz",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "EVR",
@@ -1290,12 +1212,7 @@
     {
       "hierarchy": "GLG",
       "description": "Golegã",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "GDM",
@@ -1469,12 +1386,7 @@
     {
       "hierarchy": "LLE",
       "description": "Loulé",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "LRS",
@@ -1561,12 +1473,7 @@
     {
       "hierarchy": "MFR",
       "description": "Mafra",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "MAI",
@@ -1612,12 +1519,7 @@
     {
       "hierarchy": "MGR",
       "description": "Marinha Grande",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "MRV",
@@ -1639,12 +1541,7 @@
     {
       "hierarchy": "MLD",
       "description": "Mealhada",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "MED",
@@ -1661,12 +1558,7 @@
     {
       "hierarchy": "MLG",
       "description": "Melgaço",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "MTL",
@@ -1782,12 +1674,7 @@
     {
       "hierarchy": "MCQ",
       "description": "Monchique",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "MDB",
@@ -1867,12 +1754,7 @@
     {
       "hierarchy": "MRT",
       "description": "Mortágua",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "MRA",
@@ -2029,12 +1911,7 @@
     {
       "hierarchy": "OBR",
       "description": "Oliveira do Bairro",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "OHP",
@@ -2538,12 +2415,7 @@
     {
       "hierarchy": "SMG",
       "description": "Salvaterra de Magos",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "SCD",
@@ -2872,12 +2744,7 @@
     {
       "hierarchy": "SMA",
       "description": "Sobral de Monte Agraço",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "SRE",
@@ -3000,12 +2867,7 @@
     {
       "hierarchy": "TNV",
       "description": "Torres Novas",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "TVD",
@@ -3153,12 +3015,7 @@
     {
       "hierarchy": "VDG",
       "description": "Vidigueira",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "VRM",
@@ -3216,12 +3073,7 @@
     {
       "hierarchy": "VFX",
       "description": "Vila Franca de Xira",
-      "holidays": [
-        {
-          "holidayType": "CHRISTIAN",
-          "key": "ASCENSION_DAY"
-        }
-      ]
+      "holidays": []
     },
     {
       "hierarchy": "VFC",

@@ -8,6 +8,11 @@
     },
     {
       "holidayType": "CHRISTIAN",
+      "key": "GOOD_FRIDAY",
+      "validFrom": 2017
+    },
+    {
+      "holidayType": "CHRISTIAN",
       "key": "EASTER_MONDAY"
     },
     {
