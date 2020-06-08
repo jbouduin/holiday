@@ -1,3 +1,7 @@
+source: http://www.staff.science.uu.nl/~gent0113/easter/addfiles/easter.js
+The javascript file contents are stored here, just in case the source goes offline.
+
+```javascript
 function movepic(img_name,img_src){
   document[img_name].src=img_src;
 }
@@ -65,37 +69,37 @@ function seteasteryear(){
 
 function addoneyear(){
   document.eastercalc.year.value=year+1;
-  
+
   easter_passover();
 }
 
 function subtractoneyear(){
   document.eastercalc.year.value=year-1;
-  
+
   easter_passover();
 }
 
 function addoneyear1926(){
   document.easter1926.year.value=year+1;
-  
+
   easter1926();
 }
 
 function subtractoneyear1926(){
   document.easter1926.year.value=year-1;
-  
+
   easter1926();
 }
 
 function addoneeasteryear(){
   document.easteryear.year.value=year+1;
-  
+
   easteryear();  
 }
 
 function subtractoneeasteryear(){
   document.easteryear.year.value=year-1;
-  
+
   easteryear();  
 }
 
@@ -132,7 +136,7 @@ function jul_easter(year,emod){
   if((emod == 1) && (gn == 1)) d=d+1;
   e=gmod((2*b+4*c-d+6),7);
   fmj=113+d;                                     // Easter full moon [days after -92 March]
-  dmj=fmj+e+1;                                   // Easter Sunday [days after -92 March] 
+  dmj=fmj+e+1;                                   // Easter Sunday [days after -92 March]
   fmmj=Math.floor(fmj/31);                       // month Easter full moon [March = 3; April = 4]
   fmdj=gmod(fmj,31)+1;                           // day Easter full moon
   esmj=Math.floor(dmj/31);                       // month Easter Sunday [March = 3; April = 4]
@@ -181,7 +185,7 @@ function greg_easter(year){
 function easter_passover(){
 
   year=parseFloat(document.eastercalc.year.value);
-  
+
   prol=document.eastercalc.proleptic.selectedIndex;
   emod=document.eastercalc.julianmode.selectedIndex;
 
@@ -216,7 +220,7 @@ function easter_passover(){
 // Convert Dionysian Easter Sunday date to the Gregorian calendar
 
   diff_jg=Math.floor(year/100)-Math.floor(year/400)-2;  // offset between Julian and Gregorian calendar [after 0 March]
-  
+
   fmjg=j_easter[3]+diff_jg;
   fmmjg=Math.floor((fmjg-62)/30.6);
   fmdjg=Math.floor(fmjg-62-30.6*fmmjg)+1;
@@ -256,7 +260,7 @@ function easter_passover(){
     document.eastercalc.dayg.value='--';
     document.eastercalc.mong.value=' --- ';
   }
-  
+
 // Days between Dionysian and Gregorian Easter Sunday
 
   ddjg=dmjg-g_easter[0];
@@ -284,7 +288,7 @@ function easter_passover(){
   mh=Math.floor((dmh-62)/30.6);
   dh=Math.floor(dmh-62-30.6*mh)+1;
   mh=mh+2;
-  wh=gmod(c+p+5,7); 
+  wh=gmod(c+p+5,7);
   am=year+3760;
 
   document.eastercalc.amundi.value=am;
@@ -300,13 +304,13 @@ function easter_passover(){
 function easter1926(){
 
   year=parseFloat(document.easter1926.year.value);
-  
+
   var g_easter=Array;
   g_easter=greg_easter(year);
 
 // 1926 Proposal of the League of Nations
 
-  day1926=15-gmod((Math.floor(5*year/4)-Math.floor(year/100)+Math.floor(year/400)+6),7); 
+  day1926=15-gmod((Math.floor(5*year/4)-Math.floor(year/100)+Math.floor(year/400)+6),7);
   dd1926g=123+day1926-g_easter[0];
 
   document.easter1926.year.value=year;
@@ -321,13 +325,13 @@ function easter1926(){
 function easteryear(){
 
   year=parseFloat(document.easteryear.year.value);
- 
+
   var g_easter=Array;
   g_easter=greg_easter(year);
 
   gn=g_easter[6];
   ep=g_easter[7];
-  
+
   document.easteryear.numaur.value=gn;
   document.easteryear.epact.value=epactname[ep];
   if((ep == 25) && (gn > 11)) document.easteryear.epact.value='25';
@@ -359,7 +363,7 @@ function easteryear(){
   if((dl == "E") || (dl == "ED")) dep=-54-yt;
   if((dl == "F") || (dl == "FE")) dep=-53-yt;
   if((dl == "G") || (dl == "GF")) dep=-52-yt;
-  
+
   if((dl == "A") || (dl == "BA")) dadv=278;
   if((dl == "B") || (dl == "CB")) dadv=272;
   if((dl == "C") || (dl == "DC")) dadv=273;
@@ -368,7 +372,7 @@ function easteryear(){
   if((dl == "F") || (dl == "GF")) dadv=276;
   if((dl == "G") || (dl == "AG")) dadv=277;
 
-  
+
   dd=dep;                    // Feast Holy Name of Jesus (Epiphany)
   document.epiphanyseason.weekep0.value=(dd-dmar0)/7;
   document.epiphanyseason.dholyname.value=addspace(days2day(dd,yt));
@@ -388,7 +392,7 @@ function easteryear(){
     document.epiphanyseason.depiphsun2.value='--';
     document.epiphanyseason.mepiphsun2.value='   ---   ';
   }
-  
+
   dd=dep+21;                   // 3rd Sunday after Epiphany
   document.epiphanyseason.weekep3.value=(dd-dmar0)/7;
   document.epiphanyseason.depiphsun3.value=addspace(days2day(dd,yt));
@@ -398,7 +402,7 @@ function easteryear(){
     document.epiphanyseason.depiphsun3.value='--';
     document.epiphanyseason.mepiphsun3.value='   ---   ';
   }
-  
+
   dd=dep+28;                   // 4th Sunday after Epiphany
   document.epiphanyseason.weekep4.value=(dd-dmar0)/7;
   document.epiphanyseason.depiphsun4.value=addspace(days2day(dd,yt));
@@ -408,7 +412,7 @@ function easteryear(){
     document.epiphanyseason.depiphsun4.value='--';
     document.epiphanyseason.mepiphsun4.value='   ---   ';
   }
-  
+
   dd=dep+35;                   // 5th Sunday after Epiphany
   document.epiphanyseason.weekep5.value=(dd-dmar0)/7;
   document.epiphanyseason.depiphsun5.value=addspace(days2day(dd,yt));
@@ -418,7 +422,7 @@ function easteryear(){
     document.epiphanyseason.depiphsun5.value='--';
     document.epiphanyseason.mepiphsun5.value='   ---   ';
   }
-  
+
   dd=dep+42;                   // 6th Sunday after Epiphany
   document.epiphanyseason.weekep6.value=(dd-dmar0)/7;
   document.epiphanyseason.depiphsun6.value=addspace(days2day(dd,yt));
@@ -428,7 +432,7 @@ function easteryear(){
     document.epiphanyseason.depiphsun6.value='--';
     document.epiphanyseason.mepiphsun6.value='   ---   ';
   }
-  
+
   dd=dmar0-63;                 // Septuagesima Sunday
   document.easterseason.dseptuasun.value=addspace(days2day(dd,yt));
   document.easterseason.mseptuasun.value=monthname[days2month(dd,yt)-1];
@@ -620,7 +624,7 @@ function easteryear(){
     document.easterseason.deaster31sun.value='--';
     document.easterseason.measter31sun.value='   ---   ';
   }
-  
+
   dd=dmar0+224;                // 32nd Sunday after Easter
   document.easterseason.deaster32sun.value=addspace(days2day(dd,yt));
   document.easterseason.measter32sun.value=monthname[days2month(dd,yt)-1];
@@ -628,7 +632,7 @@ function easteryear(){
     document.easterseason.deaster32sun.value='--';
     document.easterseason.measter32sun.value='   ---   ';
   }
-  
+
   dd=dmar0+231;                // 33rd Sunday after Easter
   document.easterseason.deaster33sun.value=addspace(days2day(dd,yt));
   document.easterseason.measter33sun.value=monthname[days2month(dd,yt)-1];
@@ -636,7 +640,7 @@ function easteryear(){
     document.easterseason.deaster33sun.value='--';
     document.easterseason.measter33sun.value='   ---   ';
   }
-  
+
   dd=dmar0+238;                // 34th Sunday after Easter
   document.easterseason.deaster34sun.value=addspace(days2day(dd,yt));
   document.easterseason.measter34sun.value=monthname[days2month(dd,yt)-1];
@@ -644,7 +648,7 @@ function easteryear(){
     document.easterseason.deaster34sun.value='--';
     document.easterseason.measter34sun.value='   ---   ';
   }
-  
+
   dd=dmar0+245;                // 35th Sunday after Easter
   document.easterseason.deaster35sun.value=addspace(days2day(dd,yt));
   document.easterseason.measter35sun.value=monthname[days2month(dd,yt)-1];
@@ -652,7 +656,7 @@ function easteryear(){
     document.easterseason.deaster35sun.value='--';
     document.easterseason.measter35sun.value='   ---   ';
   }
-  
+
   dd=dadv;                     // 1st Advent Sunday
   document.adventseason.weekadv1.value=(dd-dmar0)/7;
   document.adventseason.dadvent1sun.value=addspace(days2day(dd,yt));
@@ -667,7 +671,7 @@ function easteryear(){
   document.adventseason.weekadv3.value=(dd-dmar0)/7;
   document.adventseason.dadvent3sun.value=addspace(days2day(dd,yt));
   document.adventseason.madvent3sun.value=monthname[days2month(dd,yt)-1];
-  
+
   dd=dadv+17;                  // Ember Wednesday in Advent
   document.adventseason.demberadvwed.value=addspace(days2day(dd,yt));
   document.adventseason.memberadvwed.value=monthname[days2month(dd,yt)-1];
@@ -684,9 +688,10 @@ function easteryear(){
   document.adventseason.weekadv4.value=(dd-dmar0)/7;
   document.adventseason.dadvent4sun.value=addspace(days2day(dd,yt));
   document.adventseason.madvent4sun.value=monthname[days2month(dd,yt)-1];
-  
+
   dd=dadv+28;                  // 5th Advent Sunday
   document.adventseason.weekadv5.value=(dd-dmar0)/7;
   document.adventseason.dadvent5sun.value=addspace(days2day(dd,yt));
   document.adventseason.madvent5sun.value=monthname[days2month(dd,yt)-1];
 }
+```
