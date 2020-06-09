@@ -1,5 +1,5 @@
 import { IFix, IRelation } from '../specifics';
-import { Category, Cycle, HolidayType, Weekday, When } from '../types';
+import { Category, Cycle, HolidayType } from '../types';
 import { IBaseHoliday, BaseHoliday } from './base-holiday';
 
 export interface IRelativeHoliday<T extends IRelation, U extends IFix > extends IBaseHoliday<string> {
@@ -31,6 +31,10 @@ export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelat
   // </editor-fold>
 
   // <editor-fold desc='Abstract methods implementation'>
+  public get stringKey(): string {
+    return this.key;
+  }
+
   public get translationKey(): string {
     return this.key;
   }

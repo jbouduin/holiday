@@ -1,4 +1,4 @@
-import { IBaseHoliday, IConfiguration } from '../configuration';
+import { IBaseHoliday, IConfiguration } from '../../configuration';
 
 export interface IHierarchyFilter {
   filterConfigurationByHierarchy(

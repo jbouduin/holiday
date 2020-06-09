@@ -1,4 +1,4 @@
-import { HierarchyFilter } from '../../src/calculators';
+import { HierarchyFilter } from '../../src/calculators/helpers';
 import { Loader } from '../loader';
 import { IBaseHoliday } from '../../src/configuration';
 

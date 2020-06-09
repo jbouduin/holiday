@@ -7,6 +7,7 @@ export interface IBaseHoliday<T> {
   readonly category: Category;
   readonly validFrom: number;
   readonly validTo: number;
+  readonly stringKey: string;
   readonly translationKey: string;
   readonly holidayType: HolidayType;
   readonly moves: Array<IMove>;
@@ -33,6 +34,7 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   // </editor-fold>
 
   // <editor-fold desc='Abstract methods'>
+  public abstract get stringKey(): string;
   public abstract get translationKey(): string;
   // </editor-fold>
 

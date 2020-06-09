@@ -27,6 +27,10 @@ export class FixedDateHoliday extends BaseHoliday<string> implements IFixedDateH
   // </editor-fold>
 
   // <editor-fold desc='Abstract method implementations'>
+  public get stringKey(): string {
+    return this.key;
+  }
+
   public get translationKey(): string {
     return this.key;
   }

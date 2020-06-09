@@ -27,7 +27,7 @@ test('calculate a christian holiday (EASTER)', async () => {
   const calculator = new HierarchyCalculator('en', new FileProvider('./data/valid'));
   return calculator.getHolidays('02', 2022, false).then( holidays => {
     expect(holidays.length).toBe(1);
-    expect(ChristianHolidayType[holidays[0].key]).toBe(ChristianHolidayType[ChristianHolidayType.EASTER]);
+    expect(holidays[0].key).toBe(ChristianHolidayType[ChristianHolidayType.EASTER]);
     expect(holidays[0].date).toStrictEqual(new Date(Date.UTC(2022, 3, 24)));
   });
 });

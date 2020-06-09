@@ -1,7 +1,7 @@
 import { IFileProvider, IHoliday, IHierarchy } from '../api';
 import { IBaseHoliday, IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday, IConfiguration  } from '../configuration';
 import { ConfigurationFactory, HolidayType  } from '../configuration';
-import { HierarchyFilter } from './hierarchy-filter';
+import { HierarchyFilter } from './helpers';
 import { ChristianHolidayCalculator } from './christian-holiday-calculator';
 import { FixedHolidayCalculator } from './fixed-holiday-calculator';
 import { FixedWeekdayCalculator } from './fixed-weekday-calculator';
@@ -121,7 +121,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       }
     }
 
-    return date ? new CalculatedHoliday(date, holiday.key, holiday.translationKey) : undefined;
+    return date ? new CalculatedHoliday(date, holiday.stringKey, holiday.translationKey) : undefined;
   }
 
   private translateHierarchyTree(tree: Array<IHierarchy>, translations: any, fallback: any): Array<IHierarchy> {
