@@ -16,6 +16,7 @@ describe.each([
   const holiday: IEthiopianOrthodoxHoliday = configuration.holidays[0] as IEthiopianOrthodoxHoliday;
   test(`EthiopianOrthodoxHolidayType`,
      () => expect(EthiopianOrthodoxHolidayType[holiday.key]).toBe(EthiopianOrthodoxHolidayType[expected]));
+  test(`string key`, () => expect(holiday.stringKey).toBe(EthiopianOrthodoxHolidayType[expected]));
 });
 
 describe.each([

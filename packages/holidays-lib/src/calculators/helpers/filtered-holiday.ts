@@ -1,4 +1,4 @@
-import { IBaseHoliday } from "../../configuration";
+import { IBaseHoliday } from '../../configuration';
 
 export class FilteredHoliday<T> {
   public hierarchy: string;

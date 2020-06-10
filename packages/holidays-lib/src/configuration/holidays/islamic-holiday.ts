@@ -23,8 +23,6 @@ export class IslamicHoliday extends BaseHoliday<IslamicHolidayType> implements I
   }
 
   public get translationKey(): string {
-    // redundant line of code to get codecoverage
-    this.stringKey;
     return 'ISLAMIC.' + IslamicHolidayType[this.key];
   }
   // </editor-fold>

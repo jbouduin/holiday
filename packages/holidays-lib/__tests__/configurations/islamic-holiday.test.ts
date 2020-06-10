@@ -26,6 +26,7 @@ describe.each([
   test('number of holidays', () => expect(configuration.holidays.length).toBe(1));
   const holiday: IIslamicHoliday = configuration.holidays[0] as IIslamicHoliday;
   test(`type value`, () => expect(IslamicHolidayType[holiday.key]).toBe(IslamicHolidayType[expected]));
+  test(`string key`, () => expect(holiday.stringKey).toBe(IslamicHolidayType[expected]));
 })
 
 describe.each([

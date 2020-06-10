@@ -22,8 +22,6 @@ export class EthiopianOrthodoxHoliday extends BaseHoliday<EthiopianOrthodoxHolid
   }
 
   public get translationKey(): string {
-    // redundant line of code to get codecoverage
-    this.stringKey;
     return 'ETHIOPIAN_ORTHODOX.' + EthiopianOrthodoxHolidayType[this.key];
   }
   // </editor-fold>
