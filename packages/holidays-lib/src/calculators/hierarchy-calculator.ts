@@ -1,7 +1,7 @@
 import { IFileProvider, IHoliday, IHierarchy } from '../api';
 import { IBaseHoliday, IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday, IConfiguration  } from '../configuration';
 import { ConfigurationFactory, HolidayType  } from '../configuration';
-import { HierarchyFilter } from './helpers';
+import { HierarchyFilter, FilteredHoliday } from './helpers';
 import { ChristianHolidayCalculator } from './christian-holiday-calculator';
 import { FixedHolidayCalculator } from './fixed-holiday-calculator';
 import { FixedWeekdayCalculator } from './fixed-weekday-calculator';
@@ -16,11 +16,21 @@ export interface IHierarchyCalculator {
 class CalculatedHoliday implements IHoliday {
   public date: Date;
   public key: string;
+  public fullPath: string;
+  public hierarchy: string;
   public name: string;
   public translationKey: string;
 
-  public constructor(date: Date, key: string, translationKey: string) {
+  public constructor(
+    date: Date,
+    fullPath: string,
+    hierarchy: string,
+    key: string,
+    translationKey: string) {
+
     this.date = date;
+    this.fullPath = fullPath;
+    this.hierarchy = hierarchy;
     this.key = key;
     this.name = key;
     this.translationKey = translationKey
@@ -54,7 +64,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       const configuration: IConfiguration = new ConfigurationFactory().loadConfigurationFromString('root', strings[0]);
       const translations: any = JSON.parse(strings[1]);
       const fallback: any = JSON.parse(strings[2]);
-      const holidays: Array<IBaseHoliday<any>> = new HierarchyFilter().filterConfigurationByHierarchy(configuration, hierarchy, deep);
+      const holidays: Array<FilteredHoliday<any>> = new HierarchyFilter().filterConfigurationByHierarchy(configuration, hierarchy, deep);
       const calculatedHolidays = new Array<CalculatedHoliday | undefined>();
       holidays.forEach(holiday => calculatedHolidays.push(this.calculateHoliday(holiday, year - 1)));
       holidays.forEach(holiday => calculatedHolidays.push(this.calculateHoliday(holiday, year)));
@@ -91,11 +101,11 @@ export class HierarchyCalculator implements IHierarchyCalculator {
   // </editor-fold>
 
   // <editor-fold desc='Private methods'>
-  private calculateHoliday(holiday: IBaseHoliday<any>, year: number): CalculatedHoliday | undefined {
+  private calculateHoliday(holiday: FilteredHoliday<any>, year: number): CalculatedHoliday | undefined {
     let date: Date | undefined;
-    switch(holiday.holidayType) {
+    switch(holiday.holiday.holidayType) {
       case HolidayType.CHRISTIAN: {
-        date = new ChristianHolidayCalculator().calculate(holiday as IChristianHoliday, year);
+        date = new ChristianHolidayCalculator().calculate(holiday.holiday as IChristianHoliday, year);
         break;
       }
       case HolidayType.ETHIOPIAN_ORTHODOX: {
@@ -103,11 +113,11 @@ export class HierarchyCalculator implements IHierarchyCalculator {
         break;
       }
       case HolidayType.FIXED_DATE: {
-        date = new FixedHolidayCalculator().calculate(holiday as IFixedDateHoliday, year);
+        date = new FixedHolidayCalculator().calculate(holiday.holiday as IFixedDateHoliday, year);
         break;
       }
       case HolidayType.FIXED_WEEKDAY: {
-        date = new FixedWeekdayCalculator().calculate(holiday as IFixedWeekdayHoliday, year);
+        date = new FixedWeekdayCalculator().calculate(holiday.holiday as IFixedWeekdayHoliday, year);
         break;
       }
       case HolidayType.ISLAMIC: {
@@ -117,11 +127,16 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       case HolidayType.RELATIVE_BETWEEN_FIXED:
       case HolidayType.RELATIVE_TO_DATE:
       case HolidayType.RELATIVE_TO_WEEKDAY: {
-        date = new RelativeHolidayCalculator().calculate(holiday as IRelativeHoliday<any, any>, year)
+        date = new RelativeHolidayCalculator().calculate(holiday.holiday as IRelativeHoliday<any, any>, year)
       }
     }
 
-    return date ? new CalculatedHoliday(date, holiday.stringKey, holiday.translationKey) : undefined;
+    return date ? new CalculatedHoliday(
+      date,
+      holiday.fullPath,
+      holiday.hierarchy,
+      holiday.holiday.stringKey,
+      holiday.holiday.translationKey) : undefined;
   }
 
   private translateHierarchyTree(tree: Array<IHierarchy>, translations: any, fallback: any): Array<IHierarchy> {
