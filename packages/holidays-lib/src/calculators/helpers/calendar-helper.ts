@@ -1,4 +1,4 @@
-import { ChronologyType, Cycle } from '../../configuration';
+import { Cycle } from '../../configuration';
 import { Which } from '../../configuration';
 import { BaseHoliday, IBaseHoliday, IFixedDate, IFixedWeekday } from '../../configuration';
 

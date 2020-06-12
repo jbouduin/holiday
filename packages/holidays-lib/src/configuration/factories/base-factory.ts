@@ -1,6 +1,5 @@
 import { ErrorKey, ILoadError, LoadError } from '../errors';
 import { IBaseHoliday, BaseHoliday } from '../holidays';
-import { IFixedDate, IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { Cycle, CycleKeyStrings } from '../types';
 import { Category, CategoryKeyStrings } from '../types';
 

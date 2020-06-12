@@ -1,3 +1,40 @@
+# Islamic holidays
+
+## holiday definition
+
+### Properties
+| Property    | Mandatory | Default   | Description      |
+| ---------   | :-------: | --------- | ---------------- |
+| holidayType | yes       |           | must be: ISLAMIC |
+| key         | yes       |           | see below        |
+
+### Implemented Islamic holidays
+
+| Key             | Occurs                       |
+| --------------- | ---------------------------- |
+| NEWYEAR         | 01/01 |
+| ASCHURA         | 10/01 |
+| LAILAT_AL_MIRAJ | 27/07 |
+| LAILAT_AL_BARAT | 15/08 |
+| RAMADAN         | 01/09 |
+| ID_AL_FITR      | 01/10 |
+| ID_AL_FITR_2    | 02/10 |
+| ID_AL_FITR_3    | 03/10 |
+| LAILAT_AL_QADR  | |
+| MAWLID_AN_NABI  | |
+| RAMADAN_END     | |
+| ARAFAAT         | 09/12 |
+| ID_UL_ADHA      | 10/12 |
+| ID_UL_ADHA_2    | 11/12 |
+| ID_UL_ADHA_3    | 12/12 |
+
+### Sample
+```json
+{
+  "holidayType": "ISLAMIC",
+  "key": "NEWYEAR"
+}
+```
 ## Credits and sources
 
 - the lisp code from GNU Emacs' cal-islam.el which itself is based on [Calendrical Calculations](https://www.reingold.co/cc-paper.pdf) by Nachum Dershowitz and Edward M. Reingold.
