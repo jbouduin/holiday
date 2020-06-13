@@ -23,7 +23,7 @@ Following [types of holidays](https://github.com/jbouduin/holiday/blob/master/pa
 | ISLAMIC                | [Details](/docs/configuration/islamic.md)                | :x:                   |
 | RELATIVE_BETWEEN_FIXED | [Details](/docs/configuration/relative-between-fixed.md) | :white_check_mark:    |
 | RELATIVE_TO_DATE       | [Details](/docs/configuration/relative-to-date.md)       | :white_check_mark:    |
-| RELATIVE_TO_WEEKDAY    |  [Details](/docs/configuration/relative-to-weekday.md)   | :white_check_mark:    |
+| RELATIVE_TO_WEEKDAY    | [Details](/docs/configuration/relative-to-weekday.md)    | :white_check_mark:    |
 
 ## Demo Site
 Source: [holiday-site](https://github.jbouduin/holiday-site)
@@ -36,3 +36,8 @@ Demo: [here](https://jbouduin.github.io/holiday-site/)
 Source [holiday-server](https://github.com/jbouduin/holiday-server)
 
 ![call](/docs/images/api-server.jpg)
+
+## Contributing
+If you find a bug, have a great idea, can translate the resources, or discovered missing or wrong holiday definitions, you can
+- [create an issue](https://github.com/jbouduin/holiday/issues/new/choose)
+- correct/implement yourself and create a pull request. If you write code, please have a look at the [coding-guidelines](/docs/contributing/coding-guidelines.md)
