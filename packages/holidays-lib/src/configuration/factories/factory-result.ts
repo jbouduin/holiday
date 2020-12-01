@@ -1,5 +1,5 @@
 import { IBaseHoliday } from '../holidays';
-import { ILoadError, LoadError } from '../errors';
+import { ILoadError } from '../errors';
 
 export interface IFactoryResult<T extends IBaseHoliday<any>> {
   holiday?: T;

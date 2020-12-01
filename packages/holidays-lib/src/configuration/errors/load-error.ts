@@ -1,5 +1,3 @@
-import { ErrorKey } from './error-key';
-
 export interface ILoadError {
   key: string;
   location: string;

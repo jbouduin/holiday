@@ -1,4 +1,4 @@
-import { IIslamicHoliday, IslamicHolidayType } from '../configuration';
+import { IIslamicHoliday } from '../configuration';
 import { IBaseCalculator, BaseCalculator } from './base-calculator';
 
 export interface IIslamicHolidayCalculator extends IBaseCalculator<IIslamicHoliday>{ }
@@ -12,6 +12,7 @@ export class IslamicHolidayCalculator extends BaseCalculator<IIslamicHoliday> im
   //#endregion
 
   //#region Abstract method implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public calculateDate(holiday: IIslamicHoliday, year: number): Date | undefined
   {
     return undefined;

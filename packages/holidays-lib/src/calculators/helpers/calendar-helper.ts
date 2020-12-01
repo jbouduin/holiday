@@ -13,6 +13,7 @@ export interface ICalendarHelper {
 export class CalendarHelper implements ICalendarHelper {
 
   //#region Constructor & C°
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public constructor() { }
   //#endregion
 

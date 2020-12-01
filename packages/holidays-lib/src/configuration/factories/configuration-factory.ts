@@ -19,7 +19,9 @@ export interface IConfigurationFactory {
 export class ConfigurationFactory implements IConfigurationFactory {
 
   //#region Constructor & C°
-  public constructor() { }
+  public constructor() {
+    // nothing to do here
+  }
   //#endregion
 
   //#region IConfigurationFactory interface methods

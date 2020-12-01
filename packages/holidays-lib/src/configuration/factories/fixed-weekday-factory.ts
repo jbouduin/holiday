@@ -1,7 +1,5 @@
-import { ErrorKey } from '../errors';
 import { IFixedWeekdayHoliday, FixedWeekdayHoliday } from '../holidays';
 import { IFixedWeekday } from '../specifics';
-import { ChronologyType, ChronologyTypeKeyStrings} from '../types';
 import { Category, Cycle } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 

@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build:package": "tsc",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "test": "echo \"Error: run tests from root\" && exit 1",
     "clean:assets": "rimraf lib/assets",
     "copy:assets": "copyfiles \"src/assets/**/*\" -u 1 lib"

@@ -21,7 +21,8 @@ export class IslamicFactory extends BaseFactory<IIslamicHoliday, IslamicHolidayT
       key, category, cycle, validFrom, validTo);
   }
 
-  protected extractData(obj: any): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  protected extractData(_obj: any): void {
     // nothing to do here
   }
 

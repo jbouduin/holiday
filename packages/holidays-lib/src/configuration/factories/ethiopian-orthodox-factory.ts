@@ -27,6 +27,7 @@ export class EthiopianOrthodoxFactory
     return new EthiopianOrthodoxHoliday(key, category, cycle, validFrom, validTo);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   protected extractData(obj: any): void {
     // nothing to do here
   }

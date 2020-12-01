@@ -11,6 +11,7 @@ export interface IHierarchyFilter {
 export class HierarchyFilter implements IHierarchyFilter {
 
   //#region Constructor & Co°
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public constructor() { }
   //#endregion
 

@@ -3,7 +3,6 @@ import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IBetweenFixedDates, IRelationWeekday } from '../specifics';
 import { Category, Cycle, HolidayType } from '../types';
 import { Weekday, WeekdayKeyStrings } from '../types';
-import { When } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
 export interface IRelativeBetweenFixedFactory extends IBaseFactory<IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>, string>{ }
@@ -95,7 +94,7 @@ export class RelativeBetweenFixedFactory
           }
         }
       }
-    };
+    }
   }
 
   protected extractKey(obj: any): string {

@@ -45,7 +45,7 @@ export class RelativeHolidayCalculator extends BaseCalculator<IRelativeHoliday<I
     year: number): Date | undefined {
 
     const from = this.calendarHelper.calculateFixedDate(holiday.fix.from, year);
-    const to = this.calendarHelper.calculateFixedDate(holiday.fix.to, year);
+    // const to = this.calendarHelper.calculateFixedDate(holiday.fix.to, year);
 
     const dayOfFrom = from.getDay();
     const result = this.calendarHelper.addDays(from,

@@ -12,6 +12,7 @@ export class HijriGregorianConvertor {
   //#endregion
 
   //#region Constructor & C°
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   public constructor() { }
   //#endregion
 
@@ -25,6 +26,7 @@ export class HijriGregorianConvertor {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public hijriToGregorian(hijriDate: HijriDate, calendar: IslamicCalendar): Date {
     throw new Error('Not Implemented');
   }

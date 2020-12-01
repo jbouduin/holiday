@@ -2,9 +2,6 @@ import { ErrorKey } from '../errors';
 import { IRelativeHoliday, RelativeHoliday } from '../holidays';
 import { IFixedWeekday, IRelationWhichWeekdayWhen } from '../specifics';
 import { Category, Cycle, HolidayType } from '../types';
-import { Weekday, WeekdayKeyStrings } from '../types';
-import { When, WhenKeyStrings } from '../types';
-import { Which, WhichKeyStrings } from '../types';
 import { IBaseFactory, BaseFactory } from './base-factory';
 
 export interface IRelativeToWeekdayFactory extends IBaseFactory<IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>, string> { }

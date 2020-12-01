@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build:package": "tsc",
-    "lint": "tslint -p tsconfig.json",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "repository": {
