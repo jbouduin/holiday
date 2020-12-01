@@ -8,15 +8,15 @@ export interface IFactoryResult<T extends IBaseHoliday<any>> {
 
 export class FactoryResult<T extends IBaseHoliday<any>> implements IFactoryResult<T> {
 
-  // <editor-fold desc='IFactoryResult interface properties'>
+  //#region IFactoryResult interface properties
   public holiday?: T;
   public errors: Array<ILoadError>;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor and C°'>
+  //#region Constructor and C°
   public constructor(holiday: T | undefined, errors: Array<ILoadError>) {
     this.holiday = holiday;
     this.errors = errors;
   }
-  // </editor-fold>
+  //#endregion
 }

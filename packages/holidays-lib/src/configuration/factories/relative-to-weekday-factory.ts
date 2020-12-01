@@ -13,18 +13,18 @@ export class RelativeToWeekdayFactory
   extends BaseFactory<IRelativeHoliday<IRelationWhichWeekdayWhen, IFixedWeekday>, string>
   implements IRelativeToWeekdayFactory {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private fix!: IFixedWeekday;
   private relation!: IRelationWhichWeekdayWhen;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: string,
     category: Category,
@@ -64,5 +64,5 @@ export class RelativeToWeekdayFactory
   protected extractKey(obj: any): string {
     return this.dataExtractor.extractStringKey(obj);
   }
-  // </editor-fold>
+  //#endregion
 }

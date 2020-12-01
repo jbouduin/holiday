@@ -10,13 +10,13 @@ export class EthiopianOrthodoxFactory
   extends BaseFactory<IEthiopianOrthodoxHoliday, EthiopianOrthodoxHolidayType>
   implements IEthiopianOrthodoxFactory {
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: EthiopianOrthodoxHolidayType,
     category: Category,
@@ -43,6 +43,6 @@ export class EthiopianOrthodoxFactory
     }
     return result;
   }
-  // </editor-fold>
+  //#endregion
 
 }

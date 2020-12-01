@@ -8,13 +8,13 @@ export interface IIslamicFactory extends IBaseFactory<IIslamicHoliday, IslamicHo
 
 export class IslamicFactory extends BaseFactory<IIslamicHoliday, IslamicHolidayType> implements IIslamicFactory {
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: IslamicHolidayType, category: Category, cycle: Cycle, validFrom: number, validTo: number): IIslamicHoliday {
     return new IslamicHoliday(
@@ -37,6 +37,6 @@ export class IslamicFactory extends BaseFactory<IIslamicHoliday, IslamicHolidayT
     }
     return result;
   }
-  // </editor-fold>
+  //#endregion
 
 }

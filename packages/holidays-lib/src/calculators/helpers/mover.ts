@@ -8,17 +8,17 @@ export interface IMover {
 
 export class Mover implements IMover {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private calendarHelper: ICalendarHelper;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(calendarHelper: ICalendarHelper) {
     this.calendarHelper = calendarHelper;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IMover interface methods'>
+  //#region IMover interface methods
   public moveDate(moves: Array<IMove>, date: Date): Date {
     let cnt = 0;
     const original = date;
@@ -33,9 +33,9 @@ export class Mover implements IMover {
     return cnt === 32 ? original : date;
   }
 
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private helper methods'>
+  //#region Private helper methods
   private mustMove(move: IMove, date: Date): boolean {
     const day = date.getDay();
     if (move.condition === Condition.IS_WEEKEND) {
@@ -55,5 +55,5 @@ export class Mover implements IMover {
     return this.calendarHelper.addDays(date, diff);
   }
 
-  // </editor-fold>
+  //#endregion
 }

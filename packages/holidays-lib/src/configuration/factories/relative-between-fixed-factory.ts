@@ -12,18 +12,18 @@ export class RelativeBetweenFixedFactory
   extends BaseFactory<IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>, string>
   implements IRelativeBetweenFixedFactory {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private fix!: IBetweenFixedDates;
   private relation!: IRelationWeekday;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: string,
     category: Category,
@@ -101,5 +101,5 @@ export class RelativeBetweenFixedFactory
   protected extractKey(obj: any): string {
     return this.dataExtractor.extractStringKey(obj);
   }
-  // </editor-fold>
+  //#endregion
 }

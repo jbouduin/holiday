@@ -5,7 +5,7 @@ export interface IIslamicHoliday extends IBaseHoliday<IslamicHolidayType> { }
 
 export class IslamicHoliday extends BaseHoliday<IslamicHolidayType> implements IIslamicHoliday {
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(
     key: IslamicHolidayType,
     category: Category,
@@ -15,9 +15,9 @@ export class IslamicHoliday extends BaseHoliday<IslamicHolidayType> implements I
 
     super(HolidayType.ISLAMIC, key, category, cycle, validFrom, validTo);
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementations'>
+  //#region Abstract method implementations
   public get stringKey(): string {
     return IslamicHolidayType[this.key];
   }
@@ -25,5 +25,5 @@ export class IslamicHoliday extends BaseHoliday<IslamicHolidayType> implements I
   public get translationKey(): string {
     return 'ISLAMIC.' + IslamicHolidayType[this.key];
   }
-  // </editor-fold>
+  //#endregion
 }

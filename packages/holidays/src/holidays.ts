@@ -6,17 +6,17 @@ import { FileProvider } from './file-provider';
 
 export class Holidays implements IHolidays {
 
-  // <editor-fold desc='private properties'>
+  //#region private properties
   private hierarchyCalculator: IHierarchyCalculator;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(assetsPath: string, language?: string) {
     this.hierarchyCalculator = new HierarchyCalculator(language || 'en', new FileProvider(assetsPath));
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Public methods'>
+  //#region Public methods
   public getHierarchyTree(): Promise<Array<IHierarchy>> {
     return this.hierarchyCalculator.getHierarchyTree();
   }
@@ -28,5 +28,5 @@ export class Holidays implements IHolidays {
   public getSupportedLanguages(): Promise<Array<string>> {
     return this.hierarchyCalculator.getSupportedLanguages();
   }
-  // </editor-fold>
+  //#endregion
 }

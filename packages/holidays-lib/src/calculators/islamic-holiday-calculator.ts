@@ -5,13 +5,13 @@ export interface IIslamicHolidayCalculator extends IBaseCalculator<IIslamicHolid
 
 export class IslamicHolidayCalculator extends BaseCalculator<IIslamicHoliday> implements IIslamicHolidayCalculator {
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementation'>
+  //#region Abstract method implementation
   public calculateDate(holiday: IIslamicHoliday, year: number): Date | undefined
   {
     return undefined;
@@ -21,5 +21,5 @@ export class IslamicHolidayCalculator extends BaseCalculator<IIslamicHoliday> im
     // convert them to gregorian calender and return the one that suits the requested year
 
   }
-  // </editor-fold>
+  //#endregion
 }

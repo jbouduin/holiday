@@ -12,20 +12,20 @@ export interface IBaseFactory<T extends IBaseHoliday<U>, U> {
 
 export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBaseFactory<IBaseHoliday<U>, U> {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private errors: Array<ILoadError>;
   private location: string;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Protected properties'>
+  //#region Protected properties
   protected dataExtractor: IDataExtractor;
   private cycle: Cycle;
   private category: Category;
   private validFrom: number;
   private validTo: number;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     this.location = '';
     this.dataExtractor = new DataExtractor(this.addError.bind(this));
@@ -35,15 +35,15 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
     this.cycle = Cycle.EVERY_YEAR;
     this.category = Category.OFFICIAL_HOLIDAY;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods'>
+  //#region Abstract methods
   protected abstract extractKey(obj: any): U;
   protected abstract extractData(obj: any): void;
   protected abstract createHoliday(key: U, category: Category, cycle: Cycle, validFrom: number, validTo: number): T;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IBaseFactory interface methods'>
+  //#region IBaseFactory interface methods
   public create(location: string, obj: any): IFactoryResult<T> {
     this.location = location;
     const key = this.extractKey(obj);
@@ -59,15 +59,15 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
       return new FactoryResult<T>(undefined, this.errors);
     }
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Protected helper methods'>
+  //#region Protected helper methods
   protected addError(key: string, ...args: Array<any>): void {
     this.errors.push(new LoadError(key, this.location, args));
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private helper methods'>
+  //#region Private helper methods
   private extractBaseHolidayData(obj: any): void {
     if (obj.validFrom) {
       this.validFrom = Number(obj.validFrom);
@@ -117,6 +117,6 @@ export abstract class BaseFactory<T extends IBaseHoliday<U>, U> implements IBase
       this.addError(ErrorKey.VALID_TO_BEFORE_VALID_FROM, obj.validTo, obj.validFrom);
     }
   }
-  // </editor-fold>
+  //#endregion
 
 }

@@ -19,17 +19,17 @@ type ErrorHandlerCallBack = (key: string, ...args: Array<any>) => void;
 
 export class DataExtractor implements IDataExtractor {
 
-  // <editor-fold desc='Private Properties'>
+  //#region Private Properties
   private errorHandlerCallBack: ErrorHandlerCallBack;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(errorHandlerCallBack: ErrorHandlerCallBack) {
     this.errorHandlerCallBack = errorHandlerCallBack;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IDataExtractor interface methods'>
+  //#region IDataExtractor interface methods
   public extractFixedDate(obj: any): IFixedDate {
     const result: IFixedDate = {
       day: Number(obj.day),
@@ -194,9 +194,9 @@ export class DataExtractor implements IDataExtractor {
     }
     return result;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methos'>
+  //#region Private methos
   private extractMove(obj: any): IMove {
     const result: IMove = {
       condition: Condition[<ConditionKeyStrings>obj.condition],
@@ -229,5 +229,5 @@ export class DataExtractor implements IDataExtractor {
     }
     return result;
   }
-  // </editor-fold>
+  //#endregion
 }

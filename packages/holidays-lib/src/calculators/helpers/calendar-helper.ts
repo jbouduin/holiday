@@ -12,11 +12,11 @@ export interface ICalendarHelper {
 
 export class CalendarHelper implements ICalendarHelper {
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() { }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='ICalendar interface methods'>
+  //#region ICalendar interface methods
   public addDays(date: Date, days: number): Date {
     return new Date(date.getTime() + (days * 1000 * 60 * 60 * 24));
   }
@@ -53,9 +53,9 @@ export class CalendarHelper implements ICalendarHelper {
       this.isValidForCyle(holiday, year);
     return result;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private isValidForCyle(holiday: IBaseHoliday<any>, year: number): boolean
   {
     let cycleYears = 1;
@@ -88,5 +88,5 @@ export class CalendarHelper implements ICalendarHelper {
     }
     return (year - holiday.validFrom) % cycleYears === 0;
   }
-  // </editor-fold>
+  //#endregion
 }

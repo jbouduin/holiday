@@ -8,14 +8,14 @@ export interface IHijriGregorianConvertor {
 
 export class HijriGregorianConvertor {
 
-  // <editor-fold desc='Private properties'>
-  // </editor-fold>
+  //#region Private properties
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() { }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='HijriGregorianConvertor interface methods'>
+  //#region HijriGregorianConvertor interface methods
   public gregorianToHijri(date: Date, calendar: IslamicCalendar): HijriDate {
 
     if (calendar === IslamicCalendar.UMM_AL_QURA || calendar === IslamicCalendar.TURKEY) {
@@ -62,9 +62,9 @@ export class HijriGregorianConvertor {
   //
 	// 	return new Date(Date.UTC(y, m - 1, d));
   // }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private intercalatedGregorianToHijri(date: Date, calendar: IslamicCalendar): HijriDate {
     let day: number = date.getDate();
     let month: number = date.getMonth() + 1;
@@ -189,5 +189,5 @@ export class HijriGregorianConvertor {
       day: id
     };
   }
-  // </editor-fold>
+  //#endregion
 }

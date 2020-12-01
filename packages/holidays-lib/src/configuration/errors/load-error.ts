@@ -8,17 +8,17 @@ export interface ILoadError {
 
 export class LoadError implements ILoadError {
 
-  // <editor-fold desc='ILoadError interface properties'>
+  //#region ILoadError interface properties
   public key: string;
   public location: string;
   public args: Array<any>;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor(key: string, location: string, ...args: Array<any>) {
     this.key = key;
     this.location = location;
     this.args = args;
   }
-  // </editor-fold>
+  //#endregion
 }

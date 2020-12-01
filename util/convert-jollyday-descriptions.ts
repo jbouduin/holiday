@@ -23,15 +23,15 @@ import * as commandLineArgs from 'command-line-args';
 
 class Main {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private commandLineOptions = [
     { name: 'file', alias: 'f', type: String },
     { name: 'input', alias: 'i', type: String },
     { name: 'output', alias: 'o', type: String }
   ];
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Main method'>
+  //#region Main method
   public execute() {
 
     let params: any;
@@ -66,9 +66,9 @@ class Main {
     }
 
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private convertFile(fullFileName: string, outputDir: string) {
     const fileName = fullFileName.replace(/\\/g, '/').split('/').pop() || '';
     let languageCode: string = fileName.split('.')[0].split('_').pop() || '';
@@ -170,7 +170,7 @@ class Main {
       .replace(/\\u00F6/g, 'ö')
       .replace(/\\u0161/g, 'š');
   }
-  // </editor-fold>
+  //#endregion
 }
 
 

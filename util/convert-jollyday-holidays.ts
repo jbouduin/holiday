@@ -5,16 +5,16 @@ import * as commandLineArgs from 'command-line-args';
 
 class Main {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private unknownKey = '__UNKNOWN__';
   private commandLineOptions = [
     { name: 'file', alias: 'f', type: String },
     { name: 'input', alias: 'i', type: String },
     { name: 'output', alias: 'o', type: String }
   ];
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Main method'>
+  //#region Main method
   public execute() {
 
     let params: any;
@@ -49,9 +49,9 @@ class Main {
     }
 
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='XML-JSON execution'>
+  //#region XML-JSON execution
   private convertFile(fileName: string, outputDir: string) {
     var options = {
       compact: true,
@@ -89,9 +89,9 @@ class Main {
   private convertElementNames(value: string, parentElement: any) {
     return value.replace('tns:', '').toLowerCase();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Processing a configuration recursively'>
+  //#region Processing a configuration recursively
   private processConfiguration(configuration: any): any {
     const holidays = new Array<any>();
 
@@ -201,9 +201,9 @@ class Main {
       subConfigurations: subConfigurations
     };
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Holiday specific processing'>
+  //#region Holiday specific processing
   private processFixed(obj:any): any {
     try {
       let moves: Array<any> | undefined = undefined;
@@ -439,9 +439,9 @@ class Main {
       throw error;
     }
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Process moving conditions'>
+  //#region Process moving conditions
   private processMovingConditions(obj: any): Array<any> {
     const result = new Array<any>();
     if (Array.isArray(obj)) {
@@ -459,9 +459,9 @@ class Main {
       weekday: obj._attributes.weekday
     };
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private transformation methods'>
+  //#region Private transformation methods
   private transformCycle(obj: any): any {
     switch(obj) {
       case '2_YEARS': { return 'TWO_YEARS'; }
@@ -471,7 +471,7 @@ class Main {
       default: { return obj; }
     }
   }
-  // </editor-fold>
+  //#endregion
 }
 
 new Main().execute();

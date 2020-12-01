@@ -6,13 +6,13 @@ export interface IFixedWeekdayHoliday extends IBaseHoliday<string>, IFixedWeekda
 
 export class FixedWeekdayHoliday extends BaseHoliday<string> implements IFixedWeekdayHoliday {
 
-  // <editor-fold desc='IFixedWeekday interface members'>
+  //#region IFixedWeekday interface members
   public month: Month;
   public weekday: Weekday;
   public which: Which;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor(
     key: string,
     category: Category,
@@ -25,9 +25,9 @@ export class FixedWeekdayHoliday extends BaseHoliday<string> implements IFixedWe
     this.weekday = fixedWeekday.weekday;
     this.which = fixedWeekday.which;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   public get stringKey(): string {
     return this.key;
   }
@@ -35,5 +35,5 @@ export class FixedWeekdayHoliday extends BaseHoliday<string> implements IFixedWe
   public get translationKey(): string {
     return this.key;
   }
-  // </editor-fold>
+  //#endregion
 }

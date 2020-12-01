@@ -5,16 +5,16 @@ export interface IFixedWeekdayCalculator extends IBaseCalculator<IFixedWeekdayHo
 
 export class FixedWeekdayCalculator extends BaseCalculator<IFixedWeekdayHoliday> implements IFixedWeekdayCalculator {
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementation'>
+  //#region Abstract method implementation
   public calculateDate(holiday: IFixedWeekdayHoliday, year: number): Date | undefined
   {
     return this.calendarHelper.calculateFixedWeekday(holiday as IFixedWeekday, year);
   }
-  // </editor-fold>
+  //#endregion
 }

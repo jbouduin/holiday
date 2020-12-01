@@ -7,13 +7,13 @@ export interface IChristianHolidayCalculator extends IBaseCalculator<IChristianH
 
 export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday> implements IChristianHolidayCalculator {
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementation'>
+  //#region Abstract method implementation
   public calculateDate(holiday: IChristianHoliday, year: number): Date | undefined {
     const easternSunday = this.getEasternSunday(holiday.chronology, year);
     switch (holiday.key) {
@@ -67,9 +67,9 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
       }
     }
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IChristianHolidayCalculator interface methods'>
+  //#region IChristianHolidayCalculator interface methods
   public getEasternSunday(chronology: ChronologyType, year: number): Date {
     switch (chronology) {
       case ChronologyType.JULIAN: {
@@ -81,9 +81,9 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
       }
     }
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private getJulianEasternSunday(year: number): Date {
     // source: https://www.staff.science.uu.nl/~gent0113/easter/easter_text2a.htm
     const a = this.calendarHelper.generalizedModulo (year, 19);
@@ -122,5 +122,5 @@ export class ChristianHolidayCalculator extends BaseCalculator<IChristianHoliday
     const day = (x % 31) + 1;
     return new Date(Date.UTC(year, month === 3 ? 2 : 3, day));
   }
-  // </editor-fold>
+  //#endregion
 }

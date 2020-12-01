@@ -9,18 +9,18 @@ export interface IChristianFactory extends IBaseFactory<IChristianHoliday, Chris
 
 export class ChristianFactory extends BaseFactory<IChristianHoliday, ChristianHolidayType> implements IChristianFactory {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private chronology: ChronologyType;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
     this.chronology = ChronologyType.GREGORIAN;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: ChristianHolidayType, category: Category, cycle: Cycle, validFrom: number, validTo: number): IChristianHoliday {
     return new ChristianHoliday(key, category, cycle, validFrom, validTo, this.chronology);
@@ -50,6 +50,6 @@ export class ChristianFactory extends BaseFactory<IChristianHoliday, ChristianHo
     }
     return result;
   }
-  // </editor-fold>
+  //#endregion
 
 }

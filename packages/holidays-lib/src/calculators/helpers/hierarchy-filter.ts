@@ -10,20 +10,20 @@ export interface IHierarchyFilter {
 
 export class HierarchyFilter implements IHierarchyFilter {
 
-  // <editor-fold desc='Constructor & Co°'>
+  //#region Constructor & Co°
   public constructor() { }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IHierarchyFilter interface methods'>
+  //#region IHierarchyFilter interface methods
   public filterConfigurationByHierarchy(
     configuration: IConfiguration,
     hierarchy: string,
     deep: boolean): Array<FilteredHoliday<any>> {
     return this.internalFilter(configuration, hierarchy, '', deep);
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='private methods'>
+  //#region private methods
   private internalFilter(
     configuration: IConfiguration,
     hierarchy: string,
@@ -53,5 +53,5 @@ export class HierarchyFilter implements IHierarchyFilter {
 
     return result;
 }
-  // </editor-fold>
+  //#endregion
 }

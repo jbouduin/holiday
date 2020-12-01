@@ -18,11 +18,11 @@ export interface IConfigurationFactory {
 
 export class ConfigurationFactory implements IConfigurationFactory {
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() { }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IConfigurationFactory interface methods'>
+  //#region IConfigurationFactory interface methods
   public loadConfigurationFromString(parent: string, asString: string): IConfiguration {
     const configuration: IConfiguration = new Configuration('', '');
     let obj: any;
@@ -124,5 +124,5 @@ export class ConfigurationFactory implements IConfigurationFactory {
       configuration.holidays.push(factoryResult.holiday);
     }
   }
-  // </editor-fold>
+  //#endregion
 }

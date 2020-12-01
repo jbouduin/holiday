@@ -35,7 +35,7 @@ describe.each( [
   const hijri: HijriDate = { year: 1441, month: 5, day: 6  };
   test(IslamicCalendar[islamicCalendar], () => expect(convertor.gregorianToHijri(gregorian, islamicCalendar)).toStrictEqual(hijri));
 });
-// <editor-fold desc='The not implemented methods'>
+//#region The not implemented methods
 test(IslamicCalendar[IslamicCalendar.UMM_AL_QURA],
   () => {
     function convert() {
@@ -62,4 +62,4 @@ test('Hijri to Gregorian',
     expect(convert).toThrow();
   }
 );
-// </editor-fold>
+//#endregion

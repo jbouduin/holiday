@@ -9,17 +9,17 @@ export interface IFixedWeekdayFactory extends IBaseFactory<IFixedWeekdayHoliday,
 
 export class FixedWeekdayFactory extends BaseFactory<IFixedWeekdayHoliday, string> implements IFixedWeekdayFactory {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private fixedWeekday!: IFixedWeekday;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: string, category: Category, cycle: Cycle, validFrom: number, validTo: number): IFixedWeekdayHoliday {
     return new FixedWeekdayHoliday(key, category, cycle, validFrom, validTo, this.fixedWeekday);
@@ -32,6 +32,6 @@ export class FixedWeekdayFactory extends BaseFactory<IFixedWeekdayHoliday, strin
   protected extractKey(obj: any): string {
     return this.dataExtractor.extractStringKey(obj);
   }
-  // </editor-fold>
+  //#endregion
 
 }

@@ -4,18 +4,18 @@ import { IHolidays } from '@jbouduin/holidays-lib';
 
 export class HolidaysHttp implements IHolidays {
 
-  // <editor-fold desc='private properties'>
+  //#region private properties
   // private hierarchyCalculator: IHierarchyCalculator;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(language?: string) {
     // this.hierarchyCalculator = new HierarchyCalculator(language || 'en_GB');
   }
 
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IHolidays interface methods'>
+  //#region IHolidays interface methods
   public getHierarchyTree(): Promise<Array<IHierarchy>> {
     return Promise.resolve(new Array<IHierarchy>());
   }
@@ -27,5 +27,5 @@ export class HolidaysHttp implements IHolidays {
   public getSupportedLanguages(): Promise<Array<string>> {
     return Promise.resolve(new Array<string>());
   }
-  // </editor-fold>
+  //#endregion
 }

@@ -15,15 +15,15 @@ export interface IBaseHoliday<T> {
 
 export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
 
-  // <editor-fold desc='Public static magic numbers'>
+  //#region Public static magic numbers
   // see http://ecma-international.org/ecma-262/5.1/#sec-15.9.1.1
   // undefined valid from is approx. the earliest date possible in JS
   public static undefinedValidFrom = new Date(-8640000000000000).getFullYear();
   // undefined valid from is approx. the latest date possible in JS
   public static undefinedValidTo = new Date(8640000000000000).getFullYear();
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IHoliday interface members'>
+  //#region IHoliday interface members
   public readonly holidayType: HolidayType;
   public readonly key: T
   public readonly validFrom: number;
@@ -31,14 +31,14 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
   public readonly cycle!: Cycle;
   public readonly category!: Category;
   public readonly moves: Array<IMove>;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods'>
+  //#region Abstract methods
   public abstract get stringKey(): string;
   public abstract get translationKey(): string;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(
     holidayType: HolidayType,
     key: T,
@@ -54,5 +54,5 @@ export abstract class BaseHoliday<T> implements IBaseHoliday<T> {
     this.validTo = validTo;
     this.moves = new Array<IMove>();
   }
-  // </editor-fold>
+  //#endregion
 }

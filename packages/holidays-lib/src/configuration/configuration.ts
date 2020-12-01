@@ -12,15 +12,15 @@ export interface IConfiguration {
 
 export class Configuration implements IConfiguration {
 
-  // <editor-fold desc='IConfiguration interface properties'>
+  //#region IConfiguration interface properties
   public readonly hierarchy: string;
   public readonly description: string;
   public readonly errors: Array<ILoadError>;
   public readonly holidays: Array<IBaseHoliday<any>>;
   public readonly subConfigurations: Array<IConfiguration>;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(hierarchy: string, description: string) {
     this.hierarchy = hierarchy;
     this.description = description;
@@ -29,12 +29,12 @@ export class Configuration implements IConfiguration {
     this.subConfigurations = new Array<IConfiguration>();
 
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IConfiguration interface methods'>
+  //#region IConfiguration interface methods
   public addError(key: string, location: string, ...args: Array<any>): void {
     this.errors.push(new LoadError(key, location, args));
   }
-  // </editor-fold>
+  //#endregion
 
 }

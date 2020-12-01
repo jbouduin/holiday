@@ -5,16 +5,16 @@ export interface IFixedHolidayCalculator extends IBaseCalculator<IFixedDateHolid
 
 export class FixedHolidayCalculator extends BaseCalculator<IFixedDateHoliday> implements IFixedHolidayCalculator {
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementation'>
+  //#region Abstract method implementation
   public calculateDate(holiday: IFixedDateHoliday, year: number): Date | undefined
   {
     return this.calendarHelper.calculateFixedDate(holiday as IFixedDate, year);
   }
-  // </editor-fold>
+  //#endregion
 }

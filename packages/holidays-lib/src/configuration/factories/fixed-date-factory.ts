@@ -8,17 +8,17 @@ export interface IFixedDateFactory extends IBaseFactory<IFixedDateHoliday, strin
 
 export class FixedDateFactory extends BaseFactory<IFixedDateHoliday, string> implements IFixedDateFactory {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private fixedDate!: IFixedDate;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   protected createHoliday(
     key: string, category: Category, cycle: Cycle, validFrom: number, validTo: number): IFixedDateHoliday {
     return new FixedDateHoliday(
@@ -32,6 +32,6 @@ export class FixedDateFactory extends BaseFactory<IFixedDateHoliday, string> imp
   protected extractKey(obj: any): string {
     return this.dataExtractor.extractStringKey(obj);
   }
-  // </editor-fold>
+  //#endregion
 
 }

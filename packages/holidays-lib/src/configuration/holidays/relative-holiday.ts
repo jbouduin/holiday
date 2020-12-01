@@ -9,12 +9,12 @@ export interface IRelativeHoliday<T extends IRelation, U extends IFix > extends 
 
 export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelativeHoliday<T, U> {
 
-  // <editor-fold desc='IBaseRelativeHoliday interface members'>
+  //#region IBaseRelativeHoliday interface members
   public fix: U;
   public relation: T;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(
     holidayType: HolidayType,
     key: string,
@@ -28,9 +28,9 @@ export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelat
     this.fix = fix;
     this.relation = relation;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods implementation'>
+  //#region Abstract methods implementation
   public get stringKey(): string {
     return this.key;
   }
@@ -38,6 +38,6 @@ export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelat
   public get translationKey(): string {
     return this.key;
   }
-  // </editor-fold>
+  //#endregion
 
 }

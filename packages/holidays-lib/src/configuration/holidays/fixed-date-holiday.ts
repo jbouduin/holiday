@@ -6,12 +6,12 @@ export interface IFixedDateHoliday extends IBaseHoliday<string>, IFixedDate { }
 
 export class FixedDateHoliday extends BaseHoliday<string> implements IFixedDateHoliday {
 
-  // <editor-fold desc='IFixedDate interface members'>
+  //#region IFixedDate interface members
   public month: Month;
   public day: number;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor(
     key: string,
     category: Category,
@@ -24,9 +24,9 @@ export class FixedDateHoliday extends BaseHoliday<string> implements IFixedDateH
     this.month = fixedDate.month;
     this.day = fixedDate.day;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementations'>
+  //#region Abstract method implementations
   public get stringKey(): string {
     return this.key;
   }
@@ -34,5 +34,5 @@ export class FixedDateHoliday extends BaseHoliday<string> implements IFixedDateH
   public get translationKey(): string {
     return this.key;
   }
-  // </editor-fold>
+  //#endregion
 }

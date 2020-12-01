@@ -8,22 +8,22 @@ export interface IBaseCalculator<T extends IBaseHoliday<any>> {
 
 export abstract class BaseCalculator<T extends IBaseHoliday<any>> implements IBaseCalculator<IBaseHoliday<any>> {
 
-  // <editor-fold desc='Protected properties'>
+  //#region Protected properties
   protected readonly calendarHelper: ICalendarHelper;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private mover: IMover;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor() {
     this.calendarHelper = new CalendarHelper();
     this.mover = new Mover(this.calendarHelper);
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private abstract methods'>
+  //#region Private abstract methods
   public calculate(holiday: T, year: number): Date | undefined {
     if (!this.calendarHelper.occurs(holiday, year)) {
       return undefined;
@@ -34,9 +34,9 @@ export abstract class BaseCalculator<T extends IBaseHoliday<any>> implements IBa
     }
     return result;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract methods'>
+  //#region Abstract methods
   public abstract calculateDate(holiday: T, year: number): Date | undefined;
-  // </editor-fold>
+  //#endregion
 }

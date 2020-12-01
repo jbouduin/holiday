@@ -5,17 +5,17 @@ import { IFileProvider } from '../../src/api';
 
 export class FileProvider implements IFileProvider {
 
-  // <editor-fold desc='Private properties'>
+  //#region Private properties
   private assetsPath: string;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(assetsPath: string) {
     this.assetsPath = assetsPath;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IFileProvider interface methods'>
+  //#region IFileProvider interface methods
   public loadConfiguration(rootHierarchy: string): Promise<string> {
     const fileName = path.join(__dirname, `${this.assetsPath}/configurations/${rootHierarchy}.json`);
     return fs.readFile(fileName, 'utf-8');
@@ -44,5 +44,5 @@ export class FileProvider implements IFileProvider {
       path.join(__dirname, `${this.assetsPath}/translations/holiday.json`);
     return fs.readFile(fileName, 'utf-8');
   }
-  // </editor-fold>
+  //#endregion
 }

@@ -39,19 +39,19 @@ class CalculatedHoliday implements IHoliday {
 
 export class HierarchyCalculator implements IHierarchyCalculator {
 
-  // <editor-fold desc='private properties'>
+  //#region private properties
   private currentLanguage: string;
   private fileProvider: IFileProvider;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor(language: string, fileProvider: IFileProvider) {
     this.currentLanguage = language;
     this.fileProvider = fileProvider
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='IHierarchyCalculator interface methods'>
+  //#region IHierarchyCalculator interface methods
   public async getHolidays(hierarchy: string, year: number, deep: boolean): Promise<Array<IHoliday>> {
     const root = hierarchy.split('/')[0];
     const loadPromises: Array<Promise<string>> = [
@@ -98,9 +98,9 @@ export class HierarchyCalculator implements IHierarchyCalculator {
     const parse: Array<string> = JSON.parse(dataString);
     return parse;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private calculateHoliday(holiday: FilteredHoliday<any>, year: number): CalculatedHoliday | undefined {
     let date: Date | undefined;
     switch(holiday.holiday.holidayType) {
@@ -166,6 +166,6 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       holiday.name = holiday.translationKey;
     }
   }
-  // </editor-fold>
+  //#endregion
 
 }

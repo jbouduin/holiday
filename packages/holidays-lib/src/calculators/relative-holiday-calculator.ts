@@ -8,13 +8,13 @@ export interface IRelativeHolidayCalculator extends IBaseCalculator<IRelativeHol
 
 export class RelativeHolidayCalculator extends BaseCalculator<IRelativeHoliday<IRelation, IFix>> implements IRelativeHolidayCalculator {
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor() {
     super();
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementation'>
+  //#region Abstract method implementation
   public calculateDate(holiday: IRelativeHoliday<IRelation, IFix>, year: number): Date | undefined {
     switch (holiday.holidayType) {
       case HolidayType.RELATIVE_BETWEEN_FIXED: {
@@ -37,9 +37,9 @@ export class RelativeHolidayCalculator extends BaseCalculator<IRelativeHoliday<I
       }
     }
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private calculateRelativeBetween(
     holiday: IRelativeHoliday<IRelationWeekday, IBetweenFixedDates>,
     year: number): Date | undefined {
@@ -94,5 +94,5 @@ export class RelativeHolidayCalculator extends BaseCalculator<IRelativeHoliday<I
 
     return this.calendarHelper.addDays(date, diff + (relation.which * 7 * relation.when));
   }
-  // </editor-fold>
+  //#endregion
 }

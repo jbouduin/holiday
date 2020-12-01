@@ -9,20 +9,20 @@ import { FileProvider } from '../packages/holidays/src/file-provider';
 
 class Hierarchy implements IHierarchy {
 
-  // <editor-fold desc='IHierarchy interface properties'>
+  //#region IHierarchy interface properties
   public code: string;
   public fullPath: string;
   public description: string;
   public children: Array<IHierarchy> | undefined;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor & C°'>
+  //#region Constructor & C°
   public constructor(code: string, fullPath: string, description: string) {
     this.code = code;
     this.fullPath = fullPath;
     this.description = description;
   }
-  // </editor-fold>
+  //#endregion
 }
 
 class Main {
@@ -31,7 +31,7 @@ class Main {
     { name: 'input', alias: 'i', type: String }
   ];
 
-  // <editor-fold desc='Main method'>
+  //#region Main method
   public execute() {
     let params: any;
     try {
@@ -75,9 +75,9 @@ class Main {
       }
     );
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Private methods'>
+  //#region Private methods
   private async processFile(fileprovider: IFileProvider, fullFileName: string): Promise<IHierarchy> {
     const fileName = fullFileName.replace(/\\/g, '/').split('/').pop() || '';
     const hierarchy = fileName.split('.')[0];
@@ -96,7 +96,7 @@ class Main {
     }
     return hierarchy;
   }
-  // </editor-fold>
+  //#endregion
 }
 
 new Main().execute();

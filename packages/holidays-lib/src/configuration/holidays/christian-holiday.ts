@@ -7,11 +7,11 @@ export interface IChristianHoliday extends IBaseHoliday<ChristianHolidayType> {
 
 export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implements IChristianHoliday {
 
-  // <editor-fold desc='IChristianHoliday interface properties'>
+  //#region IChristianHoliday interface properties
   public chronology: ChronologyType;
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Constructor'>
+  //#region Constructor
   public constructor(
     key: ChristianHolidayType,
     category: Category,
@@ -22,9 +22,9 @@ export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implemen
     super(HolidayType.CHRISTIAN, key, category, cycle, validFrom, validTo);
     this.chronology = chronology;
   }
-  // </editor-fold>
+  //#endregion
 
-  // <editor-fold desc='Abstract method implementations'>
+  //#region Abstract method implementations
   public get stringKey(): string {
     return ChristianHolidayType[this.key];
   }
@@ -32,5 +32,5 @@ export class ChristianHoliday extends BaseHoliday<ChristianHolidayType> implemen
   public get translationKey(): string {
     return 'CHRISTIAN.' + ChristianHolidayType[this.key];
   }
-  // </editor-fold>
+  //#endregion
 }
