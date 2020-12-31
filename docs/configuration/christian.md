@@ -32,7 +32,7 @@ Christian holidays are holidays that occur a fixed number of days before or afte
 | CORPUS_CHRISTI     | 60  days after Easter Sunday |
 | SACRED_HEART       | 68 days after Easter Sunday  |
 
-### Sample
+### Example
 ```json
 {
   "holidayType": "CHRISTIAN",

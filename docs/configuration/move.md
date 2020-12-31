@@ -5,4 +5,4 @@ Some countries, states, regions... do officially (i.e. it is specified in the la
 
 ### Properties
 
-### Sample
+### Example

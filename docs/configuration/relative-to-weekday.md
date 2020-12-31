@@ -9,7 +9,7 @@
 | holidayType | yes       |           | must be: RELATIVE_TO_WEEKDAY |
 | key         | yes       |           | |
 
-### Sample
+### Example
 
 ```json
 {

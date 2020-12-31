@@ -13,7 +13,7 @@ Fixed weekday holidays are holidays that occur on a fixed weekday during the yea
 | weekday     ||||
 | month       ||||
 
-### Sample
+### Example
 ```json
 {
   "holidayType": "FIXED_WEEKDAY",

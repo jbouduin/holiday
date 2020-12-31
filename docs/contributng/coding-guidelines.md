@@ -6,9 +6,9 @@ Please talk before doing.
 - do not try to show off. If I can not understand your code, even when documented, I won't merge it.
 - no tabs, use spaces
 - import/export
-  - use appropriately index.ts files to export  
+  - use appropriately index.ts files to export
 - code has to pass Lint
-  - if you want to change tslint.json: convince me
+  - if you want to change .eslintrc: convince me
   - ```lerna run lint``` will do the job
   - if you use ts-lint disable, explain why (comment)
 - Tests:
@@ -26,6 +26,6 @@ Please talk before doing.
     - constants
   - do not import from '.'. In that case reference the file.
   - logically group imports.
-- indent = 2 spaces  
+- indent = 2 spaces
 
 ---

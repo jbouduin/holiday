@@ -13,7 +13,7 @@ Fixed date holidays are holidays that occur on a fixed day in the year.
 | month       | yes       |           |                     |
 | day         | yes       |           |                     |
 
-### Sample
+### Example
 
 ```json
 {

@@ -4,7 +4,11 @@
   "title": "Hierarchy",
   "description": "A hierarchy",
   "type": "object",
-  "required": ["hierarchy", "description", "holidays"],
+  "required": [
+    "hierarchy",
+    "description",
+    "holidays"
+  ],
   "properties": {
     "hierarchy": {
       "type": "string"
@@ -13,13 +17,9 @@
       "type": "string"
     },
     "holidays": {
-      "type":"array",
+      "type": "array",
       "items": {
-        "allOf": [
-          {
-            "$ref": "http://example.com/schemas/holiday#/definitions/holiday"
-          }
-        ]
+        "$ref": "http://example.com/schemas/holiday#/definitions/holiday"
       }
     },
     "subConfigurations": {

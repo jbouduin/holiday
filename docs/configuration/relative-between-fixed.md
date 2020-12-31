@@ -9,7 +9,7 @@
 | holidayType | yes       |           | must be: RELATIVE_BETWEEN_FIXED |
 | key         | yes       |           | |
 
-### Sample
+### Example
 
 ```json
 {

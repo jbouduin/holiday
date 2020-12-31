@@ -71,7 +71,7 @@ def process(schemaFile, jsonFile):
         files = glob.glob("{0}/*.json".format(jsonFile))
     else:
         files = [jsonFile]
-    print(files)
+
     # TODO this is not correct,it depends on the folder where you start the script
     # {0}/'.format(schemaPath).replace(os.sep, '/')
     baseUri = 'http://example.com/schemas/'

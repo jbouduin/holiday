@@ -15,7 +15,7 @@
 | MESKEL     | |
 | TIMKAT     | |
 
-### Sample
+### Example
 ```json
 {
   "holidayType": "ETHIOPIAN_ORTHODOX",

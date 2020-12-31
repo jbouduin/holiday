@@ -65,6 +65,30 @@
         "AFTER"
       ]
     },
+    "condition": {
+      "title": "Condition",
+      "description": "Condition to move a holiday to another day",
+      "type": "string",
+      "enum": [
+        "IS_SUNDAY",
+        "IS_MONDAY",
+        "IS_TUESDAY",
+        "IS_WEDNESDAY",
+        "IS_THURSDAY",
+        "IS_FRIDAY",
+        "IS_SATURDAY",
+        "IS_WEEKEND"
+      ]
+    },
+    "move-to": {
+      "title": "Move to",
+      "description": "Where to move a holiday to",
+      "type": "string",
+      "enum": [
+        "NEXT",
+        "PREVIOUS"
+      ]
+    },
     "relation-which-weekday-when": {
       "title": "Which-Weekday-When",
       "description": "Which-Weekday-When relation: e.g. first wednesday after a fix",
@@ -177,6 +201,20 @@
         }
       }
     },
+    "move": {
+      "title": "Move",
+      "description": "Definition on when to move a holiday whereto",
+      "required": ["condition", "moveTo", "weekday"],
+      "properties": {
+        "condition": { "$ref": "#/definitions/condition"},
+        "moveTo": {
+          "$ref": "#/definitions/move-to"
+        },
+        "weekday":{
+          "$ref": "#/definitions/weekday"
+        }
+      }
+    },
     "holiday": {
       "title": "holiday",
       "description": "A holiday definition",
@@ -243,7 +281,8 @@
           "type": "number"
         },
         "moves": {
-          "type": "array"
+          "type": "array",
+          "items": { "$ref": "#/definitions/move"}
         }
       },
       "allOf": [

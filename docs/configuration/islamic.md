@@ -28,7 +28,7 @@
 | ID_UL_ADHA_2    | 11/12 |
 | ID_UL_ADHA_3    | 12/12 |
 
-### Sample
+### Example
 ```json
 {
   "holidayType": "ISLAMIC",
@@ -73,7 +73,7 @@ Several slightly different intercalary schemes have been described in the litera
 | UMM_AL_QURA | Umm al-Qura | :x: |
 | TURKEY      | Islamic calendar of Turkey | :x: |
 | TAB_Ic      | Tabular I (East Islamic) civil | :x: |
-| TAB_Ia      | Tabular I (East Islamic) astronomical | :x: |	  		  	
+| TAB_Ia      | Tabular I (East Islamic) astronomical | :x: |
 | TAB_IIc     | Tabular II (West Islamic) civil | :x: |
 |	TAB_IIa     | Tabular II (West Islamic) astronomical | :x: |
 | TAB_IIIc    | Tabular III (Ismāʿīlī, Fāṭimid, Ṭayyibī, Bohorā) civil | :x: |
