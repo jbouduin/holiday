@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/schemas/hierarchy",
+  "title": "Hierarchy",
+  "description": "A hierarchy",
+  "type": "object",
+  "required": ["hierarchy", "description", "holidays"],
+  "properties": {
+    "hierarchy": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "holidays": {
+      "type":"array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://example.com/schemas/holiday#/definitions/holiday"
+          }
+        ]
+      }
+    },
+    "subConfigurations": {
+      "type": "array",
+      "items": {
+        "$ref": "http://example.com/schemas/hierarchy"
+      }
+    }
+  },
+  "additionalProperties": false
+}

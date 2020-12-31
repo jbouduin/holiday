@@ -1,0 +1,372 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/schemas/holiday",
+  "title": "Holiday",
+  "description": "A holiday definition",
+  "definitions": {
+    "month": {
+      "title": "Month",
+      "description": "Month",
+      "type": "string",
+      "enum": [
+        "JANUARY",
+        "FEBRUARY",
+        "MARCH",
+        "APRIL",
+        "MAY",
+        "JUNE",
+        "JULY",
+        "AUGUST",
+        "SEPTEMBER",
+        "OCTOBER",
+        "NOVEMBER",
+        "DECEMBER"
+      ]
+    },
+    "day": {
+      "title": "Day",
+      "description": "Day",
+      "type": "number",
+      "minimum": 1,
+      "maximum": 31
+    },
+    "which": {
+      "title": "Which",
+      "description": "Which, used in combination with a weekday: e.g. second tuesday",
+      "type": "string",
+      "enum": [
+        "FIRST",
+        "SECOND",
+        "THIRD",
+        "FOURTH",
+        "LAST"
+      ]
+    },
+    "weekday": {
+      "title": "Weekday",
+      "description": "Weekday",
+      "type": "string",
+      "enum": [
+        "SUNDAY",
+        "MONDAY",
+        "TUESDAY",
+        "WEDNESDAY",
+        "THURSDAY",
+        "FRIDAY",
+        "SATURDAY"
+      ]
+    },
+    "when": {
+      "title": "When",
+      "description": "'Before' or 'after' a fix",
+      "type": "string",
+      "enum": [
+        "BEFORE",
+        "AFTER"
+      ]
+    },
+    "relation-which-weekday-when": {
+      "title": "Which-Weekday-When",
+      "description": "Which-Weekday-When relation: e.g. first wednesday after a fix",
+      "type": "object",
+      "required": [
+        "weekday",
+        "when"
+      ],
+      "properties": {
+        "which": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/which"
+            },
+            {
+              "default": "FIRST"
+            }
+          ]
+        },
+        "weekday": {
+          "$ref": "#/definitions/weekday"
+        },
+        "when": {
+          "$ref": "#/definitions/when"
+        }
+      }
+    },
+    "relation-weekday-when": {
+      "title": "Weekday-When",
+      "description": "Weekday-When relation: e.g. wednesday after a fix",
+      "type": "object",
+      "required": [
+        "weekday",
+        "when"
+      ],
+      "properties": {
+        "weekday": {
+          "$ref": "#/definitions/weekday"
+        },
+        "when": {
+          "$ref": "#/definitions/when"
+        }
+      }
+    },
+    "relation-weekday": {
+      "type": "object",
+      "title": "Weekday",
+      "description": "Weekday relation used in a relative between definition: e.g. wednesday between January 1. and January 8.",
+      "required": [
+        "weekday"
+      ],
+      "properties": {
+        "weekday": {
+          "$ref": "#/definitions/weekday"
+        }
+      }
+    },
+    "fixed-date": {
+      "title": "Fixed date",
+      "description": "Fixed date: e.g. February 20.",
+      "type": "object",
+      "required": [
+        "month",
+        "day"
+      ],
+      "properties": {
+        "month": {
+          "$ref": "#/definitions/month"
+        },
+        "day": {
+          "$ref": "#/definitions/day"
+        }
+      }
+    },
+    "fix-from-to": {
+      "title": "Fix from to",
+      "description": "A date range between to fixed dates",
+      "type": "object",
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": {
+        "from": {
+          "$ref": "#/definitions/fixed-date"
+        },
+        "to": {
+          "$ref": "#/definitions/fixed-date"
+        }
+      }
+    },
+    "fix-which-weekday-month": {
+      "title": "Fixed weekday in month",
+      "description": "A fixed weekday in a month. e.g. The first monday in august.",
+      "type": "object",
+      "required": [
+        "which",
+        "weekday",
+        "month"
+      ],
+      "properties": {
+        "which": {
+          "$ref": "#/definitions/which"
+        },
+        "weekday": {
+          "$ref": "#/definitions/weekday"
+        },
+        "month": {
+          "$ref": "#/definitions/month"
+        }
+      }
+    },
+    "holiday": {
+      "title": "holiday",
+      "description": "A holiday definition",
+      "type": "object",
+      "required": [
+        "holidayType",
+        "key"
+      ],
+      "properties": {
+        "holidayType": {
+          "title": "Holiday type",
+          "description": "The type of holiday",
+          "type": "string",
+          "enum": [
+            "CHRISTIAN",
+            "ETHIOPIAN_ORTHODOX",
+            "FIXED_DATE",
+            "FIXED_WEEKDAY",
+            "HEBREW",
+            "ISLAMIC",
+            "RELATIVE_BETWEEN_FIXED",
+            "RELATIVE_TO_DATE",
+            "RELATIVE_TO_WEEKDAY"
+          ]
+        },
+        "key": {
+          "title": "Key",
+          "description": "The unique identifier of the holiday.",
+          "type": "string"
+        },
+        "cycle": {
+          "title": "Cycle",
+          "description": "The cycle of the holiday. Used for holidays that do not occur every year",
+          "type": "string",
+          "enum": [
+            "TWO_YEARS",
+            "FOUR_YEARS",
+            "FIVE_YEARS",
+            "SIX_YEARS",
+            "EVERY_YEAR",
+            "EVEN_YEARS",
+            "ODD_YEARS"
+          ],
+          "default": "EVERY_YEAR"
+        },
+        "category": {
+          "title": "Category",
+          "description": "The holiday category: official or unofficial",
+          "type": "string",
+          "enum": [
+            "OFFICIAL_HOLIDAY",
+            "UNOFFICIAL_HOLIDAY"
+          ],
+          "default": "OFFICIAL_HOLIDAY"
+        },
+        "validFrom": {
+          "title": "Valid from",
+          "description": "The first year this holiday occurred.",
+          "type": "number"
+        },
+        "validTo": {
+          "title": "Valid to",
+          "description": "The last year this holiday occurred.",
+          "type": "number"
+        },
+        "moves": {
+          "type": "array"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "holidayType": {
+                "const": "FIXED_DATE"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "month",
+              "day"
+            ],
+            "properties": {
+              "month": {
+                "$ref": "#/definitions/month"
+              },
+              "day": {
+                "$ref": "#/definitions/day"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "holidayType": {
+                "const": "FIXED_WEEKDAY"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "which",
+              "weekday",
+              "month"
+            ],
+            "properties": {
+              "which": {
+                "$ref": "#/definitions/which"
+              },
+              "weekday": {
+                "$ref": "#/definitions/weekday"
+              },
+              "month": {
+                "$ref": "#/definitions/month"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "holidayType": {
+                "const": "RELATIVE_BETWEEN_FIXED"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "relation",
+              "fix"
+            ],
+            "properties": {
+              "relation": {
+                "$ref": "#/definitions/relation-weekday"
+              },
+              "fix": {
+                "$ref": "#/definitions/fix-from-to"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "holidayType": {
+                "const": "RELATIVE_TO_DATE"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "relation",
+              "fix"
+            ],
+            "properties": {
+              "relation": {
+                "$ref": "#/definitions/relation-which-weekday-when"
+              },
+              "fix": {
+                "$ref": "#/definitions/fixed-date"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "holidayType": {
+                "const": "RELATIVE_TO_WEEKDAY"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "relation",
+              "fix"
+            ],
+            "properties": {
+              "relation": {
+                "$ref": "#definitions/relation-weekday-when"
+              },
+              "fix": {
+                "$ref": "#definitions/fix-which-weekday-month"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
