@@ -26,7 +26,7 @@ Following [types of holidays](https://github.com/jbouduin/holiday/blob/master/pa
 | RELATIVE_TO_WEEKDAY    | [Details](/docs/configuration/relative-to-weekday.md)    | :white_check_mark:    |
 
 ## Demo Site
-Source: [holiday-site](https://github.jbouduin/holiday-site)
+Source: [holiday-site](https://github.com/jbouduin/holiday-site)
 
 Demo: [here](https://jbouduin.github.io/holiday-site/)
 

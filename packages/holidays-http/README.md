@@ -1,17 +1,19 @@
 # @jbouduin/holidays
 
-This is a wrapper around `@jbouduin/holidays-lib`, using file system access to read the configuration files.
+This is a wrapper around `@jbouduin/holidays-lib`, using http calls (Axios) to fetch the configuration files.
 
 ## Usage
+
 Using the default language (en):
 ```typescript
-const holidays = new Holidays('assetsroot');
+// instantiate the wrapper
+const holidays = new HolidaysHttp('https://jbouduin.github.io/holiday-site/', 'assets/holidays');
 // retrieve the supported languages
 const supportedLanguages = await holidays.getSupportedLanguages();
-// retrieve the hierarchies
+// retrieve retrieve the hierarchies
 const hierarchies = await holidays.getHierarchyTree();
 // retrieve the holidays in 2022 for a munich in bavaria in germany
-const holidaysForMunich = await  holidays.getHolidays('de/by/mu', 2022, false);
+const holidaysForMunich = await holidays.getHolidays('de/by/mu', 2022, false);
 // retrieve the holidays in 2022 for bavaria in germany, including all local holidays
 const holidaysForBavaria = await holidays.getHolidays('de/by', 2022, true);
 // retrieve the holidays in 2022 for germany, leaving out all regional and local holidays
@@ -20,13 +22,13 @@ const holidaysForGermany = await holidays.getHolidays('de', 2022, false);
 
 In order to retrieve the data in another language (e.g. German), use the language parameter when instantiating Holidays:
 ```typescript
-const holidays = new Holidays('../../holidays-lib/lib/assets', 'de');
+const holidays = new Holidays('https://jbouduin.github.io/holiday-site/', 'assets/holidays', 'de');
 ```
 
 A sample implementation can be found [here](https://github.com/jbouduin/holiday-server)
 
 ## Prerequisites
-The implementation of the file provider expects a directory structure like this below the assetsroot.
+The implementation of the file provider expects a directory structure like this below the assetsroot on the host.
 
 ```text
 │   configurations.json
