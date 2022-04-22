@@ -10,6 +10,15 @@ This library gives you a list of holidays for a given year and location. The def
 
 The original idea comes from [Jollyday](https://github.com/svendiedrichsen/jollyday), a Java project offering the same functionality.
 
+
+## Wrappers
+| Wrapper       | Source code | Usage | Returns |
+| ------------- | ----------- | ----- | ------- |
+| holidays      | [holidays](https://github.com/jbouduin/holiday/tree/master/packages/holidays)| when you have the definition files stored locally<br>Example [holiday-server](https://github.com/jbouduin/holiday-server) | Promises |
+| holidays-http | [holidays-http](https://github.com/jbouduin/holiday/tree/master/packages/holidays-http) | when you have the definition files stored on a webserver<br>Example [here](https://github.com/jbouduin/holiday/blob/master/packages/holidays-http/__tests__/github-pages.testx.ts) | Promises |
+| holidays-rjxs | to be implemented | when you have the definition files stored on a webserver | Observables |
+
+
 ## Status
 Following [types of holidays](https://github.com/jbouduin/holiday/blob/master/packages/holidays-lib/src/configuration/types/holiday-type.ts) are planned/implemented
 
