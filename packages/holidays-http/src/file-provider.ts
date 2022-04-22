@@ -5,14 +5,12 @@ import { IFileProvider } from "@jbouduin/holidays-lib";
 export class FileProvider implements IFileProvider {
 
   //#region Private properties ------------------------------------------------
-  // private readonly host: string;
   private readonly assetsPath: string;
   private axios: AxiosInstance;
   //#endregion
 
   //#region Constructor & C° --------------------------------------------------
   public constructor(host: string, assetsPath: string, options: AxiosRequestConfig = {}) {
-    // this.host = host;
     this.assetsPath = assetsPath;
     const config = options;
     config.baseURL = host;

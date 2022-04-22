@@ -11,6 +11,13 @@ export class HolidaysHttp implements IHolidays {
   //#endregion
 
   //#region Constructor & C° --------------------------------------------------
+  /**
+   *
+   * @param host The host name
+   * @param assetsDirectory the assets root directory
+   * @param options any Axios Request configuration you want to pass
+   * @param language Optional. If not specified, the system falls back to 'en'
+   */
   public constructor(host: string, assetsDirectory: string, options: AxiosRequestConfig = {}, language?: string) {
     this.hierarchyCalculator = new HierarchyCalculator(language || 'en', new FileProvider(host, assetsDirectory, options));
   }
