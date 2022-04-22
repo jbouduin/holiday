@@ -40,7 +40,7 @@ export class ConfigurationFactory implements IConfigurationFactory {
   private loadConfiguration(parent: string, obj: any)
   {
     let hierarchy: string;
-    const result = new Configuration(obj.hierarchy, obj.description);
+    const result = new Configuration(obj.hierarchy as string, obj.description as string);
     if (!result.hierarchy) {
       result.addError(ErrorKey.HIERARCHY_NOT_SPECIFIED, parent);
       hierarchy = parent;
