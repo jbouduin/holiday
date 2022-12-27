@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as glob from 'glob';
 import * as convert from 'xml-js';
-import * as commandLineArgs from 'command-line-args';
+import commandLineArgs from 'command-line-args';
 
 class Main {
 

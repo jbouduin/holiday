@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import * as readline  from 'readline';
 import * as glob from 'glob';
 
-import * as commandLineArgs from 'command-line-args';
+import commandLineArgs from 'command-line-args';
 // function utf8Encode(unicodeString: string) {
 //     if (typeof unicodeString != 'string') throw new TypeError('parameter ‘unicodeString’ is not a string');
 //     const utf8String = unicodeString.replace(
