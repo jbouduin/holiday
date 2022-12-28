@@ -1,6 +1,6 @@
 {
   "name": "@jbouduin/holidays-http",
-  "version": "0.0.1-alpha.4",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -19,7 +19,7 @@
   "author": "Johan Bouduin",
   "license": "MIT",
   "dependencies": {
-    "@jbouduin/holidays-lib": "^0.0.1-alpha.4",
+    "@jbouduin/holidays-lib": "^0.0.1",
     "axios": "^0.26.1"
   },
   "publishConfig": {
