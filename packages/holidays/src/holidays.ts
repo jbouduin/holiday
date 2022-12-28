@@ -6,17 +6,22 @@ import { FileProvider } from './file-provider';
 
 export class Holidays implements IHolidays {
 
-  //#region private properties
+  //#region private properties ------------------------------------------------
   private hierarchyCalculator: IHierarchyCalculator;
   //#endregion
 
-  //#region Constructor & C°
+  //#region Constructor & C° --------------------------------------------------
+  /**
+   *
+   * @param assetsPath the root directory of the definition files
+   * @param language Optional. If not set, the system falls back on 'en'
+   */
   public constructor(assetsPath: string, language?: string) {
     this.hierarchyCalculator = new HierarchyCalculator(language || 'en', new FileProvider(assetsPath));
   }
   //#endregion
 
-  //#region Public methods
+  //#region Public methods ----------------------------------------------------
   public getHierarchyTree(): Promise<Array<IHierarchy>> {
     return this.hierarchyCalculator.getHierarchyTree();
   }

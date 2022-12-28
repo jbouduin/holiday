@@ -1,5 +1,5 @@
 import { IFileProvider, IHoliday, IHierarchy } from '../api';
-import { IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday, IConfiguration  } from '../configuration';
+import { IChristianHoliday, IFixedDateHoliday, IFixedWeekdayHoliday, IRelativeHoliday, IConfiguration, IRelation, IFix  } from '../configuration';
 import { ConfigurationFactory, HolidayType  } from '../configuration';
 import { HierarchyFilter, FilteredHoliday } from './helpers';
 import { ChristianHolidayCalculator } from './christian-holiday-calculator';
@@ -127,7 +127,7 @@ export class HierarchyCalculator implements IHierarchyCalculator {
       case HolidayType.RELATIVE_BETWEEN_FIXED:
       case HolidayType.RELATIVE_TO_DATE:
       case HolidayType.RELATIVE_TO_WEEKDAY: {
-        date = new RelativeHolidayCalculator().calculate(holiday.holiday as IRelativeHoliday<any, any>, year)
+        date = new RelativeHolidayCalculator().calculate(holiday.holiday as IRelativeHoliday<IRelation, IFix>, year)
       }
     }
 

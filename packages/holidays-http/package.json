@@ -19,7 +19,8 @@
   "author": "Johan Bouduin",
   "license": "MIT",
   "dependencies": {
-    "@jbouduin/holidays-lib": "^0.0.1-alpha.4"
+    "@jbouduin/holidays-lib": "^0.0.1-alpha.4",
+    "axios": "^0.26.1"
   },
   "publishConfig": {
     "access": "public"

@@ -7,7 +7,7 @@ export interface IRelativeHoliday<T extends IRelation, U extends IFix > extends 
   relation: T;
 }
 
-export class RelativeHoliday<T, U> extends BaseHoliday<string> implements IRelativeHoliday<T, U> {
+export class RelativeHoliday<T extends IRelation, U extends IFix> extends BaseHoliday<string> implements IRelativeHoliday<T, U> {
 
   //#region IBaseRelativeHoliday interface members
   public fix: U;

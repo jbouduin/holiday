@@ -1,31 +1,39 @@
-// import { IHierarchyCalculator, HierarchyCalculator } from '@jbouduin/holidays-lib';
+import { IHierarchyCalculator, HierarchyCalculator } from '@jbouduin/holidays-lib';
 import { IHierarchy, IHoliday } from '@jbouduin/holidays-lib';
 import { IHolidays } from '@jbouduin/holidays-lib';
+import { FileProvider } from './file-provider';
+import { AxiosRequestConfig } from "axios";
 
 export class HolidaysHttp implements IHolidays {
 
-  //#region private properties
-  // private hierarchyCalculator: IHierarchyCalculator;
+  //#region private properties ------------------------------------------------
+  private hierarchyCalculator: IHierarchyCalculator;
   //#endregion
 
-  //#region Constructor & C°
-  public constructor(language?: string) {
-    // this.hierarchyCalculator = new HierarchyCalculator(language || 'en_GB');
+  //#region Constructor & C° --------------------------------------------------
+  /**
+   *
+   * @param host The host name
+   * @param assetsDirectory the assets root directory
+   * @param options any Axios Request configuration you want to pass
+   * @param language Optional. If not specified, the system falls back to 'en'
+   */
+  public constructor(host: string, assetsDirectory: string, options: AxiosRequestConfig = {}, language?: string) {
+    this.hierarchyCalculator = new HierarchyCalculator(language || 'en', new FileProvider(host, assetsDirectory, options));
   }
-
   //#endregion
 
-  //#region IHolidays interface methods
+  //#region IHolidays interface methods ---------------------------------------
   public getHierarchyTree(): Promise<Array<IHierarchy>> {
-    return Promise.resolve(new Array<IHierarchy>());
+    return this.hierarchyCalculator.getHierarchyTree();
   }
 
-  public getHolidays(path: string, year: number, deep?: boolean | undefined): Promise<Array<IHoliday>> {
-    return Promise.resolve(new Array<IHoliday>());
+  public getHolidays(path: string, year: number, deep: boolean): Promise<Array<IHoliday>> {
+    return this.hierarchyCalculator.getHolidays(path, year, deep);
   }
 
   public getSupportedLanguages(): Promise<Array<string>> {
-    return Promise.resolve(new Array<string>());
+    return this.hierarchyCalculator.getSupportedLanguages();
   }
   //#endregion
 }

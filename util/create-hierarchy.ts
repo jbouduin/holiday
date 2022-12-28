@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import * as glob from 'glob';
 import * as path from 'path';
-import * as commandLineArgs from 'command-line-args';
+import commandLineArgs from 'command-line-args';
 
 import { IConfiguration, ConfigurationFactory } from '../packages/holidays-lib/src/configuration';
 import { IFileProvider, IHierarchy } from '../packages/holidays-lib/src/api/';
