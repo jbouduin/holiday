@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^29.2.4",
     "@typescript-eslint/eslint-plugin": "^5.47.1",
     "@typescript-eslint/parser": "^5.47.1",
     "command-line-args": "^5.2.0",
